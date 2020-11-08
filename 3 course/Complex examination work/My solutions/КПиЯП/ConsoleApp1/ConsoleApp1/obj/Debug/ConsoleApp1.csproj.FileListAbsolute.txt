@@ -1,0 +1,6 @@
+I:\25ПО ККР\КПиЯП\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+I:\25ПО ККР\КПиЯП\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+I:\25ПО ККР\КПиЯП\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+I:\25ПО ККР\КПиЯП\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csprojResolveAssemblyReference.cache
+I:\25ПО ККР\КПиЯП\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+I:\25ПО ККР\КПиЯП\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb

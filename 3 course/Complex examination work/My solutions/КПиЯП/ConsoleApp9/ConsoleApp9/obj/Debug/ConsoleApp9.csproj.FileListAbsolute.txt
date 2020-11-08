@@ -1,0 +1,5 @@
+I:\25ПО ККР\КПиЯП\ConsoleApp9\ConsoleApp9\bin\Debug\ConsoleApp9.exe.config
+I:\25ПО ККР\КПиЯП\ConsoleApp9\ConsoleApp9\bin\Debug\ConsoleApp9.exe
+I:\25ПО ККР\КПиЯП\ConsoleApp9\ConsoleApp9\bin\Debug\ConsoleApp9.pdb
+I:\25ПО ККР\КПиЯП\ConsoleApp9\ConsoleApp9\obj\Debug\ConsoleApp9.exe
+I:\25ПО ККР\КПиЯП\ConsoleApp9\ConsoleApp9\obj\Debug\ConsoleApp9.pdb

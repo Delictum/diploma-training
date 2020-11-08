@@ -1,0 +1,6 @@
+I:\25ПО ККР\КПиЯП\ConsoleApp11\ConsoleApp11\bin\Debug\ConsoleApp11.exe.config
+I:\25ПО ККР\КПиЯП\ConsoleApp11\ConsoleApp11\bin\Debug\ConsoleApp11.exe
+I:\25ПО ККР\КПиЯП\ConsoleApp11\ConsoleApp11\bin\Debug\ConsoleApp11.pdb
+I:\25ПО ККР\КПиЯП\ConsoleApp11\ConsoleApp11\obj\Debug\ConsoleApp11.csprojResolveAssemblyReference.cache
+I:\25ПО ККР\КПиЯП\ConsoleApp11\ConsoleApp11\obj\Debug\ConsoleApp11.exe
+I:\25ПО ККР\КПиЯП\ConsoleApp11\ConsoleApp11\obj\Debug\ConsoleApp11.pdb

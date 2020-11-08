@@ -1,0 +1,6 @@
+I:\25ПО ККР\КПиЯП\ConsoleApp13\ConsoleApp13\bin\Debug\ConsoleApp13.exe.config
+I:\25ПО ККР\КПиЯП\ConsoleApp13\ConsoleApp13\bin\Debug\ConsoleApp13.exe
+I:\25ПО ККР\КПиЯП\ConsoleApp13\ConsoleApp13\bin\Debug\ConsoleApp13.pdb
+I:\25ПО ККР\КПиЯП\ConsoleApp13\ConsoleApp13\obj\Debug\ConsoleApp13.csprojResolveAssemblyReference.cache
+I:\25ПО ККР\КПиЯП\ConsoleApp13\ConsoleApp13\obj\Debug\ConsoleApp13.exe
+I:\25ПО ККР\КПиЯП\ConsoleApp13\ConsoleApp13\obj\Debug\ConsoleApp13.pdb

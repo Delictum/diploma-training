@@ -1,0 +1,6 @@
+I:\25ПО ККР\КПиЯП\ConsoleApp14\ConsoleApp14\bin\Debug\ConsoleApp14.exe.config
+I:\25ПО ККР\КПиЯП\ConsoleApp14\ConsoleApp14\bin\Debug\ConsoleApp14.exe
+I:\25ПО ККР\КПиЯП\ConsoleApp14\ConsoleApp14\bin\Debug\ConsoleApp14.pdb
+I:\25ПО ККР\КПиЯП\ConsoleApp14\ConsoleApp14\obj\Debug\ConsoleApp14.csprojResolveAssemblyReference.cache
+I:\25ПО ККР\КПиЯП\ConsoleApp14\ConsoleApp14\obj\Debug\ConsoleApp14.exe
+I:\25ПО ККР\КПиЯП\ConsoleApp14\ConsoleApp14\obj\Debug\ConsoleApp14.pdb

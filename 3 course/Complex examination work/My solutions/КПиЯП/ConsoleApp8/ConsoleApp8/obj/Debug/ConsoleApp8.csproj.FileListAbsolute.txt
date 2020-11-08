@@ -1,0 +1,5 @@
+I:\25ПО ККР\КПиЯП\ConsoleApp8\ConsoleApp8\bin\Debug\ConsoleApp8.exe.config
+I:\25ПО ККР\КПиЯП\ConsoleApp8\ConsoleApp8\bin\Debug\ConsoleApp8.exe
+I:\25ПО ККР\КПиЯП\ConsoleApp8\ConsoleApp8\bin\Debug\ConsoleApp8.pdb
+I:\25ПО ККР\КПиЯП\ConsoleApp8\ConsoleApp8\obj\Debug\ConsoleApp8.exe
+I:\25ПО ККР\КПиЯП\ConsoleApp8\ConsoleApp8\obj\Debug\ConsoleApp8.pdb
