@@ -1,0 +1,24 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+  <p>Tickets</p>
+  
+  {% if tickets %}
+  <ul>
+	{% for type_ticket in type_tickets %}    
+	  <p>{{ type_ticket }}:</p>
+	  	{% for ticket in tickets %}	
+		  {% if ticket.type_ticket == type_ticket %}		  
+		    <ul><li>
+			  <a href=" {{ ticket.id }}/">Place {{ ticket.seat_number_ticket }}</a> ({{ ticket.cost_ticket }}p - {{ ticket.status_ticket }})
+		    </li></ul>
+        {% endif %}		  
+	  {% endfor %}
+	{% endfor %}
+  </ul>
+  {% else %}
+	<p>There are no tickets in the events.</p>
+  {% endif %}
+	
+{% endblock %}

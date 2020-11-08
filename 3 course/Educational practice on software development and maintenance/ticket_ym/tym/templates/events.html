@@ -1,0 +1,21 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+  <p>Events</p>
+
+  {% if events %}
+  <ul>
+  
+    {% for event in events %}
+      <li>
+	    <a href="{{ event.id }}/">{{ event.name_event }}</a> ({{ event.date_added }})
+	  </li> 
+	{% endfor %}
+	
+  </ul>
+  {% else %}
+	<p>There are no events in the institution.</p>
+  {% endif %}
+	
+{% endblock %}

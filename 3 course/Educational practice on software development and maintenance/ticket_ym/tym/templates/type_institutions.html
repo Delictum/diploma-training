@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+  <p>Type institutions</p>
+
+  <ul>
+    {% for type_institution in type_institutions %}
+      <li>
+	    <a href="type_institutions/{{ type_institution.id }}/">{{ type_institution.type_institution }}</a>
+	  </li> 
+	{% endfor %}
+  </ul>
+	
+{% endblock %}

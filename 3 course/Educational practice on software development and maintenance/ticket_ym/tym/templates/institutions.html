@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+  <p>Institutions</p>
+
+  <ul>
+    {% for institution in institutions %}
+      <li>
+	    <a href="{{ institution.id }}/">{{ institution.name_institution }}</a> ({{ institution.adress_institution }})
+	  </li> 
+	{% endfor %}
+  </ul>
+	
+{% endblock %}

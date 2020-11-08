@@ -1,0 +1,25 @@
+{% extends "base_generic.html" %}
+
+{% block header %}
+  <div class='jumbotron'>
+    <h1>
+	Ticket your managment.
+	<p>Welocme to <em>Ticket your managment</em><p>
+	</h1>        
+  </div>
+{% endblock header %}
+
+{% block content %}
+  
+
+<h2>Dynamic content</h2>
+
+  <p>The library has the following record counts:</p>  
+  <ul>
+    <li><strong>Type institution:</strong> {{ num_type_institution }}</li>
+    <li><strong>Institution:</strong> {{ num_institution }}</li>
+	<li><strong>Events:</strong> {{ num_event }}</li>
+	<li><strong>Type payments:</strong> {{ num_type_payment }}</li>
+  </ul>
+	
+{% endblock %}

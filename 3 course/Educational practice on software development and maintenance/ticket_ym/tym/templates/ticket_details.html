@@ -1,0 +1,23 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+  <p>Ticket: </p>
+  
+  <p><strong>Institution:</strong> <a href="/type_institutions/{{ ticket_id.event.institution.type_institution.id }}/{{ ticket_id.event.institution.id }}">{{ ticket_id.event.institution }} </a></p>
+  <p><strong>Event:</strong> <a href="/type_institutions/{{ ticket_id.event.institution.type_institution.id }}/{{ ticket_id.event.institution.id }}/{{ ticket_id.event.id }}">{{ ticket_id.event }} </a></p>
+  <p><strong>Type:</strong> {{ ticket_id.type_ticket }}</p>
+  <p><strong>Place:</strong> {{ ticket_id.seat_number_ticket }}</p>
+  <p><strong>Cost ticket:</strong> {{ ticket_id.cost_ticket }}</p>
+  <p><strong>Status ticket:</strong> {{ ticket_id.status_ticket }}</p>
+  
+  <p><strong>Institution:</strong> <a href="ticket_booked/">{{ ticket_id.event.institution }} </a></p>
+  
+  {% if status_ticket.1 == ticket_id.status_ticket %}  
+    <form action="ticket_booked/" method="post">
+	  {% csrf_token %}
+	  <input type="submit" value="booked" />
+	</form>
+ {% endif %}
+  
+{% endblock %}
