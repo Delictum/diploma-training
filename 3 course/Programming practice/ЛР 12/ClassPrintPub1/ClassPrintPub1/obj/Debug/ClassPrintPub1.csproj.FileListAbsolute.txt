@@ -1,0 +1,4 @@
+F:\Практика по программированию\Исполнение\ЛР 12\ClassPrintPub1\ClassPrintPub1\bin\Debug\ClassPrintPub1.dll
+F:\Практика по программированию\Исполнение\ЛР 12\ClassPrintPub1\ClassPrintPub1\bin\Debug\ClassPrintPub1.pdb
+F:\Практика по программированию\Исполнение\ЛР 12\ClassPrintPub1\ClassPrintPub1\obj\Debug\ClassPrintPub1.dll
+F:\Практика по программированию\Исполнение\ЛР 12\ClassPrintPub1\ClassPrintPub1\obj\Debug\ClassPrintPub1.pdb

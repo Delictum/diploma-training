@@ -1,0 +1,359 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.IO;
+using System.Threading;
+
+namespace ConsoleApp5
+{
+    public delegate void info_print();
+    public delegate void asin_deleg();
+
+    //печатное издание, журнал, книга, учебник
+    abstract class pub_print
+    {
+        public string name_print, name_pub, author_print;
+        public int pages_print, year_print;
+
+
+        public pub_print(string name_print, string name_pub, string author_print, int pages_print, int year_print)
+        {
+            this.name_print = name_print;
+            this.name_pub = name_pub;
+            this.author_print = author_print;
+            this.pages_print = pages_print;
+            this.year_print = year_print;
+        }
+
+        public string Name_print
+        {
+            get { return name_print; }
+            set { name_print = value; }
+        }
+
+        public abstract void print();
+
+        public int Pages_print
+        {
+            get { return pages_print; }
+            set
+            {
+                if ((value >= 150) && (value <= 500))
+                {
+                    Console.WriteLine("Усредненный размер типа 'книга'.");
+                }
+                else if ((value >= 10) && (value <= 20))
+                {
+                    Console.WriteLine("Усредненный размер типа 'газета'.");
+                }
+            }
+        }
+
+
+        public static pub_print operator ++(pub_print obj1)
+        {
+            obj1.pages_print += 1;
+            return obj1;
+        }
+    }
+
+    class journal : pub_print
+    {
+        public string style;
+
+        public journal(string style, string name_print, string name_pub, string author_print, int pages_print, int year_print)
+            : base(name_print, name_pub, author_print, pages_print, year_print)
+        {
+            this.style = style;
+        }
+
+        public override void print()
+        {
+            Console.WriteLine("Печатное издание: журнал;\nИздатель: {0};\nНазвание журнала: {1};\nАвтор: {4};\nНаправление журнала: {5};\nКоличество страниц: {2};\nГод издания: {3}.\n", name_pub, name_print, pages_print, year_print, author_print, style);
+        }
+
+        public void journal_e_p(string spam)
+        {
+            Console.WriteLine("Обработчик события {0} вызван.", spam);
+        }
+    }    
+
+    class book : pub_print
+    {
+        public event info_print event_print;
+
+        public string binding;
+
+        public book(string binding, string name_print, string name_pub, string author_print, int pages_print, int year_print)
+            : base(name_print, name_pub, author_print, pages_print, year_print)
+        {
+            this.binding = binding;
+        }
+
+        public override void print()
+        {
+
+        }
+
+        public void printer()
+        {
+            Console.WriteLine("Печатное издание: книга;\nИздатель: {0};\nНазвание: {1};\nАвтор: {4};\nКоличество страниц: {2};\nГод издания: {3};", name_pub, name_print, pages_print, year_print, author_print);
+            Console.WriteLine("Переплёт: {0};", binding);
+        }
+
+        public void events_now()
+        {
+            event_print();
+        }
+
+        public void events_job()
+        {
+            Console.WriteLine("Обработчик события книги.");
+        }
+    }
+
+    class textbook : book
+    {
+        public string discipline;
+
+        public textbook(string binding, string name_print, string name_pub, string author_print, int pages_print, int year_print)
+            : base(binding, name_print, name_pub, author_print, pages_print, year_print)
+        {
+            discipline = "Биология";
+        }
+
+        public override void print()
+        {
+            printer();
+            Console.WriteLine("Дисциплина: {0}.\n", discipline);
+        }
+
+        public void textbook_event()
+        {
+            Console.WriteLine("Обработчик события учебника.");
+        }
+    }
+
+    public interface ISort<T>
+       where T : struct
+    {
+        void ReWrite();
+    }
+
+    class MyObj<T> : ISort<T> where T : struct
+    {
+        public int longOb { get; set; }
+        T[] myarr;
+
+        public MyObj(int i)
+        {
+            longOb = i;
+        }
+
+        public MyObj(int i, T[] arr)
+        {
+            longOb = i;
+            myarr = new T[i];
+            for (int j = 0; j < arr.Length; j++)
+                myarr[j] = arr[j];
+        }
+
+        public void ReWrite()
+        {
+            Console.WriteLine("Тип: {0}", typeof(T));
+            Console.WriteLine("Распределение тиражей по городу: ");
+            foreach (T t in myarr)
+                Console.Write("{0}; ", t);
+            Console.WriteLine("\n");
+        }
+
+        public static int SumInt(int a, int b)
+        {
+            return a + b;
+        }
+    }
+
+    delegate T MyDel<T> (T obj1, T obj2);
+
+    public class Program
+    {
+        public delegate int Del(DateTime DT);
+
+        static int on_date_time(DateTime dt)
+        {
+            return dt.Day;
+        }
+
+        static void ThreadFunction(Object input)
+        {
+            int flag = (int)input;
+            if (flag == 1)
+            {
+                Console.WriteLine("Это первый поток!");
+            }
+            else
+            {
+                Console.WriteLine("Это второй поток!");
+            }
+        }
+
+        static void SpamFunction()
+        {
+            //Аналогично главному потоку выводим три раза текст
+            int count = 12;
+            while (count > 0)
+            {
+                Console.Write(" -Spam- ");
+                Thread.Sleep(50);
+                --count;
+            }
+        }
+
+        static void EggsFunction()
+        {
+            for (int i = 0; i < 7; i++)
+            {
+                Console.Write("Eggs! ");
+                Thread.Sleep(15);
+            }
+        }
+
+        static void Sort<T>(ref T[] a) where T : IComparable<T>
+        {
+            T buf;
+            int n = a.Length;
+            for (int i = 0; i < n; i++)
+            {
+                int im = i;
+                for (int j = i + 1; j < n; j++)
+                    if (a[j].CompareTo(a[im]) < 0) im = j;
+                buf = a[i]; a[i] = a[im]; a[im] = buf;
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            MyDel<int> del1 = MyObj<int>.SumInt;
+            Console.WriteLine("Количество художественных и научных журналов проданных за январь = " + del1(136, 74));
+
+            int[] MyArrByte = new int[6] { 41, 50, 183, 566, 87, 65 };
+            MyObj<int> ByteConst = new MyObj<int>(MyArrByte.Length, MyArrByte);
+            ByteConst.ReWrite();
+
+            Console.WriteLine("Авторы, чьи произведения отправлены в печать в порядке следования: ");
+            string[] a = { "Сколков", "Форграт", "Мехов", "Зыков", "Норри", "Хох", "Альков" };
+            foreach (string x in a) Console.Write(x + "; ");
+            Console.WriteLine();
+            Console.WriteLine("Упорядочивание авторов в алфавитном порядке: ");
+            Sort<string>(ref a);
+            foreach (string x in a) Console.Write(x + "; ");
+            Console.WriteLine();
+            Console.WriteLine();
+
+            asin_deleg a_d = SpamFunction;
+            IAsyncResult ar = a_d.BeginInvoke(null, null);
+            while (!ar.IsCompleted)
+            {
+                // Выполнение операций в главном потоке
+                Console.Write("...");
+                Thread.Sleep(100);
+            }
+            Thread thread1 = new Thread(ThreadFunction);
+            thread1.Start(1);
+            Thread thread2 = new Thread(SpamFunction);
+            thread2.Start();
+            Thread thread3 = new Thread(EggsFunction);
+            thread3.Start();
+            Thread thread4 = new Thread(ThreadFunction);
+            thread4.Start(2);
+
+            Thread th = Thread.CurrentThread;
+            th.Name = "Метод Main";
+            Console.WriteLine("Имя потока: {0}", th.Name);
+            Console.WriteLine("Запущен ли поток: {0}", th.IsAlive);
+            Console.WriteLine("Приоритет потока: {0}", th.Priority);
+            Console.WriteLine("Статус потока: {0}", th.ThreadState);
+            Console.WriteLine("Домен приложения: {0}", Thread.GetDomain().FriendlyName);
+            Console.WriteLine();
+
+            DateTime dt = new DateTime(2018, 01, 24);
+            Del d = new Del(on_date_time);
+            Console.WriteLine("Делегат создан {0} числа", d(dt));
+            Console.WriteLine();
+
+            book bk = new book("Твердый", "Sapiens. Краткая история человечества", "Синдбад", "Юваль Ной Харари", 512, 2017);
+            textbook tbk = new textbook("Твердый", "Sapiens. Краткая история человечества", "Синдбад", "Юваль Ной Харари", 512, 2017);
+
+            Console.WriteLine("Подписка на события книги и учебника активирована: ");
+            bk.event_print += new info_print(bk.events_job);
+            bk.event_print += new info_print(tbk.textbook_event);
+            bk.events_now();
+            Console.WriteLine();
+
+            Console.WriteLine("Подписка на событие учебника отменена: ");
+            bk.event_print -= new info_print(tbk.textbook_event);
+            bk.events_now();
+            Console.WriteLine();
+
+            string b, n_print, n_pub, a_print;
+            int N, p_print, y_print;
+
+            StreamReader sr = new StreamReader("text.txt");
+            N = int.Parse(sr.ReadLine());
+            textbook[] t = new textbook[N];
+
+            for (int i = 0; i < N; i++)
+            {
+                b = sr.ReadLine();
+                n_print = sr.ReadLine();
+                n_pub = sr.ReadLine();
+                a_print = sr.ReadLine();
+                p_print = int.Parse(sr.ReadLine());
+                y_print = int.Parse(sr.ReadLine());
+                t[i] = new textbook(b, n_print, n_pub, a_print, p_print, y_print);
+            }
+
+            for (int i = 0; i < N; i++)
+                t[i].print();
+
+            textbook tb = new textbook("Твердый", "Sapiens. Краткая история человечества", "Синдбад", "Юваль Ной Харари", 512, 2017);
+            tb.print();
+
+            Console.WriteLine("Введите количество заполняемых журналов: ");
+            int n = int.Parse(Console.ReadLine());
+
+            journal[] j = new journal[n];
+            string name_print, name_pub, author_print, style;
+            int pages_print, year_print;
+
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write("Введите издательство: ");
+                name_pub = Console.ReadLine();
+                Console.Write("Введите название издания: ");
+                name_print = Console.ReadLine();
+                Console.Write("Введите автора издания: ");
+                author_print = Console.ReadLine();
+                Console.Write("Введите количество страниц: ");
+                pages_print = int.Parse(Console.ReadLine());
+                Console.Write("Введите год издания: ");
+                year_print = int.Parse(Console.ReadLine());
+                Console.Write("Введите направление журнала: ");
+                style = Console.ReadLine();
+                j[i] = new journal(style, name_print, name_pub, author_print, pages_print, year_print);
+                Console.WriteLine();
+                j[0].Pages_print = pages_print;
+            }
+
+            j[0].pages_print++;
+
+            for (int i = 0; i < n; i++)
+            {
+                j[i].print();
+            }
+
+            Console.ReadKey();
+        }
+    }
+}
