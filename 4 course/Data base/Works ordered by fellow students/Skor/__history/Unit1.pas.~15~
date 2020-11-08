@@ -1,0 +1,267 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Data.DBXMySQL, Data.FMTBcd,
+  Datasnap.Provider, Datasnap.DBClient, Data.SqlExpr, Vcl.Grids, Vcl.DBGrids,
+  Vcl.StdCtrls, Vcl.Mask, Vcl.DBCtrls, Vcl.ComCtrls, ExcelXP, ComObj,
+  Vcl.ExtCtrls;
+
+type
+  TForm1 = class(TForm)
+    SQLConnection1: TSQLConnection;
+    SQLQuery1: TSQLQuery;
+    ClientDataSet1: TClientDataSet;
+    DataSetProvider1: TDataSetProvider;
+    DataSource1: TDataSource;
+    DBGrid1: TDBGrid;
+    SQLQuery2: TSQLQuery;
+    DataSetProvider2: TDataSetProvider;
+    ClientDataSet2: TClientDataSet;
+    DataSource2: TDataSource;
+    DBLookupComboBox1: TDBLookupComboBox;
+    Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
+    DBEdit1: TDBEdit;
+    Button4: TButton;
+    Button5: TButton;
+    Edit4: TEdit;
+    Edit5: TEdit;
+    DBLookupListBox1: TDBLookupListBox;
+    Label2: TLabel;
+    Edit6: TEdit;
+    DBGrid2: TDBGrid;
+    Panel1: TPanel;
+    DBNavigator1: TDBNavigator;
+    Button7: TButton;
+    OpenDialog1: TOpenDialog;
+    DBLookupComboBox2: TDBLookupComboBox;
+    SQLQuery3: TSQLQuery;
+    DataSetProvider3: TDataSetProvider;
+    ClientDataSet3: TClientDataSet;
+    DataSource3: TDataSource;
+    DateTimePicker1: TDateTimePicker;
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
+    procedure Button5Click(Sender: TObject);
+    procedure Edit6KeyPress(Sender: TObject; var Key: Char);
+    procedure DataSource1DataChange(Sender: TObject; Field: TField);
+    procedure Button7Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+
+function ParseDate(DateTime : string) : string;
+  Var newStr, day, month, year : string;
+begin
+  day := copy(DateTime, 1, 2);
+  month := copy(DateTime, 4, 2);
+  year := copy(DateTime, 7, 4);
+  newStr := year + '-' + month + '-' + day;
+  ParseDate := newStr;
+end;
+
+procedure TForm1.Button1Click(Sender: TObject);
+  Var bufName : string;
+      bufId   : integer;
+begin
+    case MessageDlg('Вы уверены, что хотите добавить запись?', mtConfirmation, [mbOK, mbCancel], 0) of
+      mrOk:
+        begin
+
+        end;
+      mrCancel:
+        begin
+          Exit;
+        end;
+    end;
+
+    DBEdit1.DataField := '';
+    DataSource1.OnDataChange := DataSource2.OnDataChange;
+
+    ClientDataSet1.Active := false;
+    SQLQuery1.Close;
+    SQLQuery1.SQL.Clear;
+    SQLQuery1.SQL.Add('SELECT id_vlad FROM vladelectelefona WHERE Familiya = "' + DBLookupComboBox1.Text + '"');
+    SQLQuery1.Open;
+    ClientDataSet1.Active := true;
+    bufName := VarToStr(SQLQuery1.FieldValues['id_vlad']);
+
+    ClientDataSet1.Active := false;
+    SQLQuery1.Close;
+    SQLQuery1.SQL.Clear;
+    SQLQuery1.SQL.Add('SELECT MAX(id_kvit) AS ID FROM kvitancia');
+    SQLQuery1.Open;
+    ClientDataSet1.Active := true;
+    bufId := SQLQuery1.FieldValues['ID'] + 1;
+
+    SQLQuery1.Close;
+    SQLQuery1.SQL.Clear;
+    SQLQuery1.SQL.Add
+      ('INSERT INTO kvitancia(id_kvit, id_vladelec, id_norma, '
+      +'dataoplati) VALUES (');
+    SQLQuery1.SQL.Add(IntToStr(bufId) + ', ' + bufName + ', ' + DBLookupComboBox2.Text + ', "' +
+    ParseDate(DateTimeToStr(DateTimePicker1.DateTime)) + '")');
+    SQLQuery1.ExecSQL;
+
+    ClientDataSet1.Active := false;
+    SQLQuery1.Close;
+    SQLQuery1.SQL.Clear;
+    SQLQuery1.SQL.Add
+      ('SELECT id_kvit, Familiya, Name, Otchestvo, Telefon, DomAdres, APYS, MTR, abonentplata, dataoplati FROM normi, vladelectelefona, kvitancia WHERE ' +
+       'kvitancia.id_vladelec = vladelectelefona.id_vlad AND kvitancia.id_norma = normi.id_norm');
+    SQLQuery1.Open;
+    ClientDataSet1.Active := true;
+    DBEdit1.DataField := 'id_kvit';
+    DataSource1.OnDataChange := DataSource1DataChange;
+    ShowMessage('Запись успешно добавлена.');
+  end;
+
+procedure TForm1.Button2Click(Sender: TObject);
+  Var bufName, bufId : string;
+begin
+    case MessageDlg('Вы уверены, что хотите изменить запись?', mtConfirmation, [mbOK, mbCancel], 0) of
+      mrOk:
+        begin
+
+        end;
+      mrCancel:
+        begin
+          Exit;
+        end;
+    end;
+
+    bufId := DBEdit1.Text;
+    DBEdit1.DataField := '';
+    DataSource1.OnDataChange := DataSource2.OnDataChange;
+
+    ClientDataSet1.Active := false;
+    SQLQuery1.Close;
+    SQLQuery1.SQL.Clear;
+    SQLQuery1.SQL.Add('SELECT id_vlad FROM vladelectelefona WHERE Familiya = "' + DBLookupComboBox1.Text + '"');
+    SQLQuery1.Open;
+    ClientDataSet1.Active := true;
+    bufName := VarToStr(SQLQuery1.FieldValues['id_vlad']);
+
+    SQLQuery1.Close;
+    SQLQuery1.SQL.Clear;
+    SQLQuery1.SQL.Add('UPDATE kvitancia Set id_vladelec = ' +
+      bufName + ', id_norma = ' + DBLookupComboBox2.Text + ', dataoplati = "' + ParseDate(DateTimeToStr(DateTimePicker1.DateTime)) +
+      '" WHERE id_kvit = ' + bufId);
+    SQLQuery1.ExecSQL;
+
+    ClientDataSet1.Active := false;
+    SQLQuery1.Close;
+    SQLQuery1.SQL.Clear;
+    SQLQuery1.SQL.Add
+      ('SELECT id_kvit, Familiya, Name, Otchestvo, Telefon, DomAdres, APYS, MTR, abonentplata, dataoplati FROM normi, vladelectelefona, kvitancia WHERE ' +
+       'kvitancia.id_vladelec = vladelectelefona.id_vlad AND kvitancia.id_norma = normi.id_norm');
+    SQLQuery1.Open;
+    ClientDataSet1.Active := true;
+    DBEdit1.DataField := 'id_kvit';
+    DataSource1.OnDataChange := DataSource1DataChange;
+    ShowMessage('Запись успешно изменена.');
+  end;
+
+procedure TForm1.Button3Click(Sender: TObject);
+  Var bufName, bufId : string;
+begin
+    case MessageDlg('Вы уверены, что хотите удалить запись?', mtConfirmation, [mbOK, mbCancel], 0) of
+      mrOk:
+        begin
+
+        end;
+      mrCancel:
+        begin
+          Exit;
+        end;
+    end;
+
+    bufId := DBEdit1.Text;
+    DBEdit1.DataField := '';
+    DataSource1.OnDataChange := DataSource2.OnDataChange;
+
+    SQLQuery1.Close;
+    SQLQuery1.SQL.Clear;
+    SQLQuery1.SQL.Add('DELETE FROM kvitancia WHERE id_kvit = ' + bufId);
+    SQLQuery1.ExecSQL;
+
+    ClientDataSet1.Active := false;
+    SQLQuery1.Close;
+    SQLQuery1.SQL.Clear;
+    SQLQuery1.SQL.Add
+      ('SELECT id_kvit, Familiya, Name, Otchestvo, Telefon, DomAdres, APYS, MTR, abonentplata, dataoplati FROM normi, vladelectelefona, kvitancia WHERE ' +
+       'kvitancia.id_vladelec = vladelectelefona.id_vlad AND kvitancia.id_norma = normi.id_norm');
+    SQLQuery1.Open;
+    ClientDataSet1.Active := true;
+    DBEdit1.DataField := 'id_kvit';
+    DataSource1.OnDataChange := DataSource1DataChange;
+    ShowMessage('Запись успешно удалена.');
+end;
+
+procedure TForm1.Button4Click(Sender: TObject);
+begin
+    DBGrid1.DataSource.DataSet.Locate('Familiya', VarArrayOf([edit5.Text]),
+    [loCaseInsensitive, loPartialKey]);
+end;
+
+procedure TForm1.Button5Click(Sender: TObject);
+begin
+    if VarType(SQLQuery1.Lookup('Familiya', Edit4.Text, 'APYS')) <> VarNull then
+      ShowMessage('APYS: ' +
+        VarToStr(SQLQuery1.Lookup('Familiya', Edit4.Text,
+        'APYS')) + ', MTR: ' +
+        VarToStr(SQLQuery1.Lookup('Familiya', Edit4.Text,
+        'MTR')))
+    else
+      ShowMessage('Нет данных');
+end;
+
+procedure TForm1.Button7Click(Sender: TObject);
+begin
+    ClientDataSet1.Active := false;
+    SQLQuery1.Close;
+    SQLQuery1.SQL.Clear;
+    SQLQuery1.SQL.Add
+      ('SELECT id_kvit, Familiya, Name, Otchestvo, Telefon, DomAdres, APYS, MTR, abonentplata, dataoplati FROM normi, vladelectelefona, kvitancia WHERE ' +
+       'kvitancia.id_vladelec = vladelectelefona.id_vlad AND kvitancia.id_norma = normi.id_norm');
+    SQLQuery1.Open;
+    ClientDataSet1.Active := true;
+end;
+
+
+
+procedure TForm1.DataSource1DataChange(Sender: TObject; Field: TField);
+begin
+    DateTimePicker1.DateTime := StrToDateTime(DBGrid1.Fields[9].AsString);
+end;
+
+procedure TForm1.Edit6KeyPress(Sender: TObject; var Key: Char);
+begin
+    ClientDataSet1.Active := false;
+    SQLQuery1.Close;
+    SQLQuery1.SQL.Clear;
+    SQLQuery1.SQL.Add
+      ('SELECT id_kvit, Familiya, Name, Otchestvo, Telefon, DomAdres, APYS, MTR, abonentplata, dataoplati FROM normi, vladelectelefona, kvitancia WHERE ' +
+       'kvitancia.id_vladelec = vladelectelefona.id_vlad AND kvitancia.id_norma = normi.id_norm ' +
+       'AND Familiya LIKE "%' + edit6.Text + '%"');
+    SQLQuery1.Open;
+    ClientDataSet1.Active := true;
+end;
+
+end.

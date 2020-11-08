@@ -1,0 +1,450 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'LR'
+  ClientHeight = 689
+  ClientWidth = 1115
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label2: TLabel
+    Left = 8
+    Top = 400
+    Width = 30
+    Height = 13
+    Caption = #1055#1086#1080#1089#1082
+  end
+  object DBGrid1: TDBGrid
+    Left = 8
+    Top = 8
+    Width = 1099
+    Height = 273
+    DataSource = DataSource1
+    ReadOnly = True
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'id_kvit'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'Familiya'
+        Width = 150
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Name'
+        Width = 150
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Otchestvo'
+        Width = 150
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Telefon'
+        Width = 100
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'DomAdres'
+        Width = 240
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'APYS'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'MTR'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'abonentplata'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'dataoplati'
+        Visible = True
+      end>
+  end
+  object DBLookupComboBox1: TDBLookupComboBox
+    Left = 8
+    Top = 287
+    Width = 153
+    Height = 21
+    KeyField = 'Familiya'
+    ListField = 'Familiya'
+    ListSource = DataSource2
+    TabOrder = 1
+  end
+  object Button1: TButton
+    Left = 9
+    Top = 314
+    Width = 89
+    Height = 25
+    Caption = #1044#1086#1073#1072#1074#1080#1090#1100
+    TabOrder = 2
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 104
+    Top = 314
+    Width = 90
+    Height = 25
+    Caption = #1056#1077#1076#1072#1082#1090#1080#1088#1086#1074#1072#1090#1100
+    TabOrder = 3
+    OnClick = Button2Click
+  end
+  object Button3: TButton
+    Left = 200
+    Top = 314
+    Width = 89
+    Height = 25
+    Caption = #1059#1076#1072#1083#1080#1090#1100
+    TabOrder = 4
+    OnClick = Button3Click
+  end
+  object DBEdit1: TDBEdit
+    Left = 40
+    Top = 544
+    Width = 33
+    Height = 21
+    DataField = 'id_kvit'
+    DataSource = DataSource1
+    TabOrder = 5
+    Visible = False
+  end
+  object Button4: TButton
+    Left = 462
+    Top = 369
+    Width = 75
+    Height = 25
+    Caption = 'Locate'
+    TabOrder = 6
+    OnClick = Button4Click
+  end
+  object Button5: TButton
+    Left = 8
+    Top = 369
+    Width = 75
+    Height = 25
+    Caption = 'Lookup'
+    TabOrder = 7
+    OnClick = Button5Click
+  end
+  object Edit4: TEdit
+    Left = 89
+    Top = 371
+    Width = 177
+    Height = 21
+    TabOrder = 8
+  end
+  object Edit5: TEdit
+    Left = 279
+    Top = 371
+    Width = 177
+    Height = 21
+    TabOrder = 9
+  end
+  object DBLookupListBox1: TDBLookupListBox
+    Left = 808
+    Top = 287
+    Width = 132
+    Height = 134
+    KeyField = 'abonentplata'
+    ListField = 'abonentplata'
+    ListSource = DataSource3
+    TabOrder = 10
+  end
+  object Edit6: TEdit
+    Left = 44
+    Top = 397
+    Width = 492
+    Height = 21
+    TabOrder = 11
+    OnKeyPress = Edit6KeyPress
+  end
+  object DBGrid2: TDBGrid
+    Left = 963
+    Top = 287
+    Width = 144
+    Height = 134
+    DataSource = DataSource2
+    TabOrder = 12
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'Familiya'
+        Visible = True
+      end>
+  end
+  object Panel1: TPanel
+    Left = 272
+    Top = 352
+    Width = 1
+    Height = 42
+    Caption = 'Panel1'
+    TabOrder = 13
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 146
+    Top = 432
+    Width = 240
+    Height = 25
+    DataSource = DataSource1
+    TabOrder = 14
+  end
+  object Button7: TButton
+    Left = 462
+    Top = 287
+    Width = 74
+    Height = 21
+    Caption = #1054#1073#1085#1086#1074#1080#1090#1100
+    TabOrder = 15
+    OnClick = Button7Click
+  end
+  object DBLookupComboBox2: TDBLookupComboBox
+    Left = 167
+    Top = 287
+    Width = 153
+    Height = 21
+    KeyField = 'id_norm'
+    ListField = 'id_norm'
+    ListSource = DataSource3
+    TabOrder = 16
+  end
+  object DateTimePicker1: TDateTimePicker
+    Left = 327
+    Top = 287
+    Width = 129
+    Height = 21
+    Date = 43469.754950532410000000
+    Time = 43469.754950532410000000
+    TabOrder = 17
+  end
+  object SQLConnection1: TSQLConnection
+    ConnectionName = 'MySQLConnection'
+    DriverName = 'MySQL'
+    LoginPrompt = False
+    Params.Strings = (
+      'DriverUnit=Data.DBXMySQL'
+      
+        'DriverPackageLoader=TDBXDynalinkDriverLoader,DbxCommonDriver250.' +
+        'bpl'
+      
+        'DriverAssemblyLoader=Borland.Data.TDBXDynalinkDriverLoader,Borla' +
+        'nd.Data.DbxCommonDriver,Version=24.0.0.0,Culture=neutral,PublicK' +
+        'eyToken=91d62ebb5b0d1b1b'
+      
+        'MetaDataPackageLoader=TDBXMySqlMetaDataCommandFactory,DbxMySQLDr' +
+        'iver250.bpl'
+      
+        'MetaDataAssemblyLoader=Borland.Data.TDBXMySqlMetaDataCommandFact' +
+        'ory,Borland.Data.DbxMySQLDriver,Version=24.0.0.0,Culture=neutral' +
+        ',PublicKeyToken=91d62ebb5b0d1b1b'
+      'GetDriverFunc=getSQLDriverMYSQL'
+      'LibraryName=dbxmys.dll'
+      'LibraryNameOsx=libsqlmys.dylib'
+      'VendorLib=LIBMYSQL.dll'
+      'VendorLibWin64=libmysql.dll'
+      'VendorLibOsx=libmysqlclient.dylib'
+      'MaxBlobSize=-1'
+      'DriverName=MySQL'
+      'HostName=127.0.0.1'
+      'Database=laba19'
+      'User_Name=mysql'
+      'Password=mysql'
+      'ServerCharSet=cp1251'
+      'BlobSize=-1'
+      'ErrorResourceFile='
+      'LocaleCode=0000'
+      'Compressed=False'
+      'Encrypted=False'
+      'ConnectTimeout=60')
+    Connected = True
+    Left = 40
+    Top = 488
+  end
+  object SQLQuery1: TSQLQuery
+    Active = True
+    MaxBlobSize = -1
+    Params = <>
+    SQL.Strings = (
+      
+        'SELECT id_kvit, Familiya, Name, Otchestvo, Telefon, DomAdres, AP' +
+        'YS, MTR, abonentplata, dataoplati FROM normi, vladelectelefona, ' +
+        'kvitancia WHERE '
+      
+        'kvitancia.id_vladelec = vladelectelefona.id_vlad AND kvitancia.i' +
+        'd_norma = normi.id_norm')
+    SQLConnection = SQLConnection1
+    Left = 136
+    Top = 488
+  end
+  object ClientDataSet1: TClientDataSet
+    Active = True
+    Aggregates = <>
+    FieldDefs = <
+      item
+        Name = 'id_kvit'
+        Attributes = [faRequired]
+        DataType = ftInteger
+      end
+      item
+        Name = 'Familiya'
+        Attributes = [faRequired]
+        DataType = ftString
+        Size = 100
+      end
+      item
+        Name = 'Name'
+        Attributes = [faRequired]
+        DataType = ftString
+        Size = 100
+      end
+      item
+        Name = 'Otchestvo'
+        Attributes = [faRequired]
+        DataType = ftString
+        Size = 100
+      end
+      item
+        Name = 'Telefon'
+        Attributes = [faRequired]
+        DataType = ftString
+        Size = 100
+      end
+      item
+        Name = 'DomAdres'
+        Attributes = [faRequired]
+        DataType = ftString
+        Size = 200
+      end
+      item
+        Name = 'APYS'
+        Attributes = [faRequired]
+        DataType = ftInteger
+      end
+      item
+        Name = 'MTR'
+        Attributes = [faRequired]
+        DataType = ftInteger
+      end
+      item
+        Name = 'abonentplata'
+        Attributes = [faRequired]
+        DataType = ftInteger
+      end
+      item
+        Name = 'dataoplati'
+        Attributes = [faRequired]
+        DataType = ftDate
+      end>
+    IndexDefs = <>
+    Params = <>
+    ProviderName = 'DataSetProvider1'
+    StoreDefs = True
+    Left = 312
+    Top = 488
+  end
+  object DataSetProvider1: TDataSetProvider
+    DataSet = SQLQuery1
+    Left = 224
+    Top = 488
+  end
+  object DataSource1: TDataSource
+    DataSet = ClientDataSet1
+    OnDataChange = DataSource1DataChange
+    Left = 392
+    Top = 488
+  end
+  object SQLQuery2: TSQLQuery
+    Active = True
+    MaxBlobSize = -1
+    Params = <>
+    SQL.Strings = (
+      'SELECT Familiya  FROM vladelectelefona')
+    SQLConnection = SQLConnection1
+    Left = 136
+    Top = 536
+  end
+  object DataSetProvider2: TDataSetProvider
+    DataSet = SQLQuery2
+    Left = 224
+    Top = 536
+  end
+  object ClientDataSet2: TClientDataSet
+    Active = True
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DataSetProvider2'
+    Left = 312
+    Top = 536
+  end
+  object DataSource2: TDataSource
+    DataSet = ClientDataSet2
+    Left = 392
+    Top = 536
+  end
+  object OpenDialog1: TOpenDialog
+    Left = 456
+    Top = 536
+  end
+  object SQLQuery3: TSQLQuery
+    Active = True
+    MaxBlobSize = -1
+    Params = <>
+    SQL.Strings = (
+      'SELECT *  FROM normi')
+    SQLConnection = SQLConnection1
+    Left = 136
+    Top = 592
+  end
+  object DataSetProvider3: TDataSetProvider
+    DataSet = SQLQuery3
+    Left = 224
+    Top = 592
+  end
+  object ClientDataSet3: TClientDataSet
+    Active = True
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DataSetProvider3'
+    Left = 312
+    Top = 592
+  end
+  object DataSource3: TDataSource
+    DataSet = ClientDataSet3
+    Left = 392
+    Top = 592
+  end
+end

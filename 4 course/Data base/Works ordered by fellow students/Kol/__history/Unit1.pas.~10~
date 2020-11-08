@@ -1,0 +1,261 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Data.DBXMySQL, Data.FMTBcd,
+  Datasnap.Provider, Datasnap.DBClient, Data.SqlExpr, Vcl.Grids, Vcl.DBGrids,
+  Vcl.StdCtrls, Vcl.Mask, Vcl.DBCtrls, Vcl.ComCtrls, ExcelXP, ComObj,
+  Vcl.ExtCtrls;
+
+type
+  TForm1 = class(TForm)
+    SQLConnection1: TSQLConnection;
+    SQLQuery1: TSQLQuery;
+    ClientDataSet1: TClientDataSet;
+    DataSetProvider1: TDataSetProvider;
+    DataSource1: TDataSource;
+    DBGrid1: TDBGrid;
+    SQLQuery2: TSQLQuery;
+    DataSetProvider2: TDataSetProvider;
+    ClientDataSet2: TClientDataSet;
+    DataSource2: TDataSource;
+    DBLookupComboBox1: TDBLookupComboBox;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Edit3: TEdit;
+    Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
+    DBEdit1: TDBEdit;
+    Button4: TButton;
+    Button5: TButton;
+    Button6: TButton;
+    Edit4: TEdit;
+    Label1: TLabel;
+    Edit5: TEdit;
+    DBLookupListBox1: TDBLookupListBox;
+    Label2: TLabel;
+    Edit6: TEdit;
+    DBGrid2: TDBGrid;
+    Panel1: TPanel;
+    DBNavigator1: TDBNavigator;
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
+    procedure Button5Click(Sender: TObject);
+    procedure Button6Click(Sender: TObject);
+    procedure Edit6KeyPress(Sender: TObject; var Key: Char);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+
+procedure TForm1.Button1Click(Sender: TObject);
+  Var bufName : string;
+      bufId   : integer;
+begin
+    DBEdit1.DataField := '';
+
+    case MessageDlg('Вы уверены, что хотите добавить запись?', mtConfirmation, [mbOK, mbCancel], 0) of
+      mrOk:
+        begin
+
+        end;
+      mrCancel:
+        begin
+          Exit;
+        end;
+    end;
+
+    ClientDataSet1.Active := false;
+    SQLQuery1.Close;
+    SQLQuery1.SQL.Clear;
+    SQLQuery1.SQL.Add('SELECT cityId FROM City WHERE cityName = "' + DBLookupComboBox1.Text + '"');
+    SQLQuery1.Open;
+    ClientDataSet1.Active := true;
+    bufName := VarToStr(SQLQuery1.FieldValues['cityId']);
+
+    ClientDataSet1.Active := false;
+    SQLQuery1.Close;
+    SQLQuery1.SQL.Clear;
+    SQLQuery1.SQL.Add('SELECT MAX(exchangeOfficeId) AS ID FROM exchangeoffice');
+    SQLQuery1.Open;
+    ClientDataSet1.Active := true;
+    bufId := SQLQuery1.FieldValues['ID'] + 1;
+
+    SQLQuery1.Close;
+    SQLQuery1.SQL.Clear;
+    SQLQuery1.SQL.Add
+      ('INSERT INTO ExchangeOffice(exchangeOfficeId, exchangeOfficeCityId, exchangeOfficeExchangeRate, '
+      +'exchangeOfficeBuy, exchangeOfficeSale) VALUES (');
+    SQLQuery1.SQL.Add(IntToStr(bufId) + ', ' + bufName + ', "' + Edit1.Text +
+      '", ' + Edit2.Text + ', ' + Edit3.Text + ')');
+    SQLQuery1.ExecSQL;
+
+    ClientDataSet1.Active := false;
+    SQLQuery1.Close;
+    SQLQuery1.SQL.Clear;
+    SQLQuery1.SQL.Add
+      ('SELECT cityName, exchangeOfficeExchangeRate, exchangeOfficeBuy, ' +
+       'exchangeOfficeSale, exchangeOfficeId FROM exchangeoffice, city WHERE exchangeOfficeCityId = CityId');
+    SQLQuery1.Open;
+    ClientDataSet1.Active := true;
+    DBEdit1.DataField := 'exchangeOfficeId';
+    ShowMessage('Запись успешно добавлена.');
+  end;
+
+procedure TForm1.Button2Click(Sender: TObject);
+  Var bufName, bufId : string;
+begin
+    case MessageDlg('Вы уверены, что хотите изменить запись?', mtConfirmation, [mbOK, mbCancel], 0) of
+      mrOk:
+        begin
+
+        end;
+      mrCancel:
+        begin
+          Exit;
+        end;
+    end;
+
+    bufId := DBEdit1.Text;
+    DBEdit1.DataField := '';
+
+    ClientDataSet1.Active := false;
+    SQLQuery1.Close;
+    SQLQuery1.SQL.Clear;
+    SQLQuery1.SQL.Add('SELECT cityId FROM City WHERE cityName = "' +
+      DBLookupComboBox1.Text + '"');
+    SQLQuery1.Open;
+    ClientDataSet1.Active := true;
+    bufName := VarToStr(SQLQuery1.FieldValues['cityId']);
+
+    SQLQuery1.Close;
+    SQLQuery1.SQL.Clear;
+    SQLQuery1.SQL.Add('UPDATE exchangeOffice Set exchangeOfficeCityId = ' +
+      bufName + ', exchangeOfficeExchangeRate = "' + Edit1.Text +
+      '", exchangeOfficeBuy = ' + Edit2.Text + ', exchangeOfficeSale = ' +
+      Edit3.Text + ' WHERE exchangeOfficeId = ' + bufId);
+    SQLQuery1.ExecSQL;
+
+    ClientDataSet1.Active := false;
+    SQLQuery1.Close;
+    SQLQuery1.SQL.Clear;
+    SQLQuery1.SQL.Add
+      ('SELECT cityName, exchangeOfficeExchangeRate, exchangeOfficeBuy, ' +
+      'exchangeOfficeSale, exchangeOfficeId FROM exchangeoffice, city WHERE exchangeOfficeCityId = CityId');
+    SQLQuery1.Open;
+    ClientDataSet1.Active := true;
+    DBEdit1.DataField := 'exchangeOfficeId';
+    ShowMessage('Запись успешно изменена.');
+  end;
+
+procedure TForm1.Button3Click(Sender: TObject);
+  Var bufName, bufId : string;
+begin
+    case MessageDlg('Вы уверены, что хотите удалить запись?', mtConfirmation, [mbOK, mbCancel], 0) of
+      mrOk:
+        begin
+
+        end;
+      mrCancel:
+        begin
+          Exit;
+        end;
+    end;
+
+    bufId := DBEdit1.Text;
+    DBEdit1.DataField := '';
+
+    SQLQuery1.Close;
+    SQLQuery1.SQL.Clear;
+    SQLQuery1.SQL.Add('DELETE FROM exchangeoffice WHERE exchangeOfficeId = ' + bufId);
+    SQLQuery1.ExecSQL;
+
+    ClientDataSet1.Active := false;
+    SQLQuery1.Close;
+    SQLQuery1.SQL.Clear;
+    SQLQuery1.SQL.Add
+      ('SELECT cityName, exchangeOfficeExchangeRate, exchangeOfficeBuy, ' +
+      'exchangeOfficeSale, exchangeOfficeId FROM exchangeoffice, city WHERE exchangeOfficeCityId = CityId');
+    SQLQuery1.Open;
+    ClientDataSet1.Active := true;
+    DBEdit1.DataField := 'exchangeOfficeId';
+    ShowMessage('Запись успешно удалена.');
+end;
+
+procedure TForm1.Button4Click(Sender: TObject);
+begin
+    DBGrid1.DataSource.DataSet.Locate('exchangeOfficeExchangeRate', VarArrayOf([edit5.Text]),
+    [loCaseInsensitive, loPartialKey]);
+end;
+
+procedure TForm1.Button5Click(Sender: TObject);
+begin
+    if VarType(SQLQuery1.Lookup('exchangeOfficeExchangeRate', Edit4.Text, 'exchangeOfficeBuy')) <> VarNull then
+      ShowMessage('Покупка: ' +
+        VarToStr(SQLQuery1.Lookup('exchangeOfficeExchangeRate', Edit4.Text,
+        'exchangeOfficeBuy')) + ', продажа: ' +
+        VarToStr(SQLQuery1.Lookup('exchangeOfficeExchangeRate', Edit4.Text,
+        'exchangeOfficeSale')))
+    else
+      ShowMessage('Нет данных');
+  end;
+
+procedure TForm1.Button6Click(Sender: TObject);
+  Var i,j,index: Integer;
+      ExcelApp,sheet: Variant;
+begin
+    ExcelApp := CreateOleObject('Excel.Application');
+    ExcelApp.Visible := false;
+    ExcelApp.WorkBooks.Add(-4167);
+    ExcelApp.WorkBooks[1].WorkSheets[1].name := 'Export';
+    sheet := ExcelApp.WorkBooks[1].WorkSheets['Export'];
+    index := 2;
+    sheet.cells[1, 1] := 'Город';
+    sheet.cells[1, 2] := 'Пункт обмена';
+    sheet.cells[1, 3] := 'Покупка';
+    sheet.cells[1, 4] := 'Продажа';
+    sheet.Columns[1].ColumnWidth := 20;
+    sheet.Columns[2].ColumnWidth := 20;
+    sheet.Columns[3].ColumnWidth := 20;
+    sheet.Columns[4].ColumnWidth := 10;
+    //sheet.Columns[5].ColumnWidth := 10;
+
+    DBGrid1.DataSource.DataSet.First;
+    for i := 1 to DBGrid1.DataSource.DataSet.RecordCount do
+    begin
+      for j := 1 to DBGrid1.FieldCount do
+        sheet.cells[index, j] := DBGrid1.fields[j - 1].asstring;
+      inc(index);
+      DBGrid1.DataSource.DataSet.Next;
+    end;
+    ExcelApp.Visible := true;
+end;
+
+procedure TForm1.Edit6KeyPress(Sender: TObject; var Key: Char);
+begin
+    ClientDataSet1.Active := false;
+    SQLQuery1.Close;
+    SQLQuery1.SQL.Clear;
+    SQLQuery1.SQL.Add
+      ('SELECT cityName, exchangeOfficeExchangeRate, exchangeOfficeBuy, ' +
+      'exchangeOfficeSale, exchangeOfficeId FROM exchangeoffice, city WHERE exchangeOfficeCityId = CityId ' +
+      'AND cityName LIKE "%' + edit6.Text + '%"');
+    SQLQuery1.Open;
+    ClientDataSet1.Active := true;
+end;
+
+end.

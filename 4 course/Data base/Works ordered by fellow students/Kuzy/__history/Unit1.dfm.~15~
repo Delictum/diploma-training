@@ -1,0 +1,632 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = #1050#1091#1088#1089#1099' '#1086#1073#1084#1077#1085#1072' '#1085#1072#1083#1080#1095#1085#1099#1093' '#1074#1072#1083#1102#1090
+  ClientHeight = 576
+  ClientWidth = 956
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 8
+    Top = 352
+    Width = 225
+    Height = 13
+    Caption = #1055#1086#1080#1089#1082' '#1087#1086#1082#1091#1087#1082#1080' '#1080' '#1087#1088#1086#1076#1072#1078#1080' '#1087#1086' '#1087#1091#1085#1082#1090#1091' '#1086#1073#1084#1077#1085#1072
+  end
+  object Label2: TLabel
+    Left = 8
+    Top = 400
+    Width = 30
+    Height = 13
+    Caption = #1055#1086#1080#1089#1082
+  end
+  object DBGrid1: TDBGrid
+    Left = 8
+    Top = 8
+    Width = 529
+    Height = 273
+    DataSource = DataSource1
+    ReadOnly = True
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'cityName'
+        Title.Caption = #1043#1086#1088#1086#1076
+        Width = 150
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'exchangeOfficeExchangeRate'
+        Title.Caption = #1055#1091#1085#1082#1090' '#1086#1073#1084#1077#1085#1072
+        Width = 200
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'exchangeOfficeBuy'
+        Title.Caption = #1055#1086#1082#1091#1087#1082#1072
+        Width = 70
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'exchangeOfficeSale'
+        Title.Caption = #1055#1088#1086#1076#1072#1078#1072
+        Width = 70
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'exchangeOfficeId'
+        Visible = False
+      end>
+  end
+  object DBLookupComboBox1: TDBLookupComboBox
+    Left = 8
+    Top = 287
+    Width = 153
+    Height = 21
+    KeyField = 'cityName'
+    ListField = 'cityName'
+    ListSource = DataSource2
+    TabOrder = 1
+  end
+  object Edit1: TEdit
+    Left = 167
+    Top = 287
+    Width = 194
+    Height = 21
+    TabOrder = 2
+  end
+  object Edit2: TEdit
+    Left = 367
+    Top = 287
+    Width = 82
+    Height = 21
+    TabOrder = 3
+  end
+  object Edit3: TEdit
+    Left = 455
+    Top = 287
+    Width = 82
+    Height = 21
+    TabOrder = 4
+  end
+  object Button1: TButton
+    Left = 136
+    Top = 314
+    Width = 89
+    Height = 25
+    Caption = #1044#1086#1073#1072#1074#1080#1090#1100
+    TabOrder = 5
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 231
+    Top = 314
+    Width = 90
+    Height = 25
+    Caption = #1056#1077#1076#1072#1082#1090#1080#1088#1086#1074#1072#1090#1100
+    TabOrder = 6
+    OnClick = Button2Click
+  end
+  object Button3: TButton
+    Left = 327
+    Top = 314
+    Width = 89
+    Height = 25
+    Caption = #1059#1076#1072#1083#1080#1090#1100
+    TabOrder = 7
+    OnClick = Button3Click
+  end
+  object DBEdit1: TDBEdit
+    Left = 72
+    Top = 640
+    Width = 33
+    Height = 21
+    DataField = 'exchangeOfficeId'
+    DataSource = DataSource1
+    TabOrder = 8
+    Visible = False
+  end
+  object Button4: TButton
+    Left = 462
+    Top = 369
+    Width = 75
+    Height = 25
+    Caption = 'Locate'
+    TabOrder = 9
+    OnClick = Button4Click
+  end
+  object Button5: TButton
+    Left = 8
+    Top = 369
+    Width = 75
+    Height = 25
+    Caption = 'Lookup'
+    TabOrder = 10
+    OnClick = Button5Click
+  end
+  object Button6: TButton
+    Left = 231
+    Top = 501
+    Width = 66
+    Height = 25
+    Caption = 'Excel'
+    TabOrder = 11
+    OnClick = Button6Click
+  end
+  object Edit4: TEdit
+    Left = 89
+    Top = 371
+    Width = 177
+    Height = 21
+    TabOrder = 12
+  end
+  object Edit5: TEdit
+    Left = 279
+    Top = 371
+    Width = 177
+    Height = 21
+    TabOrder = 13
+  end
+  object DBLookupListBox1: TDBLookupListBox
+    Left = 8
+    Top = 432
+    Width = 132
+    Height = 134
+    KeyField = 'cityName'
+    ListField = 'cityName'
+    ListSource = DataSource2
+    TabOrder = 14
+  end
+  object Edit6: TEdit
+    Left = 44
+    Top = 397
+    Width = 492
+    Height = 21
+    TabOrder = 15
+    OnKeyPress = Edit6KeyPress
+  end
+  object DBGrid2: TDBGrid
+    Left = 392
+    Top = 432
+    Width = 144
+    Height = 134
+    DataSource = DataSource2
+    TabOrder = 16
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'cityName'
+        Title.Caption = #1043#1086#1088#1086#1076
+        Width = 150
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'exchangeOfficeExchangeRate'
+        Title.Caption = #1055#1091#1085#1082#1090' '#1086#1073#1084#1077#1085#1072
+        Width = 200
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'exchangeOfficeBuy'
+        Title.Caption = #1055#1086#1082#1091#1087#1082#1072
+        Width = 70
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'exchangeOfficeSale'
+        Title.Caption = #1055#1088#1086#1076#1072#1078#1072
+        Width = 70
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'exchangeOfficeId'
+        Visible = False
+      end>
+  end
+  object Panel1: TPanel
+    Left = 272
+    Top = 352
+    Width = 1
+    Height = 42
+    Caption = 'Panel1'
+    TabOrder = 17
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 146
+    Top = 432
+    Width = 240
+    Height = 25
+    TabOrder = 18
+  end
+  object Button7: TButton
+    Left = 231
+    Top = 470
+    Width = 66
+    Height = 25
+    Caption = 'Refresh'
+    TabOrder = 19
+    OnClick = Button7Click
+  end
+  object Button8: TButton
+    Left = 231
+    Top = 532
+    Width = 66
+    Height = 25
+    Caption = 'HeaderExcel'
+    TabOrder = 20
+    OnClick = Button8Click
+  end
+  object DBChart1: TDBChart
+    Left = 543
+    Top = 8
+    Width = 400
+    Height = 273
+    Title.Text.Strings = (
+      'Sale')
+    Chart3DPercent = 67
+    Legend.Alignment = laBottom
+    Legend.Title.Alignment = taCenter
+    View3DOptions.Elevation = 315
+    View3DOptions.Orthogonal = False
+    View3DOptions.Perspective = 0
+    View3DOptions.Rotation = 360
+    Zoom.Animated = True
+    TabOrder = 21
+    DefaultCanvas = 'TGDIPlusCanvas'
+    PrintMargins = (
+      15
+      19
+      15
+      19)
+    ColorPaletteIndex = 7
+    object Series1: TPieSeries
+      DataSource = SQLQuery3
+      XValues.Order = loAscending
+      YValues.Name = 'Pie'
+      YValues.Order = loNone
+      YValues.ValueSource = 'exchangeOfficeSale'
+      Frame.InnerBrush.BackColor = clRed
+      Frame.InnerBrush.Gradient.EndColor = clGray
+      Frame.InnerBrush.Gradient.MidColor = clWhite
+      Frame.InnerBrush.Gradient.StartColor = 4210752
+      Frame.InnerBrush.Gradient.Visible = True
+      Frame.MiddleBrush.BackColor = clYellow
+      Frame.MiddleBrush.Gradient.EndColor = 8553090
+      Frame.MiddleBrush.Gradient.MidColor = clWhite
+      Frame.MiddleBrush.Gradient.StartColor = clGray
+      Frame.MiddleBrush.Gradient.Visible = True
+      Frame.OuterBrush.BackColor = clGreen
+      Frame.OuterBrush.Gradient.EndColor = 4210752
+      Frame.OuterBrush.Gradient.MidColor = clWhite
+      Frame.OuterBrush.Gradient.StartColor = clSilver
+      Frame.OuterBrush.Gradient.Visible = True
+      Frame.Width = 4
+      Bevel.Bright = 43
+      Gradient.Balance = 74
+      Gradient.Direction = gdFromCenter
+      Gradient.EndColor = clBlack
+      Gradient.MidColor = 16744576
+      Gradient.StartColor = clBlack
+      OtherSlice.Legend.Title.Cursor = crDrag
+      OtherSlice.Legend.Title.Text.Strings = (
+        #1055#1086#1082#1091#1087#1082#1072'-'#1087#1088#1086#1076#1072#1078#1072)
+      OtherSlice.Legend.Visible = False
+      PieMarks.InsideSlice = True
+      PieMarks.Rotated = True
+      UsePatterns = True
+    end
+  end
+  object DBChart2: TDBChart
+    Left = 543
+    Top = 287
+    Width = 400
+    Height = 279
+    Foot.Font.Height = -4
+    Gradient.EndColor = 8388672
+    Gradient.Visible = True
+    LeftWall.Color = 4194368
+    Title.Font.Color = clWhite
+    Title.Frame.Style = psDashDot
+    Title.Frame.Width = 0
+    Title.Frame.Fill.Gradient.Visible = True
+    Title.Text.Strings = (
+      'Buy : Sale')
+    BottomAxis.Visible = False
+    Legend.Alignment = laTop
+    Legend.Brush.Style = bsHorizontal
+    Legend.DividingLines.Visible = True
+    Legend.Inverted = True
+    Legend.Picture.Data = {
+      07544269746D6170360C0000424D360C00000000000036000000280000002000
+      0000200000000100180000000000000C00000000000000000000000000000000
+      0000EEC973EECE7CEDCE7DEBCD75EECE7DEFD388EED58CEED490F1D794F3D997
+      F4DA98F2D795EFD58FF1D691F2D692F1D491F1D592EFD894EDD692F1D896F2D7
+      99F3DA9CF3D99EF0D694EDD182EECE76EDCA71EDCC75EFCF7EEECF7DEECC76EE
+      CB71EDCE7DF1D68FEFD48DECCF7AF0CD79F1CF81ECD186F4DA98F4DFAAF7E5B8
+      F6E1ADF5DD9FF7DB9FF6DB9BF5DC9BF3DA9CF5DBA1F7DEA6F6DFABF4E1AAF8E2
+      ABF3DDA6F5DEACF5DFA9F3D894EDD285EED184ECD287F2D996F0D894F0D083ED
+      CE7AEECE7EF1D58FEED58DEDD184EFCF78F0CD74EDCE7EF0D693F7E3B0F7E6BC
+      F6E1B0F6DFA1F8DCA1F4D998F1D896F6DC9EF8DDA4F7DDA8F6E4B7F6E6BBF6E5
+      B3F4E0AAF5DFADF4DFA8F2D896EED388EFD58CF2D895F5DE9FF0D894EECE81EE
+      CD7EEFD082F1D48AF0D58BEDD082EBCD76ECCA71F1D388F3DA98F6DFA7F9E3AC
+      F9E0AAF6DE9FF2D795F2D794F4DA9CF8DDA6F5DCA1F6DC9FF8E5B3F7E7BCF6E5
+      B9F7E7B4F6E1AEF7DEA5F2D795F0D385F0D389F5DB99F5DDA2F3D997F0D083ED
+      CD7CEFD289EDCE81EECF81EECF7DEDCE74EECD71EBD182F1DA97F7DFA8F5E0A8
+      F7E0ACF1DCA1F4DB99EFD692F5DDA6F7E0B0F3DDA3F4DA99F4E0AAF7E7B8F8E8
+      B9F4E6B5F5E3B4F5DFA9F4DA9AF1D38AEFD081EED28AF1D898F1D794EED389EF
+      D288EED68DEFD080EDCE7CF0CE7CEDC96BEFC868F0CF7FF3DA97F6DDA7F3DEA5
+      F5E1ADF8E4B2F7DFAAF5DDA7F8DFAAF7DEA8F4DD9CF3DA98F6E2ABF7E7B6F5E4
+      B2F5E2AEF5DEA9F5DB9FF2D795F2D58BEFCF7AEED282F0D892F3DB97EDD790EF
+      D593EDD58AEFCF7EEFCD75F0CA74EBC55EEBC561EDCC78EFD28AF6DA9DF4DB9D
+      F6E0A8F9E6B8F5E5B8F6E6BBF7E6B4F5E0ABF6DEA6F8DFA6F6E0A8F7E2ABF6DE
+      A8F5DDA4F3DC9DF1D796EFD591EDD48AF1CD7AEDCD7AF1D792F4DA9DF0D895F1
+      D694F0D07EEEC768EDC15BEBC057E7BE52EAC159EFC668EDCD78F0D288F1D68F
+      F6DEA2F7E3B1F7E8BDF7E7BFF4E6B8F6E6B7F7E4B3F8E0ADF4DC9CF4DB98F5DE
+      A2F6E0A7F3DB9FF6DB9CF7DEA0F0D794EFD185EED384F2D792F7DDA3F5DC9DF1
+      D792EECA6DE9BE4DE5B63DE7BB47E8BC4FE8BE54ECC35EF1C969EECA71F1D080
+      F5D794F5DFA6F7E5B9F5E6B9F5E9BFF7E6BDF4E0ABF6DEA7F4DA9CEFD891F1D8
+      96F5DC9BF4DB9DF4DCA4F7DDA1F2DA97F1D897F0D794EFD792F3DDA3F3DDA0EF
+      D591F0C662E8BA47E5B83EE5BC47E7BE50EEC15BEDC461EEC566EFCC71EECD78
+      EFD185F5DCA0F7E5B5F7E8BDF8E8C1F8E6B6F6E0AAF4DDA2F1D896F1D691F0D6
+      8FEED38CF2D796F5DCA0F4DB9EF6DC9FF8DEA6F4DCA0F3DB9CF7DFACF6DDA8EF
+      D38BEFC562E7BE51E8BD4DE8BD50ECC159EEC35EEFC765EEC867F0CD72F2CF7B
+      F0CF82F3D995F7E3AFF6E8BFF6E5BCF6E0A8F7DDA4F4DB9EF1D795F1D691EFD5
+      8BEFD58BF1D691F4D898F6DCA2F8E0A9F6DEADF5DEA7F4DDA1F7E0A8F5DDA4F1
+      D487EDC769EDC55EE9BE57E7BD53E8BF53EAC057ECC45EEDC869EECC71EDCC74
+      EED07EF5DC99F7E0ABF7E7BBF5E2AFF3D99AF5DB9DF6DB9CF3D996F2D793F1D8
+      90F0D78EF0D690F1D695F6DEA7F5E7BEF6E6BCF7E2AFF8DFA6F4DEA8F6DFA8F0
+      D58EEDCF7AEFC96BF0C567EAC25BE7BF51E9BD52EBC25AF1CB70F0CE74ECCE75
+      EFD388F6DCA6F8E2ACF8E4B3F5DD9FF0D590F1D998F2D896F0D68FF1D594F2D7
+      93F0D590F2D695F6DB9EF4DEAAF6E6B9F5E9BEF5E1B2F8DFAAF5E3B0F5E0ACF0
+      D899EED486EFCF7CEECB73EEC86AECC25AECC35BEEC766EFCC75F1D185EFD48D
+      F4DA98F7DEA5F6E1ACF7E1ABF4D795EDD589EED68FF1D48DEFD183F0D286F1D3
+      88F2D58DF2D79AF4DEAAF7E2ADF4E2B0F5E4B7F7E5B6F8E5B6F7E7BAF7E0ACF6
+      DC9BF3DA9AF1D797F1D694F0D187EFCE79ECC96EEEC96FEFCE7CF1D58DF5DB9C
+      F6DDA1F3DFA4F8E0A9F7DEA6F2D693EDD384F0D384F0D07EECCB72EDCD74EECD
+      78EFCF7EF2D48DF3D99CF6DFA7F7E2ADF8E2ADF7E3B1FAE7BAF6E7B9F7E0ACFA
+      DEA1F5E0ADF4E1B1F6E1ADF4DA9BF2D591EDD181EFCD7AEECE7EEFCE7FF1D58E
+      F6DC9DF2DDA4F5DDA0F4DA9AEFD38DEED080F0CE76EEC970ECC970EECD78F1CB
+      73EFC869F0CE79F0D58BF2D99AF4DDA5F6DEA7F4DDA6F7E2ADF8E4B1F7E1ADF5
+      DDA5F6E6B4F8E7BFF7E6B9F4E0A7F5DBA1F2D896EDD083EECE79F0CC72ECCC79
+      EED284EED790F1D896F2D691F0D187EFCC79EEC769EBC25FEDC767EFCB6EEFC7
+      6DEDC562EDC86BEECF80EFD690F3DA9BF4DA9CF3DA9CF5DEA4F7DEA7F7DEA7F5
+      DDA7F4E3B0F6E7C3F8E9C2F4E5B4F7E3B0F5DDA5EFD58DEFCB73EEC665EFCC72
+      EFCE7CF2D68EEED38BEFD286F0CE78ECC765E9C155EABE53EBC158EDC25DEFC5
+      66F0C663EDC565F0CD79F0D488F0D48CEFD38AF0D693F4DCA2F9DFA6F5DBA0F5
+      DBA5F8E3B3F7EACAFAECCBF6E6BDF7E5B4F5DDA6F2D792F0D184EECA72EECA6D
+      EFCB71EECC79F0D080EFCF7AEDC463EABF55E8BD4DEABD50E6BB47E9BD4FECC1
+      5AEFC563EEC669EECB75EED081EED082EFD184F2D797F9E1AEF5DDA3F4DA9BF5
+      DB9FF8E7BEF9F1D7FBEED3F7E4BBF8E0ADF8E2AEF3DA98EFD690ECD58EEFD384
+      EECD7AECC869EDC669ECC664E8BD4DE7B945E9B944E7B944E7BB42E9BD4BE8BE
+      54EDC45FEDC666EECB71EECD7AEFD388EFD791F5DC9FF7DEAAF3DBA1F4D99BF6
+      DCA2F4E9BDFBEED1F9EBC9F6E5B7F8E2ABF9DFA6F6DD9FF3D898F7DDA5F8DC9E
+      EED083EEC666EBC159EBBE52E8B63BEAB632E8B536E9B942E7BB4BE6BA47EBBF
+      52EEC25CEFC767EECC76F0D17EF1D68EEFD893F4DA9BF5DBA1F5DCA3F1DA99F4
+      DCA8F6E3B0F5E4B3F9E7BCF8E6B8F6E3AFF2D89DF6DCA2F7DDA8F7E2AFF3DA9D
+      EDCF82EEC565EBC159E6BB49E7B433E8B22FE6B73DE7BC4BE7BB4BE6B946E9BD
+      50EDC35DEFC96CEFD07EF0D58CF3D894F2D68FF0D38AF2D58EF6DC9DF4DDA4F7
+      DEA8F4DEA0F4DEA5F8E4B4F8E6B7F4E1AEF6DFA8F6E0ABF6E3B0F8E5B6F2DDA3
+      EFD389EFC769EBC259E6BA47E7B434E7B12EE7B943E6BD50E4BB4BE6BC47E7BD
+      4FECC25BEBC465F0CF7BF0D68FF2D896EFD185EBCC7AEECF7EF0D790F1DAA2F7
+      DDA3F3D999F5DFA9F7E3B5F8E6BBF7E7BEF8EBC7F6E8BEF5E3B0F6E0AFF3DEA2
+      F0D48BEFCA70EAC359E8BD49E6B940E8B63DE7BB4CE4BC4CE3BC48E6B941E7BB
+      46EABF51ECC35EEFC76BEECF7CF0D389F0CF81EDCC76EECB6FEFCD77F2D388F1
+      D693F5D89BF7E2AFF8E5BAF7E7C1F9EDCFF9EED2F8E8C0F8E2B1F7DFAAF0D897
+      EFD489F0CF78EFC86AEDC25CE6BB4DE9BE50EAC15CEABF57E9BF53E9BE50E4BC
+      4BE5BD4FEDC35DF1C661F0CA6CEFCB75EFCB72F0CD74F1CC72F0CB70EECD77EE
+      D286F1D68FF5DFA9F9E9C1F5EBC5FAF0D4F8EFD1F7E8BDF5E0ABF2DA9FEFD693
+      EFD488EED07AEDCE79EFCB75ECC35DECC25BEEC561EEC667EEC361EDC55EE7BF
+      52E6BD4FE9C157EAC258ECC35EEDC460EDC668F0CD74EFCD77EEC76BEFC668F0
+      CC77EED07FF1D897F6E2AEF9EAC5F9F1D4FAF1D4F8E8BEF5DFA4F0D795F1D58C
+      F0D083EED07FEDD07FEECE78EFCA70EEC566F0C563EEC668F0C564EDC461EAC1
+      57E7BD51E9C157E7BE54E7BD51E7BD51E9C058EBC460EAC663EBC157E9BE52ED
+      C565ECC96EF0D489F3DA9BF7E2B7F4EBC7FBF2D6F6E4B6F2DA9BF2D794F0D38D
+      EFD083F0CE78F0CF7EEFCD79F0CC72F0CA6DEAC056E9BC4DE8BE4FEABF57EEC4
+      5DEAC058EDC258ECC157E7BC4EE8BD52E9BD52E7BD4FE6BD4EE7B843E5B944E9
+      C257EDC96CF0D387F2D895F4DDA4F7E6BAF9EDCBF7E5B6F3D99DF1D692F0D58B
+      F3D68AEDCF7DEFCF7EECD287F0CD7CEDC763E7BE4DE8B945E8BA42E8BC4FEBC3
+      59EDC55DEBC25BEBC25BE9BF59EDC35CE7BD54E7BB4BE6BA42E4B639E6BA43EA
+      C359EDC86CEFD284F0D68DEFD890F8E1AFF7E6BFF7E3B3F5DCA2EFD48DEDD181
+      EED184ECD286F0D790F1D58BEECA6FEBC459E9BF55E5BC4FE5BA46E7BC4DE8C0
+      54EDC55DECC461F0C866F0C569EEC461EDC35EEBBE4EE7B73CE7B940E9BD50EB
+      C35DF1C86DEECC78ECCF7DECD285F3DB9DF7E0ACF3DCA1F1D898EED187EDCE79
+      EECE7AF1D386EFD68EF1D285EECA6FEAC561ECC563EBC35BEBC055E9C053E8BE
+      55EAC460ECCA6BF0CC72EEC567EDC35BEFC562ECC055E7B946E9BD4CECC25AED
+      C460F0C567F1C86CF2CE74F0CF82EED284F2D48DEFD58EEED48BEFD083F1D180
+      EED284EFD48DEED68AEFD084F0CF7DEECF77F0D080EED07DEECD78EECD71EDCC
+      72EFCE7BEFD183EDCD82F2C96DEEC35FEDC35CEAC15AECC25CEEC360EFC362ED
+      C362}
+    Zoom.AnimatedSteps = 7
+    TabOrder = 22
+    DefaultCanvas = 'TGDIPlusCanvas'
+    PrintMargins = (
+      15
+      18
+      15
+      18)
+    ColorPaletteIndex = 1
+    object Series2: TBarSeries
+      BarPen.Color = 16751001
+      ColorEachPoint = True
+      Marks.Visible = False
+      DataSource = SQLQuery3
+      XLabelsSource = 'exchangeOfficeExchangeRate'
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      XValues.ValueSource = 'exchangeOfficeBuy'
+      YValues.Name = 'Bar'
+      YValues.Order = loNone
+      YValues.ValueSource = 'exchangeOfficeSale'
+    end
+  end
+  object SQLConnection1: TSQLConnection
+    ConnectionName = 'MySQLConnection'
+    DriverName = 'MySQL'
+    LoginPrompt = False
+    Params.Strings = (
+      'DriverUnit=Data.DBXMySQL'
+      
+        'DriverPackageLoader=TDBXDynalinkDriverLoader,DbxCommonDriver250.' +
+        'bpl'
+      
+        'DriverAssemblyLoader=Borland.Data.TDBXDynalinkDriverLoader,Borla' +
+        'nd.Data.DbxCommonDriver,Version=24.0.0.0,Culture=neutral,PublicK' +
+        'eyToken=91d62ebb5b0d1b1b'
+      
+        'MetaDataPackageLoader=TDBXMySqlMetaDataCommandFactory,DbxMySQLDr' +
+        'iver250.bpl'
+      
+        'MetaDataAssemblyLoader=Borland.Data.TDBXMySqlMetaDataCommandFact' +
+        'ory,Borland.Data.DbxMySQLDriver,Version=24.0.0.0,Culture=neutral' +
+        ',PublicKeyToken=91d62ebb5b0d1b1b'
+      'GetDriverFunc=getSQLDriverMYSQL'
+      'LibraryName=dbxmys.dll'
+      'LibraryNameOsx=libsqlmys.dylib'
+      'VendorLib=LIBMYSQL.dll'
+      'VendorLibWin64=libmysql.dll'
+      'VendorLibOsx=libmysqlclient.dylib'
+      'MaxBlobSize=-1'
+      'DriverName=MySQL'
+      'HostName=127.0.0.1'
+      'Database=exchangerate'
+      'User_Name=mysql'
+      'Password=mysql'
+      'ServerCharSet=cp1251'
+      'BlobSize=-1'
+      'ErrorResourceFile='
+      'LocaleCode=0000'
+      'Compressed=False'
+      'Encrypted=False'
+      'ConnectTimeout=60')
+    Connected = True
+    Left = 72
+    Top = 584
+  end
+  object SQLQuery2: TSQLQuery
+    Active = True
+    MaxBlobSize = -1
+    Params = <>
+    SQL.Strings = (
+      'SELECT cityName  FROM city')
+    SQLConnection = SQLConnection1
+    Left = 168
+    Top = 632
+  end
+  object DataSetProvider2: TDataSetProvider
+    DataSet = SQLQuery2
+    Left = 256
+    Top = 632
+  end
+  object ClientDataSet2: TClientDataSet
+    Active = True
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DataSetProvider2'
+    Left = 344
+    Top = 632
+  end
+  object DataSource2: TDataSource
+    DataSet = ClientDataSet2
+    Left = 424
+    Top = 632
+  end
+  object OpenDialog1: TOpenDialog
+    Left = 488
+    Top = 632
+  end
+  object SQLQuery1: TSQLQuery
+    Active = True
+    MaxBlobSize = -1
+    Params = <>
+    SQL.Strings = (
+      
+        'SELECT exchangeOfficeId, cityName, exchangeOfficeExchangeRate, e' +
+        'xchangeOfficeBuy, '
+      
+        'exchangeOfficeSale  FROM exchangeoffice, city WHERE exchangeOffi' +
+        'ceCityId = CityId')
+    SQLConnection = SQLConnection1
+    Left = 168
+    Top = 584
+  end
+  object ClientDataSet1: TClientDataSet
+    Active = True
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DataSetProvider1'
+    Left = 344
+    Top = 584
+  end
+  object DataSetProvider1: TDataSetProvider
+    DataSet = SQLQuery1
+    Left = 256
+    Top = 584
+  end
+  object DataSource1: TDataSource
+    DataSet = ClientDataSet1
+    OnDataChange = DataSource1DataChange
+    Left = 424
+    Top = 584
+  end
+  object SQLQuery3: TSQLQuery
+    Active = True
+    MaxBlobSize = -1
+    Params = <>
+    SQL.Strings = (
+      
+        'SELECT exchangeOfficeId, cityName, exchangeOfficeExchangeRate, e' +
+        'xchangeOfficeBuy, '
+      
+        'exchangeOfficeSale  FROM exchangeoffice, city WHERE exchangeOffi' +
+        'ceCityId = CityId')
+    SQLConnection = SQLConnection1
+    Left = 600
+    Top = 584
+  end
+  object DataSetProvider3: TDataSetProvider
+    DataSet = SQLQuery3
+    Left = 688
+    Top = 584
+  end
+  object ClientDataSet3: TClientDataSet
+    Active = True
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DataSetProvider1'
+    Left = 776
+    Top = 584
+  end
+  object DataSource3: TDataSource
+    DataSet = ClientDataSet3
+    OnDataChange = DataSource1DataChange
+    Left = 856
+    Top = 584
+  end
+end
