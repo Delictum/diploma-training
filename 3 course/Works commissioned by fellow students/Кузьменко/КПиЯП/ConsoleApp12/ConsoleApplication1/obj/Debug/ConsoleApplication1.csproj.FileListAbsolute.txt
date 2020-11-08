@@ -1,0 +1,17 @@
+E:\КПиЯП\ЛР\Олишкевич Игорь ЛР 12\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+E:\КПиЯП\ЛР\Олишкевич Игорь ЛР 12\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+E:\КПиЯП\ЛР\Олишкевич Игорь ЛР 12\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+E:\КПиЯП\ЛР\Олишкевич Игорь ЛР 12\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+E:\КПиЯП\ЛР\Олишкевич Игорь ЛР 12\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+I:\КПиЯП\ЛР\Олишкевич Игорь ЛР 12\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+I:\КПиЯП\ЛР\Олишкевич Игорь ЛР 12\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+I:\КПиЯП\ЛР\Олишкевич Игорь ЛР 12\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+I:\КПиЯП\ЛР\Олишкевич Игорь ЛР 12\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+I:\КПиЯП\ЛР\Олишкевич Игорь ЛР 12\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+I:\КПиЯП\ЛР\Олишкевич Игорь ЛР 12\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+I:\Лабы\Кузьменко\КПиЯП\ConsoleApp12\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+I:\Лабы\Кузьменко\КПиЯП\ConsoleApp12\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+I:\Лабы\Кузьменко\КПиЯП\ConsoleApp12\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+I:\Лабы\Кузьменко\КПиЯП\ConsoleApp12\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+I:\Лабы\Кузьменко\КПиЯП\ConsoleApp12\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+I:\Лабы\Кузьменко\КПиЯП\ConsoleApp12\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb

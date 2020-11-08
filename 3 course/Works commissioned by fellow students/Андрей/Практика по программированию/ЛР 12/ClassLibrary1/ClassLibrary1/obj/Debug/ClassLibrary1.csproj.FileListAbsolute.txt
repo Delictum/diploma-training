@@ -1,0 +1,5 @@
+I:\Лабы\Андрей\Практика по программированию\ЛР 12\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+I:\Лабы\Андрей\Практика по программированию\ЛР 12\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+I:\Лабы\Андрей\Практика по программированию\ЛР 12\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.csprojResolveAssemblyReference.cache
+I:\Лабы\Андрей\Практика по программированию\ЛР 12\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+I:\Лабы\Андрей\Практика по программированию\ЛР 12\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.pdb

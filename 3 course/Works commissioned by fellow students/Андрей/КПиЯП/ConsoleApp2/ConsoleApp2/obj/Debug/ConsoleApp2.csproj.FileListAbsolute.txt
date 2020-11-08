@@ -1,0 +1,6 @@
+I:\Лабы\Андрей\КПиЯП\ConsoleApp2\ConsoleApp2\bin\Debug\ConsoleApp2.exe.config
+I:\Лабы\Андрей\КПиЯП\ConsoleApp2\ConsoleApp2\bin\Debug\ConsoleApp2.exe
+I:\Лабы\Андрей\КПиЯП\ConsoleApp2\ConsoleApp2\bin\Debug\ConsoleApp2.pdb
+I:\Лабы\Андрей\КПиЯП\ConsoleApp2\ConsoleApp2\obj\Debug\ConsoleApp2.csprojResolveAssemblyReference.cache
+I:\Лабы\Андрей\КПиЯП\ConsoleApp2\ConsoleApp2\obj\Debug\ConsoleApp2.exe
+I:\Лабы\Андрей\КПиЯП\ConsoleApp2\ConsoleApp2\obj\Debug\ConsoleApp2.pdb

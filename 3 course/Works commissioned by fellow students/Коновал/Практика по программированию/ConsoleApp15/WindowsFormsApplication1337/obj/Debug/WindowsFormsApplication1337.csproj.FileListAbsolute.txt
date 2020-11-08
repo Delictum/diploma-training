@@ -1,0 +1,54 @@
+E:\practica\WindowsFormsApplication1337\WindowsFormsApplication1337\bin\Debug\WindowsFormsApplication1337.exe.config
+E:\practica\WindowsFormsApplication1337\WindowsFormsApplication1337\obj\Debug\WindowsFormsApplication1337.Form1.resources
+E:\practica\WindowsFormsApplication1337\WindowsFormsApplication1337\obj\Debug\WindowsFormsApplication1337.Properties.Resources.resources
+E:\practica\WindowsFormsApplication1337\WindowsFormsApplication1337\obj\Debug\WindowsFormsApplication1337.csproj.GenerateResource.Cache
+E:\practica\WindowsFormsApplication1337\WindowsFormsApplication1337\bin\Debug\WindowsFormsApplication1337.exe
+E:\practica\WindowsFormsApplication1337\WindowsFormsApplication1337\bin\Debug\WindowsFormsApplication1337.pdb
+E:\practica\WindowsFormsApplication1337\WindowsFormsApplication1337\obj\Debug\WindowsFormsApplication1337.exe
+E:\practica\WindowsFormsApplication1337\WindowsFormsApplication1337\obj\Debug\WindowsFormsApplication1337.pdb
+E:\practica\WindowsFormsApplication1337\WindowsFormsApplication1337\obj\Debug\WindowsFormsApplication1337.csprojResolveAssemblyReference.cache
+E:\practica\трусов задание 15\WindowsFormsApplication1337\bin\Debug\WindowsFormsApplication1337.exe.config
+E:\practica\трусов задание 15\WindowsFormsApplication1337\obj\Debug\WindowsFormsApplication1337.exe
+E:\practica\трусов задание 15\WindowsFormsApplication1337\obj\Debug\WindowsFormsApplication1337.pdb
+E:\practica\трусов задание 15\WindowsFormsApplication1337\obj\Debug\WindowsFormsApplication1337.csprojResolveAssemblyReference.cache
+E:\practica\трусов задание 15\WindowsFormsApplication1337\obj\Debug\WindowsFormsApplication1337.Form1.resources
+E:\practica\трусов задание 15\WindowsFormsApplication1337\obj\Debug\WindowsFormsApplication1337.Properties.Resources.resources
+E:\practica\трусов задание 15\WindowsFormsApplication1337\obj\Debug\WindowsFormsApplication1337.csproj.GenerateResource.Cache
+E:\practica\трусов задание 15\WindowsFormsApplication1337\bin\Debug\WindowsFormsApplication1337.exe
+E:\practica\трусов задание 15\WindowsFormsApplication1337\bin\Debug\WindowsFormsApplication1337.pdb
+F:\Практика по программированию\Исполнение\ЛР 13\WindowsFormsApplication1337\bin\Debug\WindowsFormsApplication1337.exe.config
+F:\Практика по программированию\Исполнение\ЛР 13\WindowsFormsApplication1337\obj\Debug\WindowsFormsApplication1337.exe
+F:\Практика по программированию\Исполнение\ЛР 13\WindowsFormsApplication1337\obj\Debug\WindowsFormsApplication1337.pdb
+F:\Практика по программированию\Исполнение\ЛР 13\WindowsFormsApplication1337\bin\Debug\WindowsFormsApplication1337.exe
+F:\Практика по программированию\Исполнение\ЛР 13\WindowsFormsApplication1337\bin\Debug\WindowsFormsApplication1337.pdb
+F:\Практика по программированию\Исполнение\ЛР 13\WindowsFormsApplication1337\obj\Debug\WindowsFormsApplication1337.csprojResolveAssemblyReference.cache
+F:\Практика по программированию\Исполнение\ЛР 13\WindowsFormsApplication1337\obj\Debug\WindowsFormsApplication1337.Form1.resources
+F:\Практика по программированию\Исполнение\ЛР 13\WindowsFormsApplication1337\obj\Debug\WindowsFormsApplication1337.Properties.Resources.resources
+F:\Практика по программированию\Исполнение\ЛР 13\WindowsFormsApplication1337\obj\Debug\WindowsFormsApplication1337.csproj.GenerateResource.Cache
+E:\Практика по программированию\Исполнение\ЛР 13\WindowsFormsApplication1337\bin\Debug\WindowsFormsApplication1337.exe.config
+E:\Практика по программированию\Исполнение\ЛР 13\WindowsFormsApplication1337\obj\Debug\WindowsFormsApplication1337.exe
+E:\Практика по программированию\Исполнение\ЛР 13\WindowsFormsApplication1337\obj\Debug\WindowsFormsApplication1337.pdb
+E:\Практика по программированию\Исполнение\ЛР 13\WindowsFormsApplication1337\obj\Debug\WindowsFormsApplication1337.csprojResolveAssemblyReference.cache
+E:\Практика по программированию\Исполнение\ЛР 13\WindowsFormsApplication1337\obj\Debug\WindowsFormsApplication1337.Form1.resources
+E:\Практика по программированию\Исполнение\ЛР 13\WindowsFormsApplication1337\obj\Debug\WindowsFormsApplication1337.Properties.Resources.resources
+E:\Практика по программированию\Исполнение\ЛР 13\WindowsFormsApplication1337\obj\Debug\WindowsFormsApplication1337.csproj.GenerateResource.Cache
+E:\Практика по программированию\Исполнение\ЛР 13\WindowsFormsApplication1337\bin\Debug\WindowsFormsApplication1337.exe
+E:\Практика по программированию\Исполнение\ЛР 13\WindowsFormsApplication1337\bin\Debug\WindowsFormsApplication1337.pdb
+I:\Лабы\Андрей\Практика по программированию\ЛР 13\WindowsFormsApplication1337\bin\Debug\WindowsFormsApplication1337.exe.config
+I:\Лабы\Андрей\Практика по программированию\ЛР 13\WindowsFormsApplication1337\bin\Debug\WindowsFormsApplication1337.exe
+I:\Лабы\Андрей\Практика по программированию\ЛР 13\WindowsFormsApplication1337\bin\Debug\WindowsFormsApplication1337.pdb
+I:\Лабы\Андрей\Практика по программированию\ЛР 13\WindowsFormsApplication1337\obj\Debug\WindowsFormsApplication1337.csprojResolveAssemblyReference.cache
+I:\Лабы\Андрей\Практика по программированию\ЛР 13\WindowsFormsApplication1337\obj\Debug\WindowsFormsApplication1337.Form1.resources
+I:\Лабы\Андрей\Практика по программированию\ЛР 13\WindowsFormsApplication1337\obj\Debug\WindowsFormsApplication1337.Properties.Resources.resources
+I:\Лабы\Андрей\Практика по программированию\ЛР 13\WindowsFormsApplication1337\obj\Debug\WindowsFormsApplication1337.csproj.GenerateResource.Cache
+I:\Лабы\Андрей\Практика по программированию\ЛР 13\WindowsFormsApplication1337\obj\Debug\WindowsFormsApplication1337.exe
+I:\Лабы\Андрей\Практика по программированию\ЛР 13\WindowsFormsApplication1337\obj\Debug\WindowsFormsApplication1337.pdb
+I:\Лабы\Коновал\Практика по программированию\ConsoleApp15\WindowsFormsApplication1337\bin\Debug\WindowsFormsApplication1337.exe.config
+I:\Лабы\Коновал\Практика по программированию\ConsoleApp15\WindowsFormsApplication1337\bin\Debug\WindowsFormsApplication1337.exe
+I:\Лабы\Коновал\Практика по программированию\ConsoleApp15\WindowsFormsApplication1337\bin\Debug\WindowsFormsApplication1337.pdb
+I:\Лабы\Коновал\Практика по программированию\ConsoleApp15\WindowsFormsApplication1337\obj\Debug\WindowsFormsApplication1337.csprojResolveAssemblyReference.cache
+I:\Лабы\Коновал\Практика по программированию\ConsoleApp15\WindowsFormsApplication1337\obj\Debug\WindowsFormsApplication1337.Form1.resources
+I:\Лабы\Коновал\Практика по программированию\ConsoleApp15\WindowsFormsApplication1337\obj\Debug\WindowsFormsApplication1337.Properties.Resources.resources
+I:\Лабы\Коновал\Практика по программированию\ConsoleApp15\WindowsFormsApplication1337\obj\Debug\WindowsFormsApplication1337.csproj.GenerateResource.Cache
+I:\Лабы\Коновал\Практика по программированию\ConsoleApp15\WindowsFormsApplication1337\obj\Debug\WindowsFormsApplication1337.exe
+I:\Лабы\Коновал\Практика по программированию\ConsoleApp15\WindowsFormsApplication1337\obj\Debug\WindowsFormsApplication1337.pdb

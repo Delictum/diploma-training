@@ -1,0 +1,18 @@
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp18\ConsoleApp18\bin\Debug\ConsoleApp18.exe.config
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp18\ConsoleApp18\bin\Debug\ConsoleApp18.exe
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp18\ConsoleApp18\bin\Debug\ConsoleApp18.pdb
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp18\ConsoleApp18\obj\Debug\ConsoleApp18.csprojResolveAssemblyReference.cache
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp18\ConsoleApp18\obj\Debug\ConsoleApp18.exe
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp18\ConsoleApp18\obj\Debug\ConsoleApp18.pdb
+E:\КПиЯП\ЛР\Олишкевич Игорь ЛР 10\ConsoleApp19\ConsoleApp18\bin\Debug\ConsoleApp18.exe.config
+E:\КПиЯП\ЛР\Олишкевич Игорь ЛР 10\ConsoleApp19\ConsoleApp18\obj\Debug\ConsoleApp18.exe
+E:\КПиЯП\ЛР\Олишкевич Игорь ЛР 10\ConsoleApp19\ConsoleApp18\obj\Debug\ConsoleApp18.pdb
+E:\КПиЯП\ЛР\Олишкевич Игорь ЛР 10\ConsoleApp19\ConsoleApp18\bin\Debug\ConsoleApp18.exe
+E:\КПиЯП\ЛР\Олишкевич Игорь ЛР 10\ConsoleApp19\ConsoleApp18\bin\Debug\ConsoleApp18.pdb
+E:\КПиЯП\ЛР\Олишкевич Игорь ЛР 10\ConsoleApp19\ConsoleApp18\obj\Debug\ConsoleApp18.csprojResolveAssemblyReference.cache
+I:\Ванька\ConsoleApp10\ConsoleApp18\bin\Debug\ConsoleApp18.exe.config
+I:\Ванька\ConsoleApp10\ConsoleApp18\bin\Debug\ConsoleApp18.exe
+I:\Ванька\ConsoleApp10\ConsoleApp18\bin\Debug\ConsoleApp18.pdb
+I:\Ванька\ConsoleApp10\ConsoleApp18\obj\Debug\ConsoleApp18.csprojResolveAssemblyReference.cache
+I:\Ванька\ConsoleApp10\ConsoleApp18\obj\Debug\ConsoleApp18.exe
+I:\Ванька\ConsoleApp10\ConsoleApp18\obj\Debug\ConsoleApp18.pdb

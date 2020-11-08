@@ -1,0 +1,21 @@
+d:\documents\visual studio 2015\Projects\ConsoleApplication35\ConsoleApplication35\bin\Debug\ConsoleApplication35.exe.config
+d:\documents\visual studio 2015\Projects\ConsoleApplication35\ConsoleApplication35\obj\Debug\ConsoleApplication35.csprojResolveAssemblyReference.cache
+d:\documents\visual studio 2015\Projects\ConsoleApplication35\ConsoleApplication35\bin\Debug\ConsoleApplication35.exe
+d:\documents\visual studio 2015\Projects\ConsoleApplication35\ConsoleApplication35\bin\Debug\ConsoleApplication35.pdb
+d:\documents\visual studio 2015\Projects\ConsoleApplication35\ConsoleApplication35\obj\Debug\ConsoleApplication35.exe
+d:\documents\visual studio 2015\Projects\ConsoleApplication35\ConsoleApplication35\obj\Debug\ConsoleApplication35.pdb
+C:\Users\User\Desktop\Практика\Колковский 11з\ConsoleApplication35\ConsoleApplication35\bin\Debug\ConsoleApplication35.exe.config
+C:\Users\User\Desktop\Практика\Колковский 11з\ConsoleApplication35\ConsoleApplication35\obj\Debug\ConsoleApplication35.exe
+C:\Users\User\Desktop\Практика\Колковский 11з\ConsoleApplication35\ConsoleApplication35\obj\Debug\ConsoleApplication35.pdb
+C:\Users\User\Desktop\Практика\Колковский 10-11з\ConsoleApplication35\ConsoleApplication35\bin\Debug\ConsoleApplication35.exe.config
+C:\Users\User\Desktop\Практика\Колковский 10-11з\ConsoleApplication35\ConsoleApplication35\obj\Debug\ConsoleApplication35.exe
+C:\Users\User\Desktop\Практика\Колковский 10-11з\ConsoleApplication35\ConsoleApplication35\obj\Debug\ConsoleApplication35.pdb
+C:\Users\User\Desktop\Практика\Колковский 10-11з\ConsoleApplication35\ConsoleApplication35\bin\Debug\ConsoleApplication35.exe
+C:\Users\User\Desktop\Практика\Колковский 10-11з\ConsoleApplication35\ConsoleApplication35\bin\Debug\ConsoleApplication35.pdb
+C:\Users\User\Desktop\Практика\Колковский 10-11з\ConsoleApplication35\ConsoleApplication35\obj\Debug\ConsoleApplication35.csprojResolveAssemblyReference.cache
+I:\Лабы\Леха\Практика по программированию\1.11\ConsoleApplication35\ConsoleApplication35\bin\Debug\ConsoleApplication35.exe.config
+I:\Лабы\Леха\Практика по программированию\1.11\ConsoleApplication35\ConsoleApplication35\bin\Debug\ConsoleApplication35.exe
+I:\Лабы\Леха\Практика по программированию\1.11\ConsoleApplication35\ConsoleApplication35\bin\Debug\ConsoleApplication35.pdb
+I:\Лабы\Леха\Практика по программированию\1.11\ConsoleApplication35\ConsoleApplication35\obj\Debug\ConsoleApplication35.csprojResolveAssemblyReference.cache
+I:\Лабы\Леха\Практика по программированию\1.11\ConsoleApplication35\ConsoleApplication35\obj\Debug\ConsoleApplication35.exe
+I:\Лабы\Леха\Практика по программированию\1.11\ConsoleApplication35\ConsoleApplication35\obj\Debug\ConsoleApplication35.pdb

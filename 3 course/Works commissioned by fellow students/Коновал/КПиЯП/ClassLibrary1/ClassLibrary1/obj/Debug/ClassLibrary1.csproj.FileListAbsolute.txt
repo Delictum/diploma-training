@@ -1,0 +1,9 @@
+I:\Лерой\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+I:\Лерой\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+I:\Лерой\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+I:\Лерой\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+I:\Лабы\Коновал\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+I:\Лабы\Коновал\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+I:\Лабы\Коновал\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.csprojResolveAssemblyReference.cache
+I:\Лабы\Коновал\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+I:\Лабы\Коновал\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.pdb

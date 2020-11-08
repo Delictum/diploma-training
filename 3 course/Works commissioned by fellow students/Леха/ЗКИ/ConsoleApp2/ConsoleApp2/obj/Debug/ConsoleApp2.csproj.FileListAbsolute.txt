@@ -1,0 +1,5 @@
+I:\Леха\ConsoleApp2\ConsoleApp2\bin\Debug\ConsoleApp2.exe.config
+I:\Леха\ConsoleApp2\ConsoleApp2\bin\Debug\ConsoleApp2.exe
+I:\Леха\ConsoleApp2\ConsoleApp2\bin\Debug\ConsoleApp2.pdb
+I:\Леха\ConsoleApp2\ConsoleApp2\obj\Debug\ConsoleApp2.exe
+I:\Леха\ConsoleApp2\ConsoleApp2\obj\Debug\ConsoleApp2.pdb

@@ -1,0 +1,86 @@
+E:\Учёба\Курсовая\Kurs\Kurs\bin\Debug\Kurs.exe.config
+E:\Учёба\Курсовая\Kurs\Kurs\bin\Debug\Kurs.exe
+E:\Учёба\Курсовая\Kurs\Kurs\bin\Debug\Kurs.pdb
+E:\Учёба\Курсовая\Kurs\Kurs\obj\Debug\Kurs.Form1.resources
+E:\Учёба\Курсовая\Kurs\Kurs\obj\Debug\Kurs.Form2.resources
+E:\Учёба\Курсовая\Kurs\Kurs\obj\Debug\Kurs.Form3.resources
+E:\Учёба\Курсовая\Kurs\Kurs\obj\Debug\Kurs.Form4.resources
+E:\Учёба\Курсовая\Kurs\Kurs\obj\Debug\Kurs.Form5.resources
+E:\Учёба\Курсовая\Kurs\Kurs\obj\Debug\Kurs.Form6.resources
+E:\Учёба\Курсовая\Kurs\Kurs\obj\Debug\Kurs.Form7.resources
+E:\Учёба\Курсовая\Kurs\Kurs\obj\Debug\Kurs.Properties.Resources.resources
+E:\Учёба\Курсовая\Kurs\Kurs\obj\Debug\Kurs.csproj.GenerateResource.cache
+E:\Учёба\Курсовая\Kurs\Kurs\obj\Debug\Kurs.csproj.CoreCompileInputs.cache
+E:\Учёба\Курсовая\Kurs\Kurs\obj\Debug\Kurs.exe
+E:\Учёба\Курсовая\Kurs\Kurs\obj\Debug\Kurs.pdb
+E:\Учёба\Курсовая\Kurs\Kurs\bin\Debug\MySql.Data.dll
+E:\Учёба\Курсовая\Kurs\Kurs\bin\Debug\MySql.Data.xml
+E:\Учёба\Курсовая\Kurs\Kurs\obj\Debug\Kurs.csproj.CopyComplete
+E:\Учёба\Курсовая\Kurs\Kurs\obj\Debug\Kurs.csprojResolveAssemblyReference.cache
+C:\Users\Delictum\Desktop\Курсовые проекты\Kurs\Kurs\Kurs\bin\Debug\Kurs.exe.config
+C:\Users\Delictum\Desktop\Курсовые проекты\Kurs\Kurs\Kurs\bin\Debug\Kurs.exe
+C:\Users\Delictum\Desktop\Курсовые проекты\Kurs\Kurs\Kurs\bin\Debug\Kurs.pdb
+C:\Users\Delictum\Desktop\Курсовые проекты\Kurs\Kurs\Kurs\bin\Debug\MySql.Data.xml
+C:\Users\Delictum\Desktop\Курсовые проекты\Kurs\Kurs\Kurs\obj\Debug\Kurs.csprojAssemblyReference.cache
+C:\Users\Delictum\Desktop\Курсовые проекты\Kurs\Kurs\Kurs\obj\Debug\Kurs.Form1.resources
+C:\Users\Delictum\Desktop\Курсовые проекты\Kurs\Kurs\Kurs\obj\Debug\Kurs.Form2.resources
+C:\Users\Delictum\Desktop\Курсовые проекты\Kurs\Kurs\Kurs\obj\Debug\Kurs.Form3.resources
+C:\Users\Delictum\Desktop\Курсовые проекты\Kurs\Kurs\Kurs\obj\Debug\Kurs.Form4.resources
+C:\Users\Delictum\Desktop\Курсовые проекты\Kurs\Kurs\Kurs\obj\Debug\Kurs.Form5.resources
+C:\Users\Delictum\Desktop\Курсовые проекты\Kurs\Kurs\Kurs\obj\Debug\Kurs.Form6.resources
+C:\Users\Delictum\Desktop\Курсовые проекты\Kurs\Kurs\Kurs\obj\Debug\Kurs.Form7.resources
+C:\Users\Delictum\Desktop\Курсовые проекты\Kurs\Kurs\Kurs\obj\Debug\Kurs.Properties.Resources.resources
+C:\Users\Delictum\Desktop\Курсовые проекты\Kurs\Kurs\Kurs\obj\Debug\Kurs.csproj.GenerateResource.cache
+C:\Users\Delictum\Desktop\Курсовые проекты\Kurs\Kurs\Kurs\obj\Debug\Kurs.csproj.CoreCompileInputs.cache
+C:\Users\Delictum\Desktop\Курсовые проекты\Kurs\Kurs\Kurs\obj\Debug\Kurs.csproj.CopyComplete
+C:\Users\Delictum\Desktop\Курсовые проекты\Kurs\Kurs\Kurs\obj\Debug\Kurs.exe
+C:\Users\Delictum\Desktop\Курсовые проекты\Kurs\Kurs\Kurs\obj\Debug\Kurs.pdb
+C:\Users\Delictum\Desktop\Курсовые проекты\Kurs\Kurs\Kurs\obj\Debug\Kurs.Form8.resources
+C:\Users\Delictum\Desktop\Курсовые проекты\Kurs\Kurs\Kurs\obj\Debug\Kurs.Form9.resources
+C:\Users\Delictum\Desktop\Курсовые проекты\Kurs\Kurs\Kurs\obj\Debug\Kurs.Form10.resources
+C:\Users\Delictum\Desktop\Курсовые проекты\Kurs\Kurs\Kurs\obj\Debug\Kurs.AboutBox1.resources
+D:\Учёба\Курсовая\Kurs\Kurs\bin\Debug\Kurs.exe.config
+D:\Учёба\Курсовая\Kurs\Kurs\bin\Debug\Kurs.exe
+D:\Учёба\Курсовая\Kurs\Kurs\bin\Debug\Kurs.pdb
+D:\Учёба\Курсовая\Kurs\Kurs\bin\Debug\MySql.Data.dll
+D:\Учёба\Курсовая\Kurs\Kurs\bin\Debug\MySql.Data.xml
+D:\Учёба\Курсовая\Kurs\Kurs\obj\Debug\Kurs.csprojAssemblyReference.cache
+D:\Учёба\Курсовая\Kurs\Kurs\obj\Debug\Kurs.AboutBox1.resources
+D:\Учёба\Курсовая\Kurs\Kurs\obj\Debug\Kurs.Form1.resources
+D:\Учёба\Курсовая\Kurs\Kurs\obj\Debug\Kurs.Form10.resources
+D:\Учёба\Курсовая\Kurs\Kurs\obj\Debug\Kurs.Form2.resources
+D:\Учёба\Курсовая\Kurs\Kurs\obj\Debug\Kurs.Form3.resources
+D:\Учёба\Курсовая\Kurs\Kurs\obj\Debug\Kurs.Form4.resources
+D:\Учёба\Курсовая\Kurs\Kurs\obj\Debug\Kurs.Form5.resources
+D:\Учёба\Курсовая\Kurs\Kurs\obj\Debug\Kurs.Form6.resources
+D:\Учёба\Курсовая\Kurs\Kurs\obj\Debug\Kurs.Form7.resources
+D:\Учёба\Курсовая\Kurs\Kurs\obj\Debug\Kurs.Form8.resources
+D:\Учёба\Курсовая\Kurs\Kurs\obj\Debug\Kurs.Form9.resources
+D:\Учёба\Курсовая\Kurs\Kurs\obj\Debug\Kurs.Properties.Resources.resources
+D:\Учёба\Курсовая\Kurs\Kurs\obj\Debug\Kurs.csproj.GenerateResource.cache
+D:\Учёба\Курсовая\Kurs\Kurs\obj\Debug\Kurs.csproj.CoreCompileInputs.cache
+D:\Учёба\Курсовая\Kurs\Kurs\obj\Debug\Kurs.csproj.CopyComplete
+D:\Учёба\Курсовая\Kurs\Kurs\obj\Debug\Kurs.exe
+D:\Учёба\Курсовая\Kurs\Kurs\obj\Debug\Kurs.pdb
+C:\Users\Delictum\Downloads\Skoryabkin\Скорябкин\Kurs\Kurs\bin\Debug\Kurs.exe.config
+C:\Users\Delictum\Downloads\Skoryabkin\Скорябкин\Kurs\Kurs\bin\Debug\Kurs.exe
+C:\Users\Delictum\Downloads\Skoryabkin\Скорябкин\Kurs\Kurs\bin\Debug\Kurs.pdb
+C:\Users\Delictum\Downloads\Skoryabkin\Скорябкин\Kurs\Kurs\bin\Debug\MySql.Data.xml
+C:\Users\Delictum\Downloads\Skoryabkin\Скорябкин\Kurs\Kurs\obj\Debug\Kurs.csprojAssemblyReference.cache
+C:\Users\Delictum\Downloads\Skoryabkin\Скорябкин\Kurs\Kurs\obj\Debug\Kurs.AboutBox1.resources
+C:\Users\Delictum\Downloads\Skoryabkin\Скорябкин\Kurs\Kurs\obj\Debug\Kurs.Form1.resources
+C:\Users\Delictum\Downloads\Skoryabkin\Скорябкин\Kurs\Kurs\obj\Debug\Kurs.Form10.resources
+C:\Users\Delictum\Downloads\Skoryabkin\Скорябкин\Kurs\Kurs\obj\Debug\Kurs.Form2.resources
+C:\Users\Delictum\Downloads\Skoryabkin\Скорябкин\Kurs\Kurs\obj\Debug\Kurs.Form3.resources
+C:\Users\Delictum\Downloads\Skoryabkin\Скорябкин\Kurs\Kurs\obj\Debug\Kurs.Form4.resources
+C:\Users\Delictum\Downloads\Skoryabkin\Скорябкин\Kurs\Kurs\obj\Debug\Kurs.Form5.resources
+C:\Users\Delictum\Downloads\Skoryabkin\Скорябкин\Kurs\Kurs\obj\Debug\Kurs.Form6.resources
+C:\Users\Delictum\Downloads\Skoryabkin\Скорябкин\Kurs\Kurs\obj\Debug\Kurs.Form7.resources
+C:\Users\Delictum\Downloads\Skoryabkin\Скорябкин\Kurs\Kurs\obj\Debug\Kurs.Form8.resources
+C:\Users\Delictum\Downloads\Skoryabkin\Скорябкин\Kurs\Kurs\obj\Debug\Kurs.Form9.resources
+C:\Users\Delictum\Downloads\Skoryabkin\Скорябкин\Kurs\Kurs\obj\Debug\Kurs.Properties.Resources.resources
+C:\Users\Delictum\Downloads\Skoryabkin\Скорябкин\Kurs\Kurs\obj\Debug\Kurs.csproj.GenerateResource.cache
+C:\Users\Delictum\Downloads\Skoryabkin\Скорябкин\Kurs\Kurs\obj\Debug\Kurs.csproj.CoreCompileInputs.cache
+C:\Users\Delictum\Downloads\Skoryabkin\Скорябкин\Kurs\Kurs\obj\Debug\Kurs.csproj.CopyComplete
+C:\Users\Delictum\Downloads\Skoryabkin\Скорябкин\Kurs\Kurs\obj\Debug\Kurs.exe
+C:\Users\Delictum\Downloads\Skoryabkin\Скорябкин\Kurs\Kurs\obj\Debug\Kurs.pdb

@@ -1,0 +1,5 @@
+I:\Андрей\ConsoleApp11\ConsoleApp11\bin\Debug\ConsoleApp11.exe.config
+I:\Андрей\ConsoleApp11\ConsoleApp11\bin\Debug\ConsoleApp11.exe
+I:\Андрей\ConsoleApp11\ConsoleApp11\bin\Debug\ConsoleApp11.pdb
+I:\Андрей\ConsoleApp11\ConsoleApp11\obj\Debug\ConsoleApp11.exe
+I:\Андрей\ConsoleApp11\ConsoleApp11\obj\Debug\ConsoleApp11.pdb

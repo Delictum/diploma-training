@@ -1,0 +1,12 @@
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp12\ConsoleApp12\bin\Debug\ConsoleApp12.exe.config
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp12\ConsoleApp12\bin\Debug\ConsoleApp12.exe
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp12\ConsoleApp12\bin\Debug\ConsoleApp12.pdb
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp12\ConsoleApp12\obj\Debug\ConsoleApp12.csprojResolveAssemblyReference.cache
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp12\ConsoleApp12\obj\Debug\ConsoleApp12.exe
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp12\ConsoleApp12\obj\Debug\ConsoleApp12.pdb
+I:\Леха\КПиЯП\ConsoleApp6\ConsoleApp12\bin\Debug\ConsoleApp12.exe.config
+I:\Леха\КПиЯП\ConsoleApp6\ConsoleApp12\bin\Debug\ConsoleApp12.exe
+I:\Леха\КПиЯП\ConsoleApp6\ConsoleApp12\bin\Debug\ConsoleApp12.pdb
+I:\Леха\КПиЯП\ConsoleApp6\ConsoleApp12\obj\Debug\ConsoleApp12.csprojResolveAssemblyReference.cache
+I:\Леха\КПиЯП\ConsoleApp6\ConsoleApp12\obj\Debug\ConsoleApp12.exe
+I:\Леха\КПиЯП\ConsoleApp6\ConsoleApp12\obj\Debug\ConsoleApp12.pdb

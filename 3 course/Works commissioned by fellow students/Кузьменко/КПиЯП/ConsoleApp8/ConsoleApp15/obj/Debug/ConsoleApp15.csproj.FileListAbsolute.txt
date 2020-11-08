@@ -1,0 +1,18 @@
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp15\ConsoleApp15\bin\Debug\ConsoleApp15.exe.config
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp15\ConsoleApp15\bin\Debug\ConsoleApp15.exe
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp15\ConsoleApp15\bin\Debug\ConsoleApp15.pdb
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp15\ConsoleApp15\obj\Debug\ConsoleApp15.csprojResolveAssemblyReference.cache
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp15\ConsoleApp15\obj\Debug\ConsoleApp15.exe
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp15\ConsoleApp15\obj\Debug\ConsoleApp15.pdb
+I:\Леха\КПиЯП\ConsoleApp8\ConsoleApp15\bin\Debug\ConsoleApp15.exe.config
+I:\Леха\КПиЯП\ConsoleApp8\ConsoleApp15\bin\Debug\ConsoleApp15.exe
+I:\Леха\КПиЯП\ConsoleApp8\ConsoleApp15\bin\Debug\ConsoleApp15.pdb
+I:\Леха\КПиЯП\ConsoleApp8\ConsoleApp15\obj\Debug\ConsoleApp15.csprojResolveAssemblyReference.cache
+I:\Леха\КПиЯП\ConsoleApp8\ConsoleApp15\obj\Debug\ConsoleApp15.exe
+I:\Леха\КПиЯП\ConsoleApp8\ConsoleApp15\obj\Debug\ConsoleApp15.pdb
+I:\Лерой\ConsoleApp8\ConsoleApp15\bin\Debug\ConsoleApp15.exe.config
+I:\Лерой\ConsoleApp8\ConsoleApp15\bin\Debug\ConsoleApp15.exe
+I:\Лерой\ConsoleApp8\ConsoleApp15\bin\Debug\ConsoleApp15.pdb
+I:\Лерой\ConsoleApp8\ConsoleApp15\obj\Debug\ConsoleApp15.csprojResolveAssemblyReference.cache
+I:\Лерой\ConsoleApp8\ConsoleApp15\obj\Debug\ConsoleApp15.exe
+I:\Лерой\ConsoleApp8\ConsoleApp15\obj\Debug\ConsoleApp15.pdb

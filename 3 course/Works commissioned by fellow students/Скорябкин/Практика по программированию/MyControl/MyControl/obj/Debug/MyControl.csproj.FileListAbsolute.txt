@@ -1,0 +1,16 @@
+C:\Учеба\5 семестр 7272\Контрольные\MyControl\MyControl\obj\Debug\ResolveAssemblyReference.cache
+C:\Учеба\5 семестр 7272\Контрольные\MyControl\MyControl\obj\Debug\MyControl.csproj.GenerateResource.Cache
+C:\Учеба\5 семестр 7272\Контрольные\MyControl\MyControl\bin\Debug\MyControl.dll
+C:\Учеба\5 семестр 7272\Контрольные\MyControl\MyControl\bin\Debug\MyControl.pdb
+C:\Учеба\5 семестр 7272\Контрольные\MyControl\MyControl\obj\Debug\MyControl.dll
+C:\Учеба\5 семестр 7272\Контрольные\MyControl\MyControl\obj\Debug\MyControl.pdb
+C:\Учеба\5 семестр 7272\Контрольные\MyControl\MyControl\obj\Debug\MyControl.ButtonControl.resources
+I:\Практика по программированию\Исполнение\ЛР 15\MyControl\MyControl\bin\Debug\MyControl.dll
+I:\Практика по программированию\Исполнение\ЛР 15\MyControl\MyControl\bin\Debug\MyControl.pdb
+I:\Практика по программированию\Исполнение\ЛР 15\MyControl\MyControl\obj\Debug\MyControl.dll
+I:\Практика по программированию\Исполнение\ЛР 15\MyControl\MyControl\obj\Debug\MyControl.pdb
+I:\Лабы\Скорябкин\Практика по программированию\MyControl\MyControl\bin\Debug\MyControl.dll
+I:\Лабы\Скорябкин\Практика по программированию\MyControl\MyControl\bin\Debug\MyControl.pdb
+I:\Лабы\Скорябкин\Практика по программированию\MyControl\MyControl\obj\Debug\MyControl.csprojResolveAssemblyReference.cache
+I:\Лабы\Скорябкин\Практика по программированию\MyControl\MyControl\obj\Debug\MyControl.dll
+I:\Лабы\Скорябкин\Практика по программированию\MyControl\MyControl\obj\Debug\MyControl.pdb

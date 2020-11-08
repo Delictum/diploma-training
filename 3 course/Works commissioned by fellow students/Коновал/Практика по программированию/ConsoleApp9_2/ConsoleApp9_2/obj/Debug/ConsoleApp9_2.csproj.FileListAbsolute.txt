@@ -1,0 +1,6 @@
+I:\Лабы\Коновал\Практика по программированию\ConsoleApp9_2\ConsoleApp9_2\bin\Debug\ConsoleApp9_2.exe.config
+I:\Лабы\Коновал\Практика по программированию\ConsoleApp9_2\ConsoleApp9_2\bin\Debug\ConsoleApp9_2.exe
+I:\Лабы\Коновал\Практика по программированию\ConsoleApp9_2\ConsoleApp9_2\bin\Debug\ConsoleApp9_2.pdb
+I:\Лабы\Коновал\Практика по программированию\ConsoleApp9_2\ConsoleApp9_2\obj\Debug\ConsoleApp9_2.csprojResolveAssemblyReference.cache
+I:\Лабы\Коновал\Практика по программированию\ConsoleApp9_2\ConsoleApp9_2\obj\Debug\ConsoleApp9_2.exe
+I:\Лабы\Коновал\Практика по программированию\ConsoleApp9_2\ConsoleApp9_2\obj\Debug\ConsoleApp9_2.pdb

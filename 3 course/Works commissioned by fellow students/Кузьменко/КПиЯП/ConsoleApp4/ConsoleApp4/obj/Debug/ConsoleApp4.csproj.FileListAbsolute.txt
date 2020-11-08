@@ -1,0 +1,6 @@
+I:\Лабы\Кузьменко\ConsoleApp4\ConsoleApp4\bin\Debug\ConsoleApp4.exe.config
+I:\Лабы\Кузьменко\ConsoleApp4\ConsoleApp4\bin\Debug\ConsoleApp4.exe
+I:\Лабы\Кузьменко\ConsoleApp4\ConsoleApp4\bin\Debug\ConsoleApp4.pdb
+I:\Лабы\Кузьменко\ConsoleApp4\ConsoleApp4\obj\Debug\ConsoleApp4.csprojResolveAssemblyReference.cache
+I:\Лабы\Кузьменко\ConsoleApp4\ConsoleApp4\obj\Debug\ConsoleApp4.exe
+I:\Лабы\Кузьменко\ConsoleApp4\ConsoleApp4\obj\Debug\ConsoleApp4.pdb

@@ -1,0 +1,15 @@
+c:\users\49ю\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+c:\users\49ю\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+c:\users\49ю\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+c:\users\49ю\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+c:\users\49ю\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+c:\users\49ю\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+E:\ЗКИ\ЛР 1\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+E:\ЗКИ\ЛР 1\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+E:\ЗКИ\ЛР 1\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+I:\Лабы\Кузьменко\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+I:\Лабы\Кузьменко\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+I:\Лабы\Кузьменко\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+I:\Лабы\Кузьменко\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+I:\Лабы\Кузьменко\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+I:\Лабы\Кузьменко\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb

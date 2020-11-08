@@ -1,0 +1,22 @@
+I:\Практика по программированию\Исполнение\ЛР 15\MyControl\MyControlTest\obj\Debug\MyControlTest.csprojResolveAssemblyReference.cache
+I:\Практика по программированию\Исполнение\ЛР 15\MyControl\MyControlTest\obj\Debug\MyControlTest.Form1.resources
+I:\Практика по программированию\Исполнение\ЛР 15\MyControl\MyControlTest\obj\Debug\MyControlTest.Properties.Resources.resources
+I:\Практика по программированию\Исполнение\ЛР 15\MyControl\MyControlTest\obj\Debug\MyControlTest.csproj.GenerateResource.Cache
+I:\Практика по программированию\Исполнение\ЛР 15\MyControl\MyControlTest\bin\Debug\MyControlTest.exe.config
+I:\Практика по программированию\Исполнение\ЛР 15\MyControl\MyControlTest\bin\Debug\MyControlTest.exe
+I:\Практика по программированию\Исполнение\ЛР 15\MyControl\MyControlTest\bin\Debug\MyControlTest.pdb
+I:\Практика по программированию\Исполнение\ЛР 15\MyControl\MyControlTest\bin\Debug\MyControl.dll
+I:\Практика по программированию\Исполнение\ЛР 15\MyControl\MyControlTest\bin\Debug\MyControl.pdb
+I:\Практика по программированию\Исполнение\ЛР 15\MyControl\MyControlTest\obj\Debug\MyControlTest.exe
+I:\Практика по программированию\Исполнение\ЛР 15\MyControl\MyControlTest\obj\Debug\MyControlTest.pdb
+I:\Лабы\Скорябкин\Практика по программированию\MyControl\MyControlTest\obj\Debug\MyControlTest.csprojResolveAssemblyReference.cache
+I:\Лабы\Скорябкин\Практика по программированию\MyControl\MyControlTest\obj\Debug\MyControlTest.Form1.resources
+I:\Лабы\Скорябкин\Практика по программированию\MyControl\MyControlTest\obj\Debug\MyControlTest.Properties.Resources.resources
+I:\Лабы\Скорябкин\Практика по программированию\MyControl\MyControlTest\obj\Debug\MyControlTest.csproj.GenerateResource.Cache
+I:\Лабы\Скорябкин\Практика по программированию\MyControl\MyControlTest\obj\Debug\MyControlTest.exe
+I:\Лабы\Скорябкин\Практика по программированию\MyControl\MyControlTest\obj\Debug\MyControlTest.pdb
+I:\Лабы\Скорябкин\Практика по программированию\MyControl\MyControlTest\bin\Debug\MyControlTest.exe.config
+I:\Лабы\Скорябкин\Практика по программированию\MyControl\MyControlTest\bin\Debug\MyControlTest.exe
+I:\Лабы\Скорябкин\Практика по программированию\MyControl\MyControlTest\bin\Debug\MyControlTest.pdb
+I:\Лабы\Скорябкин\Практика по программированию\MyControl\MyControlTest\bin\Debug\MyControl.dll
+I:\Лабы\Скорябкин\Практика по программированию\MyControl\MyControlTest\bin\Debug\MyControl.pdb

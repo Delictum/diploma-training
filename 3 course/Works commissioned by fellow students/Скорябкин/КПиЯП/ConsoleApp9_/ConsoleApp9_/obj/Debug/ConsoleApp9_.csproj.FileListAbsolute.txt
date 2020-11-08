@@ -1,0 +1,11 @@
+I:\Скорябкин\ConsoleApp9_\ConsoleApp9_\bin\Debug\ConsoleApp9_.exe.config
+I:\Скорябкин\ConsoleApp9_\ConsoleApp9_\bin\Debug\ConsoleApp9_.exe
+I:\Скорябкин\ConsoleApp9_\ConsoleApp9_\bin\Debug\ConsoleApp9_.pdb
+I:\Скорябкин\ConsoleApp9_\ConsoleApp9_\obj\Debug\ConsoleApp9_.exe
+I:\Скорябкин\ConsoleApp9_\ConsoleApp9_\obj\Debug\ConsoleApp9_.pdb
+E:\Скорябкин\ConsoleApp9_\ConsoleApp9_\bin\Debug\ConsoleApp9_.exe.config
+E:\Скорябкин\ConsoleApp9_\ConsoleApp9_\obj\Debug\ConsoleApp9_.exe
+E:\Скорябкин\ConsoleApp9_\ConsoleApp9_\obj\Debug\ConsoleApp9_.pdb
+E:\Скорябкин\ConsoleApp9_\ConsoleApp9_\bin\Debug\ConsoleApp9_.exe
+E:\Скорябкин\ConsoleApp9_\ConsoleApp9_\bin\Debug\ConsoleApp9_.pdb
+E:\Скорябкин\ConsoleApp9_\ConsoleApp9_\obj\Debug\ConsoleApp9_.csprojResolveAssemblyReference.cache

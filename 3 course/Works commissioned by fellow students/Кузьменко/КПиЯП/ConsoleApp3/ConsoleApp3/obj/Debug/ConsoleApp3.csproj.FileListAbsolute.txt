@@ -1,0 +1,12 @@
+I:\Лерой\ConsoleApp3\ConsoleApp3\bin\Debug\ConsoleApp3.exe.config
+I:\Лерой\ConsoleApp3\ConsoleApp3\bin\Debug\ConsoleApp3.exe
+I:\Лерой\ConsoleApp3\ConsoleApp3\bin\Debug\ConsoleApp3.pdb
+I:\Лерой\ConsoleApp3\ConsoleApp3\obj\Debug\ConsoleApp3.exe
+I:\Лерой\ConsoleApp3\ConsoleApp3\obj\Debug\ConsoleApp3.pdb
+I:\Лерой\ConsoleApp3\ConsoleApp3\obj\Debug\ConsoleApp3.csprojResolveAssemblyReference.cache
+I:\Лабы\Кузьменко\ConsoleApp3\ConsoleApp3\bin\Debug\ConsoleApp3.exe.config
+I:\Лабы\Кузьменко\ConsoleApp3\ConsoleApp3\bin\Debug\ConsoleApp3.exe
+I:\Лабы\Кузьменко\ConsoleApp3\ConsoleApp3\bin\Debug\ConsoleApp3.pdb
+I:\Лабы\Кузьменко\ConsoleApp3\ConsoleApp3\obj\Debug\ConsoleApp3.csprojResolveAssemblyReference.cache
+I:\Лабы\Кузьменко\ConsoleApp3\ConsoleApp3\obj\Debug\ConsoleApp3.exe
+I:\Лабы\Кузьменко\ConsoleApp3\ConsoleApp3\obj\Debug\ConsoleApp3.pdb

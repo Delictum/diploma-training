@@ -1,0 +1,6 @@
+I:\Скорябкин\ConsoleApp7\ConsoleApp7\bin\Debug\ConsoleApp7.exe.config
+I:\Скорябкин\ConsoleApp7\ConsoleApp7\bin\Debug\ConsoleApp7.exe
+I:\Скорябкин\ConsoleApp7\ConsoleApp7\bin\Debug\ConsoleApp7.pdb
+I:\Скорябкин\ConsoleApp7\ConsoleApp7\obj\Debug\ConsoleApp7.csprojResolveAssemblyReference.cache
+I:\Скорябкин\ConsoleApp7\ConsoleApp7\obj\Debug\ConsoleApp7.exe
+I:\Скорябкин\ConsoleApp7\ConsoleApp7\obj\Debug\ConsoleApp7.pdb

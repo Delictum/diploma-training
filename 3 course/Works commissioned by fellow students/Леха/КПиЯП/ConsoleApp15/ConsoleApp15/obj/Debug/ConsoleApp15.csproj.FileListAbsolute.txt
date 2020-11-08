@@ -1,0 +1,8 @@
+I:\Леха\КПиЯП\ConsoleApp15\ConsoleApp15\bin\Debug\ConsoleApp15.exe.config
+I:\Леха\КПиЯП\ConsoleApp15\ConsoleApp15\bin\Debug\ConsoleApp15.exe
+I:\Леха\КПиЯП\ConsoleApp15\ConsoleApp15\bin\Debug\ConsoleApp15.pdb
+I:\Леха\КПиЯП\ConsoleApp15\ConsoleApp15\bin\Debug\ClassLibrary1.dll
+I:\Леха\КПиЯП\ConsoleApp15\ConsoleApp15\bin\Debug\ClassLibrary1.pdb
+I:\Леха\КПиЯП\ConsoleApp15\ConsoleApp15\obj\Debug\ConsoleApp15.csprojResolveAssemblyReference.cache
+I:\Леха\КПиЯП\ConsoleApp15\ConsoleApp15\obj\Debug\ConsoleApp15.exe
+I:\Леха\КПиЯП\ConsoleApp15\ConsoleApp15\obj\Debug\ConsoleApp15.pdb

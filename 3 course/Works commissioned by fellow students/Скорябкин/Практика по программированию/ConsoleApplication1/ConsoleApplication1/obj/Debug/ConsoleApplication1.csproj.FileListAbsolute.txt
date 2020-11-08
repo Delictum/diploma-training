@@ -1,0 +1,7 @@
+E:\Лабы\Скорябкин\Практика по программированию\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+F:\Лабы\Скорябкин\Практика по программированию\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+F:\Лабы\Скорябкин\Практика по программированию\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+F:\Лабы\Скорябкин\Практика по программированию\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+F:\Лабы\Скорябкин\Практика по программированию\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+F:\Лабы\Скорябкин\Практика по программированию\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+F:\Лабы\Скорябкин\Практика по программированию\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb

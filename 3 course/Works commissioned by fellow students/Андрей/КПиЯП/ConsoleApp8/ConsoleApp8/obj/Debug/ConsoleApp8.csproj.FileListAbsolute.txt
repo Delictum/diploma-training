@@ -1,0 +1,6 @@
+I:\Андрей\ConsoleApp8\ConsoleApp8\bin\Debug\ConsoleApp8.exe.config
+I:\Андрей\ConsoleApp8\ConsoleApp8\bin\Debug\ConsoleApp8.exe
+I:\Андрей\ConsoleApp8\ConsoleApp8\bin\Debug\ConsoleApp8.pdb
+I:\Андрей\ConsoleApp8\ConsoleApp8\obj\Debug\ConsoleApp8.csprojResolveAssemblyReference.cache
+I:\Андрей\ConsoleApp8\ConsoleApp8\obj\Debug\ConsoleApp8.exe
+I:\Андрей\ConsoleApp8\ConsoleApp8\obj\Debug\ConsoleApp8.pdb

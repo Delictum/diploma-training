@@ -1,0 +1,11 @@
+C:\Users\Delictum\Desktop\Курсовые проекты\SortingAlgorithms\SortingAlgorithms\bin\Debug\SortingAlgorithms.exe.config
+C:\Users\Delictum\Desktop\Курсовые проекты\SortingAlgorithms\SortingAlgorithms\bin\Debug\SortingAlgorithms.exe
+C:\Users\Delictum\Desktop\Курсовые проекты\SortingAlgorithms\SortingAlgorithms\bin\Debug\SortingAlgorithms.pdb
+C:\Users\Delictum\Desktop\Курсовые проекты\SortingAlgorithms\SortingAlgorithms\obj\Debug\SortingAlgorithms.Form1.resources
+C:\Users\Delictum\Desktop\Курсовые проекты\SortingAlgorithms\SortingAlgorithms\obj\Debug\SortingAlgorithms.Properties.Resources.resources
+C:\Users\Delictum\Desktop\Курсовые проекты\SortingAlgorithms\SortingAlgorithms\obj\Debug\SortingAlgorithms.csproj.GenerateResource.cache
+C:\Users\Delictum\Desktop\Курсовые проекты\SortingAlgorithms\SortingAlgorithms\obj\Debug\SortingAlgorithms.csproj.CoreCompileInputs.cache
+C:\Users\Delictum\Desktop\Курсовые проекты\SortingAlgorithms\SortingAlgorithms\obj\Debug\SortingAlgorithms.exe
+C:\Users\Delictum\Desktop\Курсовые проекты\SortingAlgorithms\SortingAlgorithms\obj\Debug\SortingAlgorithms.pdb
+C:\Users\Delictum\Desktop\Курсовые проекты\SortingAlgorithms\SortingAlgorithms\obj\Debug\SortingAlgorithms.csprojResolveAssemblyReference.cache
+C:\Users\Delictum\Desktop\Курсовые проекты\SortingAlgorithms\SortingAlgorithms\obj\Debug\SortingAlgorithms.AboutBox1.resources

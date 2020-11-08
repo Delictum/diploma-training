@@ -1,0 +1,13 @@
+E:\Практика по программированию\Исполнение\ЛР 14\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+F:\Практика по программированию\Исполнение\ЛР 14\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+F:\Практика по программированию\Исполнение\ЛР 14\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+F:\Практика по программированию\Исполнение\ЛР 14\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+F:\Практика по программированию\Исполнение\ЛР 14\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+F:\Практика по программированию\Исполнение\ЛР 14\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+F:\Практика по программированию\Исполнение\ЛР 14\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+I:\Лабы\Леха\Практика по программированию\1.15\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+I:\Лабы\Леха\Практика по программированию\1.15\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+I:\Лабы\Леха\Практика по программированию\1.15\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+I:\Лабы\Леха\Практика по программированию\1.15\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+I:\Лабы\Леха\Практика по программированию\1.15\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+I:\Лабы\Леха\Практика по программированию\1.15\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb

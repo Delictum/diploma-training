@@ -1,0 +1,5 @@
+I:\Леха\КПиЯП\ConsoleApp7\ConsoleApp7\bin\Debug\ConsoleApp7.exe.config
+I:\Леха\КПиЯП\ConsoleApp7\ConsoleApp7\bin\Debug\ConsoleApp7.exe
+I:\Леха\КПиЯП\ConsoleApp7\ConsoleApp7\bin\Debug\ConsoleApp7.pdb
+I:\Леха\КПиЯП\ConsoleApp7\ConsoleApp7\obj\Debug\ConsoleApp7.exe
+I:\Леха\КПиЯП\ConsoleApp7\ConsoleApp7\obj\Debug\ConsoleApp7.pdb

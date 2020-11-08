@@ -1,0 +1,30 @@
+I:\Андрей\ConsoleApp13\ConsoleApp13\bin\Debug\ConsoleApp13.exe.config
+I:\Андрей\ConsoleApp13\ConsoleApp13\bin\Debug\ConsoleApp13.exe
+I:\Андрей\ConsoleApp13\ConsoleApp13\bin\Debug\ConsoleApp13.pdb
+I:\Андрей\ConsoleApp13\ConsoleApp13\obj\Debug\ConsoleApp13.csprojResolveAssemblyReference.cache
+I:\Андрей\ConsoleApp13\ConsoleApp13\obj\Debug\ConsoleApp13.exe
+I:\Андрей\ConsoleApp13\ConsoleApp13\obj\Debug\ConsoleApp13.pdb
+E:\КПиЯП\ЛР\Олишкевич Игорь ЛР 13\ConsoleApp13\ConsoleApp13\bin\Debug\ConsoleApp13.exe.config
+E:\КПиЯП\ЛР\Олишкевич Игорь ЛР 13\ConsoleApp13\ConsoleApp13\obj\Debug\ConsoleApp13.exe
+E:\КПиЯП\ЛР\Олишкевич Игорь ЛР 13\ConsoleApp13\ConsoleApp13\obj\Debug\ConsoleApp13.pdb
+E:\КПиЯП\ЛР\Олишкевич Игорь ЛР 13\ConsoleApp13\ConsoleApp13\bin\Debug\ConsoleApp13.exe
+E:\КПиЯП\ЛР\Олишкевич Игорь ЛР 13\ConsoleApp13\ConsoleApp13\bin\Debug\ConsoleApp13.pdb
+E:\КПиЯП\ЛР\Олишкевич Игорь ЛР 13\ConsoleApp13\ConsoleApp13\obj\Debug\ConsoleApp13.csprojResolveAssemblyReference.cache
+I:\Леха\КПиЯП\ConsoleApp13\ConsoleApp13\bin\Debug\ConsoleApp13.exe.config
+I:\Леха\КПиЯП\ConsoleApp13\ConsoleApp13\bin\Debug\ConsoleApp13.exe
+I:\Леха\КПиЯП\ConsoleApp13\ConsoleApp13\bin\Debug\ConsoleApp13.pdb
+I:\Леха\КПиЯП\ConsoleApp13\ConsoleApp13\obj\Debug\ConsoleApp13.csprojResolveAssemblyReference.cache
+I:\Леха\КПиЯП\ConsoleApp13\ConsoleApp13\obj\Debug\ConsoleApp13.exe
+I:\Леха\КПиЯП\ConsoleApp13\ConsoleApp13\obj\Debug\ConsoleApp13.pdb
+I:\Лерой\ConsoleApp13\ConsoleApp13\bin\Debug\ConsoleApp13.exe.config
+I:\Лерой\ConsoleApp13\ConsoleApp13\bin\Debug\ConsoleApp13.exe
+I:\Лерой\ConsoleApp13\ConsoleApp13\bin\Debug\ConsoleApp13.pdb
+I:\Лерой\ConsoleApp13\ConsoleApp13\obj\Debug\ConsoleApp13.csprojResolveAssemblyReference.cache
+I:\Лерой\ConsoleApp13\ConsoleApp13\obj\Debug\ConsoleApp13.exe
+I:\Лерой\ConsoleApp13\ConsoleApp13\obj\Debug\ConsoleApp13.pdb
+I:\Лабы\Коновал\ConsoleApp13\ConsoleApp13\bin\Debug\ConsoleApp13.exe.config
+I:\Лабы\Коновал\ConsoleApp13\ConsoleApp13\bin\Debug\ConsoleApp13.exe
+I:\Лабы\Коновал\ConsoleApp13\ConsoleApp13\bin\Debug\ConsoleApp13.pdb
+I:\Лабы\Коновал\ConsoleApp13\ConsoleApp13\obj\Debug\ConsoleApp13.csprojResolveAssemblyReference.cache
+I:\Лабы\Коновал\ConsoleApp13\ConsoleApp13\obj\Debug\ConsoleApp13.exe
+I:\Лабы\Коновал\ConsoleApp13\ConsoleApp13\obj\Debug\ConsoleApp13.pdb

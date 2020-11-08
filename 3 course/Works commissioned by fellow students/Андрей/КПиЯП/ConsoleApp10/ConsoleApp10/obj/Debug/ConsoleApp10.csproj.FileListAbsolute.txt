@@ -1,0 +1,12 @@
+I:\Андрей\ConsoleApp10\ConsoleApp10\bin\Debug\ConsoleApp10.exe.config
+I:\Андрей\ConsoleApp10\ConsoleApp10\bin\Debug\ConsoleApp10.exe
+I:\Андрей\ConsoleApp10\ConsoleApp10\bin\Debug\ConsoleApp10.pdb
+I:\Андрей\ConsoleApp10\ConsoleApp10\obj\Debug\ConsoleApp10.csprojResolveAssemblyReference.cache
+I:\Андрей\ConsoleApp10\ConsoleApp10\obj\Debug\ConsoleApp10.exe
+I:\Андрей\ConsoleApp10\ConsoleApp10\obj\Debug\ConsoleApp10.pdb
+I:\Андрей\КПиЯП\ConsoleApp10\ConsoleApp10\bin\Debug\ConsoleApp10.exe.config
+I:\Андрей\КПиЯП\ConsoleApp10\ConsoleApp10\bin\Debug\ConsoleApp10.exe
+I:\Андрей\КПиЯП\ConsoleApp10\ConsoleApp10\bin\Debug\ConsoleApp10.pdb
+I:\Андрей\КПиЯП\ConsoleApp10\ConsoleApp10\obj\Debug\ConsoleApp10.csprojResolveAssemblyReference.cache
+I:\Андрей\КПиЯП\ConsoleApp10\ConsoleApp10\obj\Debug\ConsoleApp10.exe
+I:\Андрей\КПиЯП\ConsoleApp10\ConsoleApp10\obj\Debug\ConsoleApp10.pdb

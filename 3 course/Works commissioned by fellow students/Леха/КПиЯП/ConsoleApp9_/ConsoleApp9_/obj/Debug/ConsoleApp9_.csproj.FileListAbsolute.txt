@@ -1,0 +1,6 @@
+I:\Леха\КПиЯП\ConsoleApp9_\ConsoleApp9_\bin\Debug\ConsoleApp9_.exe.config
+I:\Леха\КПиЯП\ConsoleApp9_\ConsoleApp9_\bin\Debug\ConsoleApp9_.exe
+I:\Леха\КПиЯП\ConsoleApp9_\ConsoleApp9_\bin\Debug\ConsoleApp9_.pdb
+I:\Леха\КПиЯП\ConsoleApp9_\ConsoleApp9_\obj\Debug\ConsoleApp9_.csprojResolveAssemblyReference.cache
+I:\Леха\КПиЯП\ConsoleApp9_\ConsoleApp9_\obj\Debug\ConsoleApp9_.exe
+I:\Леха\КПиЯП\ConsoleApp9_\ConsoleApp9_\obj\Debug\ConsoleApp9_.pdb

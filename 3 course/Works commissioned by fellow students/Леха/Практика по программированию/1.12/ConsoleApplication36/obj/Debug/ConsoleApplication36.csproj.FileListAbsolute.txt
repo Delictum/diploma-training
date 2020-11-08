@@ -1,0 +1,17 @@
+d:\documents\visual studio 2015\Projects\ConsoleApplication36\ConsoleApplication36\bin\Debug\ConsoleApplication36.exe.config
+d:\documents\visual studio 2015\Projects\ConsoleApplication36\ConsoleApplication36\bin\Debug\ConsoleApplication36.exe
+d:\documents\visual studio 2015\Projects\ConsoleApplication36\ConsoleApplication36\bin\Debug\ConsoleApplication36.pdb
+d:\documents\visual studio 2015\Projects\ConsoleApplication36\ConsoleApplication36\obj\Debug\ConsoleApplication36.csprojResolveAssemblyReference.cache
+d:\documents\visual studio 2015\Projects\ConsoleApplication36\ConsoleApplication36\obj\Debug\ConsoleApplication36.exe
+d:\documents\visual studio 2015\Projects\ConsoleApplication36\ConsoleApplication36\obj\Debug\ConsoleApplication36.pdb
+C:\Users\User\Desktop\Практика\Колковский 9з\Задание 1\ConsoleApplication36\bin\Debug\ConsoleApplication36.exe.config
+C:\Users\User\Desktop\Практика\Колковский 9з\Задание 1\ConsoleApplication36\obj\Debug\ConsoleApplication36.exe
+C:\Users\User\Desktop\Практика\Колковский 9з\Задание 1\ConsoleApplication36\obj\Debug\ConsoleApplication36.pdb
+I:\Лабы\Леха\Практика по программированию\1.12\ConsoleApplication36\bin\Debug\ConsoleApplication36.exe.config
+I:\Лабы\Леха\Практика по программированию\1.12\ConsoleApplication36\bin\Debug\ConsoleApplication36.exe
+I:\Лабы\Леха\Практика по программированию\1.12\ConsoleApplication36\bin\Debug\ConsoleApplication36.pdb
+I:\Лабы\Леха\Практика по программированию\1.12\ConsoleApplication36\bin\Debug\ClassLibrary1.dll
+I:\Лабы\Леха\Практика по программированию\1.12\ConsoleApplication36\bin\Debug\ClassLibrary1.pdb
+I:\Лабы\Леха\Практика по программированию\1.12\ConsoleApplication36\obj\Debug\ConsoleApplication36.csprojResolveAssemblyReference.cache
+I:\Лабы\Леха\Практика по программированию\1.12\ConsoleApplication36\obj\Debug\ConsoleApplication36.exe
+I:\Лабы\Леха\Практика по программированию\1.12\ConsoleApplication36\obj\Debug\ConsoleApplication36.pdb

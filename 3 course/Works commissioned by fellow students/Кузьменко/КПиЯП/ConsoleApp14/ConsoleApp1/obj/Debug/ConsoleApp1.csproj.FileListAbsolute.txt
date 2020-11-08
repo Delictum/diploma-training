@@ -1,0 +1,24 @@
+I:\КПиЯП\ЛР\Олишкевич Игорь ЛР 14\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+I:\КПиЯП\ЛР\Олишкевич Игорь ЛР 14\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+I:\КПиЯП\ЛР\Олишкевич Игорь ЛР 14\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+I:\КПиЯП\ЛР\Олишкевич Игорь ЛР 14\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csprojResolveAssemblyReference.cache
+I:\КПиЯП\ЛР\Олишкевич Игорь ЛР 14\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+I:\КПиЯП\ЛР\Олишкевич Игорь ЛР 14\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
+I:\Леха\КПиЯП\ConsoleApp14\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+I:\Леха\КПиЯП\ConsoleApp14\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+I:\Леха\КПиЯП\ConsoleApp14\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+I:\Леха\КПиЯП\ConsoleApp14\ConsoleApp1\obj\Debug\ConsoleApp1.csprojResolveAssemblyReference.cache
+I:\Леха\КПиЯП\ConsoleApp14\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+I:\Леха\КПиЯП\ConsoleApp14\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
+I:\Лерой\ConsoleApp14\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+I:\Лерой\ConsoleApp14\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+I:\Лерой\ConsoleApp14\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+I:\Лерой\ConsoleApp14\ConsoleApp1\obj\Debug\ConsoleApp1.csprojResolveAssemblyReference.cache
+I:\Лерой\ConsoleApp14\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+I:\Лерой\ConsoleApp14\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
+I:\Лабы\Кузьменко\КПиЯП\ConsoleApp14\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+I:\Лабы\Кузьменко\КПиЯП\ConsoleApp14\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+I:\Лабы\Кузьменко\КПиЯП\ConsoleApp14\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+I:\Лабы\Кузьменко\КПиЯП\ConsoleApp14\ConsoleApp1\obj\Debug\ConsoleApp1.csprojResolveAssemblyReference.cache
+I:\Лабы\Кузьменко\КПиЯП\ConsoleApp14\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+I:\Лабы\Кузьменко\КПиЯП\ConsoleApp14\ConsoleApp1\obj\Debug\ConsoleApp1.pdb

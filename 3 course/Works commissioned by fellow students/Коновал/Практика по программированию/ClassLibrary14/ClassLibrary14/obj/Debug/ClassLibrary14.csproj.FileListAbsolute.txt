@@ -1,0 +1,5 @@
+I:\Лабы\Коновал\Практика по программированию\ClassLibrary14\ClassLibrary14\bin\Debug\ClassLibrary14.dll
+I:\Лабы\Коновал\Практика по программированию\ClassLibrary14\ClassLibrary14\bin\Debug\ClassLibrary14.pdb
+I:\Лабы\Коновал\Практика по программированию\ClassLibrary14\ClassLibrary14\obj\Debug\ClassLibrary14.csprojResolveAssemblyReference.cache
+I:\Лабы\Коновал\Практика по программированию\ClassLibrary14\ClassLibrary14\obj\Debug\ClassLibrary14.dll
+I:\Лабы\Коновал\Практика по программированию\ClassLibrary14\ClassLibrary14\obj\Debug\ClassLibrary14.pdb

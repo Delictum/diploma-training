@@ -1,0 +1,12 @@
+I:\Леха\КПиЯП\ConsoleApp5\ConsoleApp5\bin\Debug\ConsoleApp5.exe.config
+I:\Леха\КПиЯП\ConsoleApp5\ConsoleApp5\bin\Debug\ConsoleApp5.exe
+I:\Леха\КПиЯП\ConsoleApp5\ConsoleApp5\bin\Debug\ConsoleApp5.pdb
+I:\Леха\КПиЯП\ConsoleApp5\ConsoleApp5\obj\Debug\ConsoleApp5.csprojResolveAssemblyReference.cache
+I:\Леха\КПиЯП\ConsoleApp5\ConsoleApp5\obj\Debug\ConsoleApp5.exe
+I:\Леха\КПиЯП\ConsoleApp5\ConsoleApp5\obj\Debug\ConsoleApp5.pdb
+E:\Леха\КПиЯП\ConsoleApp5\ConsoleApp5\bin\Debug\ConsoleApp5.exe.config
+E:\Леха\КПиЯП\ConsoleApp5\ConsoleApp5\obj\Debug\ConsoleApp5.exe
+E:\Леха\КПиЯП\ConsoleApp5\ConsoleApp5\obj\Debug\ConsoleApp5.pdb
+E:\Леха\КПиЯП\ConsoleApp5\ConsoleApp5\bin\Debug\ConsoleApp5.exe
+E:\Леха\КПиЯП\ConsoleApp5\ConsoleApp5\bin\Debug\ConsoleApp5.pdb
+E:\Леха\КПиЯП\ConsoleApp5\ConsoleApp5\obj\Debug\ConsoleApp5.csprojResolveAssemblyReference.cache

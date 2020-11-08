@@ -1,0 +1,6 @@
+I:\Андрей\ConsoleApp9\ConsoleApp9\bin\Debug\ConsoleApp9.exe.config
+I:\Андрей\ConsoleApp9\ConsoleApp9\bin\Debug\ConsoleApp9.exe
+I:\Андрей\ConsoleApp9\ConsoleApp9\bin\Debug\ConsoleApp9.pdb
+I:\Андрей\ConsoleApp9\ConsoleApp9\obj\Debug\ConsoleApp9.csprojResolveAssemblyReference.cache
+I:\Андрей\ConsoleApp9\ConsoleApp9\obj\Debug\ConsoleApp9.exe
+I:\Андрей\ConsoleApp9\ConsoleApp9\obj\Debug\ConsoleApp9.pdb
