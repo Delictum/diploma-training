@@ -1,0 +1,129 @@
+object FormPDF: TFormPDF
+  Left = 0
+  Top = 0
+  Caption = #1048#1079#1086#1073#1088#1072#1078#1077#1085#1080#1077
+  ClientHeight = 298
+  ClientWidth = 560
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object AcroPDF1: TAcroPDF
+    Left = 0
+    Top = 26
+    Width = 560
+    Height = 246
+    Align = alClient
+    TabOrder = 0
+    ExplicitLeft = 192
+    ExplicitTop = 72
+    ExplicitWidth = 192
+    ExplicitHeight = 192
+    ControlData = {000C0000E13900006D190000}
+  end
+  object Button1: TButton
+    Left = 0
+    Top = 0
+    Width = 560
+    Height = 26
+    Align = alTop
+    Caption = #1044#1077#1081#1089#1090#1074#1080#1077
+    TabOrder = 1
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 0
+    Top = 272
+    Width = 560
+    Height = 26
+    Align = alBottom
+    Caption = #1054#1090#1084#1077#1085#1072
+    TabOrder = 2
+    OnClick = Button2Click
+  end
+  object OpenDialog1: TOpenDialog
+    Left = 512
+    Top = 224
+  end
+  object SQLConnection1: TSQLConnection
+    ConnectionName = 'MySQLConnection'
+    DriverName = 'MySQL'
+    LoginPrompt = False
+    Params.Strings = (
+      'DriverUnit=DBXMySQL'
+      
+        'DriverPackageLoader=TDBXDynalinkDriverLoader,DbxCommonDriver140.' +
+        'bpl'
+      
+        'DriverAssemblyLoader=Borland.Data.TDBXDynalinkDriverLoader,Borla' +
+        'nd.Data.DbxCommonDriver,Version=14.0.0.0,Culture=neutral,PublicK' +
+        'eyToken=91d62ebb5b0d1b1b'
+      
+        'MetaDataPackageLoader=TDBXMySqlMetaDataCommandFactory,DbxMySQLDr' +
+        'iver140.bpl'
+      
+        'MetaDataAssemblyLoader=Borland.Data.TDBXMySqlMetaDataCommandFact' +
+        'ory,Borland.Data.DbxMySQLDriver,Version=14.0.0.0,Culture=neutral' +
+        ',PublicKeyToken=91d62ebb5b0d1b1b'
+      'GetDriverFunc=getSQLDriverMYSQL'
+      'LibraryName=dbxmys.dll'
+      'LibraryNameOsx=libsqlmys.dylib'
+      'VendorLib=LIBMYSQL.dll'
+      'VendorLibWin64=libmysql.dll'
+      'VendorLibOsx=libmysqlclient.dylib'
+      'DriverName=MySQL'
+      'HostName=127.0.0.1'
+      'Database=StructuralDrawings'
+      'User_Name=mysql'
+      'Password=mysql'
+      'ServerCharSet=cp1251'
+      'BlobSize=-1'
+      'ErrorResourceFile='
+      'LocaleCode=0000'
+      'Compressed=False'
+      'Encrypted=False'
+      'ConnectTimeout=60'
+      'MaxBlobSize=-1')
+    Connected = True
+    Left = 32
+    Top = 222
+  end
+  object SQLQuery1: TSQLQuery
+    Active = True
+    MaxBlobSize = 1
+    Params = <>
+    SQL.Strings = (
+      
+        'SELECT Drawing.ID, Drawing.Designation, Drawing.Name, Conditions' +
+        '.Appointment, Environment.Appointment, Image FROM Drawing, Condi' +
+        'tions, Environment WHERE Drawing.ID_Conditions = Conditions.ID A' +
+        'ND Drawing.ID_Environment = Environment.ID')
+    SQLConnection = SQLConnection1
+    Left = 96
+    Top = 222
+  end
+  object DataSetProvider1: TDataSetProvider
+    DataSet = SQLQuery1
+    Left = 176
+    Top = 222
+  end
+  object ClientDataSet1: TClientDataSet
+    Active = True
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DataSetProvider1'
+    Left = 264
+    Top = 222
+  end
+  object DataSource1: TDataSource
+    DataSet = ClientDataSet1
+    Left = 336
+    Top = 222
+  end
+end

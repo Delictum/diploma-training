@@ -1,0 +1,7 @@
+[ODBC]
+DRIVER=MySQL ODBC 5.3 Unicode Driver
+UID=pol3
+COLUMN_SIZE_S32=1
+PORT=3306
+DATABASE=StructuralDrawings
+SERVER=localhost

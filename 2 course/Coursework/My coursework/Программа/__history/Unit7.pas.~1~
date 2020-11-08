@@ -1,0 +1,167 @@
+unit Unit7;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Imaging.jpeg,
+  Vcl.ExtCtrls;
+
+type
+  TForm7 = class(TForm)
+    ListBox1: TListBox;
+    Label1: TLabel;
+    ScrollBox1: TScrollBox;
+    Label2: TLabel;
+    Label3: TLabel;
+    Image1: TImage;
+    Label4: TLabel;
+    Image2: TImage;
+    Label5: TLabel;
+    Image3: TImage;
+    Label6: TLabel;
+    Image4: TImage;
+    ScrollBox2: TScrollBox;
+    Label7: TLabel;
+    Label8: TLabel;
+    Image5: TImage;
+    Label9: TLabel;
+    Image6: TImage;
+    Label10: TLabel;
+    Image7: TImage;
+    ScrollBox3: TScrollBox;
+    Label11: TLabel;
+    Label12: TLabel;
+    Image8: TImage;
+    Label13: TLabel;
+    Image9: TImage;
+    ScrollBox4: TScrollBox;
+    Label14: TLabel;
+    Label15: TLabel;
+    Image10: TImage;
+    Label17: TLabel;
+    ScrollBox5: TScrollBox;
+    Label16: TLabel;
+    Label18: TLabel;
+    Image11: TImage;
+    Label19: TLabel;
+    ScrollBox6: TScrollBox;
+    Label20: TLabel;
+    Image12: TImage;
+    ScrollBox7: TScrollBox;
+    Label21: TLabel;
+    Image13: TImage;
+    ScrollBox8: TScrollBox;
+    Label22: TLabel;
+    Memo1: TMemo;
+    ScrollBox9: TScrollBox;
+    Memo2: TMemo;
+    procedure ListBox1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form7: TForm7;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm7.ListBox1Click(Sender: TObject);
+begin
+case ListBox1.ItemIndex of
+0: begin
+    form7.ScrollBox1.Visible := true;
+    form7.ScrollBox2.Visible := false;
+    form7.ScrollBox3.Visible := false;
+    form7.ScrollBox4.Visible := false;
+    form7.ScrollBox5.Visible := false;
+    form7.ScrollBox6.Visible := false;
+    form7.ScrollBox7.Visible := false;
+    form7.ScrollBox8.Visible := false;
+    form7.ScrollBox9.Visible := false;
+   end;
+1: begin
+   form7.ScrollBox1.Visible := false;
+    form7.ScrollBox2.Visible := true;
+    form7.ScrollBox3.Visible := false;
+    form7.ScrollBox4.Visible := false;
+    form7.ScrollBox5.Visible := false;
+    form7.ScrollBox6.Visible := false;
+    form7.ScrollBox7.Visible := false;
+    form7.ScrollBox8.Visible := false;
+    form7.ScrollBox9.Visible := false;
+   end;
+2: begin
+   form7.ScrollBox1.Visible := false;
+    form7.ScrollBox2.Visible := false;
+    form7.ScrollBox3.Visible := true;
+    form7.ScrollBox4.Visible := false;
+    form7.ScrollBox5.Visible := false;
+    form7.ScrollBox6.Visible := false;
+    form7.ScrollBox7.Visible := false;
+    form7.ScrollBox8.Visible := false;
+    form7.ScrollBox9.Visible := false;
+   end;
+3: begin
+   form7.ScrollBox1.Visible := false;
+    form7.ScrollBox2.Visible := false;
+    form7.ScrollBox3.Visible := false;
+    form7.ScrollBox4.Visible := true;
+    form7.ScrollBox5.Visible := false;
+    form7.ScrollBox6.Visible := false;
+    form7.ScrollBox7.Visible := false;
+    form7.ScrollBox8.Visible := false;
+    form7.ScrollBox9.Visible := false;
+   end;
+  4: begin
+   form7.ScrollBox1.Visible := false;
+    form7.ScrollBox2.Visible := false;
+    form7.ScrollBox3.Visible := false;
+    form7.ScrollBox4.Visible := false;
+    form7.ScrollBox5.Visible := true;
+    form7.ScrollBox6.Visible := false;
+    form7.ScrollBox7.Visible := false;
+    form7.ScrollBox8.Visible := false;
+    form7.ScrollBox9.Visible := false;
+   end;
+5: begin
+   form7.ScrollBox1.Visible := false;
+    form7.ScrollBox2.Visible := false;
+    form7.ScrollBox3.Visible := false;
+    form7.ScrollBox4.Visible := false;
+    form7.ScrollBox5.Visible := false;
+    form7.ScrollBox6.Visible := true;
+    form7.ScrollBox7.Visible := false;
+    form7.ScrollBox8.Visible := false;
+    form7.ScrollBox9.Visible := false;
+   end;
+6: begin
+    form7.ScrollBox1.Visible := false;
+    form7.ScrollBox2.Visible := false;
+    form7.ScrollBox3.Visible := false;
+    form7.ScrollBox4.Visible := false;
+    form7.ScrollBox5.Visible := false;
+    form7.ScrollBox6.Visible := false;
+    form7.ScrollBox7.Visible := true;
+    form7.ScrollBox8.Visible := false;
+    form7.ScrollBox9.Visible := false;
+   end;
+7: begin
+    form7.ScrollBox1.Visible := false;
+    form7.ScrollBox2.Visible := false;
+    form7.ScrollBox3.Visible := false;
+    form7.ScrollBox4.Visible := false;
+    form7.ScrollBox5.Visible := false;
+    form7.ScrollBox6.Visible := false;
+    form7.ScrollBox7.Visible := false;
+    form7.ScrollBox8.Visible := true;
+    form7.ScrollBox9.Visible := false;
+   end;
+end;
+end;
+
+end.
