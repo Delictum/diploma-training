@@ -1,0 +1,100 @@
+unit Unit7;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, DBXMySQL, Vcl.StdCtrls,
+  Vcl.DBCtrls, Vcl.Imaging.jpeg, Vcl.ExtCtrls, Data.DB, Data.SqlExpr;
+
+type
+  TFormGame2 = class(TForm)
+    SQLConnection1: TSQLConnection;
+    SQLConnection2: TSQLConnection;
+    PageControl1: TPageControl;
+    TabSheet1: TTabSheet;
+    Image1: TImage;
+    DBRichEdit1: TDBRichEdit;
+    DBRichEdit2: TDBRichEdit;
+    RichEdit1: TRichEdit;
+    RichEdit2: TRichEdit;
+    RichEdit3: TRichEdit;
+    TabSheet2: TTabSheet;
+    Image2: TImage;
+    DBRichEdit3: TDBRichEdit;
+    DBRichEdit4: TDBRichEdit;
+    RichEdit4: TRichEdit;
+    RichEdit5: TRichEdit;
+    RichEdit6: TRichEdit;
+    TabSheet3: TTabSheet;
+    Image3: TImage;
+    DBRichEdit5: TDBRichEdit;
+    DBRichEdit6: TDBRichEdit;
+    RichEdit7: TRichEdit;
+    RichEdit8: TRichEdit;
+    RichEdit9: TRichEdit;
+    TabSheet4: TTabSheet;
+    Image4: TImage;
+    DBRichEdit7: TDBRichEdit;
+    DBRichEdit8: TDBRichEdit;
+    RichEdit10: TRichEdit;
+    RichEdit11: TRichEdit;
+    RichEdit12: TRichEdit;
+    TabSheet5: TTabSheet;
+    Image5: TImage;
+    DBRichEdit9: TDBRichEdit;
+    DBRichEdit10: TDBRichEdit;
+    RichEdit13: TRichEdit;
+    RichEdit14: TRichEdit;
+    RichEdit15: TRichEdit;
+    TabSheet6: TTabSheet;
+    Image6: TImage;
+    DBRichEdit11: TDBRichEdit;
+    DBRichEdit12: TDBRichEdit;
+    RichEdit16: TRichEdit;
+    RichEdit17: TRichEdit;
+    RichEdit18: TRichEdit;
+    TabSheet7: TTabSheet;
+    Image7: TImage;
+    DBRichEdit13: TDBRichEdit;
+    DBRichEdit14: TDBRichEdit;
+    RichEdit19: TRichEdit;
+    RichEdit20: TRichEdit;
+    RichEdit21: TRichEdit;
+    TabSheet8: TTabSheet;
+    Image8: TImage;
+    DBRichEdit15: TDBRichEdit;
+    DBRichEdit16: TDBRichEdit;
+    RichEdit22: TRichEdit;
+    RichEdit23: TRichEdit;
+    RichEdit24: TRichEdit;
+    TabSheet9: TTabSheet;
+    Image9: TImage;
+    DBRichEdit17: TDBRichEdit;
+    DBRichEdit18: TDBRichEdit;
+    RichEdit25: TRichEdit;
+    RichEdit26: TRichEdit;
+    RichEdit27: TRichEdit;
+    TabSheet10: TTabSheet;
+    Image10: TImage;
+    DBRichEdit19: TDBRichEdit;
+    DBRichEdit20: TDBRichEdit;
+    RichEdit28: TRichEdit;
+    RichEdit29: TRichEdit;
+    RichEdit30: TRichEdit;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormGame2: TFormGame2;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit5;
+
+end.

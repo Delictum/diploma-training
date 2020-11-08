@@ -1,0 +1,20 @@
+program Project1;
+
+uses
+  Vcl.Forms,
+  Unit2 in 'Unit2.pas' {LogReg},
+  Unit3 in 'Unit3.pas' {LogOut},
+  Unit5 in 'Unit5.pas' {FormBegin},
+  Unit6 in 'Unit6.pas' {FormGame};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TLogOut, LogOut);
+  Application.CreateForm(TLogReg, LogReg);
+  Application.CreateForm(TFormBegin, FormBegin);
+  Application.CreateForm(TFormGame, FormGame);
+  Application.Run;
+end.

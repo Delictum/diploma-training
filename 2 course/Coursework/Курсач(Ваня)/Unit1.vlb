@@ -1,0 +1,7 @@
+﻿[Module Settings]
+ModelLayerNames="SELECT * FROM `glavi`"
+
+[]
+Visible=True
+LayerNames=
+

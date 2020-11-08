@@ -1,0 +1,134 @@
+object FormGame1: TFormGame1
+  Left = 0
+  Top = 0
+  Caption = 'FormGame1'
+  ClientHeight = 298
+  ClientWidth = 396
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object PageControl1: TPageControl
+    Left = 0
+    Top = 0
+    Width = 396
+    Height = 298
+    ActivePage = TabSheet15
+    Align = alClient
+    MultiLine = True
+    Style = tsButtons
+    TabOrder = 0
+    ExplicitWidth = 560
+    object TabSheet1: TTabSheet
+      Caption = 'TabSheet1'
+      TabVisible = False
+      ExplicitTop = 6
+      ExplicitWidth = 552
+      ExplicitHeight = 288
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'TabSheet2'
+      ImageIndex = 1
+      TabVisible = False
+      ExplicitTop = 6
+      ExplicitWidth = 552
+      ExplicitHeight = 288
+    end
+    object TabSheet3: TTabSheet
+      Caption = 'TabSheet3'
+      ImageIndex = 2
+      TabVisible = False
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
+    end
+    object TabSheet4: TTabSheet
+      Caption = 'TabSheet4'
+      ImageIndex = 3
+      TabVisible = False
+      ExplicitTop = 6
+      ExplicitWidth = 552
+      ExplicitHeight = 288
+    end
+    object TabSheet5: TTabSheet
+      Caption = 'TabSheet5'
+      ImageIndex = 4
+      TabVisible = False
+      ExplicitTop = 6
+      ExplicitWidth = 552
+      ExplicitHeight = 288
+    end
+    object TabSheet6: TTabSheet
+      Caption = 'TabSheet6'
+      ImageIndex = 5
+      TabVisible = False
+      ExplicitTop = 6
+      ExplicitWidth = 552
+      ExplicitHeight = 288
+    end
+    object TabSheet7: TTabSheet
+      Caption = 'TabSheet7'
+      ImageIndex = 6
+      TabVisible = False
+      ExplicitTop = 6
+      ExplicitWidth = 552
+      ExplicitHeight = 288
+    end
+    object TabSheet8: TTabSheet
+      Caption = 'TabSheet8'
+      ImageIndex = 7
+      TabVisible = False
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
+    end
+    object TabSheet9: TTabSheet
+      Caption = 'TabSheet9'
+      ImageIndex = 8
+      TabVisible = False
+      ExplicitTop = 6
+      ExplicitWidth = 552
+      ExplicitHeight = 288
+    end
+    object TabSheet10: TTabSheet
+      Caption = 'TabSheet10'
+      ImageIndex = 9
+      TabVisible = False
+      ExplicitTop = 6
+      ExplicitWidth = 552
+      ExplicitHeight = 288
+    end
+    object TabSheet11: TTabSheet
+      Caption = 'TabSheet11'
+      ImageIndex = 10
+      ExplicitWidth = 552
+    end
+    object TabSheet12: TTabSheet
+      Caption = 'TabSheet12'
+      ImageIndex = 11
+      ExplicitWidth = 552
+    end
+    object TabSheet13: TTabSheet
+      Caption = 'TabSheet13'
+      ImageIndex = 12
+      ExplicitWidth = 552
+    end
+    object TabSheet14: TTabSheet
+      Caption = 'TabSheet14'
+      ImageIndex = 13
+      ExplicitWidth = 552
+    end
+    object TabSheet15: TTabSheet
+      Caption = 'TabSheet15'
+      ImageIndex = 14
+      ExplicitWidth = 552
+    end
+  end
+end

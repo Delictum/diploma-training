@@ -1,0 +1,85 @@
+unit Unit5;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Data.FMTBcd, DBXMySQL,
+  Vcl.StdCtrls, Vcl.DBCtrls, Data.DB, Data.SqlExpr, Datasnap.Provider,
+  Datasnap.DBClient;
+
+type
+  TFormBegin = class(TForm)
+    DataSource1: TDataSource;
+    ClientDataSet1: TClientDataSet;
+    DataSetProvider1: TDataSetProvider;
+    SQLQuery1: TSQLQuery;
+    SQLConnection1: TSQLConnection;
+    DBLCBLevel: TDBLookupComboBox;
+    Label1: TLabel;
+    Ok: TButton;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure CBLevelChange(Sender: TObject);
+    procedure OkClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormBegin: TFormBegin;
+  Otvet, GameStepID : integer;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit3;
+
+procedure TFormBegin.CBLevelChange(Sender: TObject);
+begin
+  ClientDataSet1.Active := false;
+  SQLQuery1.Close;
+  SQLQuery1.SQL.Clear;
+  SQLQuery1.SQL.Add('SELECT Name_Genre FROM Genre WHERE ID_Level = ' + IntToStr(CBLevel.ItemIndex + 1));
+  SQLQuery1.Open;
+  ClientDataSet1.Active := true;
+end;
+
+procedure TFormBegin.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  LogOut.Close;
+end;
+
+procedure TFormBegin.OkClick(Sender: TObject);
+begin
+if DBLCBLevel.Text <> '' then
+    begin
+      if DBLCBLevel.Text = 'Литература' then
+        begin
+          GameStepID := 1;
+          GameStepIDPlay := 1;
+        end;
+      if DBLCBLevel.Text = 'IT-технологии' then
+        begin
+          GameStepID := 16;
+          GameStepIDPlay := 16;
+        end;
+      if DBLCBLevel.Text = 'История' then
+        begin
+          GameStepID := 31;
+          GameStepIDPlay := 31;
+        end;
+      ClientDataSet1.Active := false;
+      SQLQuery1.Close;
+      SQLQuery1.SQL.Clear;
+      SQLQuery1.SQL.Add('SELECT * FROM Music WHERE ID = ' + IntToStr(GameStepID));
+      SQLQuery1.Open;
+      ClientDataSet1.Active := true;
+    end
+  else
+    ShowMessage('Выберите уровень.');
+end;
+
+end.

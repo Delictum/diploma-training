@@ -1,0 +1,109 @@
+unit Unit6;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Grids, Vcl.DBGrids,
+  Vcl.ComCtrls, Vcl.StdCtrls, Vcl.Imaging.jpeg, Vcl.Imaging.pngimage,
+  Vcl.ExtCtrls;
+
+type
+  TFormGame = class(TForm)
+    PageControl1: TPageControl;
+    TabSheet1: TTabSheet;
+    Image2: TImage;
+    Image3: TImage;
+    Image4: TImage;
+    Image5: TImage;
+    Image6: TImage;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label1: TLabel;
+    TabSheet2: TTabSheet;
+    Image7: TImage;
+    Image8: TImage;
+    Image9: TImage;
+    Label2: TLabel;
+    RadioButton1: TRadioButton;
+    RadioButton2: TRadioButton;
+    RadioButton3: TRadioButton;
+    RadioButton4: TRadioButton;
+    TabSheet3: TTabSheet;
+    Image10: TImage;
+    Image17: TImage;
+    Image18: TImage;
+    Label8: TLabel;
+    ComboBox1: TComboBox;
+    ComboBox2: TComboBox;
+    ComboBox3: TComboBox;
+    TabSheet4: TTabSheet;
+    Image20: TImage;
+    Image11: TImage;
+    Image19: TImage;
+    Label9: TLabel;
+    Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
+    Button4: TButton;
+    TabSheet5: TTabSheet;
+    Image12: TImage;
+    Image21: TImage;
+    Image22: TImage;
+    Label10: TLabel;
+    CheckBox1: TCheckBox;
+    CheckBox2: TCheckBox;
+    CheckBox3: TCheckBox;
+    CheckBox4: TCheckBox;
+    TabSheet6: TTabSheet;
+    Image13: TImage;
+    Image23: TImage;
+    Label11: TLabel;
+    Image1: TImage;
+    RadioButton5: TRadioButton;
+    RadioButton6: TRadioButton;
+    RadioButton7: TRadioButton;
+    RadioButton8: TRadioButton;
+    TabSheet7: TTabSheet;
+    Image26: TImage;
+    Image14: TImage;
+    Image25: TImage;
+    Label17: TLabel;
+    Edit1: TEdit;
+    TabSheet8: TTabSheet;
+    Image28: TImage;
+    Image15: TImage;
+    Image27: TImage;
+    Label14: TLabel;
+    ListBox2: TListBox;
+    ComboBox4: TComboBox;
+    ListBox3: TListBox;
+    ListBox4: TListBox;
+    TabSheet9: TTabSheet;
+    Image30: TImage;
+    Image16: TImage;
+    Image29: TImage;
+    Label18: TLabel;
+    Image24: TImage;
+    TrackBar1: TTrackBar;
+    TabSheet10: TTabSheet;
+    Image32: TImage;
+    Label16: TLabel;
+    Label7: TLabel;
+    DBGrid1: TDBGrid;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormGame: TFormGame;
+
+implementation
+
+{$R *.dfm}
+
+end.

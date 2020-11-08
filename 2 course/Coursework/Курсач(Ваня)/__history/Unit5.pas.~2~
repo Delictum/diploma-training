@@ -1,0 +1,35 @@
+unit Unit5;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DBXMySQL, Data.FMTBcd,
+  Vcl.StdCtrls, Vcl.DBCtrls, Datasnap.DBClient, Datasnap.Provider, Data.DB,
+  Data.SqlExpr;
+
+type
+  TForm5 = class(TForm)
+    SQLConnection1: TSQLConnection;
+    SQLQuery1: TSQLQuery;
+    DataSource1: TDataSource;
+    DataSetProvider1: TDataSetProvider;
+    ClientDataSet1: TClientDataSet;
+    DBMemo1: TDBMemo;
+    Button1: TButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form5: TForm5;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit1;
+
+end.

@@ -1,0 +1,257 @@
+unit Unit3;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, DBXMySQL, Data.FMTBcd, Data.DB,
+  Vcl.Grids, Vcl.DBGrids, Datasnap.Provider, Datasnap.DBClient, Data.SqlExpr,
+  Vcl.StdCtrls, jpeg, Vcl.ExtCtrls, Vcl.Menus, ShellAPI, Vcl.Imaging.pngimage;
+
+type
+  TLogOut = class(TForm)
+    SQLConnection1: TSQLConnection;
+    SQLQuery1: TSQLQuery;
+    DataSetProvider1: TDataSetProvider;
+    ClientDataSet1: TClientDataSet;
+    DataSource1: TDataSource;
+    EditNameLog: TEdit;
+    EditPasLog: TEdit;
+    BtnLED: TButton;
+    MainMenu1: TMainMenu;
+    N1: TMenuItem;
+    N4: TMenuItem;
+    Helper1: TMenuItem;
+    Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
+    Button4: TButton;
+    procedure EditNameLogClick(Sender: TObject);
+    procedure EditPasLogClick(Sender: TObject);
+    procedure BtnLEDClick(Sender: TObject);
+    procedure Helper1Click(Sender: TObject);
+    procedure N4Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  LogOut: TLogOut;
+  ENLClick, EPLClick, LogRegShow : boolean;
+  bufName, bufPas : string;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit2, Unit5, Unit6;
+
+{Нажатие на кнопку "Вход". Осуществляет проверку пользователя в базе данных таблицы Users.
+При верных данных переход на игру.}
+procedure TLogOut.BtnLEDClick(Sender: TObject);
+begin
+//Проверка ввода пользователя.
+  if (EditNameLog.Text = '') or (EditNameLog.Text = 'Введите пользователя') then
+    begin
+      ShowMessage('Введите пользователя.');
+      exit;
+    end;
+//Проверка ввода пароля.
+  if (EditPasLog.Text = '') or (EditPasLog.Text = 'Введите пароль') then
+    begin
+      ShowMessage('Введите пароль.');
+      exit;
+    end;
+//Поиск введенного пользователя в базе данных таблицы Users.
+  ClientDataSet1.Active := false;
+   SQLQuery1.Close;
+    SQLQuery1.SQL.Clear;
+     SQLQuery1.SQL.Add('SELECT Name FROM Users WHERE Name = "' + EditNameLog.Text + '"');
+      SQLQuery1.Open;
+       ClientDataSet1.Active := true;
+  bufName := VarToStr(SQLQuery1.FieldValues['Name']);
+//Не найден - выход.
+  if bufName <> EditNameLog.Text then
+    begin
+      ShowMessage('Пользователь не существует.');
+      exit;
+    end;
+//Сверяется пароль пользователя.
+  ClientDataSet1.Active := false;
+  SQLQuery1.Close;
+  SQLQuery1.SQL.Clear;
+  SQLQuery1.SQL.Add('SELECT Password FROM Users WHERE Password = "' + EditPasLog.Text);
+  SQLQuery1.SQL.Add('" AND Name = "' + EditNameLog.Text + '"');
+  SQLQuery1.Open;
+  ClientDataSet1.Active := true;
+  bufPas := VarToStr(SQLQuery1.FieldValues['Password']);
+  if bufPas <> EditPasLog.Text then
+//Не верный - выход.
+    begin
+      ShowMessage('Неверный пароль.');
+      exit;
+    end;
+//Выборка всех пользователей
+  ClientDataSet1.Active := false;
+   SQLQuery1.Close;
+    SQLQuery1.SQL.Clear;
+     SQLQuery1.SQL.Add('SELECT * FROM Users');
+      SQLQuery1.Open;
+       ClientDataSet1.Active := true;
+  LogOut.Hide;
+  FormBegin.Show;
+  Otvet := 0;
+end;
+
+procedure TLogOut.Button1Click(Sender: TObject);
+begin
+ //Регистрация
+  LogOut.Hide;
+  LogReg.Show;
+  LogReg.BtnReg.Caption := 'Зарегистрироваться';
+  LogReg.EditRPasLog.Visible := true;
+  EditNameLog.Visible := true;
+  LogReg.Caption := 'Добавление пользователя';
+end;
+
+procedure TLogOut.Button2Click(Sender: TObject);
+begin
+  if (EditNameLog.Text = '') or (EditNameLog.Text = 'Введите пользователя') then
+  begin
+    ShowMessage('Введите изменяемого пользователя.');
+    exit;
+  end;
+  if (EditPasLog.Text = '') or (EditPasLog.Text = 'Введите пароль') then
+  begin
+    ShowMessage('Введите пароль.');
+    exit;
+  end;
+  ClientDataSet1.Active := false;
+  SQLQuery1.Close;
+  SQLQuery1.SQL.Clear;
+  SQLQuery1.SQL.Add('SELECT Name FROM Users WHERE Name = "' + EditNameLog.Text + '"');
+  SQLQuery1.Open;
+  ClientDataSet1.Active := true;
+  bufName := VarToStr(SQLQuery1.FieldValues['Name']);
+  if bufName <> EditNameLog.Text then
+  begin
+    ShowMessage('Пользователь не существует.');
+    exit;
+  end;
+  ClientDataSet1.Active := false;
+  SQLQuery1.Close;
+  SQLQuery1.SQL.Clear;
+  SQLQuery1.SQL.Add('SELECT Password FROM Users WHERE Password = "' + EditPasLog.Text + '"');
+  SQLQuery1.Open;
+  ClientDataSet1.Active := true;
+  bufPas := VarToStr(SQLQuery1.FieldValues['Password']);
+  if bufPas <> EditPasLog.Text then
+  begin
+    ShowMessage('Неверный пароль.');
+    exit;
+  end;
+  ClientDataSet1.Active := false;
+  SQLQuery1.Close;
+  SQLQuery1.SQL.Clear;
+  SQLQuery1.SQL.Add('SELECT * FROM Users');
+  SQLQuery1.Open;
+  ClientDataSet1.Active := true;
+
+  LogOut.Hide;
+  LogReg.Show;
+  LogReg.BtnReg.Caption := 'Изменить';
+  LogReg.EditRPasLog.Visible := false;
+  LogReg.Caption := 'Редактирование пользователя';
+end;
+
+procedure TLogOut.Button3Click(Sender: TObject);
+begin
+  if (EditNameLog.Text = '') or (EditNameLog.Text = 'Введите пользователя') then
+  begin
+    ShowMessage('Введите удаляемого пользователя.');
+    exit;
+  end;
+  if (EditPasLog.Text = '') or (EditPasLog.Text = 'Введите пароль') then
+  begin
+    ShowMessage('Введите пароль.');
+    exit;
+  end;
+  ClientDataSet1.Active := false;
+  SQLQuery1.Close;
+  SQLQuery1.SQL.Clear;
+  SQLQuery1.SQL.Add('SELECT Name FROM Users WHERE Name = "' + EditNameLog.Text + '"');
+  SQLQuery1.Open;
+  ClientDataSet1.Active := true;
+  bufName := VarToStr(SQLQuery1.FieldValues['Name']);
+  if bufName <> EditNameLog.Text then
+    begin
+      ShowMessage('Пользователь не существует.');
+      exit;
+    end;
+  ClientDataSet1.Active := false;
+  SQLQuery1.Close;
+  SQLQuery1.SQL.Clear;
+  SQLQuery1.SQL.Add('SELECT Password FROM Users WHERE Password = "' + EditPasLog.Text + '"');
+  SQLQuery1.Open;
+  ClientDataSet1.Active := true;
+  bufPas := VarToStr(SQLQuery1.FieldValues['Password']);
+  if bufPas <> EditPasLog.Text then
+  begin
+    ShowMessage('Неверный пароль.');
+    exit;
+  end;
+  ClientDataSet1.Active := false;
+  SQLQuery1.Close;
+  SQLQuery1.SQL.Clear;
+  SQLQuery1.SQL.Add('SELECT * FROM Users');
+  SQLQuery1.Open;
+  ClientDataSet1.Active := true;
+
+  LogOut.Hide;
+  LogReg.Show;
+  LogReg.BtnReg.Caption := 'Удалить';
+  LogReg.EditRPasLog.Visible := false;
+  LogReg.EditNameLog.Visible := false;
+  LogReg.Caption := 'Удаление пользователя';
+end;
+
+procedure TLogOut.Button4Click(Sender: TObject);
+begin
+  ShellExecute (LogOut.Handle, nil, 'iexplore', 'https://thedrakoneragoni.wixsite.com/helper/', nil, SW_RESTORE);
+end;
+
+procedure TLogOut.EditNameLogClick(Sender: TObject);
+begin
+  if ENLClick <> true then
+    EditNameLog.Text := '';
+  ENLClick := true;
+end;
+
+procedure TLogOut.EditPasLogClick(Sender: TObject);
+begin
+  if EPLClick <> true then
+    begin
+      EditPasLog.Text := '';
+      EditPasLog.PasswordChar := '*';
+    end;
+  EPLClick := true;
+end;
+
+procedure TLogOut.Helper1Click(Sender: TObject);
+begin
+  ShellExecute (LogOut.Handle, nil, 'iexplore', 'www.thedrakoneragoni.wix.com/helper/', nil, SW_RESTORE);
+end;
+
+procedure TLogOut.N4Click(Sender: TObject);
+  Var i : integer;
+begin
+  LogOut.Close;
+end;
+
+end.

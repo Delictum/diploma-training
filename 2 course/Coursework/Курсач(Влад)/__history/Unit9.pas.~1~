@@ -1,0 +1,34 @@
+unit Unit9;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
+
+type
+  TFormEnd = class(TForm)
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormEnd: TFormEnd;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit6, Unit7, Unit8;
+
+procedure TFormEnd.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  FormGame1.Close;
+  FormGame2.Close;
+  FormGame3.Close;
+end;
+
+end.
