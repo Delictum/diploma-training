@@ -1,0 +1,16 @@
+E:\ЗКИ\ЛР 3\ConsoleApplication2\ConsoleApplication2\bin\Debug\ConsoleApplication2.exe.config
+I:\ЗКИ\ЛР 3\ConsoleApplication2\ConsoleApplication2\bin\Debug\ConsoleApplication2.exe.config
+I:\ЗКИ\ЛР 3\ConsoleApplication2\ConsoleApplication2\bin\Debug\ConsoleApplication2.exe
+I:\ЗКИ\ЛР 3\ConsoleApplication2\ConsoleApplication2\bin\Debug\ConsoleApplication2.pdb
+I:\ЗКИ\ЛР 3\ConsoleApplication2\ConsoleApplication2\obj\Debug\ConsoleApplication2.csprojResolveAssemblyReference.cache
+I:\ЗКИ\ЛР 3\ConsoleApplication2\ConsoleApplication2\obj\Debug\ConsoleApplication2.exe
+I:\ЗКИ\ЛР 3\ConsoleApplication2\ConsoleApplication2\obj\Debug\ConsoleApplication2.pdb
+E:\ЗКИ\ЛР 3\ConsoleApplication2\ConsoleApplication2\obj\Debug\ConsoleApplication2.exe
+E:\ЗКИ\ЛР 3\ConsoleApplication2\ConsoleApplication2\obj\Debug\ConsoleApplication2.pdb
+D:\25 Information Technology Software\3 course\ЗКИ\ЛР 3 - Цезарь и Виженер\ConsoleApplication2\ConsoleApplication2\bin\Debug\ConsoleApplication2.exe.config
+D:\25 Information Technology Software\3 course\ЗКИ\ЛР 3 - Цезарь и Виженер\ConsoleApplication2\ConsoleApplication2\bin\Debug\ConsoleApplication2.exe
+D:\25 Information Technology Software\3 course\ЗКИ\ЛР 3 - Цезарь и Виженер\ConsoleApplication2\ConsoleApplication2\bin\Debug\ConsoleApplication2.pdb
+D:\25 Information Technology Software\3 course\ЗКИ\ЛР 3 - Цезарь и Виженер\ConsoleApplication2\ConsoleApplication2\obj\Debug\ConsoleApplication2.csprojAssemblyReference.cache
+D:\25 Information Technology Software\3 course\ЗКИ\ЛР 3 - Цезарь и Виженер\ConsoleApplication2\ConsoleApplication2\obj\Debug\ConsoleApplication2.csproj.CoreCompileInputs.cache
+D:\25 Information Technology Software\3 course\ЗКИ\ЛР 3 - Цезарь и Виженер\ConsoleApplication2\ConsoleApplication2\obj\Debug\ConsoleApplication2.exe
+D:\25 Information Technology Software\3 course\ЗКИ\ЛР 3 - Цезарь и Виженер\ConsoleApplication2\ConsoleApplication2\obj\Debug\ConsoleApplication2.pdb

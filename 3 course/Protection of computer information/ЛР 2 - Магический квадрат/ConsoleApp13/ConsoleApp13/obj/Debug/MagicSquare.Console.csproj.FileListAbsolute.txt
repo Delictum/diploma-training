@@ -1,0 +1,2 @@
+D:\25 Information Technology Software\3 course\ЗКИ\ЛР 2 - Магический квадрат\ConsoleApp13\ConsoleApp13\obj\Debug\MagicSquare.Console.csprojAssemblyReference.cache
+D:\25 Information Technology Software\3 course\ЗКИ\ЛР 2 - Магический квадрат\ConsoleApp13\ConsoleApp13\obj\Debug\MagicSquare.Console.csproj.CoreCompileInputs.cache

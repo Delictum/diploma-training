@@ -1,0 +1,15 @@
+F:\ЗКИ\ЛР 3\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+F:\ЗКИ\ЛР 3\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+F:\ЗКИ\ЛР 3\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+F:\ЗКИ\ЛР 3\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+F:\ЗКИ\ЛР 3\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+F:\ЗКИ\ЛР 3\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+E:\ЗКИ\ЛР 3\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+E:\ЗКИ\ЛР 3\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+E:\ЗКИ\ЛР 3\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+I:\ЗКИ\ЛР 3\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+I:\ЗКИ\ЛР 3\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+I:\ЗКИ\ЛР 3\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+I:\ЗКИ\ЛР 3\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+I:\ЗКИ\ЛР 3\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+I:\ЗКИ\ЛР 3\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb

@@ -1,0 +1,6 @@
+D:\25 Information Technology Software\3 course\ЗКИ\ЛР 2 - Магический квадрат\ConsoleApp13\MagicSquare\bin\Debug\MagicSquare.dll
+D:\25 Information Technology Software\3 course\ЗКИ\ЛР 2 - Магический квадрат\ConsoleApp13\MagicSquare\bin\Debug\MagicSquare.pdb
+D:\25 Information Technology Software\3 course\ЗКИ\ЛР 2 - Магический квадрат\ConsoleApp13\MagicSquare\obj\Debug\MagicSquare.csprojAssemblyReference.cache
+D:\25 Information Technology Software\3 course\ЗКИ\ЛР 2 - Магический квадрат\ConsoleApp13\MagicSquare\obj\Debug\MagicSquare.csproj.CoreCompileInputs.cache
+D:\25 Information Technology Software\3 course\ЗКИ\ЛР 2 - Магический квадрат\ConsoleApp13\MagicSquare\obj\Debug\MagicSquare.dll
+D:\25 Information Technology Software\3 course\ЗКИ\ЛР 2 - Магический квадрат\ConsoleApp13\MagicSquare\obj\Debug\MagicSquare.pdb

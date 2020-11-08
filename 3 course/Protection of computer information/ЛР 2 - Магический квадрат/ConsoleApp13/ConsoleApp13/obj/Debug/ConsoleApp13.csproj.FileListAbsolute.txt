@@ -1,0 +1,31 @@
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp13\ConsoleApp13\bin\Debug\ConsoleApp13.exe.config
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp13\ConsoleApp13\bin\Debug\ConsoleApp13.exe
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp13\ConsoleApp13\bin\Debug\ConsoleApp13.pdb
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp13\ConsoleApp13\obj\Debug\ConsoleApp13.csprojResolveAssemblyReference.cache
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp13\ConsoleApp13\obj\Debug\ConsoleApp13.exe
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp13\ConsoleApp13\obj\Debug\ConsoleApp13.pdb
+F:\ЗКИ\ConsoleApp13\ConsoleApp13\bin\Debug\ConsoleApp13.exe.config
+F:\ЗКИ\ConsoleApp13\ConsoleApp13\obj\Debug\ConsoleApp13.exe
+F:\ЗКИ\ConsoleApp13\ConsoleApp13\obj\Debug\ConsoleApp13.pdb
+F:\ЗКИ\ConsoleApp13\ConsoleApp13\bin\Debug\ConsoleApp13.exe
+F:\ЗКИ\ConsoleApp13\ConsoleApp13\bin\Debug\ConsoleApp13.pdb
+F:\ЗКИ\ConsoleApp13\ConsoleApp13\obj\Debug\ConsoleApp13.csprojResolveAssemblyReference.cache
+I:\ЗКИ\ЛР 2\ConsoleApp13\ConsoleApp13\bin\Debug\ConsoleApp13.exe.config
+I:\ЗКИ\ЛР 2\ConsoleApp13\ConsoleApp13\bin\Debug\ConsoleApp13.exe
+I:\ЗКИ\ЛР 2\ConsoleApp13\ConsoleApp13\bin\Debug\ConsoleApp13.pdb
+I:\ЗКИ\ЛР 2\ConsoleApp13\ConsoleApp13\obj\Debug\ConsoleApp13.csprojResolveAssemblyReference.cache
+I:\ЗКИ\ЛР 2\ConsoleApp13\ConsoleApp13\obj\Debug\ConsoleApp13.exe
+I:\ЗКИ\ЛР 2\ConsoleApp13\ConsoleApp13\obj\Debug\ConsoleApp13.pdb
+E:\ЗКИ\ЛР 2\ConsoleApp13\ConsoleApp13\bin\Debug\ConsoleApp13.exe.config
+E:\ЗКИ\ЛР 2\ConsoleApp13\ConsoleApp13\obj\Debug\ConsoleApp13.exe
+E:\ЗКИ\ЛР 2\ConsoleApp13\ConsoleApp13\obj\Debug\ConsoleApp13.pdb
+E:\ЗКИ\ЛР 2\ConsoleApp13\ConsoleApp13\bin\Debug\ConsoleApp13.exe
+E:\ЗКИ\ЛР 2\ConsoleApp13\ConsoleApp13\bin\Debug\ConsoleApp13.pdb
+E:\ЗКИ\ЛР 2\ConsoleApp13\ConsoleApp13\obj\Debug\ConsoleApp13.csprojResolveAssemblyReference.cache
+D:\25 Information Technology Software\3 course\ЗКИ\ЛР 2 - Магический квадрат\ConsoleApp13\ConsoleApp13\bin\Debug\ConsoleApp13.exe.config
+D:\25 Information Technology Software\3 course\ЗКИ\ЛР 2 - Магический квадрат\ConsoleApp13\ConsoleApp13\bin\Debug\ConsoleApp13.exe
+D:\25 Information Technology Software\3 course\ЗКИ\ЛР 2 - Магический квадрат\ConsoleApp13\ConsoleApp13\bin\Debug\ConsoleApp13.pdb
+D:\25 Information Technology Software\3 course\ЗКИ\ЛР 2 - Магический квадрат\ConsoleApp13\ConsoleApp13\obj\Debug\ConsoleApp13.csprojAssemblyReference.cache
+D:\25 Information Technology Software\3 course\ЗКИ\ЛР 2 - Магический квадрат\ConsoleApp13\ConsoleApp13\obj\Debug\ConsoleApp13.csproj.CoreCompileInputs.cache
+D:\25 Information Technology Software\3 course\ЗКИ\ЛР 2 - Магический квадрат\ConsoleApp13\ConsoleApp13\obj\Debug\ConsoleApp13.exe
+D:\25 Information Technology Software\3 course\ЗКИ\ЛР 2 - Магический квадрат\ConsoleApp13\ConsoleApp13\obj\Debug\ConsoleApp13.pdb

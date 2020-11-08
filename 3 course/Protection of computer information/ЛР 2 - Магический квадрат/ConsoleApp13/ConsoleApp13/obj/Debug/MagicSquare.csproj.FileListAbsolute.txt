@@ -1,0 +1,7 @@
+D:\25 Information Technology Software\3 course\ЗКИ\ЛР 2 - Магический квадрат\ConsoleApp13\ConsoleApp13\bin\Debug\ConsoleApp13.exe.config
+D:\25 Information Technology Software\3 course\ЗКИ\ЛР 2 - Магический квадрат\ConsoleApp13\ConsoleApp13\bin\Debug\ConsoleApp13.exe
+D:\25 Information Technology Software\3 course\ЗКИ\ЛР 2 - Магический квадрат\ConsoleApp13\ConsoleApp13\bin\Debug\ConsoleApp13.pdb
+D:\25 Information Technology Software\3 course\ЗКИ\ЛР 2 - Магический квадрат\ConsoleApp13\ConsoleApp13\obj\Debug\MagicSquare.csprojAssemblyReference.cache
+D:\25 Information Technology Software\3 course\ЗКИ\ЛР 2 - Магический квадрат\ConsoleApp13\ConsoleApp13\obj\Debug\MagicSquare.csproj.CoreCompileInputs.cache
+D:\25 Information Technology Software\3 course\ЗКИ\ЛР 2 - Магический квадрат\ConsoleApp13\ConsoleApp13\obj\Debug\ConsoleApp13.exe
+D:\25 Information Technology Software\3 course\ЗКИ\ЛР 2 - Магический квадрат\ConsoleApp13\ConsoleApp13\obj\Debug\ConsoleApp13.pdb
