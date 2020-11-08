@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.140,=C:\Users\Delictum\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.349,=C:\Users\Delictum\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.288,=C:\Users\Delictum\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2017.09.21 10:19:57.590,=C:\Users\Delictum\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2017.09.21 10:24:41.287,C:\Users\Delictum\Desktop\Скорябкин\Unit1.pas=C:\Users\Delictum\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2017.09.21 10:24:41.287,C:\Users\Delictum\Desktop\Скорябкин\Unit1.dfm=C:\Users\Delictum\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2017.09.21 10:24:43.904,C:\Users\Delictum\Desktop\Скорябкин\Project1.dproj=C:\Users\Delictum\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

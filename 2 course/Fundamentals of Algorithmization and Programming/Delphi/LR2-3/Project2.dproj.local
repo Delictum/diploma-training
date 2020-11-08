@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.dproj,C:\Users\Delictum\Documents\RAD Studio\Projects\LR2-3\Project2.dproj=C:\Users\Delictum\Documents\RAD Studio\Projects\Project2.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.dfm,C:\Users\Delictum\Documents\RAD Studio\Projects\LR2-3\Unit2.dfm=C:\Users\Delictum\Documents\RAD Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.pas,C:\Users\Delictum\Documents\RAD Studio\Projects\LR2-3\Unit2.pas=C:\Users\Delictum\Documents\RAD Studio\Projects\Unit2.pas</Transaction>
+  </Transactions>
+</BorlandProject>

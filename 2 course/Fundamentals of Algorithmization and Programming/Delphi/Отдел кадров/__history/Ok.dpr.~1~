@@ -1,0 +1,14 @@
+program Ok;
+
+uses
+  Vcl.Forms,
+  Main in 'Main.pas' {FName};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFName, FName);
+  Application.Run;
+end.

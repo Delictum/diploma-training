@@ -1,0 +1,186 @@
+unit Unit4;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Vcl.StdCtrls,
+  Vcl.Imaging.GIFImg, Vcl.ExtCtrls, Vcl.Buttons, Vcl.Imaging.jpeg,
+  Vcl.Imaging.pngimage;
+
+type
+  TForm4 = class(TForm)
+    PageControl1: TPageControl;
+    TabSheet1: TTabSheet;
+    TabSheet2: TTabSheet;
+    TabSheet3: TTabSheet;
+    TabSheet4: TTabSheet;
+    TabSheet5: TTabSheet;
+    BitBtn1: TBitBtn;
+    Image1: TImage;
+    Label1: TLabel;
+    Image2: TImage;
+    Image3: TImage;
+    Image4: TImage;
+    Image5: TImage;
+    Image6: TImage;
+    Image7: TImage;
+    Label2: TLabel;
+    RadioButton1: TRadioButton;
+    RadioButton2: TRadioButton;
+    RadioButton3: TRadioButton;
+    RadioButton4: TRadioButton;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Image8: TImage;
+    Image9: TImage;
+    TabSheet6: TTabSheet;
+    TabSheet7: TTabSheet;
+    TabSheet8: TTabSheet;
+    TabSheet9: TTabSheet;
+    TabSheet10: TTabSheet;
+    Image10: TImage;
+    Image11: TImage;
+    Image12: TImage;
+    Image13: TImage;
+    Image14: TImage;
+    Image15: TImage;
+    Image16: TImage;
+    Label7: TLabel;
+    procedure BitBtn1Click(Sender: TObject);
+    procedure Image6Click(Sender: TObject);
+    procedure Image2Click(Sender: TObject);
+    procedure Image3Click(Sender: TObject);
+    procedure Image5Click(Sender: TObject);
+    procedure Image4Click(Sender: TObject);
+    procedure Image8Click(Sender: TObject);
+    procedure Image9Click(Sender: TObject);
+    procedure Image10Click(Sender: TObject);
+    procedure Image11Click(Sender: TObject);
+    procedure Image12Click(Sender: TObject);
+    procedure Image14Click(Sender: TObject);
+    procedure Image13Click(Sender: TObject);
+    procedure Image15Click(Sender: TObject);
+    procedure Image16Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form4: TForm4;
+  Otvet:integer;
+  O1:boolean;
+  Ot:string;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit2, Unit1, Unit3;
+
+
+procedure TForm4.BitBtn1Click(Sender: TObject);
+begin
+    Form1.Close;
+    Form2.Close;
+    Form3.Close;
+    Form4.Close;
+end;
+
+procedure TForm4.Image10Click(Sender: TObject);
+begin
+PageControl1.ActivePageIndex := 3;
+end;
+
+procedure TForm4.Image11Click(Sender: TObject);
+begin
+PageControl1.ActivePageIndex := 4;
+end;
+
+procedure TForm4.Image12Click(Sender: TObject);
+begin
+PageControl1.ActivePageIndex := 5;
+end;
+
+procedure TForm4.Image13Click(Sender: TObject);
+begin
+PageControl1.ActivePageIndex := 6;
+end;
+
+procedure TForm4.Image14Click(Sender: TObject);
+begin
+PageControl1.ActivePageIndex := 7;
+end;
+
+procedure TForm4.Image15Click(Sender: TObject);
+begin
+PageControl1.ActivePageIndex := 8;
+end;
+
+procedure TForm4.Image16Click(Sender: TObject);
+begin
+PageControl1.ActivePageIndex := 9;
+Ot:=inttostr(Otvet);
+Label7.Caption:=ot;
+end;
+
+procedure TForm4.Image2Click(Sender: TObject);
+begin
+if Otvet<>0 then Otvet:=Otvet-1;
+Label3.Visible:=True;
+Label4.Visible:=False;
+Label5.Visible:=False;
+Label6.Visible:=False;
+end;
+
+procedure TForm4.Image3Click(Sender: TObject);
+begin
+Label4.Visible:=False;
+Label3.Visible:=False;
+Label5.Visible:=True;
+Label6.Visible:=False;
+Otvet:=Otvet+1;
+O1:=true;
+end;
+
+procedure TForm4.Image4Click(Sender: TObject);
+begin
+Label5.Visible:=False;
+Label3.Visible:=False;
+Label4.Visible:=False;
+Label6.Visible:=True;
+end;
+
+procedure TForm4.Image5Click(Sender: TObject);
+begin
+Label6.Visible:=False;
+Label5.Visible:=False;
+Label4.Visible:=True;
+Label3.Visible:=False;
+end;
+
+procedure TForm4.Image6Click(Sender: TObject);
+begin
+PageControl1.ActivePageIndex := 1;
+end;
+
+procedure TForm4.Image8Click(Sender: TObject);
+begin
+if radioButton1.Checked = true then
+Otvet:=Otvet+1;
+PageControl1.ActivePageIndex := 2;
+end;
+
+procedure TForm4.Image9Click(Sender: TObject);
+begin
+PageControl1.ActivePageIndex := 0;
+if o1=true then Otvet:=Otvet-1;
+end;
+
+Begin
+Otvet:=0;
+end.

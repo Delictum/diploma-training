@@ -1,0 +1,75 @@
+unit Main;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Grids, Vcl.DBGrids,
+  Vcl.StdCtrls, Vcl.ExtCtrls, Data.Win.ADODB;
+
+type
+  TFName = class(TForm)
+    Panel1: TPanel;
+    Panel2: TPanel;
+    Panel3: TPanel;
+    Splitter1: TSplitter;
+    RadioButton1: TRadioButton;
+    RadioButton2: TRadioButton;
+    RadioButton3: TRadioButton;
+    Bevel1: TBevel;
+    Label1: TLabel;
+    Edit1: TEdit;
+    Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
+    Bevel2: TBevel;
+    DBGrid1: TDBGrid;
+    DBGrid2: TDBGrid;
+    ADOConnection1: TADOConnection;
+    TLichData: TADOTable;
+    TDoljnost: TADOTable;
+    TTelphones: TADOTable;
+    TAdress: TADOTable;
+    DSLichData: TDataSource;
+    DSDoljnost: TDataSource;
+    DSTelephones: TDataSource;
+    DSAdress: TDataSource;
+    TLichDataКлюч: TAutoIncField;
+    TLichDataФамилия: TWideStringField;
+    TLichDataИмя: TWideStringField;
+    TLichDataОтчество: TWideStringField;
+    TLichDataПол: TWideStringField;
+    TLichDataСем_Полож: TBooleanField;
+    TLichDataДетей: TWordField;
+    TLichDataДата_Рожд: TDateTimeField;
+    TLichDataДата_Пост: TDateTimeField;
+    TLichDataСтаж: TWordField;
+    TLichDataОбразование: TWideStringField;
+    TLichDataВоеннообязанный: TBooleanField;
+    TDoljnostСотрудник: TIntegerField;
+    TDoljnostОтдел: TWideStringField;
+    TDoljnostДолжность: TWideStringField;
+    TTelphonesСотрудник: TIntegerField;
+    TTelphonesТелефон: TWideStringField;
+    TTelphonesПримечание: TWideStringField;
+    TAdressСотрудник: TIntegerField;
+    TAdressСтрана: TWideStringField;
+    TAdressГород: TWideStringField;
+    TAdressДом_Адрес: TWideStringField;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FName: TFName;
+
+implementation
+
+{$R *.dfm}
+
+uses Edit;
+
+end.
+

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.291,C:\25 ПОИТ\ОАиП\Delphi\Отдел кадров\Ok.dproj=C:\Users\Delictum\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.738,=C:\Users\Delictum\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.284,C:\25 ПОИТ\ОАиП\Delphi\Отдел кадров\Main.pas=C:\Users\Delictum\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.284,C:\25 ПОИТ\ОАиП\Delphi\Отдел кадров\Main.dfm=C:\Users\Delictum\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.259,C:\25 ПОИТ\ОАиП\Delphi\Отдел кадров\Edit.pas=C:\25 ПОИТ\ОАиП\Delphi\Отдел кадров\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.259,C:\25 ПОИТ\ОАиП\Delphi\Отдел кадров\Edit.dfm=C:\25 ПОИТ\ОАиП\Delphi\Отдел кадров\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.349,=C:\Users\Delictum\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.006,=C:\25 ПОИТ\ОАиП\Delphi\Отдел кадров\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

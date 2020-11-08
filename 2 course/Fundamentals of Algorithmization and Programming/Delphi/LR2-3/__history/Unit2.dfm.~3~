@@ -1,0 +1,95 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 298
+  ClientWidth = 560
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object PageControl1: TPageControl
+    Left = 0
+    Top = 0
+    Width = 561
+    Height = 297
+    ActivePage = Home
+    TabOrder = 0
+    object Home: TTabSheet
+      Caption = 'Home'
+      object Image1: TImage
+        Left = 19
+        Top = 19
+        Width = 174
+        Height = 182
+      end
+      object Next: TBitBtn
+        Left = 475
+        Top = 241
+        Width = 75
+        Height = 25
+        Caption = 'Next'
+        DoubleBuffered = True
+        ParentDoubleBuffered = False
+        TabOrder = 0
+        OnClick = NextClick
+      end
+      object Button1: TButton
+        Left = 56
+        Top = 232
+        Width = 75
+        Height = 25
+        Caption = 'Picture'
+        TabOrder = 1
+        OnClick = Button1Click
+      end
+      object MaskEdit1: TMaskEdit
+        Left = 264
+        Top = 88
+        Width = 65
+        Height = 21
+        EditMask = '!90:00;1;_'
+        MaxLength = 5
+        TabOrder = 2
+        Text = '  :  '
+      end
+      object Button3: TButton
+        Left = 288
+        Top = 128
+        Width = 75
+        Height = 25
+        Caption = 'Hell'
+        TabOrder = 3
+      end
+    end
+    object Count: TTabSheet
+      Caption = 'Count'
+      ImageIndex = 1
+      object Edit1: TEdit
+        Left = 80
+        Top = 64
+        Width = 121
+        Height = 21
+        TabOrder = 0
+      end
+    end
+    object Figures: TTabSheet
+      Caption = 'Figures'
+      ImageIndex = 2
+      object Button2: TButton
+        Left = 464
+        Top = 241
+        Width = 75
+        Height = 25
+        Caption = 'Home'
+        TabOrder = 0
+        OnClick = Button2Click
+      end
+    end
+  end
+end

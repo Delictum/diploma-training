@@ -1,0 +1,112 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = #1041#1044
+  ClientHeight = 281
+  ClientWidth = 577
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object DBGrid1: TDBGrid
+    Left = 0
+    Top = 104
+    Width = 577
+    Height = 177
+    DataSource = DataSource1
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'ID'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Names'
+        Width = 200
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Products'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Caloric_value'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Shelf_life'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Total_cost'
+        Visible = True
+      end>
+  end
+  object Button1: TButton
+    Left = 8
+    Top = 73
+    Width = 97
+    Height = 25
+    Caption = #1055#1086' '#1087#1088#1086#1076#1091#1082#1090#1072#1084
+    TabOrder = 1
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 136
+    Top = 73
+    Width = 97
+    Height = 25
+    Caption = #1055#1086' '#1082#1072#1083#1086#1088#1080#1081#1085#1086#1089#1090#1080
+    TabOrder = 2
+    OnClick = Button2Click
+  end
+  object Button3: TButton
+    Left = 264
+    Top = 73
+    Width = 97
+    Height = 25
+    Caption = #1055#1086' '#1089#1090#1086#1080#1084#1086#1089#1090#1080
+    TabOrder = 3
+    OnClick = Button3Click
+  end
+  object ADOConnection1: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=MSDASQL.1;Persist Security Info=False;Extended Properti' +
+      'es="DSN=mysql1;SERVER=localhost;UID=pol3;DATABASE=LR8;PORT=3306"'
+    LoginPrompt = False
+    Left = 40
+    Top = 24
+  end
+  object ADOQuery1: TADOQuery
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'SELECT * From Recipes')
+    Left = 112
+    Top = 24
+  end
+  object DataSource1: TDataSource
+    DataSet = ADOQuery1
+    Left = 176
+    Top = 24
+  end
+end

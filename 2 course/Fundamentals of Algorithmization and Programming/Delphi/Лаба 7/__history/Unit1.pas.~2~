@@ -1,0 +1,54 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Grids;
+
+type
+  TForm1 = class(TForm)
+    StringGrid1: TStringGrid;
+    Button1: TButton;
+    Memo1: TMemo;
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.Button1Click(Sender: TObject);
+Var
+i,j,n: integer;
+str:string;
+begin
+for j:=1 to StringGrid1.RowCount-1 do
+for i:=1 to StringGrid1.ColCount-1 do
+if StringGrid1.Cells[i,j] = '' then
+StringGrid1.Cells[i,j] := '-';
+Memo1.Clear;
+for i:=0 to StringGrid1.RowCount -1 do
+begin
+if i>0 then
+memo1.Lines.Add('');
+for j:=0 to StringGrid1.ColCount -1 do
+memo1.seltext:=(''+StringGrid1.Cells[j,i]+' ');
+end;
+for n:=0 to StringGrid1.ColCount -1 do
+ begin
+  str:=memo1.lines[n];
+  delete(str,Length(str),30);
+  memo1.lines[n]:=str;
+ end;
+ Memo1.Lines.SaveToFile('Тест.txt');
+end;
+
+end.

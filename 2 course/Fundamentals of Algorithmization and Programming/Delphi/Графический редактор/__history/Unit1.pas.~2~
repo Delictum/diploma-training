@@ -1,0 +1,75 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    Pic: TPaintBox;
+    Button1: TButton;
+    procedure PicPaint(Sender: TObject);
+    procedure PicMouseDown(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Integer);
+    procedure PicMouseUp(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Integer);
+    procedure PicMouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    procedure Draw;
+  end;
+
+var
+  Form1: TForm1;
+  bmp: TBitmap;
+  IsDragging: boolean;
+
+implementation
+
+{$R *.dfm}
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+draw;
+end;
+
+procedure TForm1.Draw;
+  begin
+    Canvas.Pen.Color := clBlue;
+    Canvas.MoveTo(0,0);
+    Canvas.LineTo(100,100);
+  end;
+
+procedure TForm1.PicMouseDown(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Integer);
+begin
+  IsDragging := True;
+  bmp.Canvas.MoveTo(x,y);
+end;
+
+procedure TForm1.PicMouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
+begin
+  if IsDragging then
+  begin
+     bmp.Canvas.LineTo(x, y);
+     PicPaint(Sender);
+  end;
+end;
+
+procedure TForm1.PicMouseUp(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Integer);
+begin
+  IsDragging := False;
+end;
+
+procedure TForm1.PicPaint(Sender: TObject);
+begin
+Pic.Canvas.Draw ( 0, 0, bmp );
+end;
+
+end.
