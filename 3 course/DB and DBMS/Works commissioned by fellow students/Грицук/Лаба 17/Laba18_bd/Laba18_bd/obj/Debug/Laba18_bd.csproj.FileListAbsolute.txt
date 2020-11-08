@@ -1,0 +1,12 @@
+C:\Users\from1\source\repos\Laba18_bd\Laba18_bd\bin\Debug\Laba18_bd.exe.config
+C:\Users\from1\source\repos\Laba18_bd\Laba18_bd\bin\Debug\Laba18_bd.exe
+C:\Users\from1\source\repos\Laba18_bd\Laba18_bd\bin\Debug\Laba18_bd.pdb
+C:\Users\from1\source\repos\Laba18_bd\Laba18_bd\bin\Debug\MySql.Data.dll
+C:\Users\from1\source\repos\Laba18_bd\Laba18_bd\bin\Debug\MySql.Data.xml
+C:\Users\from1\source\repos\Laba18_bd\Laba18_bd\obj\Debug\Laba18_bd.csprojResolveAssemblyReference.cache
+C:\Users\from1\source\repos\Laba18_bd\Laba18_bd\obj\Debug\Laba18_bd.Form1.resources
+C:\Users\from1\source\repos\Laba18_bd\Laba18_bd\obj\Debug\Laba18_bd.Properties.Resources.resources
+C:\Users\from1\source\repos\Laba18_bd\Laba18_bd\obj\Debug\Laba18_bd.csproj.GenerateResource.Cache
+C:\Users\from1\source\repos\Laba18_bd\Laba18_bd\obj\Debug\Laba18_bd.csproj.CoreCompileInputs.cache
+C:\Users\from1\source\repos\Laba18_bd\Laba18_bd\obj\Debug\Laba18_bd.exe
+C:\Users\from1\source\repos\Laba18_bd\Laba18_bd\obj\Debug\Laba18_bd.pdb
