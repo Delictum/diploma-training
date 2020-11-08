@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>18 (1)</title>
+
+    <script>
+        function fff() {
+            return "Здесь return";
+        };
+
+        function per() {
+            if(document.getElementById('s1').checked == true)
+                alert("В данном документе нет ссылок");
+            if(document.getElementById('s2').checked == true)
+                alert("Документ содержит форму");
+            if(document.getElementById('s3').checked == true)
+                alert("В документе установлен скрипт");
+        }
+    </script>
+</head>
+
+<body onload="fff()">
+
+<p onmouseover="document.bgColor = 'blue'">Наведи! Цвет фона станет синим!</p>
+    <p><input id="s1" name="dzen" type="radio" value="nedzen" onmouseover="document.getElementById('s1').checked = true; document.getElementById('strokas').innerText = 'В данном документе нет ссылок'"> 1.	В данном документе нет ссылок</p>
+    <p><input id="s2" name="dzen" type="radio" value="dzen" onmouseover="document.getElementById('s2').checked = true;document.getElementById('strokas').innerText = 'Документ содержит форму'"> 2.	Документ содержит форму</p>
+    <p><input id="s3" name="dzen" type="radio" value="pdzen" onmouseover="document.getElementById('s3').checked = true;document.getElementById('strokas').innerText = 'В документе установлен скрипт'"> 3.	В документе установлен скрипт</p>
+    <button onclick="per()">Проверить переключатель</button>
+<p id="strokas">Вместо строки состояния: </p>
+</body>
+</html>

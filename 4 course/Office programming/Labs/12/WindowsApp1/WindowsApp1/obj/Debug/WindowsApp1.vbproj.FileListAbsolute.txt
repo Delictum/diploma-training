@@ -1,0 +1,12 @@
+D:\25 Information Technology Software\4 course\Office programming\Labs\12\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.exe.config
+D:\25 Information Technology Software\4 course\Office programming\Labs\12\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.exe
+D:\25 Information Technology Software\4 course\Office programming\Labs\12\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.pdb
+D:\25 Information Technology Software\4 course\Office programming\Labs\12\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.xml
+D:\25 Information Technology Software\4 course\Office programming\Labs\12\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbprojAssemblyReference.cache
+D:\25 Information Technology Software\4 course\Office programming\Labs\12\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.Form1.resources
+D:\25 Information Technology Software\4 course\Office programming\Labs\12\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.Resources.resources
+D:\25 Information Technology Software\4 course\Office programming\Labs\12\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbproj.GenerateResource.cache
+D:\25 Information Technology Software\4 course\Office programming\Labs\12\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbproj.CoreCompileInputs.cache
+D:\25 Information Technology Software\4 course\Office programming\Labs\12\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.exe
+D:\25 Information Technology Software\4 course\Office programming\Labs\12\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.xml
+D:\25 Information Technology Software\4 course\Office programming\Labs\12\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.pdb

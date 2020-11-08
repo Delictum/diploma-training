@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1</title>
+    <script>
+        function stroka() {
+            if(document.getElementById('str').value == '')
+                alert("Ruchkami pisat ne umeem?");
+            else
+                window.status = document.getElementById('str').value;
+        }
+        function din() {
+            var win1;
+            win1 = window.open("", "Scriptic", "resizable=1, width=1950, height=1150");
+            win1.document.open ();
+            win1.document.write("<html><head><title>Gi-gi</title><META http-equiv=Content-Type content='text/html; charset=UTF-8'>");
+            win1.document.write(" </head> <body>Bla-bla-bla. Ku? Ku! <br> Trym, zdraste!</body></html>");
+            window.focus();
+        }
+    </script>
+</head>
+<body>
+
+<form onsubmit="stroka()">
+    <input id="str" type="text">
+    <button>Any but</button>
+</form>
+<br>
+
+<div class="container" align="center">
+	<button onclick="din()">Other any but</button><br>
+</div>
+</html>

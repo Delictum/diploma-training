@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//RU" 
+  "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		
+    	<title id="tit">T</title>
+        <h1 id="tap">Tap</h1>		
+    </head>
+    
+    <body onLoad="range()">
+		<p>
+		<script>
+			function range() {
+				var a = parseInt(prompt("First arg", ""));
+				var b = parseInt(prompt("Second arg", ""));
+				var c = prompt("Third arg", "");
+				
+				var iter = 0;	
+				var mas = [];
+
+				if (c == "") {
+					c = parseInt(1);
+				}
+				
+				c = parseInt(c);
+				
+				if (a <= b && c > 0) {
+					for (var i = a; i <= b; i += c) {
+						mas[iter] = i;
+						iter++;
+					}
+					alert(mas);
+				} else if (a >= b && c < 0) {
+					for (var i = a; i >= b; i += c) {
+						mas[iter] = i;
+						iter++;
+					}
+					alert(mas);
+				} else {
+					alert("Incorrect inputs");
+					return;
+				}
+				
+				sum(mas);
+			}
+			
+			function sum(mas) {
+				var s = 0;
+				for (var i = 0; i < mas.length; i++) {
+					s += mas[i];
+				}
+				alert(s);
+			}
+		</script>
+			</p>
+	</body>
+</html>
+

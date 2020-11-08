@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Время</title>
+    <script>
+        window.onbeforeunload = function () {
+            return "Вы провели здесь: " + timer + " секунд";
+        };
+        var timer = 0;
+        setInterval(kol,1000);
+        function kol() {
+           timer++;
+        }
+        function test(s) {
+            setTimeout(wip,s*1000);
+        }
+        function wip() {
+            location.href = "pust.html";
+        }
+        function mesec() {
+            var s = monthDiff();
+            alert(s + " месяцев");
+        }
+        function monthDiff() {
+            var nowdate = new Date();
+            var d2 = new Date(nowdate.getFullYear(),document.getElementById('m').value-1,document.getElementById('d').value);
+            var months;
+            months = (d2.getFullYear() - nowdate.getFullYear()) * 12;
+            months -= nowdate.getMonth() + 1;
+            months += d2.getMonth();
+            return months <= 0 ? 0 : months;
+        }
+    </script>
+</head>
+<body>
+<b onclick="var date = new Date();document.getElementById('s').innerText = date.getHours()+':'+date.getMinutes()+':'+date.getSeconds()">Время (Необходимо щелкнуть чтобы получить текущее время)</b><br><br>
+Вместо строки состояния: <b id="s"></b>
+
+<ul>
+    <li><a href="#" onclick="test(3)">3</a></li>
+    <li><a href="#" onclick="test(6)">6</a></li>
+    <li><a href="#" onclick="test(9)">9</a></li>
+    <li><a href="#" onclick="test(12)">12</a></li>
+</ul>
+<form>
+    <p>День рождения <input id="d" type="text"></p>
+    <p>Месяц рождения <input id="m" type="text"></p>
+    <p>Год рождения <input id="g" type="text"></p>
+    <button type="submit" onclick="mesec()">Получить</button>
+</form>
+</body>
+</html>

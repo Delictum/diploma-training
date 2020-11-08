@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="Windows-1251"?>
+<!DOCTYPE documents SYSTEM "documents.dtd">
+<documents>
+	<uslugi>
+		<usluga id="usluga1">
+			<raznovidnost>raznovidnost</raznovidnost>
+			<stoim>15</stoim>
+			<instructor> instructor </instructor>
+			<dni_nedeli>pn,sr,pt</dni_nedeli>
+		</usluga>
+		
+		<usluga id="usluga2">
+			<raznovidnost>Kros</raznovidnost>
+			<stoim>10</stoim>
+			<instructor> 2019/03/02 </instructor>
+			<dni_nedeli>sb;vs</dni_nedeli>
+		</usluga>
+		
+		<usluga id="usluga3">
+			<raznovidnost>Unknown</raznovidnost>
+			<stoim>5</stoim>
+			<instructor> V.V.Barisavich </instructor>
+			<dni_nedeli>pn;vt;ct;pt</dni_nedeli>
+		</usluga>
+	</uslugi>
+</documents>

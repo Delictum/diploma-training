@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Лаба 19 (1)</title>
+    <script>
+        function t() {
+            setTimeout(s,3000)
+        }
+        function s() {
+            document.title = "Время истекло";
+        }
+        function check() {
+            if(document.getElementById('ch').checked == true)
+                setTimeout(l,7000)
+        }
+        function l() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+<button onmouseover="t()">Наведение</button>
+<p><input id="ch" type="checkbox" onchange="check()">Закрыть (7с )</p>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Lvl4</title>
+		
+		<style>
+         #triangle-up {
+			width: 0;
+			height: 0;
+			border-left: 150px solid transparent;
+			border-right: 150px solid transparent;
+			border-bottom: 200px solid black;	
+			position: absolute;			
+		}
+		
+		#triangle-bottomleft {
+			width: 0;
+			height: 0;
+			border-bottom: 50px solid blue; 
+			border-right: 50px solid transparent;	
+			position: relative;
+		}
+		
+		#circle {
+            width: 200px;
+            height: 100px;
+            -webkit-border-radius: 100px / 50px;
+            -moz-border-radius: 100px / 50px;
+            border-radius: 100px / 50px;
+            background: gray;
+			position: relative;
+         }
+      </style>
+	</head>
+	
+	<body>
+		<p><img src="1.jpeg" width="600" height="400" usemap="#navigation"></p>
+		<map name="navigation">
+			<area shape="poly" coords="50, 50, 100, 100, 50, 100, 50, 50" href="Lvl1.html" alt="Info" title="Info">
+			
+			<area shape="poly" coords="250, 250, 100, 250, 150, 100" href="Lvl1.html" alt="Info" title="Info">
+			<area shape="poly" coords="100, 150, 400, 50, 200, 200" href="Lvl1.html" alt="Info" title="Info">
+			
+			<area shape="circle" coords="200, 200, 50" href="Lvl1.html" alt="Info" title="Info">
+		</map>
+	</body>
+</html>

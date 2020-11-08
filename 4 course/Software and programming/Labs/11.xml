@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="Windows-1251"?>
+
+<!DOCTYPE documents SYSTEM [
+<!ELEMENT documents (buses+)>
+<!ELEMENT buses (bus*)>
+<!ELEMENT bus (way, stop, departure_date, departure_time, ticket_price, number_free_places)>
+<!ATTLIST bus id ID #REQUIRED>
+<!ELEMENT way (#PCDATA)>
+<!ELEMENT stop (#PCDATA)>
+<!ELEMENT departure_date (#PCDATA)>
+<!ELEMENT departure_time (#PCDATA)>
+<!ELEMENT ticket_price (#PCDATA)>
+<!ELEMENT number_free_places (#PCDATA)>
+]>
+
+<documents>
+	<buses>
+		<bus id="Bus1">
+			<way>Minsk</way>
+			<stop>Lida;Vertilishky</stop>
+			<departure_date> 2019/02/02 </departure_date>
+			<departure_time>12:00;15:00</departure_time>
+			<ticket_price>12</ticket_price>
+			<number_free_places>25</number_free_places>
+		</bus>
+		
+		<bus id="Bus2">
+			<way>Grodno</way>
+			<stop>Chto-to tam;Snova chto-to tam</stop>
+			<departure_date> 2019/03/02 </departure_date>
+			<departure_time>11:00;16:00;20:30</departure_time>
+			<ticket_price>8</ticket_price>
+			<number_free_places>18</number_free_places>
+		</bus>
+		
+		<bus id="Bus3">
+			<way>Unknown</way>
+			<stop>Hell;Edem;Spaces</stop>
+			<departure_date> 0000/01/01 </departure_date>
+			<departure_time>00:00</departure_time>
+			<ticket_price>666</ticket_price>
+			<number_free_places>33</number_free_places>
+		</bus>
+	</buses>
+</documents>

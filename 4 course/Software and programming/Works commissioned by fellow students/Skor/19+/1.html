@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Пустой документ</title>
+</head>
+<body>
+<input type="button" onclick="f()">
+<script>
+	function f() {
+		var dateOffset = (24*60*60*1000) * 100; //5 days
+		var myDate = new Date();
+		myDate.setTime(Date.now() - dateOffset);
+		alert(myDate);
+
+		var dneiproshlo=0,mai=9;
+dneiproshlo=((myDate).getDay())%7;
+switch(dneiproshlo)
+{
+  case 0:alert("Воскресенье");break;
+  case 1:alert("Понедельник");break;
+  case 2:alert("Вторник");break;
+  case 3:alert("Среда");break;
+  case 4:alert("Четверг");break;
+  case 5:alert("Пятница");break;
+  case 6:alert("Суббота");break;
+}
+
+	}
+</script>
+</body>
+</html>

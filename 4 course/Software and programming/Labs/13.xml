@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="WINDOWS-1251" ?>
+<?xml-stylesheet type="text/xml" href="10.xml"?>
+<xsl:stylesheet
+xmlns:xsl=" http://www.w3.org/1999/XSL/Transform ">
+	<xsl:template match="/">
+		<html>
+			<head>
+			
+			</head>
+			
+			<body>
+				<table border="1">
+					<tr bgcolor="#CCCCCC">
+						<td align="center"><strong>Way</strong></td>
+						<td align="center"><strong>Stop</strong></td>
+						<td align="center"><strong>Departure date</strong></td>
+						<td align="center"><strong>Departure time</strong></td>
+						<td align="center"><strong>Ticket price</strong></td>
+						<td align="center"><strong>Number free places</strong></td>
+					</tr>
+
+					<xsl:for-each select="documnets/buses/bus">
+					<tr bgcolor="#F5F5F5">
+						<td><xsl:value-of select="way"/></td>
+						<td><xsl:value-of select="stop"/></td>
+						<td><xsl:value-of select="departure_date"/></td>
+						<td><xsl:value-of select="departure_time"/></td>
+						<td><xsl:value-of select="ticket_price"/></td>
+						<td><xsl:value-of select="number_free_places"/></td>
+					</tr>
+				</table>
+			</body>
+		<html>
+	</xsl:template>
+</xsl:stylesheet>

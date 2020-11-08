@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Слои</title>
+    <script>
+        var n = 0;
+        var i = 0;
+        var s = 0;
+        var imgArray = new Array();
+        imgArray[0] = new Image();
+        imgArray[1] = new Image();
+        imgArray[2] = new Image();
+        imgArray[0].src = "1.jpg";
+        imgArray[1].src = "2.jpg";
+        imgArray[2].src = "3.jpg";
+        function smen() {
+            document.Myimage.src = "2.jpg";
+        }
+        function smen1() {
+            IMG = new Image();
+            IMG.src = "1.jpg";
+            document.Myimage1.src = IMG.src;
+        }
+        function smenp() {
+            document.Privet.src = "1.jpg";
+        }
+        function otv() {
+            document.Privet.src = "2.jpg";
+        }
+        var amp = 50;
+        function nextImageSize(i, length) {
+            return amp * Math.abs(Math.sin(i / (length / Math.PI)));
+        }
+        function sizeImageCycle(count, d) {
+            out = "";
+            for (i = 0; i < count; i++) {
+                size = parseInt(nextImageSize(i + d, count));
+                out += "<img src = '1.jpg' style='width: "+ size +"px;' />";
+            }
+            imagewave.innerHTML = out;
+        }
+        function doImageWave(count, n) {
+            sizeImageCycle(count, n);
+            if (n > count) n = 0;
+            setTimeout("doImageWave(\"" + count + "\", " + (n + 1) + ")", 80);
+        }
+        function dalee() {
+            i++;
+            if(i == 3)
+                i = 0;
+            document.Testov.src = imgArray[i].src;
+        }
+        function nazad() {
+            i--;
+            if(i == -1)
+                i = 3;
+            document.Testov.src = imgArray[i].src;
+        }
+        function one_click() {
+            if(n == 0)
+                n++;
+            else n--;
+            if(n==1){
+                document.Testov1.width +=50;
+                document.Testov1.height +=50;
+            } else {
+                document.Testov1.width -=50;
+                document.Testov1.height -=50;
+            }
+        }
+        function one_click1() {
+            if(s == 0)
+                s++;
+            else s--;
+            if(s==1){
+                document.Testov2.width +=50;
+                document.Testov2.height +=50;
+            } else {
+                document.Testov2.width -=50;
+                document.Testov2.height -=50;
+            }
+        }
+        var t = 0;
+        function f() {
+            if(t == 0)
+                t++;
+            else t--;
+            if(t==1){
+                document.tort.src = "1.jpg";
+            } else {
+                document.tort.src = "";
+            }
+
+        }
+    </script>
+</head>
+<body>
+<div class="sloi">
+    <img src="1.jpg" height="100" width="100" name="Myimage"><br>
+    <button onclick="smen()">Сменить</button>
+</div>
+<div class="sloi1">
+    <img src="3.jpg" height="100" width="100" name="Myimage1"><br>
+    <button onclick="smen1()">Сменить</button>
+</div>
+Наведите на изображение
+<div class="sloi2">
+    <img src="2.jpg" name="Privet" onmouseover="smenp()" onmouseout="otv()" width="100" height="100"><br>
+</div>
+<div id="imagewave"></div>
+<button onclick="doImageWave(8,1)">Изображения на волнах</button>
+<div class="test">
+    <img src="1.jpg" name="Testov" width="500" height="500"><br>
+    <button onclick="dalee()">Вперед</button>
+    <button onclick="nazad()">Назад</button>
+</div>
+
+<a href="" onmouseover="f()" onmouseout="f()">Наведи</a><br>
+<img src="" name="tort">
+<div>
+    <img src="2.jpg" name="Testov1" width="200" height="200" onclick="one_click()">
+    <img src="3.jpg" name="Testov2" width="200" height="200" onclick="one_click1()">
+</div>
+
+
+
+</body>
+</html>

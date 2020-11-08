@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Результаты</title>
+</head>
+<body>
+<div id="vigr"></div>
+<script>
+    function get(name){
+        if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
+            return decodeURIComponent(name[1]);
+    }
+    var cveta = "";
+    var pol;
+    if(get('a'))
+        cveta += "Новости ";
+    if(get('b') != null)
+        cveta += "Письма ";
+    if(get('c') != null)
+        cveta += "Инфа ";
+	if(get('d') != null)
+        cveta += "Убить время ";
+
+    if(get('p') == 'm')
+        pol = 'Мужской';
+    else pol = 'Женский';
+    var html = "<p><b>Хобби: </b>" + get('k') + "</p>" +
+        "<p><b>Выбор:</b> " + cveta + "</p>";
+    document.getElementById('vigr').innerHTML = html;
+</script>
+</body>
+</html>

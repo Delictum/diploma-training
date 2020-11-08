@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//RU" 
+  "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Lvl1</title>
+	</head>
+	
+	<body>
+		<p >
+			<img src="min.jpg" align="top">
+			<a href="https://mail.google.com">E-mail</a>			
+		</p>
+		
+		<br>
+		
+		<p id="pT" ondblclick="f1()" onmouseover="f2()" onmouseout="f3()">Трям-здрасте!</p>		
+		
+		<script>
+			function f1() {
+				alert("Зачем в Интернете нажимать дважды?");
+			}
+			function f2() {
+				document.getElementById("pT").style = "color:green";
+			}
+			function f3() {
+				document.getElementById("pT").style = "color:red";			
+			}
+		</script>
+	</body>
+</html>

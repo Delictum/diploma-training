@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5</title>
+    <link rel="import" href="1.html">
+    <script>
+        function test() {
+            alert(parent['MENU2'].stre.value);
+        }
+    </script>
+</head>
+<body>
+<a href="2.html" onclick="parent['MENU2'].location.href='1.html'" target="MENU3">Load</a>
+<button onclick="test()">Ne nado</button>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//RU" 
+  "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		
+    	<title id="tit">T</title>
+        <h1 id="zag">Hello, Zag</h1>
+    </head>
+    
+    <body>
+		<input type="button" value="VwV" onClick="d();">
+		
+		<script>
+			function d() {
+				var a = parseInt(prompt("Vvdedite perviy chlen progressii)", ""));
+				var b = parseInt(prompt("Vvdedite raznost)", ""));
+				var c = parseInt(prompt("Vvdedite kolichestvo elementov)", ""));
+				var m = "";
+				if (a > b) {
+					for (var i = a; i < a+b*c; i += b) {
+						m += i + " ";
+					}
+				} else {
+					for (var i = a; i > a+b*c; i += b) {
+						m += i + " ";
+					}
+				}
+				alert(m);
+			}
+		</script>
+	</body>
+</html>
+

@@ -1,0 +1,40 @@
+<xsd:schema targetNamespace="http://example.org/publishing" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://example.org/publishing">
+	<xsd:element name="documents" type="tns: DocsType">
+	<xsd:element name="way" type="tns:WayType"/>
+	<xsd:element name="stop" type="tns:StopType "/>
+	<xsd:element name="departure_date" type="tns:YearType "/>
+	<xsd:element name="departure_time" type="tns:DateTime "/>
+	<xsd:element name="ticket_price" type="tns:integer "/>
+	<xsd:element name="number_free_places" type="tns:integer "/>
+
+	<xsd:complexType name="DocsType">
+		<xsd:sequence>
+			<xsd:element name="buses"/>
+			<xsd:complexType>
+				<xsd:element name="bus" type="tns: BusType">
+					</xsd:complexType>
+		</xsd:complexType>
+		</xsd: sequence>
+		</xsd:complexType>
+		<xsd:complexType name="BusType">
+			<xsd:sequence>
+			<xsd:element ref="way"/>
+			<xsd:element ref="title"/>
+			<xsd:element name="translate" type="tns:AuthorType"/>
+			<xsd:element ref=" year_publication"/>
+		</xsd: sequence>
+		<xsd:attribute name="id" type="xsd:string" use="required"/>
+		</xsd:complexType>
+
+		<xsd:simpleType name="WayType" >
+			<restriction base="xsd:string"> 
+			<pattern value="^[а-яА-Яa-zA-Z. ]+ "/>
+			</restriction></xsd:simpleType>
+		<xsd:simpleType name="YearType">
+		<xsd:restriction base="xsd:gYear">
+			<xsd:minInclusive value="2019"/>
+			<xsd:maxInclusive value="2020"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema >
+

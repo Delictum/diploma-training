@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Лаба 18</title>
+    <script>
+        window.onresize = function(event) {
+        document.bgColor = 'yellow';
+        };
+        window.onbeforeunload = function () {
+            return "До встречи!";
+        };
+        window.onload = function () {
+            alert("Страница загрузилась на 100");
+        }
+        window.onscroll = function() {
+            document.bgColor = 'green';
+        }
+        function sok(s,s1) {
+            var y = document.getElementById('im1').offsetTop;
+            var x = document.getElementById('im1').offsetLeft;
+            var width = document.getElementById('im1').offsetWidth;
+            var height = document.getElementById('im1').offsetHeight;
+            console.log(x + "\n"+y+"\n"+"\n" + x+width+"\n"+y+height)
+            if(s>x && s1>y && s<x+width && s1<y+height)
+                document.title = "Tut";
+            else document.title = "Не тут";
+        }
+        function getl(tr) {
+            alert(tr);
+        }
+    </script>
+</head>
+<body onmousemove="sok(event.clientX,event.clientY)">
+<img src="public_14249398_s_cdb966a.jpeg" onmouseover="alert(event.clientX+':'+event.clientY);"><br><br>
+<b id="str" onmouseover="document.getElementById('str').style.color = 'red'" onmouseout="document.getElementById('str').style.color = 'blue'">Один текст в тексте проверка</b><br><br>
+<img src="public_14249398_s_cdb966a.jpeg" onmousemove=" document.getElementById('so').innerText = event.clientX+':'+event.clientY" ondblclick="document.bgColor = 'green'" oncontextmenu="document.title = 'Произошел вызов контекстного меню'"><br>
+<img src="public_14249398_s_cdb966a.jpeg" id="im1"><br>
+<br><br>
+<input type="text" id="srok" onclick="getl(this.value)" value="Привет">
+Ответ строки состояния: <b id="so"></b><br><br><br>
+</body>
+</html>

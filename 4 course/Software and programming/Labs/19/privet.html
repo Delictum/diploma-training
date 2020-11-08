@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Privet</title>
+    <script>
+        var s = 0;
+        var timer = setInterval(f,200);
+        function f() {
+            switch (s) {
+                case 0:
+                    document.getElementById('p').innerHTML += 'П';
+                    s++;
+                    break;
+                case 1:
+                    document.getElementById('p').innerHTML += 'р';
+                    s++;
+                    break;
+                case 2:
+                    document.getElementById('p').innerHTML += 'и';
+                    s++;
+                    break;
+                case 3:
+                    document.getElementById('p').innerHTML += 'в';
+                    s++;
+                    break;
+                case 4:
+                    document.getElementById('p').innerHTML += 'е';
+                    s++;
+                    break;
+                case 5:
+                    document.getElementById('p').innerHTML += 'т';
+                    s++;
+                    break;
+                default:
+                    clearInterval(timer);
+                    break;
+            }
+        }
+    </script>
+</head>
+<body>
+<font id="p" size="72"></font>
+</body>
+</html>

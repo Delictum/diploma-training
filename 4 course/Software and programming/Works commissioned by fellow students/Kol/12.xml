@@ -1,0 +1,28 @@
+<xsd:schema targetNamespace="http://example.org/publishing" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://example.org/publishing">
+	<xsd:element name="documents" type="tns: DocsType">
+	<xsd:element name="raznovidnost" type="tns:string"/>
+	<xsd:element name="stoim" type="tns:string "/>
+	<xsd:element name="instructor" type="tns:string "/>
+	<xsd:element name="dni_nedeli" type="tns:string "/>
+
+	<xsd:complexType name="DocsType">
+		<xsd:sequence>
+			<xsd:element name="uslugi"/>
+			<xsd:complexType>
+				<xsd:element name="usluga" type="tns: UslugaType">
+					</xsd:complexType>
+		</xsd:complexType>
+		</xsd: sequence>
+		</xsd:complexType>
+		<xsd:complexType name="UslugaType">
+			<xsd:sequence>
+			<xsd:element ref="raznovidnost"/>
+			<xsd:element ref="stoim"/>
+			<xsd:element ref="instructor"/>
+			<xsd:element ref="dni_nedeli"/>
+		</xsd: sequence>
+		<xsd:attribute name="id" type="xsd:string" use="required"/>
+		</xsd:complexType>
+	</xsd:simpleType>
+</xsd:schema >
+

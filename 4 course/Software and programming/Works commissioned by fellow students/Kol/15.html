@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//RU" 
+  "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+	<head>
+		<meta charset="utf-8">
+    	<title id="tit">T</title>
+        <h1 id="zag">Hello, Zag</h1>
+    </head>
+    
+    <body>
+		<p style="line-height: 18px; font-size: 18px;  font-family: times;">
+        </p>   
+        
+		<input type="button" value="1" onclick="f1()">
+        
+        <div>
+        	<input type="button" value="2" onclick="f2()">
+        	<p id="trym"></p>
+        </div>        
+        <br>
+        
+        <div>
+        	<input type="text" id="input1">
+        	<input type="button" value="3" onclick="f3()">
+        </div>
+        <br>
+        
+        <div>
+        	<input type="checkbox" checked=true id="checked1">
+        	<input type="button" value="4" onclick="f4()">
+        </div>
+        <br>
+        
+        <div>
+        	<input type="text" id="input2">
+        	<input type="button" value="5" onclick="f5()">
+        </div>
+        <br>
+        
+        <div>
+        	<input type="button" value="6" onclick="f6()" id="but6">
+        </div>
+        <br>
+        
+        <div>
+        	<input type="button" value="7 - google" onclick="f7('g')">
+            <input type="button" value="7 - rambler" onclick="f7('r')">
+        </div>
+        <br>
+        
+        <div id="pic">
+        	<input type="button" value="8" onclick="f8()">
+            <br>
+        </div>
+        
+		<script>
+    		function f1() {    
+    			alert(document.getElementById("tit").innerHTML);
+                document.getElementById("tit").innerHTML = prompt('', '');
+                alert(document.getElementById("tit").innerHTML);
+    		}
+            
+            function f2() {    
+                document.getElementById("trym").innerHTML = window.location.href;
+    		}
+            
+            function f3() {    
+                document.getElementById("zag").innerHTML = document.getElementById("input1").value;
+    		}
+            
+            function f4() {    
+                if (document.getElementById("checked1").checked)
+                	alert("Выбор сделан");
+                else
+                	alert("Выбор не сделан");
+    		}
+            
+            function f5() {    
+                var pText = "<br><br><p id='pT' align='center'></p>";                
+    			document.getElementById("but6").insertAdjacentHTML('beforebegin', pText);
+                document.getElementById("pT").innerHTML = document.getElementById("input2").value;
+    		}
+            
+            function f6() {    
+                document.body.style.backgroundColor = "#00AF0F";
+    		}
+            
+            function f7(x) {    
+                if (x == 'g') {
+                	window.open("http://google.com");
+                } else if (x === 'r') {
+                	window.open("https://www.rambler.ru/");
+                }
+    		}
+            
+            function f8() {
+            	var pc = document.getElementById("pic");
+                
+            	var picUrl = prompt('Введите url картинки', ''); 
+                
+                var img = new Image();
+				img.src = picUrl;
+                var picP = document.createElement("p");
+                picP.innerHTML = picUrl;
+                
+				pc.appendChild(img);
+                pc.appendChild(picP);
+    		}
+		</script>		    
+        
+	</body>
+</html>
+
