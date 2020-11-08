@@ -1,0 +1,367 @@
+unit Unit4;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.DBCtrls, Vcl.StdCtrls,
+  Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.MPlayer, DBXMySQL, Data.FMTBcd,
+  Data.SqlExpr, Data.DB, Vcl.Imaging.jpeg, Datasnap.Provider, Datasnap.DBClient,
+  Vcl.Menus, Vcl.ComCtrls, ShellAPI;
+
+type
+  TFormGame = class(TForm)
+    BtnRandomCheckBox: TButton;
+    MediaPlayer1: TMediaPlayer;
+    Image6: TImage;
+    Image8: TImage;
+    Image7: TImage;
+    DataSource1: TDataSource;
+    ClientDataSet1: TClientDataSet;
+    DataSetProvider1: TDataSetProvider;
+    Image1: TImage;
+    SQLConnection1: TSQLConnection;
+    SQLQuery1: TSQLQuery;
+    ImgGameNext: TImage;
+    GameEdit: TEdit;
+    LabelStep: TLabel;
+    LabelScore: TLabel;
+    CheckBox1: TRadioButton;
+    CheckBox2: TRadioButton;
+    CheckBox3: TRadioButton;
+    CheckBox4: TRadioButton;
+    TrackBar1: TTrackBar;
+    Timer2: TTimer;
+    MainMenu1: TMainMenu;
+    N1: TMenuItem;
+    N4: TMenuItem;
+    Helper1: TMenuItem;
+    procedure BtnRandomCheckBoxClick(Sender: TObject);
+    procedure Image6Click(Sender: TObject);
+    procedure Image8Click(Sender: TObject);
+    procedure Image7Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure ImgGameNextClick(Sender: TObject);
+    procedure GameEditClick(Sender: TObject);
+    procedure N2Click(Sender: TObject);
+    procedure N3Click(Sender: TObject);
+    procedure N4Click(Sender: TObject);
+    procedure TrackBar1Change(Sender: TObject);
+    procedure Timer2Timer(Sender: TObject);
+    procedure Helper1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+  TCheckBoxRect    = record
+    Left, Top   : Integer;
+    Busy        : Boolean;
+  end;
+
+var
+  FormGame: TFormGame;
+  CheckBoxRect : array[0..3] of TCheckBoxRect = (
+    (Left : 10; Top : 80; Busy : False),
+    (Left : 10; Top : 120; Busy : False),
+    (Left : 200; Top : 80; Busy : False),
+    (Left : 200; Top : 120; Busy : False));
+  GameStepID, GameScore, GameNumberStep : integer;
+  GameEditT : boolean;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit3, Unit1, Unit5, Unit2;
+
+procedure TFormGame.BtnRandomCheckBoxClick(Sender: TObject);  //Рандомные названия и расположения
+var
+  bufIDRandom : string;
+  I, J, X, Y : Integer;
+  CheckBox : TCheckBox;
+begin
+  Randomize;
+
+  for I := 0 to High(CheckBoxRect) do
+    CheckBoxRect[I].Busy := False;
+
+  I := 1;
+  repeat
+    CheckBox := TCheckBox(FindComponent('CheckBox' + IntToStr(I)));
+    J := Random(High(CheckBoxRect) + 1);
+    X := CheckBoxRect[J].Left;
+    Y := CheckBoxRect[J].Top;
+    if CheckBoxRect[J].Busy then
+      Continue;
+    CheckBox.Left := X;
+    CheckBox.Top  := Y;
+    CheckBoxRect[J].Busy := True;
+    inc(I);
+  until I > 4;          //Рандомное расположение
+
+  ClientDataSet1.Active := false;
+   SQLQuery1.Close;
+    SQLQuery1.SQL.Clear;
+     SQLQuery1.SQL.Add('SELECT FLOOR(RAND() * COUNT(*)) AS `ID` FROM Fake_Music');
+      SQLQuery1.Open;
+       ClientDataSet1.Active := true;
+  bufIDRandom := VarToStr(SQLQuery1.FieldValues['ID']);
+  ClientDataSet1.Active := false;
+   SQLQuery1.Close;
+    SQLQuery1.SQL.Clear;
+     SQLQuery1.SQL.Add('SELECT Music FROM Fake_Music WHERE ID = ' + bufIDRandom);
+      SQLQuery1.Open;
+       ClientDataSet1.Active := true;
+  CheckBox2.Caption := VarToStr(SQLQuery1.FieldValues['Music']);           //Рандомные названия
+
+  ClientDataSet1.Active := false;
+   SQLQuery1.Close;
+    SQLQuery1.SQL.Clear;
+     SQLQuery1.SQL.Add('SELECT FLOOR(RAND() * COUNT(*)) AS `ID` FROM Fake_Music');
+      SQLQuery1.Open;
+       ClientDataSet1.Active := true;
+  bufIDRandom := VarToStr(SQLQuery1.FieldValues['ID']);
+  ClientDataSet1.Active := false;
+   SQLQuery1.Close;
+    SQLQuery1.SQL.Clear;
+     SQLQuery1.SQL.Add('SELECT Music FROM Fake_Music WHERE ID = ' + bufIDRandom);
+      SQLQuery1.Open;
+       ClientDataSet1.Active := true;
+  CheckBox3.Caption := VarToStr(SQLQuery1.FieldValues['Music']);           //Рандомные названия
+
+  ClientDataSet1.Active := false;
+   SQLQuery1.Close;
+    SQLQuery1.SQL.Clear;
+     SQLQuery1.SQL.Add('SELECT FLOOR(RAND() * COUNT(*)) AS `ID` FROM Fake_Music');
+      SQLQuery1.Open;
+       ClientDataSet1.Active := true;
+  bufIDRandom := VarToStr(SQLQuery1.FieldValues['ID']);
+  ClientDataSet1.Active := false;
+   SQLQuery1.Close;
+    SQLQuery1.SQL.Clear;
+     SQLQuery1.SQL.Add('SELECT Music FROM Fake_Music WHERE ID = ' + bufIDRandom);
+      SQLQuery1.Open;
+       ClientDataSet1.Active := true;
+  CheckBox4.Caption := VarToStr(SQLQuery1.FieldValues['Music']);           //Рандомные названия
+
+  ClientDataSet1.Active := false;
+   SQLQuery1.Close;
+    SQLQuery1.SQL.Clear;
+     SQLQuery1.SQL.Add('SELECT * FROM Music WHERE ID = ' + IntToStr(GameStepIDPlay));
+      SQLQuery1.Open;
+       ClientDataSet1.Active := true;
+  CheckBox1.Caption := VarToStr(SQLQuery1.FieldValues['Name_Song']);       //Правильное название
+
+  FormGame.MediaPlayer1.FileName := 'music\' + IntToStr(GameStepIDName) +'.mp3';
+  FormGame.MediaPlayer1.Open;
+  TrackBar1.Max:=MediaPlayer1.Length;
+  timer2.Enabled := true;
+end;
+
+procedure TFormGame.GameEditClick(Sender: TObject);
+begin
+  if GameEditT <> True then
+    GameEdit.Text := '';
+  GameEditT := True;
+end;
+
+procedure TFormGame.Helper1Click(Sender: TObject);
+begin
+  ShellExecute (FormGame.Handle, nil, 'iexplore', 'https://thedrakoneragoni.wixsite.com/helper/', nil, SW_RESTORE);
+end;
+
+procedure TFormGame.FormClose(Sender: TObject; var Action: TCloseAction);
+Var i : integer;
+begin
+  for i := 1 to 10 do
+    if FileExists('music\' + IntToStr(i) +'.mp3') then
+      DeleteFile('music\' + IntToStr(i) +'.mp3');
+  FormBegin.Close;
+  LogOut.Close;
+end;
+
+procedure TFormGame.FormShow(Sender: TObject);
+begin
+  GameNumberStep := 1;
+  BtnRandomCheckBoxClick(Self);
+  LabelStep.Caption :=  IntToStr(GameNumberStep) + ' из 10';
+end;
+
+procedure TFormGame.ImgGameNextClick(Sender: TObject);
+Var bufScore : string;
+    i : integer;
+begin
+  CheckBox1.Visible := false;
+  CheckBox2.Visible := false;
+  CheckBox3.Visible := false;
+  CheckBox4.Visible := false;
+  ImgGameNext.Visible := false;
+
+  if GameNumberStep >= 7 then
+    begin
+      ClientDataSet1.Active := false;
+         SQLQuery1.Close;
+          SQLQuery1.SQL.Clear;
+           SQLQuery1.SQL.Add('SELECT * FROM Music WHERE ID = ' + IntToStr(GameStepIDPlay));
+            SQLQuery1.Open;
+             ClientDataSet1.Active := true;
+      if GameEdit.Text = VarToStr(SQLQuery1.FieldValues['Name_Song']) then
+        begin
+          GameScore := GameScore + 15;
+          LabelScore.Caption := 'Очки: ' + IntToStr(GameScore);
+        end;
+      GameEdit.Text := '';
+    end
+  else
+    begin
+      if CheckBox1.Checked = true then
+        begin
+          GameScore := GameScore + 10;
+          LabelScore.Caption := 'Очки: ' + IntToStr(GameScore);
+        end;
+      CheckBox1.Checked := false;
+      CheckBox2.Checked := false;
+      CheckBox3.Checked := false;
+      CheckBox4.Checked := false;
+    end;
+  GameStepIDPlay := GameStepIDPlay + 1;
+  GameNumberStep := GameNumberStep + 1;
+  GameStepIDName := GameStepIDName + 1;
+
+  if GameNumberStep = 11 then
+    begin
+      FormGame.MediaPlayer1.FileName := '';
+      FormEnd.LabelNewScore.Caption := 'Вы набрали ' + IntToStr(GameScore) + ' очков!';
+
+      FormEnd.ClientDataSet1.Active := false;
+       FormEnd.SQLQuery1.Close;
+        FormEnd.SQLQuery1.SQL.Clear;
+         FormEnd.SQLQuery1.SQL.Add('SELECT * FROM Users WHERE Name = "' + bufName + '"');
+          FormEnd.SQLQuery1.Open;
+           FormEnd.ClientDataSet1.Active := true;
+      if IntToStr(GameScore) > VarToStr(FormEnd.SQLQuery1.FieldValues['Score']) then
+        begin
+          ShowMessage('Вы побили свой рекорд!');
+          FormEnd.SQLQuery1.Close;
+           FormEnd.SQLQuery1.SQL.Clear;
+            FormEnd.SQLQuery1.SQL.Add('UPDATE Users Set Score = ' + IntToStr(GameScore));
+             FormEnd.SQLQuery1.SQL.Add(' WHERE Name = "' + bufName + '"');
+              FormEnd.SQLQuery1.ExecSQL;
+        end;
+      FormEnd.ClientDataSet1.Active := false;
+       FormEnd.SQLQuery1.Close;
+        FormEnd.SQLQuery1.SQL.Clear;
+         FormEnd.SQLQuery1.SQL.Add('SELECT * FROM Users ORDER BY  Score DESC LIMIT 5');
+          FormEnd.SQLQuery1.Open;
+           FormEnd.ClientDataSet1.Active := true;
+      FormEnd.DBGrid1.Refresh;
+
+      FormGame.Hide;
+      FormEnd.Show;
+      exit;
+    end;
+
+  BtnRandomCheckBoxClick(Self);
+
+  if GameNumberStep < 7 then
+    begin
+      CheckBox1.Visible := true;
+      CheckBox2.Visible := true;
+      CheckBox3.Visible := true;
+      CheckBox4.Visible := true;
+    end
+  else
+    GameEdit.Visible := true;
+  FormGame.MediaPlayer1.FileName := '';
+  LabelStep.Caption :=  IntToStr(GameNumberStep) + ' из 10';
+
+  ImgGameNext.Visible := true;
+end;
+
+procedure TFormGame.N2Click(Sender: TObject);
+  Var i : integer;
+begin
+  FormGame.MediaPlayer1.FileName := '';
+  FormGame.MediaPlayer1.Stop;
+  for i := 1 to 10 do
+    if FileExists('music\' + IntToStr(i) +'.mp3') then
+      DeleteFile('music\' + IntToStr(i) +'.mp3');
+  GameStepIDName := 1;
+  GameStepIDBoolean := false;
+  GameStepIDPlay := 1;
+  GameStepID := 1;
+  GameScore := 0;
+  GameNumberStep := 1;
+  Image7Click(Self);
+  FormBegin.ProgressBar1.Position := 0;
+  FormGame.Hide;
+  LogOut.Show;
+  Admin := 0;
+end;
+
+procedure TFormGame.N3Click(Sender: TObject);
+  Var i : integer;
+begin
+  FormGame.MediaPlayer1.FileName := '';
+  FormGame.MediaPlayer1.Stop;
+  for i := 1 to 10 do
+    if FileExists('music\' + IntToStr(i) + '.mp3') then
+      DeleteFile('music\' + IntToStr(i) + '.mp3');
+  GameStepIDName := 1;
+  GameStepIDBoolean := false;
+  GameStepIDPlay := 1;
+  GameStepID := 1;
+  GameScore := 0;
+  GameNumberStep := 1;
+  Image7Click(Self);
+  FormBegin.ProgressBar1.Position := 0;
+  FormGame.Hide;
+  FormBegin.Show;
+end;
+
+procedure TFormGame.N4Click(Sender: TObject);
+  Var i : integer;
+begin
+  for i := 1 to 10 do
+    if FileExists('music\' + IntToStr(i) + '.mp3') then
+      DeleteFile('music\' + IntToStr(i) + '.mp3');
+  LogOut.Close;
+  FormBegin.Close;
+  FormGame.Close;
+end;
+
+procedure TFormGame.Timer2Timer(Sender: TObject);
+begin
+  TrackBar1.Position := MediaPlayer1.Position;
+end;
+
+procedure TFormGame.TrackBar1Change(Sender: TObject);
+begin
+  if ABS(mediaplayer1.Position - TrackBar1.Position) > 1000 then
+    begin
+      If TrackBar1.Position <> mediaplayer1.Position then
+        mediaplayer1.Position := TrackBar1.Position;
+      mediaplayer1.Play;
+    end;
+end;
+
+procedure TFormGame.Image6Click(Sender: TObject);
+begin
+  MediaPlayer1.Play;
+end;
+
+procedure TFormGame.Image7Click(Sender: TObject);
+begin
+  MediaPlayer1.Stop;
+  MediaPlayer1.Position:=0;
+end;
+
+procedure TFormGame.Image8Click(Sender: TObject);
+begin
+  MediaPlayer1.Pause;
+end;
+
+end.

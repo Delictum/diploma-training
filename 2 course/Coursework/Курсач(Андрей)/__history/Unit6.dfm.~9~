@@ -1,0 +1,281 @@
+object Form6: TForm6
+  Left = 0
+  Top = 0
+  Caption = #1048#1079#1084#1077#1085#1077#1085#1080#1103
+  ClientHeight = 239
+  ClientWidth = 351
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnClose = FormClose
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 24
+    Top = 26
+    Width = 73
+    Height = 23
+    Caption = #1059#1088#1086#1074#1077#1085#1100
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 24
+    Top = 122
+    Width = 49
+    Height = 23
+    Caption = #1046#1072#1085#1088
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 151
+    Top = 53
+    Width = 88
+    Height = 19
+    Caption = '- '#1080#1079#1084#1077#1085#1077#1085#1080#1103
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 151
+    Top = 149
+    Width = 88
+    Height = 19
+    Caption = '- '#1080#1079#1084#1077#1085#1077#1085#1080#1103
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 151
+    Top = 80
+    Width = 100
+    Height = 19
+    Caption = '- '#1080#1079#1084#1077#1085#1103#1077#1084#1099#1081
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label6: TLabel
+    Left = 151
+    Top = 176
+    Width = 100
+    Height = 19
+    Caption = '- '#1080#1079#1084#1077#1085#1103#1077#1084#1099#1081
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Bevel1: TBevel
+    Left = 0
+    Top = 116
+    Width = 369
+    Height = 5
+  end
+  object DBEdit1: TDBEdit
+    Left = 24
+    Top = 178
+    Width = 121
+    Height = 21
+    DataField = 'Name_Genre'
+    DataSource = FormBegin.DataSource1
+    TabOrder = 0
+  end
+  object DBEdit2: TDBEdit
+    Left = 24
+    Top = 82
+    Width = 121
+    Height = 21
+    DataField = 'Name_Level'
+    DataSource = DataSource1
+    TabOrder = 1
+  end
+  object Edit1: TEdit
+    Left = 24
+    Top = 55
+    Width = 121
+    Height = 21
+    TabOrder = 2
+  end
+  object Edit2: TEdit
+    Left = 24
+    Top = 151
+    Width = 121
+    Height = 21
+    TabOrder = 3
+  end
+  object ButtonAdd1: TButton
+    Left = 265
+    Top = 39
+    Width = 75
+    Height = 21
+    Caption = #1044#1086#1073#1072#1074#1080#1090#1100
+    TabOrder = 4
+    OnClick = ButtonAdd1Click
+  end
+  object ButtonEdd1: TButton
+    Left = 265
+    Top = 66
+    Width = 75
+    Height = 21
+    Caption = #1048#1079#1084#1077#1085#1080#1090#1100
+    TabOrder = 5
+  end
+  object ButtonDel1: TButton
+    Left = 265
+    Top = 93
+    Width = 75
+    Height = 21
+    Caption = #1059#1076#1072#1083#1080#1090#1100
+    TabOrder = 6
+  end
+  object ButtonDel2: TButton
+    Left = 265
+    Top = 189
+    Width = 75
+    Height = 21
+    Caption = #1059#1076#1072#1083#1080#1090#1100
+    TabOrder = 7
+  end
+  object ButtonEdd2: TButton
+    Left = 265
+    Top = 162
+    Width = 75
+    Height = 21
+    Caption = #1048#1079#1084#1077#1085#1080#1090#1100
+    TabOrder = 8
+  end
+  object ButtonAdd2: TButton
+    Left = 265
+    Top = 135
+    Width = 75
+    Height = 21
+    Caption = #1044#1086#1073#1072#1074#1080#1090#1100
+    TabOrder = 9
+  end
+  object SQLConnection1: TSQLConnection
+    ConnectionName = 'MySQLConnection'
+    DriverName = 'MySQL'
+    LoginPrompt = False
+    Params.Strings = (
+      'DriverUnit=DBXMySQL'
+      
+        'DriverPackageLoader=TDBXDynalinkDriverLoader,DbxCommonDriver140.' +
+        'bpl'
+      
+        'DriverAssemblyLoader=Borland.Data.TDBXDynalinkDriverLoader,Borla' +
+        'nd.Data.DbxCommonDriver,Version=14.0.0.0,Culture=neutral,PublicK' +
+        'eyToken=91d62ebb5b0d1b1b'
+      
+        'MetaDataPackageLoader=TDBXMySqlMetaDataCommandFactory,DbxMySQLDr' +
+        'iver140.bpl'
+      
+        'MetaDataAssemblyLoader=Borland.Data.TDBXMySqlMetaDataCommandFact' +
+        'ory,Borland.Data.DbxMySQLDriver,Version=14.0.0.0,Culture=neutral' +
+        ',PublicKeyToken=91d62ebb5b0d1b1b'
+      'GetDriverFunc=getSQLDriverMYSQL'
+      'LibraryName=dbxmys.dll'
+      'LibraryNameOsx=libsqlmys.dylib'
+      'VendorLib=LIBMYSQL.dll'
+      'VendorLibWin64=libmysql.dll'
+      'VendorLibOsx=libmysqlclient.dylib'
+      'DriverName=MySQL'
+      'HostName=127.0.0.1'
+      'Database=GuessTheSong'
+      'User_Name=mysql'
+      'Password=mysql'
+      'ServerCharSet=cp1251'
+      'BlobSize=-1'
+      'ErrorResourceFile='
+      'LocaleCode=0000'
+      'Compressed=False'
+      'Encrypted=False'
+      'ConnectTimeout=60'
+      'MaxBlobSize=-1')
+    Connected = True
+    Left = 32
+    Top = 278
+  end
+  object SQLQuery1: TSQLQuery
+    Active = True
+    MaxBlobSize = 1
+    Params = <>
+    SQL.Strings = (
+      'SELECT *  FROM Level')
+    SQLConnection = SQLConnection1
+    Left = 112
+    Top = 278
+  end
+  object DataSetProvider1: TDataSetProvider
+    DataSet = SQLQuery1
+    Left = 192
+    Top = 278
+  end
+  object ClientDataSet1: TClientDataSet
+    Active = True
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DataSetProvider1'
+    Left = 280
+    Top = 278
+  end
+  object DataSource1: TDataSource
+    DataSet = ClientDataSet1
+    Left = 360
+    Top = 278
+  end
+  object SQLQuery2: TSQLQuery
+    Active = True
+    MaxBlobSize = 1
+    Params = <>
+    SQL.Strings = (
+      'SELECT *  FROM Level')
+    SQLConnection = SQLConnection1
+    Left = 112
+    Top = 326
+  end
+  object DataSetProvider2: TDataSetProvider
+    DataSet = SQLQuery2
+    Left = 192
+    Top = 326
+  end
+  object ClientDataSet2: TClientDataSet
+    Active = True
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DataSetProvider2'
+    Left = 280
+    Top = 326
+  end
+  object DataSource2: TDataSource
+    DataSet = ClientDataSet2
+    Left = 360
+    Top = 326
+  end
+end

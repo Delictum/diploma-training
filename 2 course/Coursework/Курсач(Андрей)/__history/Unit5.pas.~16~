@@ -1,0 +1,67 @@
+unit Unit5;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Data.FMTBcd, DBXMySQL,
+  Data.DB, Vcl.Grids, Vcl.DBGrids, Data.SqlExpr, Datasnap.Provider,
+  Datasnap.DBClient, Vcl.Imaging.jpeg, Vcl.ExtCtrls, Vcl.Menus, ShellAPI,
+  Vcl.Imaging.pngimage;
+
+type
+  TFormEnd = class(TForm)
+    DataSource1: TDataSource;
+    ClientDataSet1: TClientDataSet;
+    DataSetProvider1: TDataSetProvider;
+    SQLQuery1: TSQLQuery;
+    SQLConnection1: TSQLConnection;
+    DBGrid1: TDBGrid;
+    LabelTable: TLabel;
+    LabelNewScore: TLabel;
+    Image1: TImage;
+    Image2: TImage;
+    ImgRestart: TImage;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure Image2Click(Sender: TObject);
+    procedure ImgRestartClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormEnd: TFormEnd;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit1, Unit4, Unit3, Unit2;
+
+procedure TFormEnd.FormClose(Sender: TObject; var Action: TCloseAction);
+  Var i : integer;
+begin
+  for i := 1 to 10 do
+    if FileExists('music\' + IntToStr(i) +'.mp3') then
+      DeleteFile('music\' + IntToStr(i) +'.mp3');
+  FormBegin.Close;
+  FormGame.Close;
+  LogOut.Close;
+end;
+
+procedure TFormEnd.Image2Click(Sender: TObject);
+begin
+  ShellExecute (LogOut.Handle, nil, 'iexplore', 'https://projectstructuraldrawinghelper.nethouse.ru/', nil, SW_RESTORE);
+end;
+
+procedure TFormEnd.ImgRestartClick(Sender: TObject);
+begin
+
+  GameScore := 0;
+  FormEnd.Hide;
+  FormBegin.Show;
+end;
+
+end.
