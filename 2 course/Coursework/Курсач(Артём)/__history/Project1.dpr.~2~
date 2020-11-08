@@ -1,0 +1,16 @@
+program Project1;
+
+uses
+  Vcl.Forms,
+  Unit1 in 'Unit1.pas' {FormLog},
+  Unit2 in 'Unit2.pas' {FormAir};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFormLog, FormLog);
+  Application.CreateForm(TFormAir, FormAir);
+  Application.Run;
+end.

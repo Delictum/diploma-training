@@ -1,0 +1,101 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, jpeg, Vcl.ExtCtrls, Vcl.StdCtrls,
+  Vcl.Imaging.pngimage;
+
+type
+  TFormLog = class(TForm)
+    Image1: TImage;
+    ImageAdminLog: TImage;
+    ImageGuestLog: TImage;
+    LabelAdminLog: TLabel;
+    LabelGuestLog: TLabel;
+    ImageFlyLog: TImage;
+    EditPasLog: TEdit;
+    procedure EditPasLogClick(Sender: TObject); //При первом нажатии на Edit-пароля стирает текст
+    procedure ImageAdminLogClick(Sender: TObject); //При нажатии на иконку админа проявляется поле ввода пароля и изображения подтверждения пароля, если попытки входа не исчерпаны
+    procedure ImageFlyLogClick(Sender: TObject);  //Введенный пароль сверяется и (верный) переход к программе, неверный - возвращение к вводу
+    procedure FormShow(Sender: TObject); //При открытии формы обнуляется лимит попыток входа под админом
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormLog: TFormLog;
+  EditPasLogBoolean : Boolean;
+  EditPasLogReWrite : integer;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit2;
+
+//При первом нажатии на Edit-пароля стирает текст
+procedure TFormLog.EditPasLogClick(Sender: TObject);
+begin
+  if EditPasLogBoolean <> true then  //Если первого ввода не было
+    EditPasLog.Text := '';           //Стираем текст
+  EditPasLogBoolean := true;         //Указываем ЭВМ первый ввод пароля
+end;
+
+//При открытии формы обнуляется лимит попыток входа под админом
+procedure TFormLog.FormShow(Sender: TObject);
+begin
+  EditPasLogReWrite := 0;
+end;
+{При нажатии на иконку админа проявляется поле ввода пароля и изображения подтверждения пароля,
+  если попытки входа не исчерпаны}
+procedure TFormLog.ImageAdminLogClick(Sender: TObject);
+begin
+  //Если неверных вводов = 4 вход неосуществим
+  if EditPasLogReWrite > 3 then
+  begin
+    ShowMessage('Лимит попыток исчерпан.');
+    exit;
+  end;
+  //Открываем компоненты
+  ImageFlyLog.Visible := true;
+  EditPasLog.Visible := true;
+end;
+
+//Введенный пароль сверяется и (верный) переход к программе, неверный - возвращение к вводу
+procedure TFormLog.ImageFlyLogClick(Sender: TObject);
+begin
+  if EditPasLogReWrite = 4 then  //Если неверных вводов = 4 ...
+    begin
+      ImageFlyLog.Visible := false;  //Скрываем
+      EditPasLog.Visible := false;   // компоненты
+      EditPasLog.Text := '';         //  и стираем пароль
+      exit;                          //   затем возвращаемся к авторизации
+    end;
+  //Проверка на ввод пароля
+  if (EditPasLog.Text = 'Введите пароль') or (EditPasLog.Text = '') then
+    begin
+      ShowMessage('Введите пароль.'); //Ошибка
+      exit;                          // и возвращение к экрану
+    end;
+
+  //Если введен верный пароль и попыток < 4...
+  if (EditPasLog.Text = 'AIR') and (EditPasLogReWrite < 4) then
+    begin
+      FormLog.Hide;   //Скрываем окно авторизации
+      FormAir.Show;   //Открываем программу
+      ImageFlyLog.Visible := false;   //Скрываем компоненты
+      EditPasLog.Visible := false;    // и
+      EditPasLog.Text := '';          //  стираем пароль
+    end
+  else //Иначе...
+    begin
+      inc(EditPasLogReWrite); //Неверный ввод + 1
+      ShowMessage('Неверный пароль.'); //Ошибка введенного пароля
+    end;
+end;
+
+end.
