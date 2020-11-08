@@ -1,0 +1,5 @@
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp6\ConsoleApp6\bin\Debug\ConsoleApp6.exe.config
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp6\ConsoleApp6\bin\Debug\ConsoleApp6.exe
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp6\ConsoleApp6\bin\Debug\ConsoleApp6.pdb
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp6\ConsoleApp6\obj\Debug\ConsoleApp6.exe
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp6\ConsoleApp6\obj\Debug\ConsoleApp6.pdb

@@ -1,0 +1,6 @@
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp15\ConsoleApp15\bin\Debug\ConsoleApp15.exe.config
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp15\ConsoleApp15\bin\Debug\ConsoleApp15.exe
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp15\ConsoleApp15\bin\Debug\ConsoleApp15.pdb
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp15\ConsoleApp15\obj\Debug\ConsoleApp15.csprojResolveAssemblyReference.cache
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp15\ConsoleApp15\obj\Debug\ConsoleApp15.exe
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp15\ConsoleApp15\obj\Debug\ConsoleApp15.pdb

@@ -1,0 +1,12 @@
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp16\ConsoleApp16\bin\Debug\ConsoleApp16.exe.config
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp16\ConsoleApp16\bin\Debug\ConsoleApp16.exe
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp16\ConsoleApp16\bin\Debug\ConsoleApp16.pdb
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp16\ConsoleApp16\obj\Debug\ConsoleApp16.exe
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp16\ConsoleApp16\obj\Debug\ConsoleApp16.pdb
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp16\ConsoleApp16\obj\Debug\ConsoleApp16.csprojResolveAssemblyReference.cache
+E:\КПиЯП\ЛР\Олишкевич Игорь ЛР 9\ConsoleApp16\ConsoleApp16\bin\Debug\ConsoleApp16.exe.config
+E:\КПиЯП\ЛР\Олишкевич Игорь ЛР 9\ConsoleApp16\ConsoleApp16\obj\Debug\ConsoleApp16.exe
+E:\КПиЯП\ЛР\Олишкевич Игорь ЛР 9\ConsoleApp16\ConsoleApp16\obj\Debug\ConsoleApp16.pdb
+E:\КПиЯП\ЛР\Олишкевич Игорь ЛР 9\ConsoleApp16\ConsoleApp16\bin\Debug\ConsoleApp16.exe
+E:\КПиЯП\ЛР\Олишкевич Игорь ЛР 9\ConsoleApp16\ConsoleApp16\bin\Debug\ConsoleApp16.pdb
+E:\КПиЯП\ЛР\Олишкевич Игорь ЛР 9\ConsoleApp16\ConsoleApp16\obj\Debug\ConsoleApp16.csprojResolveAssemblyReference.cache

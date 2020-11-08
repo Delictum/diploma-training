@@ -1,0 +1,31 @@
+C:\Users\from1\source\repos\laba18\laba18\bin\Debug\XMLFile1.xml
+C:\Users\from1\source\repos\laba18\laba18\bin\Debug\laba18.exe.config
+C:\Users\from1\source\repos\laba18\laba18\bin\Debug\laba18.exe
+C:\Users\from1\source\repos\laba18\laba18\bin\Debug\laba18.pdb
+C:\Users\from1\source\repos\laba18\laba18\obj\Debug\laba18.csprojResolveAssemblyReference.cache
+C:\Users\from1\source\repos\laba18\laba18\obj\Debug\laba18.Form1.resources
+C:\Users\from1\source\repos\laba18\laba18\obj\Debug\laba18.Properties.Resources.resources
+C:\Users\from1\source\repos\laba18\laba18\obj\Debug\laba18.csproj.GenerateResource.Cache
+C:\Users\from1\source\repos\laba18\laba18\obj\Debug\laba18.csproj.CoreCompileInputs.cache
+C:\Users\from1\source\repos\laba18\laba18\obj\Debug\laba18.exe
+C:\Users\from1\source\repos\laba18\laba18\obj\Debug\laba18.pdb
+F:\Лаба 18 Грицук\laba18\laba18\bin\Debug\laba18.exe.config
+F:\Лаба 18 Грицук\laba18\laba18\obj\Debug\laba18.exe
+F:\Лаба 18 Грицук\laba18\laba18\obj\Debug\laba18.pdb
+F:\Лаба 18 Грицук\laba18\laba18\bin\Debug\XMLFile1.xml
+F:\Лаба 18 Грицук\laba18\laba18\bin\Debug\laba18.exe
+F:\Лаба 18 Грицук\laba18\laba18\bin\Debug\laba18.pdb
+F:\Лаба 18 Грицук\laba18\laba18\obj\Debug\laba18.csprojResolveAssemblyReference.cache
+F:\Лаба 18 Грицук\laba18\laba18\obj\Debug\laba18.Form1.resources
+F:\Лаба 18 Грицук\laba18\laba18\obj\Debug\laba18.Properties.Resources.resources
+F:\Лаба 18 Грицук\laba18\laba18\obj\Debug\laba18.csproj.GenerateResource.Cache
+E:\Предметы\КПиЯП\ЛР\C#\Олишкевич Игорь ЛР 18\laba18\laba18\bin\Debug\laba18.exe.config
+E:\Предметы\КПиЯП\ЛР\C#\Олишкевич Игорь ЛР 18\laba18\laba18\obj\Debug\laba18.exe
+E:\Предметы\КПиЯП\ЛР\C#\Олишкевич Игорь ЛР 18\laba18\laba18\obj\Debug\laba18.pdb
+E:\Предметы\КПиЯП\ЛР\C#\Олишкевич Игорь ЛР 18\laba18\laba18\bin\Debug\XMLFile1.xml
+E:\Предметы\КПиЯП\ЛР\C#\Олишкевич Игорь ЛР 18\laba18\laba18\bin\Debug\laba18.exe
+E:\Предметы\КПиЯП\ЛР\C#\Олишкевич Игорь ЛР 18\laba18\laba18\bin\Debug\laba18.pdb
+E:\Предметы\КПиЯП\ЛР\C#\Олишкевич Игорь ЛР 18\laba18\laba18\obj\Debug\laba18.csprojResolveAssemblyReference.cache
+E:\Предметы\КПиЯП\ЛР\C#\Олишкевич Игорь ЛР 18\laba18\laba18\obj\Debug\laba18.Form1.resources
+E:\Предметы\КПиЯП\ЛР\C#\Олишкевич Игорь ЛР 18\laba18\laba18\obj\Debug\laba18.Properties.Resources.resources
+E:\Предметы\КПиЯП\ЛР\C#\Олишкевич Игорь ЛР 18\laba18\laba18\obj\Debug\laba18.csproj.GenerateResource.Cache

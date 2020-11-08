@@ -1,0 +1,5 @@
+I:\КПиЯП\ЛР\Олишкевич Игорь ЛР 15\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+I:\КПиЯП\ЛР\Олишкевич Игорь ЛР 15\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+I:\КПиЯП\ЛР\Олишкевич Игорь ЛР 15\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.csprojResolveAssemblyReference.cache
+I:\КПиЯП\ЛР\Олишкевич Игорь ЛР 15\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+I:\КПиЯП\ЛР\Олишкевич Игорь ЛР 15\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.pdb

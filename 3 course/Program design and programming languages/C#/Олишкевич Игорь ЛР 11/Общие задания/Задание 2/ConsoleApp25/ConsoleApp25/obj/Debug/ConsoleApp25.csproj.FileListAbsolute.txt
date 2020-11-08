@@ -1,0 +1,13 @@
+C:\Users\CHVERTOK\source\repos\ConsoleApp25\ConsoleApp25\bin\Debug\ConsoleApp25.exe.config
+C:\Users\CHVERTOK\source\repos\ConsoleApp25\ConsoleApp25\bin\Debug\ConsoleApp25.exe
+C:\Users\CHVERTOK\source\repos\ConsoleApp25\ConsoleApp25\bin\Debug\ConsoleApp25.pdb
+C:\Users\CHVERTOK\source\repos\ConsoleApp25\ConsoleApp25\obj\Debug\ConsoleApp25.csprojResolveAssemblyReference.cache
+C:\Users\CHVERTOK\source\repos\ConsoleApp25\ConsoleApp25\obj\Debug\ConsoleApp25.csproj.CoreCompileInputs.cache
+C:\Users\CHVERTOK\source\repos\ConsoleApp25\ConsoleApp25\obj\Debug\ConsoleApp25.exe
+C:\Users\CHVERTOK\source\repos\ConsoleApp25\ConsoleApp25\obj\Debug\ConsoleApp25.pdb
+C:\Users\Delictum\Downloads\Obschie_zadania\Общие задания\Задание 2\ConsoleApp25\ConsoleApp25\bin\Debug\ConsoleApp25.exe.config
+C:\Users\Delictum\Downloads\Obschie_zadania\Общие задания\Задание 2\ConsoleApp25\ConsoleApp25\bin\Debug\ConsoleApp25.exe
+C:\Users\Delictum\Downloads\Obschie_zadania\Общие задания\Задание 2\ConsoleApp25\ConsoleApp25\bin\Debug\ConsoleApp25.pdb
+C:\Users\Delictum\Downloads\Obschie_zadania\Общие задания\Задание 2\ConsoleApp25\ConsoleApp25\obj\Debug\ConsoleApp25.csprojResolveAssemblyReference.cache
+C:\Users\Delictum\Downloads\Obschie_zadania\Общие задания\Задание 2\ConsoleApp25\ConsoleApp25\obj\Debug\ConsoleApp25.exe
+C:\Users\Delictum\Downloads\Obschie_zadania\Общие задания\Задание 2\ConsoleApp25\ConsoleApp25\obj\Debug\ConsoleApp25.pdb

@@ -1,0 +1,12 @@
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp9\ConsoleApp9\bin\Debug\ConsoleApp9.exe.config
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp9\ConsoleApp9\bin\Debug\ConsoleApp9.exe
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp9\ConsoleApp9\bin\Debug\ConsoleApp9.pdb
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp9\ConsoleApp9\obj\Debug\ConsoleApp9.exe
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp9\ConsoleApp9\obj\Debug\ConsoleApp9.pdb
+c:\users\delictum\documents\visual studio 2017\Projects\ConsoleApp9\ConsoleApp9\obj\Debug\ConsoleApp9.csprojResolveAssemblyReference.cache
+C:\25 ПОИТ\КПиЯП\ЛР\Олишкевич Игорь ЛР 3\ConsoleApp9\ConsoleApp9\bin\Debug\ConsoleApp9.exe.config
+C:\25 ПОИТ\КПиЯП\ЛР\Олишкевич Игорь ЛР 3\ConsoleApp9\ConsoleApp9\bin\Debug\ConsoleApp9.exe
+C:\25 ПОИТ\КПиЯП\ЛР\Олишкевич Игорь ЛР 3\ConsoleApp9\ConsoleApp9\bin\Debug\ConsoleApp9.pdb
+C:\25 ПОИТ\КПиЯП\ЛР\Олишкевич Игорь ЛР 3\ConsoleApp9\ConsoleApp9\obj\Debug\ConsoleApp9.csprojResolveAssemblyReference.cache
+C:\25 ПОИТ\КПиЯП\ЛР\Олишкевич Игорь ЛР 3\ConsoleApp9\ConsoleApp9\obj\Debug\ConsoleApp9.exe
+C:\25 ПОИТ\КПиЯП\ЛР\Олишкевич Игорь ЛР 3\ConsoleApp9\ConsoleApp9\obj\Debug\ConsoleApp9.pdb
