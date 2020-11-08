@@ -1,0 +1,969 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6d609a15-3689-4d5f-9d03-f60351502223" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/remote-mappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/util/date_process.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/apk/app_v.1.0.2.apk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/EL02.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/back_arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/giphy.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/goblins.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/android/camera_screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/android/drawer_menu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/android/filled_in_registration_data.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/android/filled_in_sign_in_data.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/android/help_screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/android/profile_screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/android/received_photo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/android/registration_screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/android/rotated_photo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/android/select_receipt_photo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/android/settings_screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/auth/authorization_location.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/auth/confirm_email_registration.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/auth/confirm_email_reset_password.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/auth/confirm_email_view.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/auth/filled_in_authorization_data.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/auth/filled_in_registration_data.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/auth/filled_in_reset_password_data.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/auth/log_off_location.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/auth/registration_location.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/auth/registration_view.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/auth/reset_password_request_view.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/auth/reset_password_view.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/other/internal_error_view.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/other/not_found_error_view.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/profile/add_img_check.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/profile/add_product_filled_required.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/profile/check_add_view.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/profile/check_details.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/profile/checkbox_all_delete_check_on.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/profile/checkbox_delete_check_on.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/profile/choose_date.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/profile/clear_profile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/profile/click_button_add_field.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/profile/edit_check.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/profile/edit_check_add_field.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/profile/edit_profile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/profile/export_check_to_excel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/profile/export_check_to_word.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/profile/message_dialogue_check.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/profile/profile_after_editing_wage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/profile/profile_with_first_check.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/profile/recognition_img_check.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/profile/recognition_img_check_after_deleted_products.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/helpers/profile/table_check_after_deleted.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/not_data.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/practice-gallery/css/reset.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/practice-gallery/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/practice-gallery/finished-project.rar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/practice-gallery/gallery.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/practice-gallery/gallery.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/practice-gallery/img/icons/eye-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/practice-gallery/img/img-01-min.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/practice-gallery/img/img-02-min.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/practice-gallery/img/img-03-min.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/practice-gallery/img/img-04-min.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/practice-gallery/img/img-05-min.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/practice-gallery/img/img-06-min.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/practice-gallery/img/img-07-min.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/practice-gallery/img/img-08-min.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/practice-gallery/img/img-09-min.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/practice-gallery/img/originals/img-01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/practice-gallery/img/originals/img-02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/practice-gallery/img/originals/img-03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/practice-gallery/img/originals/img-04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/practice-gallery/img/originals/img-05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/practice-gallery/img/originals/img-06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/practice-gallery/img/originals/img-07.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/practice-gallery/img/originals/img-08.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/practice-gallery/img/originals/img-09.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/practice-gallery/lightbox/css/lightbox.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/practice-gallery/lightbox/images/close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/practice-gallery/lightbox/images/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/practice-gallery/lightbox/images/next.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/practice-gallery/lightbox/images/prev.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/practice-gallery/lightbox/js/lightbox-plus-jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/presents.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template_detail_information.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/user/compare_information.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/checkbook_accounting.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/checkbook_accounting.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/controllers/api/v1/check_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/controllers/api/v1/check_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/controllers/api/v1/organization_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/controllers/api/v1/organization_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/controllers/api/v1/product_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/controllers/api/v1/product_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/controllers/api/v1/user_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/controllers/api/v1/user_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/controllers/authorization_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/controllers/authorization_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/controllers/home_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/controllers/home_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/controllers/support_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/controllers/support_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/controllers/user_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/controllers/user_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/models/abstract_product.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/models/abstract_product.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/models/category_type.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/models/category_type.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/models/check.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/models/check.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/models/organization.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/models/organization.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/models/product.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/models/product.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/models/product_category.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/models/product_category.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/models/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/util/check_process/check_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/util/check_process/check_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/util/check_process/check_processing.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/util/check_process/check_processing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/util/email.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/util/email.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/util/errors.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/util/errors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/util/export_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/util/export_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/util/image_process/image_processing.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/util/image_process/image_processing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/resource/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/font-awesome.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/font-awesome.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/static/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/avatar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/glyphicons-halflings-white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/glyphicons-halflings.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/service1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/service2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/service3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/slides/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/slides/1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/slides/2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/slides/2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/slides/3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/slides/3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/team1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/team2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/team3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/team4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/works/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/works/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/works/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/works/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/works/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/works/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/works/7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/works/8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/spinner.gif" beforeDir="false" afterPath="$PROJECT_DIR$/static/spinner.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/_check.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/_check.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/_product.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/_product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/authorization/confirm_email.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/authorization/confirm_email.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/authorization/email/activate.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/authorization/email/activate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/authorization/email/activate.txt" beforeDir="false" afterPath="$PROJECT_DIR$/templates/authorization/email/activate.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/authorization/email/reset_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/authorization/email/reset_password.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/authorization/email/reset_password.txt" beforeDir="false" afterPath="$PROJECT_DIR$/templates/authorization/email/reset_password.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/authorization/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/authorization/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/authorization/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/authorization/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/authorization/reset_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/authorization/reset_password.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/authorization/reset_password_request.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/authorization/reset_password_request.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/errors/403.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/errors/403.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/errors/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/errors/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/errors/500.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/errors/500.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/agreement.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/agreement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/privacy_policy.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/privacy_policy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/site.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/support/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/support/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/add_check.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/add_check.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/check_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/check_details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/detail_information.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/detail_information.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/edit_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/edit_profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/profile.html" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.idea/shelf/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/checkbook_accounting$checkbook_accounting.coverage" NAME="checkbook_accounting Coverage Results" MODIFIED="1553863845554" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/checbook_accounting$checbook_accounting.coverage" NAME="checkbook_accounting Coverage Results" MODIFIED="1553174323946" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/checkbook_accounting$user_controller.coverage" NAME="user_controller Coverage Results" MODIFIED="1553333155708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project/controllers/api/v1" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/controllers/user_controller.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="1581" column="23" selection-start-line="1581" selection-start-column="23" selection-end-line="1581" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/models/check.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1395">
+              <caret line="97" column="8" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/util/export_data.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1785">
+              <caret line="129" selection-start-line="129" selection-end-line="129" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/user/compare_information.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="410">
+              <caret line="616" column="12" selection-start-line="616" selection-start-column="12" selection-end-line="616" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Flask Main" />
+        <option value="CSS File" />
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>send_email</find>
+      <find>navbar</find>
+      <find>nav</find>
+      <find>btn</find>
+      <find>btn</find>
+      <find>Дев Бай Медиа</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Delictum" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/templates/home/privacy_policy.html" />
+        <option value="$PROJECT_DIR$/templates/home/agreement.html" />
+        <option value="$PROJECT_DIR$/project/controllers/support_controller.py" />
+        <option value="$PROJECT_DIR$/project/controllers/authorization_controller.py" />
+        <option value="$PROJECT_DIR$/templates/authorization/confirm_email.html" />
+        <option value="$PROJECT_DIR$/templates/authorization/register.html" />
+        <option value="$PROJECT_DIR$/templates/authorization/reset_password.html" />
+        <option value="$PROJECT_DIR$/templates/support/index.html" />
+        <option value="$PROJECT_DIR$/project/controllers/home_controller.py" />
+        <option value="$PROJECT_DIR$/project/forms.py" />
+        <option value="$PROJECT_DIR$/static/select-complete/css/cs-select.css" />
+        <option value="$PROJECT_DIR$/static/select-complete/css/normalize.css" />
+        <option value="$PROJECT_DIR$/static/select-complete/css/cs-skin-slide.css" />
+        <option value="$PROJECT_DIR$/static/select-complete/js/selectFx.js" />
+        <option value="$PROJECT_DIR$/static/practice-gallery/css/reset.css" />
+        <option value="$PROJECT_DIR$/templates/404.html" />
+        <option value="$PROJECT_DIR$/templates/check_details.html" />
+        <option value="$PROJECT_DIR$/project/util/product_process.py" />
+        <option value="$PROJECT_DIR$/templates/500.html" />
+        <option value="$PROJECT_DIR$/static/practice-gallery/css/style.css" />
+        <option value="$PROJECT_DIR$/templates/user/chart.html" />
+        <option value="$PROJECT_DIR$/templates/errors/204.html" />
+        <option value="$PROJECT_DIR$/project/util/errors.py" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/templates/errors/403.html" />
+        <option value="$PROJECT_DIR$/templates/errors/404.html" />
+        <option value="$PROJECT_DIR$/templates/errors/500.html" />
+        <option value="$PROJECT_DIR$/templates/user/add_check.html" />
+        <option value="$PROJECT_DIR$/templates/home/index.html" />
+        <option value="$PROJECT_DIR$/templates/footer.html" />
+        <option value="$PROJECT_DIR$/static/stripy/stripy.htc" />
+        <option value="$PROJECT_DIR$/static/stripy/moz-behaviors.xml" />
+        <option value="$PROJECT_DIR$/static/stripy/bindings.xml" />
+        <option value="$PROJECT_DIR$/templates/home/about.html" />
+        <option value="$PROJECT_DIR$/project/util/export_data.py" />
+        <option value="$PROJECT_DIR$/project/models/product.py" />
+        <option value="$PROJECT_DIR$/project/models/abstract_product.py" />
+        <option value="$PROJECT_DIR$/templates/user/check_details.html" />
+        <option value="$PROJECT_DIR$/project/controllers/api/v1/product_controller.py" />
+        <option value="$PROJECT_DIR$/project/controllers/api/v1/user_controller.py" />
+        <option value="$PROJECT_DIR$/templates/user/profile.html" />
+        <option value="$PROJECT_DIR$/static/css/style.css" />
+        <option value="$PROJECT_DIR$/project/util/date_process.py" />
+        <option value="$PROJECT_DIR$/templates/user/detail_information.html" />
+        <option value="$PROJECT_DIR$/project/util/check_process/check_parser.py" />
+        <option value="$PROJECT_DIR$/project/models/check.py" />
+        <option value="/tmp/pycharm_project_228/app.py" />
+        <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/project/controllers/user_controller.py" />
+        <option value="$PROJECT_DIR$/templates/user/compare_information.html" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="293" />
+    <option name="y" value="53" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="checkbook_accounting" type="b2602c69:ProjectViewProjectNode" />
+              <item name="checkbook_accounting" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/server_checkbook_accounting" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="checkbook_accounting" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="checkbook_accounting" />
+      </console-settings>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/user" />
+      <recent name="$PROJECT_DIR$/templates/errors" />
+      <recent name="$PROJECT_DIR$/static/js" />
+      <recent name="$PROJECT_DIR$/static/img/helpers/auth" />
+      <recent name="$PROJECT_DIR$/static/img/helpers" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static" />
+      <recent name="$PROJECT_DIR$/static/tulios" />
+      <recent name="$PROJECT_DIR$/static/dbpas" />
+      <recent name="$PROJECT_DIR$/static/tinycircleslider" />
+      <recent name="$PROJECT_DIR$/static/thumbelina" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Flask server.checkbook_accounting">
+    <configuration name="check_processing" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="checkbook_accounting" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/project/util/check_process" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/project/util/check_process/check_processing.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="user_controller" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="checkbook_accounting" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/project/controllers/api/v1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/project/controllers/api/v1/user_controller.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="checkbook_accounting" type="Python.FlaskServer">
+      <module name="checkbook_accounting" />
+      <option name="target" value="$PROJECT_DIR$/app.py" />
+      <option name="targetType" value="PATH" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Flask server.checkbook_accounting" />
+      <item itemvalue="Python.check_processing" />
+      <item itemvalue="Python.user_controller" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.check_processing" />
+        <item itemvalue="Python.user_controller" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6d609a15-3689-4d5f-9d03-f60351502223" name="Default Changelist" comment="" />
+      <created>1553169848166</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1553169848166</updated>
+      <workItem from="1553169856065" duration="5627000" />
+      <workItem from="1553175765125" duration="46926000" />
+      <workItem from="1553332588873" duration="17207000" />
+      <workItem from="1553867812716" duration="40023000" />
+      <workItem from="1554107551407" duration="9627000" />
+      <workItem from="1554188979376" duration="14971000" />
+      <workItem from="1554363349626" duration="5516000" />
+      <workItem from="1554397230295" duration="2881000" />
+      <workItem from="1554546299731" duration="7812000" />
+      <workItem from="1554812416410" duration="14392000" />
+      <workItem from="1555069311139" duration="6275000" />
+      <workItem from="1555435686420" duration="824000" />
+      <workItem from="1556466557436" duration="58983000" />
+      <workItem from="1556612317054" duration="11490000" />
+      <workItem from="1556779272932" duration="818000" />
+      <workItem from="1556887307143" duration="16038000" />
+      <workItem from="1557174816985" duration="642000" />
+      <workItem from="1557558736361" duration="30336000" />
+      <workItem from="1558361400612" duration="19732000" />
+      <workItem from="1558617461832" duration="34143000" />
+      <workItem from="1558772544991" duration="96813000" />
+      <workItem from="1558947546501" duration="43159000" />
+      <workItem from="1559120997087" duration="76000" />
+      <workItem from="1559121099357" duration="55808000" />
+      <workItem from="1559383339392" duration="21561000" />
+      <workItem from="1559562810121" duration="4831000" />
+      <workItem from="1559663262584" duration="328000" />
+    </task>
+    <task id="LOCAL-00001" summary="Start init.&#10;Implemented by:&#10;1) authorization;&#10;2) user api">
+      <created>1553173657646</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1553173657646</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Start init.&#10;Implemented by:&#10;1) authorization;&#10;2) user api">
+      <created>1553173682273</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1553173682273</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Start init.&#10;Implemented by:&#10;1) authorization;&#10;2) user api">
+      <created>1553173713185</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1553173713185</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Start init.&#10;Implemented by:&#10;1) authorization;&#10;2) user api">
+      <created>1553174402242</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1553174402242</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Small changes">
+      <created>1553322212836</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1553322212836</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="566839000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="59" y="25" width="1861" height="1055" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.33608815" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4997245" weight="0.32937366" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4991699" weight="0.28185746" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39956802" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32937366" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5008264" side_tool="true" weight="0.32829374" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="10" weight="0.3297414" />
+      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.4991699" weight="0.32937366" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49917355" weight="0.32829374" />
+      <window_info anchor="bottom" id="Python Console" order="13" weight="0.32937366" />
+      <window_info anchor="bottom" id="CSS-X-Fire" order="14" weight="0.32937366" />
+      <window_info anchor="bottom" id="File Transfer" order="15" visible="true" weight="0.32937366" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.3294766" />
+      <window_info anchor="right" id="Database" order="4" weight="0.3294766" />
+      <window_info anchor="right" id="Coverage" order="5" side_tool="true" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27670172" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32937366" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4991699" visible="true" weight="0.32937366" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39956802" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32937366" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4991699" weight="0.32937366" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5008301" side_tool="true" weight="0.32937366" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="11" weight="0.3297414" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.4997233" weight="0.32829374" />
+      <window_info anchor="bottom" id="Python Console" order="13" weight="0.32937366" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/flask-restful" />
+    </ignored-roots>
+    <MESSAGE value="Start init" />
+    <MESSAGE value="Start init.&#10;Implemented by:&#10;1) authorization;&#10;2) user api" />
+    <MESSAGE value="Small changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Small changes" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/checkbook_accounting$check_processing.coverage" NAME="check_processing Coverage Results" MODIFIED="1555425843933" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project/util/check_process" />
+    <SUITE FILE_PATH="coverage/checkbook_accounting$checkbook_accounting.coverage" NAME="checkbook_accounting Coverage Results" MODIFIED="1559663635712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$USER_HOME$/Downloads/03.09.2014/index2.html" />
+    <entry file="file://$PROJECT_DIR$/static/select-complete/css/cs-select.css" />
+    <entry file="file://$PROJECT_DIR$/static/select-complete/css/normalize.css" />
+    <entry file="file://$PROJECT_DIR$/static/select-complete/css/cs-skin-slide.css" />
+    <entry file="file://$PROJECT_DIR$/static/select-complete/js/selectFx.js" />
+    <entry file="file://$USER_HOME$/Downloads/ResponsiveImageGallery/index.html" />
+    <entry file="file://$PROJECT_DIR$/static/gallery/css/demo.css" />
+    <entry file="file://$USER_HOME$/Downloads/thumbelina-master/index.html" />
+    <entry file="file://$USER_HOME$/Downloads/tinycircleslider-2.0.8/simple/index.html" />
+    <entry file="file://$PROJECT_DIR$/static/dbpas/jquery.dbpas.carousel.css" />
+    <entry file="file://$PROJECT_DIR$/static/tulios/config.ru" />
+    <entry file="file://$USER_HOME$/Downloads/tulios-jquery.silver_track-0.5.0-15-gb662c41/tulios-jquery.silver_track-b662c41/example/index.html" />
+    <entry file="file://$PROJECT_DIR$/static/practice-gallery/gallery.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="69" column="66" lean-forward="true" selection-start-line="69" selection-start-column="66" selection-end-line="69" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/practice-gallery/css/reset.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/util/product_process.py" />
+    <entry file="file://$PROJECT_DIR$/static/practice-gallery/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-107">
+          <caret line="23" column="1" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/Chart.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="6" column="67113" selection-start-line="6" selection-start-column="67113" selection-end-line="6" selection-end-column="67113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/flask/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="1330" column="8" selection-start-line="1330" selection-start-column="8" selection-end-line="1330" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/util/errors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="50" lean-forward="true" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="43" column="31" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/errors/403.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+          <folding>
+            <element signature="e#372#398#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/errors/500.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="14" column="96" selection-start-line="14" selection-start-column="96" selection-end-line="14" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/errors/404.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="10" column="92" selection-start-line="10" selection-start-column="92" selection-end-line="10" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/phrase.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="6" column="87067" selection-start-line="6" selection-start-column="87067" selection-end-line="6" selection-end-column="87067" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/font-awesome.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/stripy/stripy.htc" />
+    <entry file="file://$PROJECT_DIR$/static/stripy/moz-behaviors.xml" />
+    <entry file="file://$PROJECT_DIR$/static/stripy/bindings.xml" />
+    <entry file="file://$PROJECT_DIR$/templates/home/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="125" column="71" selection-start-line="125" selection-start-column="71" selection-end-line="125" selection-end-column="71" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#a#0;n#h4#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#h4#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#h4#0;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#h4#0;n#div#0;n#div#3;n#div#1;n#div#1;n#div#0;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#h4#0;n#div#0;n#div#4;n#div#1;n#div#1;n#div#0;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#h4#0;n#div#0;n#div#5;n#div#1;n#div#1;n#div#0;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/home/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="91" column="79" selection-start-line="91" selection-start-column="79" selection-end-line="91" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/user/add_check.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="91" column="21" selection-start-line="91" selection-start-column="17" selection-end-line="91" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/Chart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/models/abstract_product.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="85" selection-start-line="22" selection-start-column="85" selection-end-line="22" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/models/product.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="10" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/controllers/api/v1/product_controller.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="5" selection-start-line="13" selection-end-line="29" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/user/check_details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="273" column="27" lean-forward="true" selection-start-line="273" selection-start-column="27" selection-end-line="273" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/controllers/api/v1/user_controller.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="101" selection-start-line="101" selection-end-line="101" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/user/profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="56" column="106" selection-start-line="56" selection-start-column="106" selection-end-line="56" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/util/date_process.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="21" column="26" lean-forward="true" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1078">
+          <caret line="1835" column="6" selection-start-line="1835" selection-start-column="6" selection-end-line="1835" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/util/check_process/check_parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="184" column="93" selection-start-line="184" selection-start-column="93" selection-end-line="184" selection-end-column="93" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/user/detail_information.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="185" column="17" lean-forward="true" selection-start-line="185" selection-start-column="12" selection-end-line="187" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/flask/cli.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="235" selection-start-line="235" selection-end-line="235" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///tmp/pycharm_project_228/app.py" />
+    <entry file="file://$PROJECT_DIR$/project/controllers/user_controller.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="1581" column="23" selection-start-line="1581" selection-start-column="23" selection-end-line="1581" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/models/check.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1395">
+          <caret line="97" column="8" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/util/export_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1785">
+          <caret line="129" selection-start-line="129" selection-end-line="129" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/user/compare_information.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="616" column="12" selection-start-line="616" selection-start-column="12" selection-end-line="616" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

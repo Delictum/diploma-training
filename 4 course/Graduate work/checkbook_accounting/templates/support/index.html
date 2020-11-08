@@ -1,0 +1,473 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Справка
+{% endblock %}
+
+{% block content %}
+    <style>
+        p.main-text {
+            text-indent: 40px;
+            text-align: justify;
+            font-family: "Times New Roman", Times, serif;
+            font-size: 14pt;
+            line-height: 1.5em;
+        }
+
+        p.img-text {
+            text-align: center;
+            font-family: "Times New Roman", Times, serif;
+            font-size: 14pt;
+            line-height: 1.6em;
+        }
+
+        img {
+            line-height: 6pt;
+            border: 3px solid #000;
+            display: block;
+        }
+
+    </style>
+
+    <div class="container">
+
+        <h3 id="web_authorization">Авторизация</h3>
+        <ul id="web_authorization_list">
+            <li>
+                <h4 id="web_registration">Регистрация</h4>
+                <div class="web-registration-helper">
+                    <p class="main-text">
+                         Нажмите "Зарегистрироваться" в правой части навигационного меню (оно расположено в верхней части сайта), как показно на рисунке 1.1, или добавьте в адресную строку сразу после названия сайта следующее: "/authorization/register". Также это можно сделать из формы входа, нажав снизу на "Новый пользователь? Нажмите, чтобы зарегистрироваться!", отображенной на картинке 2.2.
+                         <div class="form-group" align="center">
+                             <img src="../../static/img/helpers/auth/registration_location.png">
+                             <p class="img-text">Рисунок 1.1 - Переход к регистрации</p>
+                         </div>
+                    </p>
+
+                    <p class="main-text">
+                         Откроется форма регистрации, как указано на изображении 1.2.
+                         <div class="form-group" align="center">
+                             <img src="../../static/img/helpers/auth/registration_view.png">
+                             <p class="img-text">Рисунок 1.2 - Отображение страницы регистрации</p>
+                         </div>
+                    </p>
+
+                    <p class="main-text">
+                         Заполните свои данные. Пример отображен на картинке 1.3. Нажмите на кнопку "Зарегистрироваться", которая видна на изображении 1.2.
+                         <div class="form-group" align="center">
+                             <img src="../../static/img/helpers/auth/filled_in_registration_data.png">
+                             <p class="img-text">Рисунок 1.3 - Заполненные данные регистрации</p>
+                         </div>
+                    </p>
+
+                    <p class="main-text">
+                         Войдите на свой почтовый адрес, указанный при регистрации. Вам должно прийти письмо с подтверждением регистрации на подобии указанного в примере на рисунке 1.4.
+                         <div class="form-group" align="center">
+                             <img src="../../static/img/helpers/auth/confirm_email_registration.png">
+                             <p class="img-text">Рисунок 1.4 - Письмо с подтверждением регистрации</p>
+                         </div>
+                    </p>
+
+                    <p class="main-text">
+                         Выполните инструкции, указанные в письме. После перехода по ссылке откроется окно как представлено на изображении 1.5.
+                         <div class="form-group" align="center">
+                             <img src="../../static/img/helpers/auth/confirm_email_view.png">
+                             <p class="img-text">Рисунок 1.5 - Отображение подтвержденной учетной записи</p>
+                         </div>
+                    </p>
+
+                    <p class="main-text">
+                        Поздравляем с успешной регистрацией и Вашим первым важным шагом на нашем сайте!
+                    </p>
+                </div>
+            </li>
+
+            <li>
+                <h4 id="web_sign_in">Вход в учетную запись</h4>
+                <div class="web-sign-in-helper">
+                    <p class="main-text">
+                        <em>Предполагается, что пользователь уже был зарегистрирован в системе (см. пункт "Регистрация").</em>
+                    </p>
+
+                    <p class="main-text">
+                         Нажмите "Войти" в правой части навигационного меню (оно расположено в верхней части сайта), как показно на рисунке 2.1 или добавьте в адресную строку сразу после названия сайта следующее: "/authorization/login". Также это возможно сделать из формы регистрации, нажав снизу на " Уже зарегистрированы? Войти.", отображенной на картинке 1.2.
+                         <div class="form-group" align="center">
+                             <img src="../../static/img/helpers/auth/authorization_location.png">
+                             <p class="img-text">Рисунок 2.1 - Переход к авторизации</p>
+                         </div>
+                    </p>
+
+                    <p class="main-text">
+                         Откроется форма входа, как указано на изображении 2.2.
+                         <div class="form-group" align="center">
+                             <img src="../../static/img/helpers/auth/authorization_view.png">
+                             <p class="img-text">Рисунок 2.2 - Отображение страницы входа</p>
+                         </div>
+                    </p>
+
+                    <p class="main-text">
+                         Заполните свои данные. Пример отображен на картинке 2.3. Если Вы желаете запомнить сессию для этого устройства, поставьте галочку, нажав на поле выбора или на текст "Запомнить меня". Далее нажмите на кнопку "Войти", которая видна на изображении 2.2.
+                         <div class="form-group" align="center">
+                             <img src="../../static/img/helpers/auth/filled_in_authorization_data.png">
+                             <p class="img-text">Рисунок 2.3 - Заполненные данные формы входа</p>
+                         </div>
+                    </p>
+
+                    <p class="main-text">
+                        Вы должны были успешно войти в систему и оказаться на главной странице. Если это так, в навигационном меню в правой части теперь должно отображаться "Привет, {Ваш логин}", "Профиль" и "Выйти", как видно на картинке 3.1.
+                    </p>
+                </div>
+            </li>
+
+            <li>
+                <h4 id="web_log_off">Выход из учетной записи</h4>
+                <div class="web-log-off-helper">
+                    <p class="main-text">
+                        <em>Предполагается, что пользователь уже вошел в учетную запись системы (см. пункт "Вход в учетную запись").</em>
+                    </p>
+
+                    <p class="main-text">
+                        Нажмите "Выйти" в правой части навигационного меню (оно расположено в верхней части сайта), как показно на рисунке 3.1, или добавьте в адресную строку сразу после названия сайта следующее: "/authorization/logout".
+                        <div class="form-group" align="center">
+                            <img src="../../static/img/helpers/auth/log_off_location.png">
+                             <p class="img-text">Рисунок 3.1 - Переход к выходу из учетной записи</p>
+                         </div>
+                    </p>
+
+                    <p class="main-text">
+                        Вы должны были успешно выйти из системы и оказаться на главной странице. Если это так, в навигационном меню в правой части теперь должно отображаться "Войти" и "Зарегистрироваться", как видно на картинке 2.1.
+                    </p>
+                </div>
+            </li>
+
+            <li>
+                <h4 id="web_reset_password">Сброс пароля</h4>
+                <div class="web-reset-password-helper">
+                    <p class="main-text">
+                        <em>Предполагается, что пользователь уже зарегистрирован в системе (см. пункт "Регистрация").</em>
+                    </p>
+
+                    <p class="main-text">
+                        Перейдите на форму входа (см. пункт "Вход в учетную запись"). Нажмите "Забыли пароль? Нажмите для сброса", как видно из рисунка 2.2, или добавьте в адресную строку сразу после названия сайта следующее: "/authorization/reset_password_request".
+                    </p>
+
+                    <p class="main-text">
+                         Откроется форма сброса пароля, как указано на изображении 4.1.
+                         <div class="form-group" align="center">
+                             <img src="../../static/img/helpers/auth/reset_password_view.png">
+                             <p class="img-text">Рисунок 4.1 - Отображение страницы сброса пароля</p>
+                         </div>
+                    </p>
+
+                    <p class="main-text">
+                         Заполните свои данные. Пример отображен на картинке 4.2. Далее нажмите на кнопку "Сбросить пароль", которая видна на изображении 4.1.
+                         <div class="form-group" align="center">
+                             <img src="../../static/img/helpers/auth/filled_in_reset_password_data.png">
+                             <p class="img-text">Рисунок 4.2 - Заполненные данные формы сброса пароля</p>
+                         </div>
+                    </p>
+
+                    <p class="main-text">
+                         Войдите на свой почтовый адрес, указанный при регистрации. Вам должно прийти письмо с подтверждением сброса пароля на подобии указанного в примере на рисунке 4.3.
+                         <div class="form-group" align="center">
+                             <img src="../../static/img/helpers/auth/confirm_email_reset_password.png">
+                             <p class="img-text">Рисунок 4.3 - Письмо с подтверждением сброса пароля</p>
+                         </div>
+                    </p>
+
+                    <p class="main-text">
+                         Выполните инструкции, указанные в письме. После перехода по ссылке откроется окно как представлено на изображении 4.4.
+                         <div class="form-group" align="center">
+                             <img src="../../static/img/helpers/auth/reset_password_request_view.png">
+                             <p class="img-text">Рисунок 4.4 - Отображение страницы со сброшенным паролем</p>
+                         </div>
+                    </p>
+
+                    <p class="main-text">
+                        Введите данные, после чего нажмите "Сбросить пароль".
+                    </p>
+
+                    <p class="main-text">
+                        Вы должны были успешно изменить пароль и оказаться на форме входа в систему.
+                    </p>
+
+                    <p class="main-text">
+                        <em>См. пункт "Вход в учетную запись".</em>
+                    </p>
+                </div>
+            </li>
+        </ul>
+
+        <hr>
+        <h3 id="android">Андроид</h3>
+        <ul id="android_list">
+            <li>
+                <h4 id="android_first_start">Первый запуск</h4>
+                <div class="android-first-start">
+                    <p class="main-text">
+                        После установки приложения на свое android-устройство, выполните его запуск. Программа откроется и отобразится окно как на рисунке 1.1.
+                         <div class="form-group" align="center">
+                             <img src="../../static/img/helpers/android/camera_screen.png">
+                             <p class="img-text">Рисунок 1.1 - Начальный экран</p>
+                         </div>
+                    </p>
+
+                    <p class="main-text">
+                        Навигация в программе осуществляется посредством выдвижного меню. Чтобы его открыть, нажмите на верхнюю область (называемую панелью инструментов), содержащую полоски в левой части. После осуществленного нажатия отобразилась панель навигации, как видно из изображения 1.2. Также меню можно открыть при проведении по экрану слева-направо.
+                         <div class="form-group" align="center">
+                             <img src="../../static/img/helpers/android/drawer_menu.png">
+                             <p class="img-text">Рисунок 1.2 - Панель навигации</p>
+                         </div>
+                    </p>
+
+                    <p class="main-text">
+                        Взаимодействию с различными секциями программы будет предшествовать переход по данной области. Остальные функции будут описаны ниже. Теперь, если у Вас еще нет учетной записи, перейдите к пункту "Регистрация", в ином случае - "Вход в систему".
+                    </p>
+                </div>
+            </li>
+
+            <li>
+                <h4 id="android_registration">Регистрация</h4>
+                <div class="android-registration-helper">
+                    <p class="main-text">
+                        <em>Регистрацию можно осуществить непосредственно на сайте (см. раздел "Авторизация" пункт "Регистрация").</em>
+                    </p>
+
+                    <p class="main-text">
+                         Перейдите к пункту "Регистрация", посредством меню. Откроется окно, отображенное на картинке 2.1.
+                         <div class="form-group" align="center">
+                             <img src="../../static/img/helpers/android/registration_screen.png">
+                             <p class="img-text">Рисунок 2.1 - Отображение экрана регистрации</p>
+                         </div>
+                    </p>
+
+                    <p class="main-text">
+                         Заполните свои данные. Пример отображен на картинке 2.2. Нажмите на кнопку "Регистрация".
+                         <div class="form-group" align="center">
+                             <img src="../../static/img/helpers/android/filled_in_registration_data.png">
+                             <p class="img-text">Рисунок 2.2 - Заполненные данные регистрации</p>
+                         </div>
+                    </p>
+
+                    <p class="main-text">
+                         Войдите на свой почтовый адрес, указанный при регистрации. Вам должно прийти письмо с подтверждением регистрации на подобии указанного в примере на рисунке 1.4 раздела "Авторизация".
+                    </p>
+
+                    <p class="main-text">
+                         Выполните инструкции, указанные в письме. После перехода по ссылке откроется окно как представлено на изображении 1.5 раздела "Авторизация".
+                    </p>
+
+                    <p class="main-text">
+                        Поздравляем с успешной регистрацией и Вашим первым важным шагом!
+                    </p>
+                </div>
+            </li>
+
+            <li>
+                <h4 id="android_sing_in">Вход в учетную запись</h4>
+                <div class="android-sign-in-helper">
+                    <p class="main-text">
+                        <em>Предполагается, что пользователь уже был зарегистрирован в системе (см. пункт "Регистрация").</em>
+                    </p>
+
+                    <p class="main-text">
+                         Перейдите на форму авторизации. Заполните свои данные, указанные при регистрации. Пример отображен на рисунке 3.1
+                         <div class="form-group" align="center">
+                             <img src="../../static/img/helpers/android/filled_in_sign_in_data.png">
+                             <p class="img-text">Рисунок 3.1 - Заполненные данные формы входа</p>
+                         </div>
+                    </p>
+
+                    <p class="main-text">
+                        Вы должны были успешно войти в систему.
+                    </p>
+                </div>
+            </li>
+
+            <li>
+                <h4 id="android_log_off">Выход из учетной записи</h4>
+                <div class="android-log-off-helper">
+                    <p class="main-text">
+                        <em>Предполагается, что пользователь уже вошел в учетную запись системы (см. пункт "Вход в учетную запись").</em>
+                    </p>
+
+                    <p class="main-text">
+                        Перейдите в раздел "Профиль". Он будет представлен как на картинке 4.1. Далее нажмите "Выйти".
+                        <div class="form-group" align="center">
+                            <img src="../../static/img/helpers/android/profile_screen.png">
+                             <p class="img-text">Рисунок 4.1 - Экран учетной записи</p>
+                         </div>
+                    </p>
+
+                    <p class="main-text">
+                        Вы должны были успешно выйти из системы.
+                    </p>
+                </div>
+            </li>
+
+            <li>
+                <h4 id="android_check_load">Загрузка чека</h4>
+                <div class="android-check-load-helper">
+                    <p class="main-text">
+                        <em>Предполагается, что пользователь уже вошел в учетную запись системы (см. пункт "Вход в учетную запись").</em>
+                    </p>
+
+                    <p class="main-text">
+                        Перейдите в раздел "Камера", представленный на рисунке 1.1. Далее нажмите на кнопку "+". Откроется выбор получения фотографии, отображенный на рисунке 5.1. Для непосредственного открытия камеры можно провести по экрану справа-налево.
+                         <div class="form-group" align="center">
+                            <img src="../../static/img/helpers/android/select_receipt_photo.png">
+                             <p class="img-text">Рисунок 5.1 - Выбор получения фотографии</p>
+                         </div>
+                    </p>
+
+                    <p class="main-text">
+                        Выберите один из представленных способов или нажмите на отмену / за пределы окна диалога для отказа от операции. После получения изображения экран камеры обновится и оно загрузится в пустую область. Пример виден на картинке 5.2.
+                        <div class="form-group" align="center">
+                            <img src="../../static/img/helpers/android/received_photo.png">
+                             <p class="img-text">Рисунок 5.2 - Загруженная фотография</p>
+                         </div>
+                    </p>
+
+                    <p class="main-text">
+                        Если фотографию требуется повернуть, нажмите на кнопку поворота требуемое количество раз. Пример виден на изображении 5.3.
+                        <div class="form-group" align="center">
+                            <img src="../../static/img/helpers/android/rotated_photo.png">
+                             <p class="img-text">Рисунок 5.3 - Повернутая фотография</p>
+                         </div>
+                    </p>
+
+                    <p class="main-text">
+                        После вышеописанных действий Вы можете отправить фотографию на сервер для ее последующей обработки, нажав на кнопку загрузки. Для последующих операций над чеком войдите на сайт под своей учетной записью (см. пункт "Войти в систему" раздела "Авторизация").
+                    </p>
+                </div>
+            </li>
+
+            <li>
+                <h4 id="android_settings">Настройки</h4>
+                <div class="android-settings-helper">
+                    <p class="main-text">
+                        Перейдите в раздел "Настройки". Откроется экран как на картинке 6.1.
+                        <div class="form-group" align="center">
+                            <img src="../../static/img/helpers/android/settings_screen.png">
+                             <p class="img-text">Рисунок 6.1 - Экран учетной записи</p>
+                         </div>
+                    </p>
+
+                    <p class="main-text">
+                        В первом выпадающем меню Вы можете выбрать язык приложения: "RU" - русский или "EN" - английский.
+                    </p>
+
+                    <p class="main-text">
+                        В втором выпадающем меню Вы можете выбрать стартовый экран при запуске программы.
+                    </p>
+
+                     <p class="main-text">
+                        По нажатию на кнопку "О разработчике" появиться диалоговое окно как на вышепредставленном изображении данного пункта.
+                    </p>
+                </div>
+            </li>
+
+            <li>
+                <h4 id="android_helper">Помощь</h4>
+                <div class="android-helper-helper">
+                    <p class="main-text">
+                        Перейдите в раздел "Помощь". Откроется экран как на картинке 7.1.
+                        <div class="form-group" align="center">
+                            <img src="../../static/img/helpers/android/help_screen.png">
+                             <p class="img-text">Рисунок 7.1 - Экран помощи</p>
+                         </div>
+                    </p>
+
+                    <p class="main-text">
+                        Для перемещения по разделам проводите по экрану слева-направо и справа-налево.
+                    </p>
+
+                    <p class="main-text">
+                        <em>Более полная справочная информация содержится на данной странице.</em>
+                    </p>
+                </div>
+            </li>
+
+        </ul>
+
+    </div>
+    {% include "footer.html" %}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            <!-- Authorization -->
+
+            $("#web_authorization").click(function(){
+                $("#web_authorization_list").slideToggle();
+            });
+
+            $("#web_registration").click(function(){
+                $(".web-registration-helper").slideToggle();
+            });
+            $('#web_registration').trigger('click');
+
+            $("#web_sign_in").click(function(){
+                $(".web-sign-in-helper").slideToggle();
+            });
+            $('#web_sign_in').trigger('click');
+
+            $("#web_log_off").click(function(){
+                $(".web-log-off-helper").slideToggle();
+            });
+            $('#web_log_off').trigger('click');
+
+            $("#web_reset_password").click(function(){
+                $(".web-reset-password-helper").slideToggle();
+            });
+            $('#web_reset_password').trigger('click');
+
+            <!-- Android -->
+
+            $("#android").click(function(){
+                $("#android_list").slideToggle();
+            });
+
+            $("#android_registration").click(function(){
+                $(".android-registration-helper").slideToggle();
+            });
+            $('#android_registration').trigger('click');
+
+            $("#android_first_start").click(function(){
+                $(".android-first-start").slideToggle();
+            });
+            $('#android_first_start').trigger('click');
+
+            $("#android_sing_in").click(function(){
+                $(".android-sign-in-helper").slideToggle();
+            });
+            $('#android_sing_in').trigger('click');
+
+            $("#android_log_off").click(function(){
+                $(".android-log-off-helper").slideToggle();
+            });
+            $('#android_log_off').trigger('click');
+
+            $("#android_check_load").click(function(){
+                $(".android-check-load-helper").slideToggle();
+            });
+            $('#android_check_load').trigger('click');
+
+            $("#android_settings").click(function(){
+                $(".android-settings-helper").slideToggle();
+            });
+            $('#android_settings').trigger('click');
+
+            $("#android_helper").click(function(){
+                $(".android-helper-helper").slideToggle();
+            });
+            $('#android_helper').trigger('click');
+
+            $("#android_registration").click(function(){
+                $(".android-registration-helper").slideToggle();
+            });
+            <!--$('#android_registration').trigger('click');-->
+        });
+    </script>
+{% endblock %}

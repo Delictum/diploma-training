@@ -1,0 +1,226 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="row">
+                    <div class="col-md-6">
+                       <img alt=" " src="{{ user.avatar(128) }}" style="border: 3px deepskyblue solid;">
+                    </div>
+
+                    <div class="col-md-6">
+                        <h1> {{ user.username }}</h1>
+                    </div>
+               </div>
+                <br>
+               {% if user == current_user %}
+                   <p><a class="btn btn-default" href="{{ url_for('edit_profile') }}">Редактировать профиль</a></p>
+               {% endif %}
+            </div>
+
+            <div class="col-md-7">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>Заработная плата: {{ wage }}</p>
+                    </div>
+
+                    <div class="col-md-6">
+                        {% if user.wage != None %}
+                            <p>Заработок в день: {{ '{:.2f}'.format(wage / 30) }}</p>
+                        {% else %}
+                            <p>Заработок в день: {{ wage }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>B этом месяце израсходовано: {{ spent }}</p>
+                    </div>
+
+                    <div class="col-md-6">
+                        <p>Остаток в месяце: {{ left }}</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>Сегодняшние затраты: {{ spent_today }}</p>
+                    </div>
+
+                    <div class="col-md-6">
+                        <p>Остаток на сегодня: {{ '{:.2f}'.format(wage / 30 - spent_today) }}</p>
+                    </div>
+                </div>
+
+                <p align="center"><a class="btn btn-default" href="{{ url_for('detail_information_all_time', public_id=current_user.public_id) }}">Подробная информация</a></p>
+            </div>
+        </div>
+
+        <hr style="border-color: deepskyblue">
+
+        <p align="center"><a class="btn btn-primary" href="{{ url_for('add_check', public_id=current_user.public_id) }}">Добавить чек</a></p>
+
+        <style>
+            .pagination-page-info {
+                padding: .6em;
+                padding-left: 0;
+                width: 40em;
+                margin: .5em;
+                margin-left: 0;
+                font-size: 12px;
+            }
+            .pagination-page-info b {
+                color: black;
+                background: #6aa6ed;
+                padding-left: 2px;
+                padding: .1em .25em;
+                font-size: 150%;
+            }
+
+            table {
+                width: 70%;
+                border-collapse: collapse;
+            }
+            td, th {
+                border: 1px solid black;
+                padding: 3px 7px 2px 7px;
+            }
+            th {
+                text-align: left;
+                padding: 5px;
+                background-color: black;
+                color: #fff;
+            }
+            tr:nth-child(odd) {
+                background-color: lightgrey;
+            }
+
+            tbody tr:nth-child (odd) {
+                background-color: #C9E4F6;/* фон нечетных строк */
+            }
+            tbody tr:nth-child (even) {
+                background-color: #B4DAF2;/* фон четных строк */
+            }
+
+        </style>
+
+        {% if checks == [] %}
+            <br>
+            <h4 align="center">Чеки отсутствуют</h4>
+            <br>
+        {% else %}
+        <div class="table-responsive">
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th></th>
+                    <th><input type="checkbox" class="unity-checkbox" name="unity-checkbox"></th>
+                </tr>
+            </thead>
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <tbody>
+                {% for check in checks %}
+                    <tr valign="top" class="removable_check">
+                        <td>Чек от <a href="{{ url_for('check_details', public_id=current_user.public_id, check_id=check.id) }}">{{ check.date_time_of_purchase.strftime('%Y-%m-%d %H:%M:%S') }}</a></td>
+                        <td><a href="#" class="delete{{ check.id }}">Удалить</a><input type="hidden" class="check_id{{ check.id }}" value="{{ check.id }}"></td>
+                        <td><input type="checkbox" class="checkbox[]" name="{{ check.id }}"></td>
+                    </tr>
+
+
+                    <script>
+                        $(document).ready(function() {
+                            $(".delete" + {{ check.id }}).click(function (e) {
+                                if (confirm("Действительно удалить чек?")) {
+                                    $.ajax({
+                                        type: 'POST',
+                                        data: JSON.stringify({
+                                            "check_id": $(".check_id" + {{ check.id }}).val()
+                                        }),
+                                        contentType: 'application/json',
+                                        url: '/api/v1/check/remove_check',
+                                    });
+                                    e.preventDefault();
+                                    $(this).parent('td').parent('tr').remove();
+                                }
+                            });
+                        });
+                    </script>
+                {% endfor %}
+            </tbody>
+        </table>
+        </div>
+        {% endif %}
+
+        {% if checks != [] %}
+
+        <div class="row">
+            <div class="col-md-10">
+                {% if prev_url %}
+                    <a href="{{ prev_url }}">Новые чеки</a>
+                {% endif %}
+                {% if next_url %}
+                    <a href="{{ next_url }}">Старые чеки</a>
+                {% endif %}
+            </div>
+            <div class="col-md-2">
+                <input type="button" class="delete-selected" value="Удалить
+ выделенные">
+            </div>
+        </div>
+
+        {% endif%}
+
+    </div>
+    
+    <script>
+        $(document).ready(function() {
+            var checks = [];
+            $('input[type=checkbox]').change(function () {
+                if (this.checked) {
+                    checks.push(this.name);
+                } else {
+                    var temp = [];
+                    for (var i = 0; i < checks.length; i++) {
+                        if (checks[i] !== this.name) {
+                            temp.push(checks[i])
+                        }
+                    }
+                    checks = temp;
+                }
+            });
+
+            $(".delete-selected").click(function (e) {
+                if (confirm("Действительно удалить чеки?")) {
+
+                    for (var i = 0; i < checks.length; i++) {
+                        $.ajax({
+                            type: 'POST',
+                            data: JSON.stringify({
+                                "check_id": checks[i]
+                            }),
+                            contentType: 'application/json',
+                            url: '/api/v1/check/remove_check',
+                        });
+                        e.preventDefault();
+                        $('.delete' + checks[i]).parent('td').parent('tr').remove();
+                    }
+                }
+            });
+
+            $(".unity-checkbox").change(function () {
+                if ($(".unity-checkbox").is(':checked')) {
+                    $("input[type=checkbox]").prop('checked', true);
+                } else {
+                    $("input[type=checkbox]").prop('checked', false);
+                }
+            })
+        });
+    </script>
+
+    {% include "footer.html" %}
+{% endblock %}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="cae25504-b315-4a75-acd4-6209d385c151" name="check-accounting" url="http://check_accounting.com">
+        <fileTransfer port="0" mountedRoot="$PROJECT_DIR$/../check_accounting" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>

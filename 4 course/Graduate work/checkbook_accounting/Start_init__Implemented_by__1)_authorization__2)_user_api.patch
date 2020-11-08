@@ -1,0 +1,1051 @@
+Index: templates/user/profile.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- templates/user/profile.html	(date 1553148993000)
++++ templates/user/profile.html	(date 1553148993000)
+@@ -0,0 +1,21 @@
++{% extends "base.html" %}
++
++{% block content %}
++    <table>
++        <tr valign="top">
++            <td><img src="{{ user.avatar(128) }}"></td>
++            <td><h1>User: {{ user.username }}</h1></td>
++        </tr>
++    </table>
++
++    <p>Wave: {{ user.wage }}</p>
++
++    {% if user == current_user %}
++                <p><a href="{{ url_for('edit_profile') }}">Edit your profile</a></p>
++                {% endif %}
++    <hr>
++    {% for post in posts %}
++        {% include '_post.html' %}
++    {% endfor %}
++{% endblock %}
++
+Index: templates/user/edit_profile.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- templates/user/edit_profile.html	(date 1553148347000)
++++ templates/user/edit_profile.html	(date 1553148347000)
+@@ -0,0 +1,23 @@
++{% extends "base.html" %}
++
++{% block content %}
++    <h1>Edit Profile</h1>
++    <form action="" method="post">
++        {{ form.hidden_tag() }}
++        <p>
++            {{ form.username.label }}<br>
++            {{ form.username(size=32) }}<br>
++            {% for error in form.username.errors %}
++            <span style="color: red;">[{{ error }}]</span>
++            {% endfor %}
++        </p>
++        <p>
++            {{ form.wage.label }}<br>
++            {{ form.wage }}<br>
++            {% for error in form.wage.errors %}
++            <span style="color: red;">[{{ error }}]</span>
++            {% endfor %}
++        </p>
++        <p>{{ form.submit() }}</p>
++    </form>
++{% endblock %}
+\ No newline at end of file
+Index: templates/404.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- templates/404.html	(date 1553154674000)
++++ templates/404.html	(date 1553154674000)
+@@ -0,0 +1,8 @@
++{% extends "base.html" %}
++
++{% block title %}Page Not Found{% endblock %}
++{% block app_content %}
++  <h1>Page Not Found</h1>
++    <p>What you were looking for is just not there.</p>
++    <a href="{{ url_for('index') }}">Go somewhere nice</a>
++{% endblock %}
+\ No newline at end of file
+Index: templates/500.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- templates/500.html	(date 1553149611000)
++++ templates/500.html	(date 1553149611000)
+@@ -0,0 +1,7 @@
++{% extends "base.html" %}
++
++{% block content %}
++    <h1>An unexpected error has occurred</h1>
++    <p>The administrator has been notified. Sorry for the inconvenience!</p>
++    <p><a href="{{ url_for('index') }}">Back</a></p>
++{% endblock %}
+\ No newline at end of file
+Index: templates/_post.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- templates/_post.html	(date 1553146304000)
++++ templates/_post.html	(date 1553146304000)
+@@ -0,0 +1,6 @@
++    <table>
++        <tr valign="top">
++            <td><img src="{{ post.author.avatar(36) }}"></td>
++            <td>{{ post.author.username }} says:<br>{{ post.body }}</td>
++        </tr>
++    </table>
+\ No newline at end of file
+Index: templates/base.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- templates/base.html	(date 1553172746000)
++++ templates/base.html	(date 1553172746000)
+@@ -0,0 +1,37 @@
++{% extends 'bootstrap/base.html' %}
++
++{% block title %}
++    {% if title %}{{ title }} - Check Accounting{% else %}Welcome to Check Accounting!{% endif %}
++    <link rel="stylesheet" href="{{ url_for('static', filename='site.css') }}">
++{% endblock %}
++
++{% block navbar %}
++    <nav class="navbar navbar-dark">
++     <div>
++        Check accounting:
++            <a href="{{ url_for('index') }}">Home</a>
++            {% if current_user.is_anonymous %}
++                <a href="../authorization/login">Login</a>
++                <a href="../authorization/register">Register</a>
++            {% else %}
++                <a href="{{ url_for('user', public_id=current_user.public_id) }}">Profile</a>
++                <a href="{{ url_for('logout') }}">Logout</a>
++            {% endif %}
++        </div>
++    </nav>
++{% endblock %}
++
++{% block content %}
++    <div class="container">
++        {% with messages = get_flashed_messages() %}
++        {% if messages %}
++            {% for message in messages %}
++            <div class="alert alert-info" role="alert">{{ message }}</div>
++            {% endfor %}
++        {% endif %}
++        {% endwith %}
++
++        {# application content needs to be provided in the app_content block #}
++        {% block app_content %}{% endblock %}
++    </div>
++{% endblock %}
+\ No newline at end of file
+Index: project/util/dto.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- project/util/dto.py	(date 1553085164000)
++++ project/util/dto.py	(date 1553085164000)
+@@ -0,0 +1,11 @@
++from flask_restplus import Namespace, fields
++
++
++class UserDto:
++    api = Namespace('user', description='user related operations')
++    user = api.model('user', {
++        'email': fields.String(required=True, description='user email address'),
++        'username': fields.String(required=True, description='user username'),
++        'password': fields.String(required=True, description='user password'),
++        'public_id': fields.String(description='user Identifier')
++    })
+Index: project/util/email.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- project/util/email.py	(date 1553173654000)
++++ project/util/email.py	(date 1553173654000)
+@@ -0,0 +1,30 @@
++from threading import Thread
++
++from flask import render_template
++from flask_babel import _
++from flask_mail import Message
++
++from config import *
++
++
++def send_async_email(app, msg):
++    with app.app_context():
++        mail.send(msg)
++
++
++def send_email(subject, sender, recipients, text_body, html_body):
++    msg = Message(subject, sender=sender, recipients=recipients)
++    msg.body = text_body
++    msg.html = html_body
++    Thread(target=send_async_email, args=(app, msg)).start()
++
++
++def send_password_reset_email(user):
++    token = user.get_reset_password_token()
++    send_email(_('[Check Accounting] Reset Your Password'),
++               sender=app.config.get("MAIL_USERNAME"),
++               recipients=[user.email],
++               text_body=render_template('authorization/email/reset_password.txt',
++                                         user=user, token=token),
++               html_body=render_template('authorization/email/reset_password.html',
++                                         user=user, token=token))
+Index: project/util/errors.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- project/util/errors.py	(date 1553173654000)
++++ project/util/errors.py	(date 1553173654000)
+@@ -0,0 +1,14 @@
++from flask import render_template
++
++from app import app, db
++
++
++@app.errorhandler(404)
++def not_found_error(error):
++    return render_template('404.html'), 404
++
++
++@app.errorhandler(500)
++def internal_error(error):
++    db.session.rollback()
++    return render_template('500.html'), 500
+Index: config.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- config.py	(date 1553170506000)
++++ config.py	(date 1553170506000)
+@@ -0,0 +1,78 @@
++import os
++
++from flask import Flask
++from flask_babel import Babel
++from flask_bootstrap import Bootstrap
++from flask_login import LoginManager
++from flask_mail import Mail
++from flask_sqlalchemy import SQLAlchemy
++from flask_wtf import CSRFProtect
++
++from constants import *
++
++app = Flask(__name__)
++app.config['SQLALCHEMY_DATABASE_URI'] = DB_STRING
++app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
++db = SQLAlchemy(app)
++app.config.update(dict(
++    SECRET_KEY=SECRET_KEY,
++    WTF_CSRF_SECRET_KEY=WTF_CSRF_SECRET_KEY
++))
++
++mail_settings = {
++    "MAIL_SERVER": MAIL_SERVER,
++    "MAIL_PORT": MAIL_PORT,
++    "MAIL_USE_TLS": MAIL_USE_TLS,
++    "MAIL_USE_SSL": MAIL_USE_SSL,
++    "MAIL_USERNAME": MAIL_USERNAME,
++    "MAIL_PASSWORD": MAIL_PASSWORD
++}
++app.config.update(mail_settings)
++mail = Mail(app)
++
++bootstrap = Bootstrap(app)
++
++
++app.config['LANGUAGES'] = LANGUAGES
++
++babel = Babel(app)
++
++login = LoginManager(app)
++login.login_view = 'login'
++
++basedir = os.path.abspath(os.path.dirname(__file__))
++csrf = CSRFProtect(app)
++
++
++class Config:
++    SECRET_KEY = os.getenv('SECRET_KEY', 'my_precious_secret_key')
++    DEBUG = False
++
++
++class DevelopmentConfig(Config):
++    # uncomment the line below to use postgres
++    # SQLALCHEMY_DATABASE_URI = postgres_local_base
++    DEBUG = True
++    SQLALCHEMY_DATABASE_URI = DB_STRING
++    SQLALCHEMY_TRACK_MODIFICATIONS = False
++    ASSETS_DEBUG = True
++
++
++class TestingConfig(Config):
++    DEBUG = True
++    TESTING = True
++    PRESERVE_CONTEXT_ON_EXCEPTION = False
++    SQLALCHEMY_TRACK_MODIFICATIONS = False
++
++
++class ProductionConfig(Config):
++    DEBUG = False
++
++
++config_by_name = dict(
++    dev=DevelopmentConfig,
++    test=TestingConfig,
++    prod=ProductionConfig
++)
++
++key = Config.SECRET_KEY
+Index: app.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app.py	(date 1553173654000)
++++ app.py	(date 1553173654000)
+@@ -0,0 +1,54 @@
++from flask import request, jsonify
++from flask_babel import _
++
++from config import *
++from project.models import organization
++from session import *
++
++
++@babel.localeselector
++def get_locale():
++    # return request.accept_languages.best_match(app.config['LANGUAGES'])
++    return 'ru'
++
++
++@app.route('/s', methods=['GET'])
++def get_s_all():
++    print(_('hello'))
++    return _('hello')
++
++
++@app.route('/organizations', methods=['GET'])
++def get_all():
++    organizations = organization.Organization.get_all()
++    results = []
++
++    for organization_ in organizations:
++        obj = {
++            'id': organization_.id,
++            'legal_name': organization_.legal_name,
++            'legal_address': organization_.legal_address,
++            'taxpayer_identification_number': organization_.taxpayer_identification_number,
++
++        }
++        results.append(obj)
++    response = jsonify(results)
++    response.status_code = 200
++    return response
++
++
++@app.route('/create_organization', methods=["POST"])
++def create_organization():
++    dict_body = request.get_json()  # convert body to dictionary
++    print(dict_body)  # have a look at what is coming in
++    organize = organization.Organization(legal_name=dict_body['legal_name'],
++                                         legal_address=dict_body['legal_address'],
++                                         taxpayer_identification_number=dict_body['taxpayer_identification_number'],
++                                         )
++    manual_session.add(organize)
++    manual_session.commit()
++    return jsonify({'message': 'New organization successfully created.'}), 200
++
++
++if __name__ == '__main__':
++    app.run(host='0.0.0.0', port=5000)
+Index: constants.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- constants.py	(date 1553170506000)
++++ constants.py	(date 1553170506000)
+@@ -0,0 +1,18 @@
++DB_STRING = 'postgresql://admin:admin@localhost/check_accounting'
++AUTH_TYPE = 1  # Database Authentication
++AUTH_USER_REGISTRATION = True
++AUTH_USER_REGISTRATION_ROLE = 'Public'
++# Config for Flask-WTF Recaptcha necessary for user registration
++RECAPTCHA_PUBLIC_KEY = 'GOOGLE PUBLIC KEY FOR RECAPTCHA'
++RECAPTCHA_PRIVATE_KEY = 'GOOGLE PRIVATE KEY FOR RECAPTCHA'
++# Config for Flask-Mail necessary for user registration
++MAIL_SERVER = 'smtp.gmail.com'
++MAIL_USE_TLS = False
++MAIL_PORT = 465
++MAIL_USE_SSL = True
++MAIL_USERNAME = 'checkbook2019@gmail.com'
++MAIL_PASSWORD = 'ca_DE_19'
++
++SECRET_KEY = 'powerful secretkey'
++WTF_CSRF_SECRET_KEY = "a csrf secret key"
++LANGUAGES = ['en', 'ru']
+Index: session.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- session.py	(date 1553173654000)
++++ session.py	(date 1553173654000)
+@@ -0,0 +1,15 @@
++from sqlalchemy import create_engine
++from sqlalchemy.orm import sessionmaker
++
++from config import *
++
++
++def create_session(config):
++    engine = create_engine(config['SQLALCHEMY_DATABASE_URI'])
++    Session = sessionmaker(bind=engine)
++    session = Session()
++    session._model_changes = {}
++    return session
++
++
++manual_session = create_session(app.config)
+Index: project/controllers/api/v1/user_controller.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- project/controllers/api/v1/user_controller.py	(date 1553173654000)
++++ project/controllers/api/v1/user_controller.py	(date 1553173654000)
+@@ -0,0 +1,34 @@
++import datetime
++import uuid
++
++from flask import jsonify, request
++
++from project.models import user
++from session import *
++
++BASE_URL = '/api/v1/user/'
++
++
++@app.route(BASE_URL + 'all')
++def get_api_users():
++    return 'Fuck u'
++
++
++@app.route(BASE_URL + 'create_user', methods=['POST'])
++def create_user():
++    dict_body = request.get_json()
++    user_ = user.User.query.filter_by(email=dict_body['email']).first()
++    if not user_:
++        data = user.User(public_id=str(uuid.uuid4()),
++                         email=dict_body['email'],
++                         username=dict_body['username'],
++                         password_hash=dict_body['password'],
++                         registered_on=datetime.datetime.utcnow(),
++                         confirmed=False,
++                         wage=dict_body['wage'],
++                         )
++        manual_session.add(data)
++        manual_session.commit()
++        return jsonify({'message': 'New user successfully created.'}), 200
++    else:
++        return jsonify({'status': 'fail', 'message': 'User already exists. Please Log in.'}), 409
+\ No newline at end of file
+Index: project/controllers/home_controller.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- project/controllers/home_controller.py	(date 1553173655000)
++++ project/controllers/home_controller.py	(date 1553173655000)
+@@ -0,0 +1,11 @@
++from config import *
++from project.controllers.user_controller import *
++
++
++@app.route('/')
++@app.route('/index')
++@app.route('/home')
++@app.route('/home/index')
++def index():
++    # ...
++    return render_template("home/index.html", title='Home Page')
+Index: project/controllers/user_controller.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- project/controllers/user_controller.py	(date 1553173654000)
++++ project/controllers/user_controller.py	(date 1553173654000)
+@@ -0,0 +1,37 @@
++from flask import render_template, flash, request
++from flask_login import login_required, current_user
++
++from config import *
++from project.forms import EditProfileForm
++from project.models.user import User
++
++BASE_URL = '/user/'
++
++
++@app.route(BASE_URL + '<public_id>')
++@login_required
++def user(public_id):
++    user_ = User.query.filter_by(public_id=public_id).first_or_404()
++    posts = [
++        {'author': user_, 'body': 'Test post #1'},
++        {'author': user_, 'body': 'Test post #2'}
++    ]
++    if current_user.public_id == user_.public_id:
++        return render_template('user/profile.html', user=user_, posts=posts)
++    return render_template('404.html'), 404
++
++
++@app.route(BASE_URL + 'edit_profile', methods=['GET', 'POST'])
++@login_required
++def edit_profile():
++    form = EditProfileForm()
++    if form.validate_on_submit():
++        current_user.username = form.username.data
++        current_user.wage = form.wage.data
++        db.session.commit()
++        flash('Your changes have been saved.')
++        return user(current_user.public_id)
++    elif request.method == 'GET':
++        form.username.data = current_user.username
++        form.wage.data = current_user.wage
++    return render_template('user/edit_profile.html', title='Edit Profile', form=form)
+Index: project/models/organization.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- project/models/organization.py	(date 1553170591000)
++++ project/models/organization.py	(date 1553170591000)
+@@ -0,0 +1,16 @@
++from config import *
++
++
++class Organization(db.Model):
++    __tablename__ = 'organization'
++    id = db.Column(db.Integer, primary_key=True)
++    legal_name = db.Column(db.String(50), unique=True, nullable=True)
++    legal_address = db.Column(db.String(50), unique=False, nullable=True)
++    taxpayer_identification_number = db.Column(db.INTEGER, unique=True, nullable=True)
++
++    def __repr__(self):
++        return '<Organization %r>' % self.legal_name
++
++    @staticmethod
++    def get_all():
++        return Organization.query.all()
+Index: project/controllers/authorization_controller.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- project/controllers/authorization_controller.py	(date 1553173654000)
++++ project/controllers/authorization_controller.py	(date 1553173654000)
+@@ -0,0 +1,84 @@
++import datetime
++import uuid
++
++from flask import redirect, url_for
++from flask_login import login_user, logout_user
++from werkzeug.urls import url_parse
++
++from project.controllers.user_controller import *
++from project.forms import RegistrationForm, LoginForm, ResetPasswordRequestForm, ResetPasswordForm
++
++BASE_URL = '/authorization/'
++
++
++@app.route(BASE_URL + 'login', methods=['GET', 'POST'])
++def login():
++    if current_user.is_authenticated:
++        return redirect(url_for('index'))
++    form = LoginForm()
++    if form.validate_on_submit():
++        user_ = User.query.filter_by(username=form.username.data).first()
++        if user_ is None or not user_.check_password(form.password.data):
++            flash('Invalid username or password')
++            return redirect(url_for('login'))
++        login_user(user_, remember=form.remember_me.data)
++        next_page = request.args.get('next')
++        if not next_page or url_parse(next_page).netloc != '':
++            next_page = url_for('index')
++        return redirect(next_page)
++    return render_template('authorization/login.html', title='Sign In', form=form)
++
++
++@app.route(BASE_URL + 'register', methods=['GET', 'POST'])
++def register():
++    if current_user.is_authenticated:
++        return redirect(url_for('index'))
++    form = RegistrationForm()
++    if form.validate_on_submit():
++        user_ = User(username=form.username.data,
++                     email=form.email.data,
++                     confirmed=False,
++                     public_id=str(uuid.uuid4()),
++                     registered_on=datetime.datetime.utcnow(),
++                     password=form.password.data)
++        db.session.add(user_)
++        db.session.commit()
++        flash('Congratulations, you are now a registered user!')
++        return redirect(url_for('login'))
++    return render_template('authorization/register.html', title='Register', form=form)
++
++
++@app.route(BASE_URL + 'logout')
++def logout():
++    logout_user()
++    return redirect(url_for('index'))
++
++
++@app.route(BASE_URL + 'reset_password_request', methods=['GET', 'POST'])
++def reset_password_request():
++    if current_user.is_authenticated:
++        return redirect(url_for('index'))
++    form = ResetPasswordRequestForm()
++    if form.validate_on_submit():
++        user_ = User.query.filter_by(email=form.email.data).first()
++        if user_:
++            send_password_reset_email(user_)
++        flash('Check your email for the instructions to reset your password')
++        return redirect(url_for('login'))
++    return render_template('authorization/reset_password_request.html', title='Reset Password', form=form)
++
++
++@app.route(BASE_URL + 'reset_password/<token>', methods=['GET', 'POST'])
++def reset_password(token):
++    if current_user.is_authenticated:
++        return redirect(url_for('index'))
++    user_ = User.verify_reset_password_token(token)
++    if not user_:
++        return redirect(url_for('index'))
++    form = ResetPasswordForm()
++    if form.validate_on_submit():
++        user_.password = form.password.data
++        db.session.commit()
++        flash('Your password has been reset.')
++        return redirect(url_for('login'))
++    return render_template('authorization/reset_password.html', form=form)
+Index: project/forms.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- project/forms.py	(date 1553173654000)
++++ project/forms.py	(date 1553173654000)
+@@ -0,0 +1,70 @@
++import decimal
++
++from flask_babel import _
++from flask_wtf import FlaskForm
++from wtforms import StringField, PasswordField, BooleanField, SubmitField, DecimalField
++from wtforms.validators import DataRequired, Email, EqualTo
++
++
++# ...
++
++
++class BetterDecimalField(DecimalField):
++    """
++    Very similar to WTForms DecimalField, except with the option of rounding
++    the data always.
++    """
++    def __init__(self, label=None, validators=None, places=2, rounding=None,
++                 round_always=False, **kwargs):
++        super(BetterDecimalField, self).__init__(
++            label=label, validators=validators, places=places, rounding=
++            rounding, **kwargs)
++        self.round_always = round_always
++
++    def process_formdata(self, valuelist):
++        if valuelist:
++            try:
++                self.data = decimal.Decimal(valuelist[0])
++                if self.round_always and hasattr(self.data, 'quantize'):
++                    exp = decimal.Decimal('.1') ** self.places
++                    if self.rounding is None:
++                        quantized = self.data.quantize(exp)
++                    else:
++                        quantized = self.data.quantize(exp, rounding=
++                                                       self.rounding)
++                    self.data = quantized
++            except (decimal.InvalidOperation, ValueError):
++                self.data = None
++                raise ValueError(self.gettext(_('Not a valid decimal value')))
++
++
++class LoginForm(FlaskForm):
++    username = StringField(_('Username'), validators=[DataRequired()])
++    password = PasswordField(_('Password'), validators=[DataRequired()])
++    remember_me = BooleanField('Remember Me')
++    submit = SubmitField('Sign In')
++
++
++class RegistrationForm(FlaskForm):
++    username = StringField(_('Username'), validators=[DataRequired()])
++    email = StringField('Email', validators=[DataRequired(), Email()])
++    password = PasswordField(_('Password'), validators=[DataRequired()])
++    password2 = PasswordField(_('Repeat Password'), validators=[DataRequired(), EqualTo('password')])
++    submit = SubmitField('Register')
++
++
++class EditProfileForm(FlaskForm):
++    username = StringField(_('Username'), validators=[DataRequired()])
++    wage = BetterDecimalField(label='Wage', round_always=True)
++    submit = SubmitField(_('Submit'))
++
++
++class ResetPasswordRequestForm(FlaskForm):
++    email = StringField('Email', validators=[DataRequired(), Email()])
++    submit = SubmitField(_('Request Password Reset'))
++
++
++class ResetPasswordForm(FlaskForm):
++    password = PasswordField(_('Password'), validators=[DataRequired()])
++    password2 = PasswordField(_('Repeat Password'), validators=[DataRequired(), EqualTo('password')])
++    submit = SubmitField(_('Request Password Reset'))
+Index: templates/authorization/email/reset_password.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- templates/authorization/email/reset_password.txt	(date 1553151326000)
++++ templates/authorization/email/reset_password.txt	(date 1553151326000)
+@@ -0,0 +1,11 @@
++Dear {{ user.username }},
++
++To reset your password click on the following link:
++
++{{ url_for('reset_password', token=token, _external=True) }}
++
++If you have not requested a password reset simply ignore this message.
++
++Sincerely,
++
++The Check Accounting Team
+\ No newline at end of file
+Index: templates/authorization/email/reset_password.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- templates/authorization/email/reset_password.html	(date 1553151360000)
++++ templates/authorization/email/reset_password.html	(date 1553151360000)
+@@ -0,0 +1,12 @@
++<p>Dear {{ user.username }},</p>
++<p>
++    To reset your password
++    <a href="{{ url_for('reset_password', token=token, _external=True) }}">
++        click here
++    </a>.
++</p>
++<p>Alternatively, you can paste the following link in your browser's address bar:</p>
++<p>{{ url_for('reset_password', token=token, _external=True) }}</p>
++<p>If you have not requested a password reset simply ignore this message.</p>
++<p>Sincerely,</p>
++<p>The Check Accounting Team</p>
+\ No newline at end of file
+Index: templates/authorization/login.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- templates/authorization/login.html	(date 1553150903000)
++++ templates/authorization/login.html	(date 1553150903000)
+@@ -0,0 +1,30 @@
++{% extends "base.html" %}
++
++{% block content %}
++    <h1>Sign In</h1>
++    <form action="" method="post" novalidate>
++        {{ form.hidden_tag() }}
++        <p>
++            {{ form.username.label }}<br>
++            {{ form.username(size=32) }}<br>
++            {% for error in form.username.errors %}
++            <span style="color: red;">[{{ error }}]</span>
++            {% endfor %}
++        </p>
++        <p>
++            {{ form.password.label }}<br>
++            {{ form.password(size=32) }}<br>
++            {% for error in form.password.errors %}
++            <span style="color: red;">[{{ error }}]</span>
++            {% endfor %}
++        </p>
++        <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
++        <p>{{ form.submit() }}</p>
++    </form>
++     <p>
++        Forgot Your Password?
++        <a href="{{ url_for('reset_password_request') }}">Click to Reset It</a>
++    </p>
++    <hr>
++    <p>New User? <a href="{{ url_for('register') }}">Click to Register!</a></p>
++{% endblock %}
+\ No newline at end of file
+Index: project/models/check.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- project/models/check.py	(date 1553161549000)
++++ project/models/check.py	(date 1553161549000)
+@@ -0,0 +1,16 @@
++from config import *
++
++
++class Check(db.Model):
++    __tablename__ = 'check'
++    id = db.Column(db.Integer, primary_key=True)
++    date_time_of_purchase = db.Column(db.DateTime, unique=False, nullable=True)
++    organization_id = db.Column(db.Integer, db.ForeignKey('organization.id'))
++    user_id = db.Column(db.INTEGER, db.ForeignKey('user.id'))
++
++    def __repr__(self):
++        return '<Check %r>' % self.date_time_of_purchase
++
++    @staticmethod
++    def get_all():
++        return Check.query.all()
+Index: templates/authorization/register.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- templates/authorization/register.html	(date 1553154702000)
++++ templates/authorization/register.html	(date 1553154702000)
+@@ -0,0 +1,40 @@
++{% extends "base.html" %}
++{% import 'bootstrap/wtf.html' as wtf %}
++
++{% block content %}
++    <h1>Register</h1>
++    <form action="" method="post">
++        {{ form.hidden_tag() }}
++        <p>
++            {{ form.username.label }}<br>
++            {{ form.username(size=32) }}<br>
++            {% for error in form.username.errors %}
++            <span style="color: red;">[{{ error }}]</span>
++            {% endfor %}
++        </p>
++        <p>
++            {{ form.email.label }}<br>
++            {{ form.email(size=64) }}<br>
++            {% for error in form.email.errors %}
++            <span style="color: red;">[{{ error }}]</span>
++            {% endfor %}
++        </p>
++        <p>
++            {{ form.password.label }}<br>
++            {{ form.password(size=32) }}<br>
++            {% for error in form.password.errors %}
++            <span style="color: red;">[{{ error }}]</span>
++            {% endfor %}
++        </p>
++        <p>
++            {{ form.password2.label }}<br>
++            {{ form.password2(size=32) }}<br>
++            {% for error in form.password2.errors %}
++            <span style="color: red;">[{{ error }}]</span>
++            {% endfor %}
++        </p>
++        <p>{{ form.submit() }}</p>
++        <br><br>
++        <p>Already have an account? <a href="/">Sign in</a>.</p>
++    </form>
++{% endblock %}
+\ No newline at end of file
+Index: project/models/product.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- project/models/product.py	(date 1553161549000)
++++ project/models/product.py	(date 1553161549000)
+@@ -0,0 +1,16 @@
++from config import *
++
++
++class Product(db.Model):
++    __tablename__ = 'product'
++    id = db.Column(db.Integer, primary_key=True)
++    product_name = db.Column(db.String(50), unique=False, nullable=True)
++    product_price = db.Column(db.NUMERIC(15, 2), unique=False, nullable=True)
++    check_id = db.Column(db.Integer, db.ForeignKey('check.id'))
++
++    def __repr__(self):
++        return '<Product %r>' % self.date_time_of_purchase
++
++    @staticmethod
++    def get_all():
++        return Product.query.all()
+Index: templates/authorization/reset_password.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- templates/authorization/reset_password.html	(date 1553151955000)
++++ templates/authorization/reset_password.html	(date 1553151955000)
+@@ -0,0 +1,24 @@
++{% extends "base.html" %}
++
++{% block content %}
++    <h1>Reset Your Password</h1>
++    <form action="" method="post">
++        {{ form.hidden_tag() }}
++        <p>
++            {{ form.password.label }}<br>
++            {{ form.password(size=32) }}<br>
++            {% for error in form.password.errors %}
++            <span style="color: red;">[{{ error }}]</span>
++            {% endfor %}
++        </p>
++        <p>
++            {{ form.password2.label }}<br>
++            {{ form.password2(size=32) }}<br>
++            {% for error in form.password2.errors %}
++            <span style="color: red;">[{{ error }}]</span>
++            {% endfor %}
++        </p>
++        <p>{{ form.submit() }}</p>
++    </form>
++{% endblock %}
++
+Index: project/models/user.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- project/models/user.py	(date 1553173654000)
++++ project/models/user.py	(date 1553173654000)
+@@ -0,0 +1,63 @@
++from hashlib import md5
++from time import time
++
++import jwt
++from flask_login import UserMixin
++from werkzeug.security import generate_password_hash, check_password_hash
++
++from config import *
++
++
++class User(UserMixin, db.Model):
++    """ User Model for storing user related details """
++    __tablename__ = "user"
++
++    id = db.Column(db.INTEGER, primary_key=True)
++    email = db.Column(db.String(255), unique=True, nullable=False)
++    registered_on = db.Column(db.DateTime, nullable=False)
++    is_admin = db.Column(db.Boolean, nullable=False, default=False)
++    public_id = db.Column(db.String(100), unique=True)
++    username = db.Column(db.String(50), unique=True)
++    password_hash = db.Column(db.String(100))
++    confirmed = db.Column(db.Boolean, nullable=False, default=False)
++    confirmed_on = db.Column(db.DateTime, nullable=True)
++    wage = db.Column(db.NUMERIC(15, 2), unique=False, nullable=True)
++
++    @property
++    def password(self):
++        raise AttributeError('password: write-only field')
++
++    @password.setter
++    def password(self, password):
++        self.password_hash = generate_password_hash(password)
++
++    def check_password(self, password):
++        return check_password_hash(self.password_hash, password)
++
++    def get_id(self):
++        return str(self.id)
++
++    def avatar(self, size):
++        digest = md5(self.email.lower().encode('utf-8')).hexdigest()
++        return 'https://www.gravatar.com/avatar/{}?d=identicon&s={}'.format(digest, size)
++
++    def get_reset_password_token(self, expires_in=600):
++        return jwt.encode(
++            {'reset_password': self.id, 'exp': time() + expires_in},
++            app.config['SECRET_KEY'], algorithm='HS256').decode('utf-8')
++
++    @staticmethod
++    def verify_reset_password_token(token):
++        try:
++            id_ = jwt.decode(token, app.config['SECRET_KEY'], algorithms=['HS256'])['reset_password']
++        except:
++            return
++        return User.query.get(id_)
++
++    def __repr__(self):
++        return "<User '{}'>".format(self.username)
++
++
++@login.user_loader
++def load_user(id_):
++    return User.query.get(int(id_))
+Index: templates/authorization/reset_password_request.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- templates/authorization/reset_password_request.html	(date 1553150980000)
++++ templates/authorization/reset_password_request.html	(date 1553150980000)
+@@ -0,0 +1,16 @@
++{% extends "base.html" %}
++
++{% block content %}
++    <h1>Reset Password</h1>
++    <form action="" method="post">
++        {{ form.hidden_tag() }}
++        <p>
++            {{ form.email.label }}<br>
++            {{ form.email(size=64) }}<br>
++            {% for error in form.email.errors %}
++            <span style="color: red;">[{{ error }}]</span>
++            {% endfor %}
++        </p>
++        <p>{{ form.submit() }}</p>
++    </form>
++{% endblock %}
+\ No newline at end of file
+Index: templates/home/index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- templates/home/index.html	(date 1553155815000)
++++ templates/home/index.html	(date 1553155815000)
+@@ -0,0 +1,5 @@
++{% extends "base.html" %}
++
++{% block content %}
++    <h1>{{ _('Hi, %(username)s!', username=current_user.username) }}</h1>
++{% endblock %}
+\ No newline at end of file

@@ -1,0 +1,65 @@
+/*
+* Photo Gallery — Practice
+* CSS Styles
+*
+* Start typing your code under these comments
+*/
+
+
+.photo {
+    float: left; /* говорим элементам выстраиваться один за другим */
+    width: 33.333333%; /* устанавливаем ширину элемента */
+    padding: 10px; /* добавляем отступы с каждой стороны */
+    box-sizing: border-box; /* меняем способ вычисления ширины */
+}
+
+.photo img {
+    display: block;
+    max-width: 100%;
+    width: auto;
+    height: 100%;
+    padding: 10px;
+    background-color: #eee;
+    box-sizing: border-box;
+}
+
+.photo a:hover {
+    opacity: 0.5;
+}
+
+.photo a {
+    display: block;
+}
+
+.photo a:after {
+    content: '';
+    background: transparent url(../img/icons/eye-icon.png) no-repeat center;
+    width: 52px;
+    height: 35px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    visibility: hidden;
+}
+
+.photo figcaption {
+    font-family: 'Open Sans', sans-serif;
+    color: #999999;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+#gallery {
+    margin-bottom: 50px;
+}
+
+#gallery:after {
+   content: '';
+   display: block;
+   height: 0;
+   clear: both;
+}

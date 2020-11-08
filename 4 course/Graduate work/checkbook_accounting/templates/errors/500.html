@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+        <h1>Произошла неожиданная</h1>
+        <h1>ошибка</h1>
+
+        <br>
+
+        <br>
+        <p id="timer_text" style="font-style: italic">Через 10 секунд Вы вернетесь назад</p>
+
+        <p>Администратор был уведомлен. Приносим извинения за неудобства!</p>
+        <input class="btn btn-link" type="button" value="Вернуться назад" onclick="history.go(-1);">
+        <a  class="btn btn-link" href="{{ url_for('index') }}">Вернуться на домашнюю страницу</a>
+
+        <hr>
+        <p><em><strong>P.S.</strong></em></p>
+        <p><em>Мы уверены, что это все проделки злых гоблинов.</em></p>
+
+        <div class="right-menu-col">
+            <img src="../../static/img/goblins.gif" alt="ГоБлиНы">
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(window).on('load', function () {
+            $preloader = $('.loaderArea'),
+            $loader = $preloader.find('.loader');
+            $loader.fadeOut();
+            $preloader.delay(350).fadeOut('slow');
+
+            var timer_value = 10;
+            var timerId = setInterval(function() {
+                timer_value--;
+                document.getElementById("timer_text").innerHTML = "Через " + timer_value + " секунд Вы вернетесь назад";
+            }, 1000);
+
+            setTimeout(function() {
+                clearInterval(timerId);
+                history.go(-1);
+            }, 10000);
+        });
+    </script>
+{% endblock %}

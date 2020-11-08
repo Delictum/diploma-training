@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <link href="../../static/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../static/css/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="../../static/css/flexslider.css" rel="stylesheet" />
+    <link href="../../static/css/style.css" rel="stylesheet" />
+
+   <!-- Script
+   ================================================== -->
+
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <title>
+            {% if title %}
+                {{ title }} - Check Accounting
+            {% else %}
+                Welcome to Check Accounting!
+            {% endif %}
+
+            <link rel="stylesheet" href="{{ url_for('static', filename='site.css') }}">
+            <link rel="icon" href="data:;base64,=">
+            <link href="../../resource/favicon.ico" rel="icon" type="image/x-icon" />
+            <link href="../../resource/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        </title>
+    </head>
+
+
+<body>
+
+<div class="loaderArea">
+   <div class="loader"></div>
+</div>
+
+{% block navbar %}
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <a class="navbar-brand" rel="home" href="#" title="Check accounting">
+                <img style="max-width:100px; margin-top: -7px;"
+                    src="/static/favicon.ico">
+            </a>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url_for('index') }}">Домашняя страница</a></li>
+                    <li><a href="{{ url_for('about') }}">О сайте</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    {% if current_user.is_anonymous %}
+                        <li><a href="{{ url_for('login') }}">Войти</a></li>
+                        <li><a href="{{ url_for('register') }}">Зарегистрироваться</a></li>
+                    {% else %}
+                        <li><a href="{{ url_for('user', public_id=current_user.public_id) }}">Привет, {{ current_user.username }}</a></li>
+                        <li><a href="{{ url_for('user', public_id=current_user.public_id) }}">Профиль</a></li>
+                        <li><a href="{{ url_for('logout') }}">Выйти</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+{% endblock %}
+
+<div id="wrapper">
+	<!-- start header -->
+
+	<!-- end header -->
+	<section id="featured">
+
+	<!-- Slider -->
+        <div id="main-slider" class="flexslider">
+            <ul class="slides">
+              <li>
+                <img src="../../static/img/slides/1.jpg" alt="" />
+                <div class="flex-caption">
+                    <h3></h3>
+					<p></p>
+                </div>
+              </li>
+              <li>
+                <img src="../../static/img/slides/2.jpg" alt="" />
+                <div class="flex-caption">
+                    <h3>Удобство использования</h3>
+					<p>Забудьте про длительные монотонные записи и построения диаграмм в погоне за точным контролем расходов.</p>
+                </div>
+              </li>
+              <li>
+                <img src="../../static/img/slides/3.jpg" alt="" />
+                <div class="flex-caption">
+                    <h3>Чеки, интернет и... ничего больше!</h3>
+					<p>Все становится невероятно просто в век IT - достаточно иметь мобильное приложение и браузер с выходом в Интернет.</p>
+                </div>
+              </li>
+            </ul>
+        </div>
+	<!-- end slider -->
+
+	</section>
+	<div class="content_white">
+        <h2>Добро пожаловать!</h2>
+        <p>Данный проект создан специально для Вас. Создайте учетную запись и пользуйтесь приложением для ведения личного учета.
+        <br/> Все данные защищены, конфеденциальность гарантирована.</p>
+    </div>
+
+    <div class="featured_content">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 feature_grid1">
+                    <i class="fa fa-ruble fa-3x"></i>
+                    <h3><a href="{{ url_for('user', public_id=current_user.public_id) }}">Бухгалтерский учет</a></h3>
+                    <p>Используя данную систему Вы сможете лучше контролировать свое финансовое положение и способствовать его улучшению.</p>
+                    <a href="{{ url_for('user', public_id=current_user.public_id) }}" class="feature_btn">В профиль</a>
+                </div>
+
+                <div class="col-md-3 feature_grid1">
+                    <i class="fa fa-android fa-3x"></i>
+                    <h3><a href="{{ url_for('download_apk') }}">Android-приложение</a></h3>
+                    <p>Что может быть лучше, чем загрузить чек не отходя от кассы? Именно для этого создано наше android-приложение.</p>
+                    <a href="{{ url_for('download_apk') }}" class="feature_btn">Скачать</a>
+                </div>
+
+                <div class="col-md-3 feature_grid1">
+                    <i class="fa fa-lock fa-3x"></i>
+                    <h3><a target="_blank" href="{{ url_for('privacy_policy') }}">Защищенность данных</a></h3>
+                    <p>Мы ценим своих пользователей. Ознакомтесь с <a target="_blank" href="{{ url_for('privacy_policy') }}">политикой конфеденциальности</a> и <a target="_blank" href="{{ url_for('agreement') }}">пользовательским соглашением</a></p>
+                    <a href="{{ url_for('privacy_policy') }}" class="feature_btn">Ознакомиться</a>
+                </div>
+
+                <div class="col-md-3 feature_grid1">
+                    <i class="fa fa-question fa-3x"></i>
+                    <h3><a target="_blank" href="{{ url_for('support_index') }}">Руководство пользователя</a></h3>
+                    <p>Вы всегда можете обратиться к <a target="_blank" href="{{ url_for('support_index') }}">справочнику</a>. Но если нужного ответа не найдется, напишите по адресу <a href="mailto:checkbook2019@gmail.com">checkbook2019@gmail.com</a>.</p>
+                    <a target="_blank" href="{{ url_for('support_index') }}" class="feature_btn">Перейти</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<section id="content">
+
+
+	    <div class="container">
+
+	        <div class="row">
+                <div class="col-md-8">
+                    <div class="block-heading-two">
+                        <h3 align="center"><span>Check Accounting представляет</span></h3>
+                    </div>
+
+                    <p align="center"><video src="../../static/presents.mp4" width="640" height="360" controls="controls" poster="../../static/img/Checks.jpg">
+                        <source src="../../static/presents.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                        Тег video не поддерживается вашим браузером.
+                        <a href="../../static/presents.mp4">Скачайте видео</a>.
+                    </video></p>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="block-heading-two">
+                        <h3><span>Наши решения</span></h3>
+                    </div>
+
+                    <div class="panel-group" id="accordion-alt3">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseOne-alt3">
+                                        <i style="color: deepskyblue;" class="fa fa-angle-right"></i> Visual check book # 1
+                                    </a>
+                                </h4>
+                            </div>
+
+                            <div id="collapseOne-alt3" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    Это приложение для андроида, позволяющее распозновать isbn книг и находить их во всемирной библиотеке, предоставляя подробную информацию. Добавление данных книг в свой список позволяет составить свою виртуальную библиотеку, которая будет всегда под рукой. <br><br> <p align="center"><a class="btn btn-link" href="https://github.com/Delictum/VisualCheckBook" target="_blank">Перейти</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseTwo-alt3">
+                                        <i style="color: deepskyblue;" class="fa fa-angle-right"></i> Repair planning # 2
+                                    </a>
+                                </h4>
+                            </div>
+
+                            <div id="collapseTwo-alt3" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    Это windows-приложение позволяет планировать ремонт, расчитывать затраты и вносить необходимые предметы, вести учет по специалситам. Собственный конструктор предоставляет гибкую возможность вносить корректировки в ремонт. <br><br> <p align="center"><a class="btn btn-link" href="https://github.com/Delictum/RepairPlanning" target="_blank">Перейти</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseThree-alt3">
+                                        <i style="color: deepskyblue;" class="fa fa-angle-right"></i> Encrypted dialogue # 3
+                                    </a>
+                                </h4>
+                            </div>
+
+                            <div id="collapseThree-alt3" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    Это windows-приложение позволяет вести диалог в зашифрованном виде. <br><br> <p align="center"><a class="btn btn-link" href="https://github.com/Delictum/EncryptedDialogue" target="_blank">Перейти</a></p> Его улучшенная версия в виде web-сайта использует принцип стеганографии посредством файлов. <br><br> <p align="center"><a class="btn btn-link" href="https://github.com/Delictum/EncryptdeDialogue.MVC" target="_blank">Перейти</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseFour-alt3">
+                                        <i style="color: deepskyblue;" class="fa fa-angle-right"></i> Network hairdressing # 4
+                                    </a>
+										</h4>
+                            </div>
+
+                            <div id="collapseFour-alt3" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    Данный web-сайт предоставляет управление сетью парикмахерских, обеспечивая табелем учета рабочего времени, графиком отпусков. Позволяет клиентам ознакомиться с парикмахерами и их работами, записаться на прием в онлайн. <br><br> <p align="center"><a class="btn btn-link" href="https://github.com/Delictum/NetworkHairdressing" target="_blank">Перейти</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseFive-alt3">
+                                        <i style="color: deepskyblue;" class="fa fa-angle-right"></i> School accounting # 5
+                                    </a>
+                                </h4>
+                            </div>
+
+                            <div id="collapseFive-alt3" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    Это windows-приложение позволяет вести учет школьных услуг, предоставляя гибкие возможности для его осуществления. Выводит ряд печатных документов, необходимых для учреждения образования. <br><br> <p align="center"><a class="btn btn-link" href="https://github.com/Delictum/SchoolAccounting" target="_blank">Перейти</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseSix-alt3">
+                                        <i style="color: deepskyblue;" class="fa fa-angle-right"></i> Event planning # 6
+                                    </a>
+                                </h4>
+                            </div>
+
+                            <div id="collapseSix-alt3" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    Данный web-сайт предоставляет управление мероприятиями, обеспечивая мощным набором возможностей для конструирования. Сайт является клиентоориентированным, включая необходимый спектр возможностей для пользователей. <br><br> <p align="center"><a class="btn btn-link" href="https://github.com/Delictum/EventPlanning" target="_blank">Перейти</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <link href="../../static/practice-gallery/css/reset.css" rel="stylesheet">
+            <link href="../../static/practice-gallery/lightbox/css/lightbox.min.css" rel="stylesheet">
+		    <link href="../../static/practice-gallery/css/style.css" rel="stylesheet">
+            <div id="gallery">
+
+                <figure class="photo">
+                    <a href="../../static/img/helpers/android/received_photo.png" data-lightbox="roadtrip" data-title="Eagle">
+                        <img src="../../static/img/helpers/android/received_photo.png" alt="Eagle" />
+                    </a>
+                    <figcaption>Андроид</figcaption>
+                </figure>
+
+                <figure class="photo">
+                    <a href="../../static/img/helpers/profile/check_add_view.png" data-lightbox="roadtrip" data-title="Eagle">
+                        <img src="../../static/img/helpers/profile/check_add_view.png" alt="Eagle" />
+                    </a>
+                    <figcaption>Добавление чека</figcaption>
+                </figure>
+
+                <figure class="photo">
+                    <a href="../../static/img/helpers/profile/export_check_to_word.png" data-lightbox="roadtrip" data-title="Eagle">
+                        <img style="" src="../../static/img/helpers/profile/export_check_to_word.png" alt="Eagle" />
+                    </a>
+                    <figcaption>Word</figcaption>
+                </figure>
+
+                <figure class="photo">
+                    <a href="../../static/img/helpers/profile/export_check_to_excel.png" data-lightbox="roadtrip" data-title="Eagle">
+                        <img src="../../static/img/helpers/profile/export_check_to_excel.png" alt="Eagle" />
+                    </a>
+                    <figcaption>Excel</figcaption>
+                </figure>
+
+                <figure class="photo">
+                    <a href="../../static/img/helpers/profile/profile_with_first_check.png" data-lightbox="roadtrip" data-title="Eagle">
+                        <img src="../../static/img/helpers/profile/profile_with_first_check.png" alt="Eagle" />
+                    </a>
+                    <figcaption>Профиль</figcaption>
+                </figure>
+
+            </div>
+        <script src="../../static/practice-gallery/lightbox/js/lightbox-plus-jquery.min.js"></script>
+
+	</div>
+
+	</section>
+	<div class="testimonial-area">
+    <div class="testimonial-solid">
+        <div class="container">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="">
+                        <a href="#"></a>
+                    </li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1" class="">
+                        <a href="#"></a>
+                    </li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2" class="active">
+                        <a href="#"></a>
+                    </li>
+                    <li data-target="#carousel-example-generic" data-slide-to="3" class="">
+                        <a href="#"></a>
+                    </li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item">
+                        <p> Время и деньги по большей части взаимозаменяемы.</p>
+                        <p>
+                            <b>- Уинстон Черчилль -</b>
+                        </p>
+                    </div>
+                    <div class="item">
+                        <p>Жизнь — игра, а деньги — способ вести счет.</p>
+                        <p>
+                            <b>- Тед Тёрнер -</b>
+                        </p>
+                    </div>
+                    <div class="item active">
+                        <p>Деньги и время — самое тяжелое бремя в жизни. Наиболее несчастны те, у кого их больше, чем они умеют использовать.</p>
+                        <p>
+                            <b>- Сэмюэл Джонсон -</b>
+                        </p>
+                    </div>
+                    <div class="item">
+                        <p>Уберечь свои деньги стоит больших трудов, чем добыть их.</p>
+                        <p>
+                            <b>- Мишель де Монтень -</b>
+                        </p>
+                    </div>
+                    <div class="item">
+                        <p>Трать на один пенс меньше, чем зарабатываешь.</p>
+                        <p>
+                            <b>- Бенджамин Франклин -</b>
+                        </p>
+                    </div>
+                    <div class="item">
+                        <p>С возрастом желание заработать переходит в желание сэкономить.</p>
+                        <p>
+                            <b>- Михаил Жванецкий -</b>
+                        </p>
+                    </div>
+                    <div class="item">
+                        <p>Будь бережлив и готовься к завтрашнему дню.</p>
+                        <p>
+                            <b>- Эзоп -</b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+	{% include "footer.html" %}
+</div>
+<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+<!-- javascript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../../static/js/jquery.js"></script>
+<script src="../../static/js/jquery.easing.1.3.js"></script>
+<script src="../../static/js/bootstrap.min.js"></script>
+<script src="../../static/js/jquery.fancybox.pack.js"></script>
+<script src="../../static/js/jquery.fancybox-media.js"></script>
+<script src="../../static/js/portfolio/jquery.quicksand.js"></script>
+<script src="../../static/js/portfolio/setting.js"></script>
+<script src="../../static/js/jquery.flexslider.js"></script>
+<script>
+  $(window).on('load', function () {
+    $preloader = $('.loaderArea'),
+      $loader = $preloader.find('.loader');
+    $loader.fadeOut();
+    $preloader.delay(350).fadeOut('slow');
+  });
+</script>
+<script src="../../static/js/animate.js"></script>
+<script src="../../static/js/custom.js"></script>
+</body>
+</html>

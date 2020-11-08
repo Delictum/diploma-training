@@ -1,0 +1,695 @@
+{% extends "bootstrap/base.html" %}
+
+<head>
+    <link rel="icon" href="data:;base64,=">
+    <link href="../../resource/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="../../resource/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <link href="../../static/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../static/css/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="../../static/css/flexslider.css" rel="stylesheet" />
+    <link href="../../static/css/style.css" rel="stylesheet" />
+
+   <!-- Script
+   ================================================== -->
+	<script src="../../static/js/modernizr.js"></script>
+
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.31.1/jquery.min.js"></script>
+
+
+
+</head>
+
+{% block title %}
+    {% if title %}{{ title }} - Check Accounting{% else %}Welcome to Check Accounting!{% endif %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='site.css') }}">
+    <link rel="icon" href="data:;base64,=">
+    <link href="../../resource/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="../../resource/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+{% endblock %}
+
+{% block navbar %}
+    <div class="loaderArea">
+        <div class="loader"></div>
+    </div>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <a class="navbar-brand" rel="home" href="#" title="Check accounting">
+                <img style="max-width:100px; margin-top: -7px;"
+                    src="/static/favicon.ico">
+            </a>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url_for('index') }}">Домашняя страница</a></li>
+                    <li><a href="{{ url_for('about') }}">О сайте</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    {% if current_user.is_anonymous %}
+                        <li><a href="{{ url_for('login') }}">Войти</a></li>
+                        <li><a href="{{ url_for('register') }}">Зарегистрироваться</a></li>
+                    {% else %}
+                        <li><a href="{{ url_for('user', public_id=current_user.public_id) }}">Привет, {{ current_user.username }}</a></li>
+                        <li><a href="{{ url_for('user', public_id=current_user.public_id) }}">Профиль</a></li>
+                        <li><a href="{{ url_for('logout') }}">Выйти</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <link href="../../static/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../static/css/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="../../static/css/flexslider.css" rel="stylesheet" />
+    <link href="../../static/css/style.css" rel="stylesheet" />
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+    <form name="check_excel" action="{{ url_for('check_excel', public_id=user.public_id, check_id=check.id) }}" method="post" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+
+        <input type="checkbox" id="word" name="word" hidden="hidden">
+        <input type="hidden" name="organization" value="{{ organization.legal_name }}" class="organization">
+        <input type="hidden" name="check_id" value="{{ check.id }}" class="check_id">
+        <input type="date" name="date_time" value={{ check.date_time_of_purchase }} class="date_time">
+
+        <div class="row">
+            <div class="col-md-7">
+                <p>{{ organization.legal_name }}</p>
+                <p>{{ organization.legal_address }}</p>
+                <p>{{ organization.taxpayer_identification_number }}</p>
+            </div>
+
+            <div class="col-md-5">
+                <p>Скачать чек в формате:</p>
+                <input type="submit" id="btn_excel" name="btn_excel" value="Excel" class="btn btn-primary">
+                <input type="submit" id="btn_word" name="btn_word" value="Word" class="btn btn-primary">
+            </div>
+        </div>
+
+        <div class="container1">
+            <input type="button" class="wow" hidden="hidden">
+            <div class="row">
+                <div class="col-md-2">
+                    <label>Название продукта</label>
+                </div>
+
+                <div class="col-md-2">
+                    <label>Цена</label>
+                </div>
+
+                <div class="col-md-2">
+                    <label>Продукт</label>
+                </div>
+
+                <div class="col-md-2">
+                    <label>Тип</label>
+                </div>
+
+                <div class="col-md-2">
+                    <label>Категория</label>
+                </div>
+            </div>
+            <button class="add_form_field">Добавить поле &nbsp;
+                    <span style="font-size:16px; font-weight:bold;">+</span>
+                </button>
+        </div>
+        <br>
+        <p class="total_cost">Общая стоимость чека: {{ total_cost }}</p>
+        <hr>
+        </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var input_category_product = $(".date_time");
+
+            $(input_category_product).change(function () {
+                $.ajax({
+                    type: 'POST',
+                    data: JSON.stringify({"date_time": input_category_product.val(), "check_id": $(".check_id").val()}),
+                    contentType: 'application/json',
+                    url: '/api/v1/check/change_date',
+                });
+            });
+
+            var wrapper = $(".container1");
+            var common_number = 1;
+            var x = 1;
+            $(".wow").click(function (e) {
+                e.preventDefault();
+
+                {% for product in products %}
+                    x++;
+                    common_number++;
+                    var load_product = function() {
+                        let current_number = common_number;
+                        $(wrapper).append('<div><a href="#" class="delete' + current_number +
+                            '               ">Удалить строку</a><input type="hidden" class="id' + current_number + '" value="{{ product.id }}"><div class="row">\n' +
+                            '                    <div class="col-md-2">\n' +
+                            '                        <input id="product_name" class="product_name' + current_number + '" type="text" name="product_name[]"\n' +
+                            '                               required="required" maxlength="150" value="{{ product.product_name }}">\n' +
+                            '                    </div>\n' +
+                            '\n' +
+                            '                    <div class="col-md-2">\n' +
+                            '                        <input type="text" name="product_price[]" class="price' + current_number + '"  value="{{ product.product_price }}" required="required" maxlength="10" >\n' +
+                            '                    </div>\n' +
+                            '\n' +
+                            '                    <div class="col-md-2">\n' +
+                            '                        <input type="text" list="abstract_products" name="abstract_product[]" id="abstract_product"\n' +
+                            '                               required="required" maxlength="100" class="abstract_product' + current_number + '"/>\n' +
+                            '                        <datalist id="abstract_products">\n' +
+                            '                            {% for abstract_product in abstract_products %}\n'+
+                                '                                <option value="{{ abstract_product }}" SELECTED>{{ abstract_product }}</option>"\n'
+                                +
+                                '                            {% endfor %}\n' +
+                            '                        </datalist>\n' +
+                            '                    </div>\n' +
+                            '\n' +
+                            '                    <div class="col-md-2">\n' +
+                            '                        <input type="text" list="category_types" name="category_type[]" id="category_type" class="category_type' + current_number + '"\n' +
+                            '                               required="required" maxlength="79" />\n' +
+                            '                        <datalist id="category_types">\n' +
+                            '                            {% for category_type in category_types %}\n'+
+                                '                                <option value="{{ category_type }}" SELECTED>{{ category_type }}</option>"\n'
+                                +
+                                '                            {% endfor %}\n' +
+                            '                        </datalist>\n' +
+                            '                    </div>\n' +
+                            '\n' +
+                            '                    <div class="col-md-2">\n' +
+                            '                        <select id="product_category" name="product_category[]" class="product_category' + current_number + '">\n' +
+                            '                            {% for product_category in product_categories %}\n'+
+                                '                                <option value="{{ product_category }}" SELECTED>{{ product_category }}</option>"\n'
+                                +
+                                '                            {% endfor %}\n' +
+                            '                        </select>\n' +
+                            '                    </div>\n' +
+                            '                </div></div>');
+
+                        var input_product = $(".product_name" + current_number);
+                        $(input_product).on('propertychange input', function () {
+                            var base_url = 'http://0.0.0.0:5000/api/v1/product/get_all_product_info/';
+                            $.ajax({
+                                type: 'GET',
+                                url: base_url + input_product.val(),
+                                success: function (data) {
+                                    $(".abstract_product" + current_number).val(data[0]);
+                                    $(".category_type" + current_number).val(data[1]);
+                                    $(".product_category" + current_number).val(data[2]);
+                                }
+                            });
+                        });
+
+                        $(input_product).change(function () {
+                            $.ajax({
+                                type: 'POST',
+                                data: JSON.stringify({
+                                    "category_type_name": $(".product_category" + current_number).val(),
+                                    "product_category_name": input_category_product.val(),
+                                    "abstract_product_name": input_abstract_product.val(),
+                                    "product_name": input_product.val(),
+                                    "product_price": $(".price" + current_number).val(),
+                                    "id": $(".id" + current_number).val(),
+                                }),
+                                contentType: 'application/json',
+                                url: '/api/v1/product/change_product',
+                            });
+                        });
+
+                        var base_url = 'http://0.0.0.0:5000/api/v1/product/get_all_product_info_by_id/';
+                            $.ajax({
+                                type: 'GET',
+                                url: base_url + {{ product.id }},
+                                success: function (data) {
+                                    $(".abstract_product" + current_number).val(data[0]);
+                                    $(".category_type" + current_number).val(data[1]);
+                                    $(".product_category" + current_number).val(data[2]);
+                                }
+                            });
+
+
+                        var input_abstract_product = $(".abstract_product" + current_number);
+                        $(input_abstract_product).on('propertychange input', function () {
+                            var base_url = 'http://0.0.0.0:5000/api/v1/product/get_all_product_info/';
+                            $.ajax({
+                                type: 'GET',
+                                url: base_url + input_abstract_product.val(),
+                                success: function (data) {
+                                    $(".category_type" + current_number).val(data[1]);
+                                    $(".product_category" + current_number).val(data[2]);
+                                }
+                            });
+                        });
+
+                        $(input_abstract_product).change(function () {
+                            $.ajax({
+                                type: 'POST',
+                                data: JSON.stringify({
+                                    "category_type_name": $(".product_category" + current_number).val(),
+                                    "product_category_name": input_category_product.val(),
+                                    "abstract_product_name": input_abstract_product.val(),
+                                    "id": $(".id" + current_number).val(),
+                                }),
+                                contentType: 'application/json',
+                                url: '/api/v1/product/change_abstract_product',
+                            });
+                        });
+
+                        var input_category_product = $(".category_type" + current_number);
+                        $(input_category_product).on('propertychange input', function () {
+                            var base_url = 'http://0.0.0.0:5000/api/v1/product/get_category_type/';
+                            $.ajax({
+                                type: 'GET',
+                                url: base_url + input_category_product.val(),
+                                success: function (data) {
+                                    $(".product_category" + current_number).val(data[1]);
+                                }
+                            });
+                        });
+
+                        $(input_category_product).change(function () {
+                            $.ajax({
+                                type: 'POST',
+                                data: JSON.stringify({
+                                    "category_type_name": $(".product_category" + current_number).val(),
+                                    "product_category_name": input_category_product.val(),
+                                    "abstract_product_name": input_abstract_product.val(),
+                                }),
+                                contentType: 'application/json',
+                                url: '/api/v1/product/change_category_product',
+                            });
+                        });
+
+                        $(".product_category").change(function () {
+                            $.ajax({
+                                type: 'POST',
+                                data: JSON.stringify({
+                                    "category_type_name": $(".product_category" + current_number).val(),
+                                    "product_category_name": input_category_product.val(),
+                                }),
+                                contentType: 'application/json',
+                                url: '/api/v1/product/change_category_type',
+                            });
+                        });
+
+                        var flag = false;
+                        $('.price' + current_number).on({
+                            input: function (e) {
+                                var re = /^\d+\.?(\d{1,2})?$/ig,
+                                    cVal = $.trim($(this).val());
+                                $(this).val(cVal.replace(/,/g, '.'));
+                                if (flag) {
+                                    var cut = cVal.match(/^\d+\.?(\d{1,2})?/ig),
+                                        clearVal = cut !== null ? cut : '';
+                                    $(this).val(clearVal);
+                                    return false;
+                                }
+                                if (!re.test(cVal)) {
+                                    $(this).val(cVal.substr(0, cVal.length - 1));
+                                }
+                            },
+                            paste: function () {
+                                flag = true;
+                            },
+                            blur: function () {
+                                var cVal = $.trim($(this).val());
+                                if (/\.$/.test(cVal)) {
+                                    $(this).val(cVal.substr(0, cVal.length - 1));
+                                }
+                            },
+                            change: function (e) {
+                                $.ajax({
+                                    type: 'POST',
+                                    data: JSON.stringify({
+                                        "product_price": $(".price" + current_number).val(),
+                                        "id": $(".id" + current_number).val(),
+                                    }),
+                                    contentType: 'application/json',
+                                    url: '/api/v1/product/change_price',
+                                    success: function () {
+                                        $.ajax({
+                                            type: 'GET',
+                                            url: '/api/v1/check/total_cost/' + $(".check_id").val(),
+                                            success: function (data) {
+                                                $(".total_cost").text('Общая стоимость чека: ' + data[0]);
+                                            }
+                                        });
+                                    }
+                                });
+                            }
+                        });
+
+                        $(wrapper).on("click", ".delete" + current_number, function (e) {
+                            if (x === 2 && confirm("Остался последний продукт. Удалить сразу чек?")) {
+                                $.ajax({
+                                        type: 'POST',
+                                        data: JSON.stringify({
+                                            "check_id": {{ check.id }}
+                                        }),
+                                        contentType: 'application/json',
+                                        url: '/api/v1/check/remove_check',
+                                        success: function () {
+                                            window.location.replace("http://0.0.0.0:5000/")
+                                        }
+                                    });
+                            } else if (confirm("Действительно удалить продукт?")) {
+                                $.ajax({
+                                    type: 'POST',
+                                    data: JSON.stringify({
+                                        "id": $(".id" + current_number).val()
+                                    }),
+                                    contentType: 'application/json',
+                                    url: '/api/v1/product/remove_product',
+                                    success: function () {
+                                        $.ajax({
+                                            type: 'GET',
+                                            url: '/api/v1/check/total_cost/' + $(".check_id").val(),
+                                            success: function (data) {
+                                                $(".total_cost").text('Общая стоимость чека: ' + data[0]);
+                                            }
+                                        });
+                                    }
+                                });
+                                e.preventDefault();
+                                $(this).parent('div').remove();
+                                x--;
+                            }
+                        });
+                    };
+                    load_product();
+
+                    var load_fields_exist_product = function () {
+                            var base_url = 'http://0.0.0.0:5000/api/v1/product/get_all_product_fields_info_by_id/';
+                            $.ajax({
+                                type: 'GET',
+                                url: base_url + '{{ product.id }}',
+                                success: function (data) {
+                                    $(".product_name" + current_number).val(data[0]);
+                                    $(".product_price" + current_number).val(data[1]);
+                                    $(".abstract_product" + current_number).val(data[2]);
+                                    $(".category_type" + current_number).val(data[3]);
+                                    $(".product_category" + current_number).val(data[4]);
+                                }
+                            });
+                        };
+
+                         load_fields_exist_product();
+                {% endfor %}
+            });
+
+            $('.wow').trigger('click');
+
+            var add_button = $(".add_form_field");
+            var max_fields = 30;
+
+       $(add_button).click(function (e) {
+           x++;
+           common_number++;
+           let current_number = common_number + 1;
+           e.preventDefault();
+
+           var addProduct = function () {
+                            $.ajax({
+                                type: 'POST',
+                                data: JSON.stringify({
+                                    "check_id": $(".check_id").val(),
+                                }),
+                                contentType: 'application/json',
+                                url: '/api/v1/product/add_product',
+                                success: function (data) {
+                                    $(wrapper).append('<div><a href="#" class="delete' + current_number +
+                            '               ">Удалить строку</a><input type="hidden" class="id' + current_number + '" value="' + data[0] + '"><div class="row">\n' +
+                            '                    <div class="col-md-2">\n' +
+                            '                        <input id="product_name" class="product_name' + current_number + '" type="text" name="product_name[]"\n' +
+                            '                               required="required" maxlength="150" value="N">\n' +
+                            '                    </div>\n' +
+                            '\n' +
+                            '                    <div class="col-md-2">\n' +
+                            '                        <input type="text" name="product_price[]" class="price' + current_number + '"  value="1" required="required" maxlength="10" >\n' +
+                            '                    </div>\n' +
+                            '\n' +
+                            '                    <div class="col-md-2">\n' +
+                            '                        <input type="text" list="abstract_products" name="abstract_product[]" id="abstract_product"\n' +
+                            '                               required="required" maxlength="100" class="abstract_product' + current_number + '"/>\n' +
+                            '                        <datalist id="abstract_products">\n' +
+                            '                            {% for abstract_product in abstract_products %}\n'+
+                                '                                <option value="{{ abstract_product }}" SELECTED>{{ abstract_product }}</option>"\n'
+                                +
+                                '                            {% endfor %}\n' +
+                            '                        </datalist>\n' +
+                            '                    </div>\n' +
+                            '\n' +
+                            '                    <div class="col-md-2">\n' +
+                            '                        <input type="text" list="category_types" name="category_type[]" id="category_type" class="category_type' + current_number + '"\n' +
+                            '                               required="required" maxlength="79" />\n' +
+                            '                        <datalist id="category_types">\n' +
+                            '                            {% for category_type in category_types %}\n'+
+                                '                                <option value="{{ category_type }}" SELECTED>{{ category_type }}</option>"\n'
+                                +
+                                '                            {% endfor %}\n' +
+                            '                        </datalist>\n' +
+                            '                    </div>\n' +
+                            '\n' +
+                            '                    <div class="col-md-2">\n' +
+                            '                        <select id="product_category" name="product_category[]" class="product_category' + current_number + '">\n' +
+                            '                            {% for product_category in product_categories %}\n'+
+                                '                                <option value="{{ product_category }}" SELECTED>{{ product_category }}</option>"\n'
+                                +
+                                '                            {% endfor %}\n' +
+                            '                        </select>\n' +
+                            '                    </div>\n' +
+                            '                </div></div>');
+
+                        var input_product = $(".product_name" + current_number);
+                        $(input_product).on('propertychange input', function () {
+                            var base_url = 'http://0.0.0.0:5000/api/v1/product/get_all_product_info/';
+                            $.ajax({
+                                type: 'GET',
+                                url: base_url + input_product.val(),
+                                success: function (data) {
+                                    $(".abstract_product" + current_number).val(data[0]);
+                                    $(".category_type" + current_number).val(data[1]);
+                                    $(".product_category" + current_number).val(data[2]);
+                                }
+                            });
+                        });
+
+                        $(input_product).change(function () {
+                            $.ajax({
+                                type: 'POST',
+                                data: JSON.stringify({
+                                    "category_type_name": $(".product_category" + current_number).val(),
+                                    "product_category_name": input_category_product.val(),
+                                    "abstract_product_name": input_abstract_product.val(),
+                                    "product_name": input_product.val(),
+                                    "product_price": $(".price" + current_number).val(),
+                                    "id": $(".id" + current_number).val(),
+                                }),
+                                contentType: 'application/json',
+                                url: '/api/v1/product/change_product',
+                            });
+                        });
+
+                        var base_url = 'http://0.0.0.0:5000/api/v1/product/get_all_product_info_by_id/';
+                            $.ajax({
+                                type: 'GET',
+                                url: base_url + data[0],
+                                success: function (data) {
+                                    $(".abstract_product" + current_number).val(data[0]);
+                                    $(".category_type" + current_number).val(data[1]);
+                                    $(".product_category" + current_number).val(data[2]);
+                                }
+                            });
+
+
+                        var input_abstract_product = $(".abstract_product" + current_number);
+                        $(input_abstract_product).on('propertychange input', function () {
+                            var base_url = 'http://0.0.0.0:5000/api/v1/product/get_all_product_info/';
+                            $.ajax({
+                                type: 'GET',
+                                url: base_url + input_abstract_product.val(),
+                                success: function (data) {
+                                    $(".category_type" + current_number).val(data[1]);
+                                    $(".product_category" + current_number).val(data[2]);
+                                }
+                            });
+                        });
+
+                        $(input_abstract_product).change(function () {
+                            $.ajax({
+                                type: 'POST',
+                                data: JSON.stringify({
+                                    "category_type_name": $(".product_category" + current_number).val(),
+                                    "product_category_name": input_category_product.val(),
+                                    "abstract_product_name": input_abstract_product.val(),
+                                    "id": $(".id" + current_number).val(),
+                                }),
+                                contentType: 'application/json',
+                                url: '/api/v1/product/change_abstract_product',
+                            });
+                        });
+
+                        var input_category_product = $(".category_type" + current_number);
+                        $(input_category_product).on('propertychange input', function () {
+                            var base_url = 'http://0.0.0.0:5000/api/v1/product/get_category_type/';
+                            $.ajax({
+                                type: 'GET',
+                                url: base_url + input_category_product.val(),
+                                success: function (data) {
+                                    $(".product_category" + current_number).val(data[1]);
+                                }
+                            });
+                        });
+
+                        $(input_category_product).change(function () {
+                            $.ajax({
+                                type: 'POST',
+                                data: JSON.stringify({
+                                    "category_type_name": $(".product_category" + current_number).val(),
+                                    "product_category_name": input_category_product.val(),
+                                    "abstract_product_name": input_abstract_product.val(),
+                                }),
+                                contentType: 'application/json',
+                                url: '/api/v1/product/change_category_product',
+                            });
+                        });
+
+                        $(".product_category").change(function () {
+                            $.ajax({
+                                type: 'POST',
+                                data: JSON.stringify({
+                                    "category_type_name": $(".product_category" + current_number).val(),
+                                    "product_category_name": input_category_product.val(),
+                                }),
+                                contentType: 'application/json',
+                                url: '/api/v1/product/change_category_type',
+                            });
+                        });
+
+                        var flag = false;
+                        $('.price' + current_number).on({
+                            input: function (e) {
+                                var re = /^\d+\.?(\d{1,2})?$/ig,
+                                    cVal = $.trim($(this).val());
+                                $(this).val(cVal.replace(/,/g, '.'));
+                                if (flag) {
+                                    var cut = cVal.match(/^\d+\.?(\d{1,2})?/ig),
+                                        clearVal = cut !== null ? cut : '';
+                                    $(this).val(clearVal);
+                                    return false;
+                                }
+                                if (!re.test(cVal)) {
+                                    $(this).val(cVal.substr(0, cVal.length - 1));
+                                }
+                            },
+                            paste: function () {
+                                flag = true;
+                            },
+                            blur: function () {
+                                var cVal = $.trim($(this).val());
+                                if (/\.$/.test(cVal)) {
+                                    $(this).val(cVal.substr(0, cVal.length - 1));
+                                }
+                            },
+                            change: function (e) {
+                                $.ajax({
+                                    type: 'POST',
+                                    data: JSON.stringify({
+                                        "product_price": $(".price" + current_number).val(),
+                                        "id": $(".id" + current_number).val(),
+                                    }),
+                                    contentType: 'application/json',
+                                    url: '/api/v1/product/change_price',
+                                    success: function () {
+                                        $.ajax({
+                                            type: 'GET',
+                                            url: '/api/v1/check/total_cost/' + $(".check_id").val(),
+                                            success: function (data) {
+                                                $(".total_cost").text('Общая стоимость чека: ' + data[0]);
+                                            }
+                                        });
+                                    }
+                                });
+                            }
+                        });
+
+                        $(wrapper).on("click", ".delete" + current_number, function (e) {
+                            if (x === 2 && confirm("Остался последний продукт. Удалить сразу чек?")) {
+                                $.ajax({
+                                        type: 'POST',
+                                        data: JSON.stringify({
+                                            "check_id": {{ check.id }}
+                                        }),
+                                        contentType: 'application/json',
+                                        url: '/api/v1/check/remove_check',
+                                        success: function () {
+                                            window.location.replace("http://0.0.0.0:5000/")
+                                        }
+                                    });
+                            } else if (confirm("Действительно удалить продукт?")) {
+                                $.ajax({
+                                    type: 'POST',
+                                    data: JSON.stringify({
+                                        "id": $(".id" + current_number).val()
+                                    }),
+                                    contentType: 'application/json',
+                                    url: '/api/v1/product/remove_product',
+                                    success: function () {
+                                        $.ajax({
+                                            type: 'GET',
+                                            url: '/api/v1/check/total_cost/' + $(".check_id").val(),
+                                            success: function (data) {
+                                                $(".total_cost").text('Общая стоимость чека: ' + data[0]);
+                                            }
+                                        });
+                                    }
+                                });
+                                e.preventDefault();
+                                $(this).parent('div').remove();
+                                x--;
+                            }
+                        });
+                                }
+                            });
+                        };
+           addProduct();
+
+
+            });
+
+        });
+
+        $(window).on('load', function () {
+            $preloader = $('.loaderArea'),
+            $loader = $preloader.find('.loader');
+            $loader.fadeOut();
+            $preloader.delay(350).fadeOut('slow');
+        });
+
+        $("#btn_word").click(function () {
+                $("#word").prop('checked', true);
+            });
+
+        $("#btn_excel").click(function () {
+                $("#word").prop('checked', false);
+            });
+    </script>
+
+    {% include "footer.html" %}
+
+{% endblock %}
+<body>

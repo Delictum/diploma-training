@@ -1,0 +1,483 @@
+{% extends "bootstrap/base.html" %}
+
+<head>
+    <link rel="icon" href="data:;base64,=">
+    <link href="../../resource/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="../../resource/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <link href="../../static/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../static/css/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="../../static/css/flexslider.css" rel="stylesheet" />
+    <link href="../../static/css/style.css" rel="stylesheet" />
+
+   <!-- Script
+   ================================================== -->
+	<script src="../../static/js/modernizr.js"></script>
+
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.31.1/jquery.min.js"></script>
+
+
+
+</head>
+
+{% block title %}
+    {% if title %}{{ title }} - Check Accounting{% else %}Welcome to Check Accounting!{% endif %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='site.css') }}">
+    <link rel="icon" href="data:;base64,=">
+    <link href="../../resource/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="../../resource/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+{% endblock %}
+
+{% block navbar %}
+    <div class="loaderArea">
+        <div class="loader"></div>
+    </div>
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <a class="navbar-brand" rel="home" href="#" title="Check accounting">
+                <img style="max-width:100px; margin-top: -7px;"
+                    src="/static/favicon.ico">
+            </a>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url_for('index') }}">Домашняя страница</a></li>
+                    <li><a href="{{ url_for('about') }}">О сайте</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    {% if current_user.is_anonymous %}
+                        <li><a href="{{ url_for('login') }}">Войти</a></li>
+                        <li><a href="{{ url_for('register') }}">Зарегистрироваться</a></li>
+                    {% else %}
+                        <li><a href="{{ url_for('user', public_id=current_user.public_id) }}">Привет, {{ current_user.username }}</a></li>
+                        <li><a href="{{ url_for('user', public_id=current_user.public_id) }}">Профиль</a></li>
+                        <li><a href="{{ url_for('logout') }}">Выйти</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <link href="../../static/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../static/css/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="../../static/css/flexslider.css" rel="stylesheet" />
+    <link href="../../static/css/style.css" rel="stylesheet" />
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+{% endblock %}
+
+
+{% block content %}
+    <div class="container">
+        <form name="add_manual_check" action="{{ url_for('add_manual_check', public_id=current_user.public_id) }}" method="post" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+
+            <div class="form-group">
+                <label title="Дата" class="control-label col-md-2">Дата</label>
+                <input type="date" name="date_time" required="required" value={{ dateTime }}>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">Организация</label>
+                <input type="text" list="organizations" name="organization" maxlength="49" />
+                <datalist id="organizations">
+                    {% for organization in organizations %}
+                        <option value="{{ organization }}" SELECTED>{{ organization }}</option>"
+                    {% endfor %}
+                </datalist>
+            </div>
+
+            <div class="container1">
+                <button class="add_form_field">Добавить поле &nbsp;
+                    <span style="font-size:16px; font-weight:bold;">+</span>
+                </button>
+
+                <br/>
+
+                <div class="row">
+                    <div class="col-md-2">
+                        <label>Название продукта</label>
+                    </div>
+
+                    <div class="col-md-2">
+                        <label>Цена</label>
+                    </div>
+
+                    <div class="col-md-2">
+                        <label>Продукт</label>
+                    </div>
+
+                    <div class="col-md-2">
+                        <label>Тип</label>
+                    </div>
+
+                    <div class="col-md-2">
+                        <label>Категория</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-2">
+                        <input id="product_name" class="product_name" type="text" name="product_name[]"
+                               required="required" maxlength="150" placeholder="Хлеб Тракайский" >
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" name="product_price[]" class="price" placeholder="12345.67" required="required" maxlength="10" >
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" list="abstract_products" name="abstract_product[]" id="abstract_product"
+                               required="required" maxlength="100" class="abstract_product"/>
+                        <datalist id="abstract_products">
+                            {% for abstract_product in abstract_products %}
+                                <option value="{{ abstract_product }}" SELECTED>{{ abstract_product }}</option>"
+                            {% endfor %}
+                        </datalist>
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" list="category_types" name="category_type[]" id="category_type" class="category_type"
+                               required="required" maxlength="79" />
+                        <datalist id="category_types">
+                            {% for category_type in category_types %}
+                                <option value="{{ category_type }}" SELECTED>{{ category_type }}</option>"
+                            {% endfor %}
+                        </datalist>
+                    </div>
+
+                    <div class="col-md-2">
+                        <select id="product_category" name="product_category[]" class="product_category">
+                            {% for product_category in product_categories %}
+                                <option value="{{ product_category }}" SELECTED>{{ product_category }}</option>"
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <br/>
+            <input type="submit" name="btn" value="Внести" class="btn btn-primary">
+        </form>
+
+        <hr>
+
+        <form action="{{ url_for('add_check', public_id=current_user.public_id) }}" method="post" enctype="multipart/form-data" name="add_check">
+            {{ form.hidden_tag() }}
+
+            <div class="row">
+                <div class="col-md-9">
+                    <span class="btn btn-default btn-file">
+                        Загрузить <input type="file" id="files" name="file[]"  multiple accept="image/*,image/jpeg" />
+                        <br>
+                        <button type="button" class="btn-default" id="clear">Очистить</button>
+                        <br>
+                        <ul id="list"></ul>
+                    </span>
+                </div>
+
+                <div class="col-md-3">
+                    <input type="submit" id="submit_img" name="btn" value="Обработать" class="btn btn-primary">
+                </div>
+            </div>
+        </form>
+
+        <img id="origImg" name="origImg">
+
+        <div class="text-center">
+            {% if init %}
+                {% if invalidImage %}
+                    <div class="alert alert-danger" style="margin-top:18px;">
+                        <strong>Ошибка</strong> Неверный файл !
+                    </div>
+                {% else %}
+                    <div class="alert alert-success" style="margin-top:18px;">
+                        <strong>Успешно</strong> Ваше изображение было загружено
+                    </div>
+                {% endif %}
+            {% endif %}
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var showFile = (function () {
+            var fr = new FileReader,
+            i = 0,
+            files, file;
+
+            fr.onload = function (e) {
+                var li;
+                if (file.type.match('image.*')) {
+                    li = document.createElement('li');
+                    li.innerHTML = "<img src='" + e.target.result + "' >";
+                    document.getElementById('list').appendChild(li);
+                }
+                file = files[++i];
+                if (file) {
+                    fr.readAsDataURL(file)
+                } else {
+                    i = 0;
+                }
+            };
+
+        return function (e) {
+            files = e.target.files;
+            file = files[i];
+            if (files) {
+                while (i < files.length && !file.type.match('image.*')) {
+                    file = files[++i];
+                }
+                if (file) fr.readAsDataURL(files[i])
+            }
+        }
+
+    })();
+
+    document.getElementById('files').addEventListener('change', showFile, false);
+
+    var clearFile = (function () {
+        try {
+            document.getElementById("files").value = null;
+
+            var list = document.getElementById('list'),
+                items = Array.prototype.slice.call(list.childNodes),
+                item;
+            while (item = items.pop()) {
+                if (item.firstChild) {
+                    list.removeChild(item);
+                }
+            }
+
+        } catch(ex) { }
+            if (document.getElementById("files").value) {
+                document.getElementById("files").parentNode.replaceChild(document.getElementById("files").cloneNode(true), document.getElementById("files"));
+        }
+    });
+
+    document.getElementById('clear').addEventListener('click', clearFile, false);
+    </script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+   $(document).ready(function() {
+       var max_fields = 30;
+       var wrapper = $(".container1");
+       var add_button = $(".add_form_field");
+
+       var common_number = 1;
+       var x = 1;
+       $(add_button).click(function (e) {
+           let current_number = common_number;
+           e.preventDefault();
+           if (x < max_fields) {
+               x++;
+               common_number++;
+               $(wrapper).append('<div><a href="#" class="delete">Удалить строку</a><div class="row">\n' +
+                   '                    <div class="col-md-2">\n' +
+                   '                        <input id="product_name" class="product_name' + current_number + '" type="text" name="product_name[]"\n' +
+                   '                               required="required" maxlength="150" placeholder="Хлеб Тракайский" >\n' +
+                   '                    </div>\n' +
+                   '\n' +
+                   '                    <div class="col-md-2">\n' +
+                   '                        <input type="text" name="product_price[]" class="price" placeholder="12345.67" required="required" maxlength="10" >\n' +
+                   '                    </div>\n' +
+                   '\n' +
+                   '                    <div class="col-md-2">\n' +
+                   '                        <input type="text" list="abstract_products" name="abstract_product[]" id="abstract_product"\n' +
+                   '                               required="required" maxlength="100" class="abstract_product' + current_number + '"/>\n' +
+                   '                        <datalist id="abstract_products">\n' +
+                   '                            {% for abstract_product in abstract_products %}\n'+
+                       '                                <option value="{{ abstract_product }}" SELECTED>{{ abstract_product }}</option>"\n'
+                       +
+                       '                            {% endfor %}\n' +
+                   '                        </datalist>\n' +
+                   '                    </div>\n' +
+                   '\n' +
+                   '                    <div class="col-md-2">\n' +
+                   '                        <input type="text" list="category_types" name="category_type[]" id="category_type" class="category_type' + current_number + '"\n' +
+                   '                               required="required" maxlength="79" />\n' +
+                   '                        <datalist id="category_types">\n' +
+                   '                            {% for category_type in category_types %}\n'+
+                       '                                <option value="{{ category_type }}" SELECTED>{{ category_type }}</option>"\n'
+                       +
+                       '                            {% endfor %}\n' +
+                   '                        </datalist>\n' +
+                   '                    </div>\n' +
+                   '\n' +
+                   '                    <div class="col-md-2">\n' +
+                   '                        <select id="product_category" name="product_category[]" class="product_category' + current_number + '">\n' +
+                   '                            {% for product_category in product_categories %}\n'+
+                       '                                <option value="{{ product_category }}" SELECTED>{{ product_category }}</option>"\n'
+                       +
+                       '                            {% endfor %}\n' +
+                   '                        </select>\n' +
+                   '                    </div>\n' +
+                   '                </div></div>');
+
+               var input_product = $(".product_name" + current_number);
+               $(input_product).on('propertychange input', function () {
+                   var base_url = 'http://0.0.0.0:5000/api/v1/product/get_all_product_info/';
+                   $.ajax({
+                       type: 'GET',
+                       url: base_url + input_product.val(),
+                       success: function (data) {
+                           $(".abstract_product" + current_number).val(data[0]);
+                           $(".category_type" + current_number).val(data[1]);
+                           $(".product_category" + current_number).val(data[2]);
+                       }
+                   });
+               });
+
+               var input_abstract_product = $(".abstract_product" + current_number);
+               $(input_abstract_product).on('propertychange input', function () {
+                   var base_url = 'http://0.0.0.0:5000/api/v1/product/get_all_product_info/';
+                   $.ajax({
+                       type: 'GET',
+                       url: base_url + input_abstract_product.val(),
+                       success: function (data) {
+                           $(".category_type" + current_number).val(data[1]);
+                           $(".product_category" + current_number).val(data[2]);
+                       }
+                   });
+               });
+
+               var input_category_product = $(".category_type" + current_number);
+               $(input_category_product).on('propertychange input', function () {
+                   var base_url = 'http://0.0.0.0:5000/api/v1/product/get_category_type/';
+                   $.ajax({
+                       type: 'GET',
+                       url: base_url + input_category_product.val(),
+                       success: function (data) {
+                           $(".product_category" + current_number).val(data[1]);
+                       }
+                   });
+               });
+
+               var flag = false;
+               $('.price').on({
+                   input: function (e) {
+                       var re = /^\d+\.?(\d{1,2})?$/ig,
+                           cVal = $.trim($(this).val());
+                       $(this).val(cVal.replace(/,/g, '.'));
+                       if (flag) {
+                           var cut = cVal.match(/^\d+\.?(\d{1,2})?/ig),
+                               clearVal = cut !== null ? cut : '';
+                           $(this).val(clearVal);
+                           return false;
+                       }
+                       if (!re.test(cVal)) {
+                           $(this).val(cVal.substr(0, cVal.length - 1));
+                       }
+                   },
+                   paste: function () {
+                       flag = true;
+                   },
+                   blur: function () {
+                       var cVal = $.trim($(this).val());
+                       if (/\.$/.test(cVal)) {
+                           $(this).val(cVal.substr(0, cVal.length - 1));
+                       }
+                   }
+               });
+
+
+           } else {
+               alert('Вы превысили лимит.')
+           }
+       });
+
+       $(wrapper).on("click", ".delete", function (e) {
+           e.preventDefault();
+           $(this).parent('div').remove();
+           x--;
+       });
+
+       var flag = false;
+       $('.price').on({
+           input: function (e) {
+               var re = /^\d+\.?(\d{1,2})?$/ig,
+                   cVal = $.trim($(this).val());
+               $(this).val(cVal.replace(/,/g, '.'));
+               if (flag) {
+                   var cut = cVal.match(/^\d+\.?(\d{1,2})?/ig),
+                       clearVal = cut !== null ? cut : '';
+                   $(this).val(clearVal);
+                   return false;
+               }
+               if (!re.test(cVal)) {
+                   $(this).val(cVal.substr(0, cVal.length - 1));
+               }
+           },
+           paste: function () {
+               flag = true;
+           },
+           blur: function () {
+               var cVal = $.trim($(this).val());
+               if (/\.$/.test(cVal)) {
+                   $(this).val(cVal.substr(0, cVal.length - 1));
+               }
+           }
+       });
+
+       var my_abstract_product = $(".product_name");
+       $(my_abstract_product).on('propertychange input', function () {
+           var base_url = 'http://0.0.0.0:5000/api/v1/product/get_all_product_info/';
+           $.ajax({
+               type: 'GET',
+               url: base_url + my_abstract_product.val(),
+               success: function (data) {
+                   $(".abstract_product").val(data[0]);
+                   $(".category_type").val(data[1]);
+                   $(".product_category").val(data[2]);
+               }
+           });
+       });
+
+       var input_abstract_product = $(".abstract_product");
+       $(input_abstract_product).on('propertychange input', function () {
+           var base_url = 'http://0.0.0.0:5000/api/v1/product/get_all_product_info/';
+           $.ajax({
+               type: 'GET',
+               url: base_url + input_abstract_product.val(),
+               success: function (data) {
+                   $(".category_type").val(data[1]);
+                   $(".product_category").val(data[2]);
+               }
+           });
+       });
+
+       var input_category_product = $(".category_type");
+       $(input_category_product).on('propertychange input', function () {
+           var base_url = 'http://0.0.0.0:5000/api/v1/product/get_category_type/';
+           $.ajax({
+               type: 'GET',
+               url: base_url + input_category_product.val(),
+               success: function (data) {
+                   $(".product_category").val(data[1]);
+               }
+           });
+       });
+   });
+
+   $(window).on('load', function () {
+            $preloader = $('.loaderArea'),
+            $loader = $preloader.find('.loader');
+            $loader.fadeOut();
+            $preloader.delay(350).fadeOut('slow');
+        });
+    </script>
+
+    {% include "footer.html" %}
+
+{% endblock %}
+<body>

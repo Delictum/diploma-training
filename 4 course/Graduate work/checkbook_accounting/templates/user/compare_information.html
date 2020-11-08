@@ -1,0 +1,693 @@
+{% extends "bootstrap/base.html" %}
+
+<head>
+    <link rel="icon" href="data:;base64,=">
+    <link href="../../resource/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="../../resource/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <link href="../../static/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../static/css/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="../../static/css/flexslider.css" rel="stylesheet" />
+    <link href="../../static/css/style.css" rel="stylesheet" />
+
+   <!-- Script
+   ================================================== -->
+	<script src="../../static/js/modernizr.js"></script>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.31.1/jquery.min.js"></script>
+
+</head>
+
+{% block title %}
+    {% if title %}{{ title }} - Check Accounting{% else %}Подробная информация{% endif %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='site.css') }}">
+    <link rel="icon" href="data:;base64,=">
+    <link href="../../resource/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="../../resource/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+{% endblock %}
+
+{% block navbar %}
+    <div class="loaderArea">
+        <div class="loader"></div>
+    </div>
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <a class="navbar-brand" rel="home" href="#" title="Check accounting">
+                <img style="max-width:100px; margin-top: -7px;"
+                    src="/static/favicon.ico">
+            </a>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url_for('index') }}">Домашняя страница</a></li>
+                    <li><a href="{{ url_for('about') }}">О сайте</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    {% if current_user.is_anonymous %}
+                        <li><a href="{{ url_for('login') }}">Войти</a></li>
+                        <li><a href="{{ url_for('register') }}">Зарегистрироваться</a></li>
+                    {% else %}
+                        <li><a href="{{ url_for('user', public_id=current_user.public_id) }}">Привет, {{ current_user.username }}</a></li>
+                        <li><a href="{{ url_for('user', public_id=current_user.public_id) }}">Профиль</a></li>
+                        <li><a href="{{ url_for('logout') }}">Выйти</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <link href="../../static/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../static/css/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="../../static/css/flexslider.css" rel="stylesheet" />
+    <link href="../../static/css/style.css" rel="stylesheet" />
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+{% endblock %}
+
+{% block content %}
+    <style>
+        .container {
+            width:1320px
+        }
+
+        .styled-select select {
+            background: transparent;
+            width: 268px;
+            padding: 5px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            height: 34px;
+        }
+
+        .styled-select {
+            width: 240px;
+            height: 34px;
+            overflow: hidden;
+            background: url(../../static/img/back_arrow.png) no-repeat right #ddd;
+        }
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+        .date {
+            background-size: contain;
+        }
+        .label {
+            text-align: center;
+            vertical-align: center;
+        }
+
+        .wrapper {
+            vertical-align: middle;
+        }
+
+        .label, .wrapper{
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .taxon {
+            display: table-row;
+            overflow: hidden;
+            outline: 1px dotted deepskyblue;
+            text-align: left;
+            border-spacing: 5px;
+        }
+
+        .text-cell {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+    </style>
+
+    <div class="container">
+        <br>
+
+        <div class="left-menu-col">
+        <form name="check_excel" action="{{ url_for('compare_information_range', public_id=user.public_id) }}" method="post" enctype="multipart/form-data">
+            <div class="row">
+            <div class="col-md-4">
+                <section>
+				    <select class="styled-select" id="select_data" name="select_data" onchange="selectData()">
+					    <option value="week">За неделю (в т.ч. прошлую)</option>
+					    <option value="month">За месяц (в т.ч. прошлый)</option>
+					    <option value="year">За год (в т.ч. прошлый)</option>
+					    <option value="range">Выборочно</option>
+				    </select>
+			    </section>
+            </div>
+
+            <div class="col-md-2">
+                <div class="form-group" id="start_first_period_group">
+                    <label class="label" style="color: black">Начало 1-го периода</label>
+                    <input type="date" required="required" class="date" id="start_first_period_date" name="start_date_first_period">
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                 <div class="form-group" id="final_first_period_group">
+                    <label class="label" style="color: black">Конец 1-го периода</label>
+                    <input type="date" required="required" class="date" id="final_first_period_date" name="final_date_first_period">
+                 </div>
+            </div>
+
+            <div class="col-md-3">
+                <a class="btn btn-primary" href="{{ url_for('detail_information_all_time', public_id=user.public_id) }}">Вернуться к деталям</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <input id="submit_compare_range" class="btn btn-primary" type="submit" value="Сравнить" hidden="hidden" name="submit_compare_range">
+            </div>
+
+            <div class="col-md-2">
+                <div class="form-group" id="start_second_period_group">
+                    <label class="label" style="color: black">Начало 2-го периода</label>
+                    <input type="date" required="required" class="date" id="start_second_period_date" name="start_date_second_period">
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="form-group" id="final_second_period_group">
+                    <label class="label" style="color: black">Конец 2-го периода</label>
+                    <input type="date" required="required" class="date" id="final_second_period_date" name="final_date_second_period">
+                </div>
+            </div>
+        </div>
+    </form>
+
+        <ul class="wrapper" style="width: 400px;">
+            {% for category_type in dict_category_types %}
+                <li class="taxon ">
+                    <label class="text-cell">{{ category_type }}</label>
+
+                    {% for product_categories in dict_category_types.values() %}
+                        {% if dict_category_types[category_type] == product_categories %}
+
+                            <ul class="wrapper" style="width: 350px;">
+
+                                {% for list_product_category in product_categories %}
+                                    {% for product_category in list_product_category %}
+
+                                        <li class="taxon">
+                                            <label class="text-cell">{{ product_category }}</label>
+                                            <ul  class="wrapper" style="width: 300px;">
+
+                                                {% for abstract_products in list_product_category.values() %}
+                                                    {% if abstract_products == list_product_category[product_category] %}
+                                                        {% for dict_abstract_product in abstract_products %}
+                                                            {% for abstract_product in dict_abstract_product %}
+
+                                                                {% if abstract_product[0] == '2' %}
+
+                                                                    <li class="taxon">
+                                                                    <table id="product_table" class="simple-little-table" cellspacing='0' width="400" style="text-shadow: 1px 1px 0 #7F8289; color: black;">
+                                                                        <tr>
+                                                                            <td>
+                                                                                <label class="text-cell">{{ abstract_product[1:] }}</label>
+                                                                            </td>
+
+                                                                            <td>
+                                                                                <label class="text-cell">{{ dict_abstract_product[abstract_product] }}</label>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </li>
+
+                                                                {% else %}
+
+                                                                    <li class="taxon">
+                                                                    <table id="product_table" class="simple-little-table" cellspacing='0' width="400">
+                                                                        <tr>
+                                                                            <td>
+                                                                                <label class="text-cell">{{ abstract_product }}</label>
+                                                                            </td>
+
+                                                                            <td>
+                                                                                <label class="text-cell">{{ dict_abstract_product[abstract_product] }}</label>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </li>
+
+                                                                {% endif %}
+
+                                                            {% endfor %}
+                                                        {% endfor %}
+                                                    {% endif %}
+                                                {% endfor %}
+
+                                            </ul>
+                                        </li>
+                                        <p class="panel-info" style="vertical-align: text-bottom; text-align: center; background-color: #7F8289; color: #FFFFFF;">Итого: {{ '{:.2f}'.format(total_costs_product_category[product_category]) }}</p>
+
+                                    {% endfor %}
+                                {% endfor %}
+
+                            </ul>
+
+                        {% endif %}
+                    {% endfor %}
+
+                </li>
+                <p class="progress-bar-info" style="vertical-align: text-bottom; text-align: center; background-color: #0f0f0f; color: #FFFFFF;">Итого: {{ '{:.2f}'.format(total_costs_category_type[category_type]) }}</p>
+            {% endfor %}
+        </ul>
+        </div>
+
+        <div class="right-menu-col">
+            <h5 align="center">Несколько фактов</h5>
+            <hr>
+
+            <ul>
+                <li>
+                    <p class="total-cost">Всего потрачено: {{ '{:.2f}'.format(total_cost) }}р.</p>
+                </li>
+
+                <li>
+                    <p>Всего заработано: {{ '{:.2f}'.format(interested_facts[4]) }}р. за {{ interested_facts[5] }} месяц(-а/-ев)</p>
+                </li>
+
+                <hr width="70%" style="border-top: 1px dotted white">
+
+                <li>
+                    <p>Самая дорогая покупка "{{ interested_facts[0] }}" на сумму {{ '{:.2f}'.format(interested_facts[1]) }}р.</p>
+                </li>
+
+                <li>
+                    <p>Самая дешевая покупка: {{ interested_facts[2] }} на сумму {{ '{:.2f}'.format(interested_facts[3]) }}р.</p>
+                </li>
+
+                <hr width="70%" style="border-top: 1px dotted white">
+
+                <li>
+                    <p>Наибольшие затраты в категории "{{ interested_facts[6] }}" на сумму {{ '{:.2f}'.format(interested_facts[7]) }}р.</p>
+                </li>
+
+                <li>
+                    <p>Наименьшие затраты в категории "{{ interested_facts[8] }}" на сумму {{ '{:.2f}'.format(interested_facts[9]) }}р.</p>
+                </li>
+
+                 <li>
+                    <p>Наибольшие затраты в секции "{{ interested_facts[10] }}" на сумму {{ '{:.2f}'.format(interested_facts[11]) }}р.</p>
+                </li>
+
+                <li>
+                    <p>Наименьшие затраты в секции "{{ interested_facts[12] }}" на сумму {{ '{:.2f}'.format(interested_facts[13]) }}р.</p>
+                </li>
+
+                <hr width="70%" style="border-top: 1px dotted white">
+
+                <li>
+                    <p>Потрачено за текущий период: {{ '{:.2f}'.format(interested_facts[14]) }}р.</p>
+                </li>
+
+                <li>
+                    <p>Потрачено за предыдущий период: {{ '{:.2f}'.format(interested_facts[15]) }}р.</p>
+                </li>
+
+                <hr width="70%" style="border-top: 1px dotted white">
+
+                <li>
+                    <p>Наибольшие затраты текущего периода в категории "{{ interested_facts[17] }}" на сумму {{ '{:.2f}'.format(interested_facts[16]) }}р.</p>
+                </li>
+
+                <li>
+                    <p>Наименьшие затраты текущего периода в категории "{{ interested_facts[19] }}" на сумму {{ '{:.2f}'.format(interested_facts[18]) }}р.</p>
+                </li>
+
+                <li>
+                    <p>Наибольшие затраты предыдущего периода в категории "{{ interested_facts[21] }}" на сумму {{ '{:.2f}'.format(interested_facts[20]) }}р.</p>
+                </li>
+
+                <li>
+                    <p>Наименьшие затраты предыдущего периода в категории "{{ interested_facts[23] }}" на сумму {{ '{:.2f}'.format(interested_facts[22]) }}р.</p>
+                </li>
+
+                <hr width="70%" style="border-top: 1px dotted white">
+
+                <li>
+                    <p>Наибольшие затраты текущего периода в секции "{{ interested_facts[25] }}" на сумму {{ '{:.2f}'.format(interested_facts[24]) }}р.</p>
+                </li>
+
+                <li>
+                    <p>Наименьшие затраты текущего периода в секции "{{ interested_facts[27] }}" на сумму {{ '{:.2f}'.format(interested_facts[26]) }}р.</p>
+                </li>
+
+                <li>
+                    <p>Наибольшие затраты предыдущего периода в секции "{{ interested_facts[29] }}" на сумму {{ '{:.2f}'.format(interested_facts[28]) }}р.</p>
+                </li>
+
+                <li>
+                    <p>Наименьшие затраты предыдущего периода в секции "{{ interested_facts[31] }}" на сумму {{ '{:.2f}'.format(interested_facts[30]) }}р.</p>
+                </li>
+
+            </ul>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+
+        <div style="position: relative; background-color: #FFFFFF; opacity: 1.0" id="chart_div">
+            <canvas id="line_chart" width="1100" height="400"></canvas>
+            <canvas id="bar_chart" width="1100" height="500"></canvas>
+            <div align="center">
+                <canvas id="radar_chart" width="600" height="500"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src='../../static/Chart.min.js'></script>
+    <script type="text/javascript">
+
+        Chart.defaults.global.responsive = false;
+
+        var chart_line_data = {
+                labels :
+                    [{% for item in labels %}
+                        "{{item}}",
+                    {% endfor %}],
+                datasets : [{
+                    label: '{{ legend_first_period }}',
+                    fill: true,
+                    lineTension: 0.1,
+                    backgroundColor: "rgba(75,192,192,0.4)",
+                    borderColor: "rgba(75,192,192,1)",
+                    borderCapStyle: 'butt',
+                    borderDash: [],
+                    borderDashOffset: 0.0,
+                    borderJoinStyle: 'miter',
+                    pointBorderColor: "rgba(75,192,192,1)",
+                    pointBackgroundColor: "#fff",
+                    pointBorderWidth: 1,
+                    pointHoverRadius: 5,
+                    pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                    pointHoverBorderColor: "rgba(220,220,220,1)",
+                    pointHoverBorderWidth: 2,
+                    pointRadius: 1,
+                    pointHitRadius: 10,
+                    data :
+                        [{% for item in checks_amount_first_period %}
+                            {{ item }},
+                        {% endfor %}],
+                    spanGaps: false
+                },
+                {
+                    label: '{{ legend_second_period }}',
+                    fill: true,
+                    lineTension: 0.1,
+                    backgroundColor: "#3e95cd",
+                    borderColor: "#0000FF",
+                    borderCapStyle: 'butt',
+                    borderDash: [],
+                    borderDashOffset: 0.0,
+                    borderJoinStyle: 'miter',
+                    pointBorderColor: "#3e95cd",
+                    pointBackgroundColor: "#0000FF",
+                    pointBorderWidth: 1,
+                    pointHoverRadius: 5,
+                    pointHoverBackgroundColor: "#3e95cd",
+                    pointHoverBorderColor: "#0000FF",
+                    pointHoverBorderWidth: 2,
+                    pointRadius: 1,
+                    pointHitRadius: 10,
+                    data :
+                        [{% for item in checks_amount_second_period %}
+                            {{ item }},
+                        {% endfor %}],
+                    spanGaps: false
+                }]
+        };
+
+        var chart_line_element = document.getElementById("line_chart").getContext("2d");
+
+        var line_chart = new Chart(chart_line_element, {
+            type: 'line',
+            data: chart_line_data,
+        });
+
+        var chart_bar_data = {
+                labels :
+                    [{% for item in labels_pie %}
+                        "{{item }}",
+                    {% endfor %}],
+                datasets : [{
+                    label: 'Категории продуктов {{ legend_first_period.lower() }}',
+                    fill: true,
+                    lineTension: 0.1,
+                    backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9",
+              "#c45850", "#000", "#FFB6C1", "#DC143C",
+              "#FFF0F5", "#8B008B", "#4B0082", "#0000FF",
+              "#5F9EA0", "#00FFFF", "#008B8B", "#2F4F4F",
+              "#7FFFD4", "#556B2F", "#808000", "#BDB76B",
+              "#FFD700", "#B8860B", "#FF8C00", "#8B4513",
+              "#FF4500", "#FFFAFA",
+                        "#3e95cd", "#8e5ea2", "rgba(75,192,192,0.4)"],
+                    borderColor: ["#3cba9f","#e8c3b9", "rgba(75,192,192,1)"],
+                    borderCapStyle: 'butt',
+                    borderDash: [],
+                    borderDashOffset: 0.0,
+                    borderJoinStyle: 'miter',
+                    pointBorderColor: ["#8e5ea2", "rgba(75,192,192,1)", "#c45850"],
+                    pointBackgroundColor: "#fff",
+                    pointBorderWidth: 1,
+                    pointHoverRadius: 5,
+                    pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                    pointHoverBorderColor: "rgba(220,220,220,1)",
+                    pointHoverBorderWidth: 2,
+                    pointRadius: 1,
+                    pointHitRadius: 10,
+                    data :
+                        [{% for item in values_pie_first_period %}
+                            {{ item }},
+                        {% endfor %}],
+                    spanGaps: false
+                },
+                {
+                    label: 'Категории продуктов {{ legend_second_period.lower() }}',
+                    fill: true,
+                    lineTension: 0.1,
+                    backgroundColor: ["#5F9EA0", "#00FFFF", "#008B8B", "#2F4F4F",
+              "#7FFFD4", "#556B2F", "#808000", "#BDB76B",
+              "#FFD700", "#B8860B", "#FF8C00", "#8B4513",
+              "#FF4500", "#FFFAFA",
+                        "#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9",
+              "#c45850", "#000", "#FFB6C1", "#DC143C",
+              "#FFF0F5", "#8B008B", "#4B0082", "#0000FF",
+
+                        "#3e95cd", "#8e5ea2", "rgba(75,192,192,0.4)"],
+                    borderColor: ["#3cba9f","#e8c3b9", "rgba(75,192,192,1)"],
+                    borderCapStyle: 'butt',
+                    borderDash: [],
+                    borderDashOffset: 0.0,
+                    borderJoinStyle: 'miter',
+                    pointBorderColor: ["#8e5ea2", "rgba(75,192,192,1)", "#c45850"],
+                    pointBackgroundColor: "#fff",
+                    pointBorderWidth: 1,
+                    pointHoverRadius: 5,
+                    pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                    pointHoverBorderColor: "rgba(220,220,220,1)",
+                    pointHoverBorderWidth: 2,
+                    pointRadius: 1,
+                    pointHitRadius: 10,
+                    data :
+                        [{% for item in values_pie_second_period %}
+                            {{ item }},
+                        {% endfor %}],
+                    spanGaps: false
+                }]
+        };
+
+        var chart_bar_element = document.getElementById("bar_chart").getContext("2d");
+
+        var bar_chart = new Chart(chart_bar_element, {
+            type: 'bar',
+            data: chart_bar_data,
+            options: {
+                title: {
+                    display: true,
+                    text: 'Категории продуктов'
+                },
+                responsive: true,
+                hover: {
+                    mode: 'point',
+                    intersect: false,
+                },
+            }
+        });
+
+        var chart_radar_element = document.getElementById("radar_chart").getContext("2d");
+
+        var radar_chart = new Chart(chart_radar_element,{
+            type: 'radar',
+            data: {
+                labels: [
+                    {% for type in values_radar_first_period %}
+                        "{{ type[1] }}",
+                    {% endfor %}
+                ],
+            datasets: [
+            {
+                label: "Типы продуктов {{ legend_first_period.lower() }}",
+                backgroundColor: [
+                    "#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9",
+                    "#c45850", "#000", "#FFB6C1", "#DC143C",
+                    "#FFF0F5", "#8B008B", "#4B0082", "#0000FF",
+                    "#5F9EA0", "#00FFFF", "#008B8B", "#2F4F4F",
+                    "#7FFFD4", "#556B2F", "#808000", "#BDB76B",
+                    "#FFD700", "#B8860B", "#FF8C00", "#8B4513",
+                    "#FF4500", "#FFFAFA",
+                ],
+                data: [
+                    {% for type in values_radar_first_period %}
+                        "{{ type[2] }}",
+                    {% endfor %}
+                ]
+              },
+              {
+                label: "Типы продуктов {{ legend_second_period.lower() }}",
+                backgroundColor: [
+                    "#7FFFD4", "#556B2F", "#808000", "#BDB76B",
+                    "#FFD700", "#B8860B", "#FF8C00", "#8B4513",
+                    "#FF4500", "#FFFAFA", "#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9",
+                    "#c45850", "#000", "#FFB6C1", "#DC143C",
+                    "#FFF0F5", "#8B008B", "#4B0082", "#0000FF",
+                    "#5F9EA0", "#00FFFF", "#008B8B", "#2F4F4F",
+                ],
+                data: [
+                    {% for type in values_radar_second_period %}
+                        "{{ type[2] }}",
+                    {% endfor %}
+                ]
+              }
+            ]
+          },
+          options: {
+            title: {
+              display: true,
+              text: 'Типы продуктов'
+            }
+          }
+      });
+
+      function selectData() {
+          document.getElementById('start_first_period_group').style.display = 'none';
+          document.getElementById('final_first_period_group').style.display = 'none';
+          document.getElementById('start_second_period_group').style.display = 'none';
+          document.getElementById('final_second_period_group').style.display = 'none';
+
+          var compare_range = $("#submit_compare_range");
+
+          $(compare_range).hide();
+
+          if (document.getElementById('select_data').value == 'range') {
+              document.getElementById('start_first_period_group').style.display = 'block';
+              document.getElementById('final_first_period_group').style.display = 'block';
+              document.getElementById('start_second_period_group').style.display = 'block';
+              document.getElementById('final_second_period_group').style.display = 'block';
+
+              $('#submit_compare_range').show();
+          }
+      }
+
+      $(document).ready(function() {
+          if (window.location.href == 'http://0.0.0.0:5000/user/9bc48f56-663c-4ba6-a80f-010a600f5310/compare_range' ||
+            window.location.href == 'http://0.0.0.0:5000/user/9bc48f56-663c-4ba6-a80f-010a600f5310/compare_information_week') {
+              document.getElementById('line_chart').style.display = "none";
+          }
+
+          selectData();
+          document.getElementById('select_data').value = '{{ sample_type }}';
+          if ('{{ sample_type }}' == 'range') {
+              document.getElementById('start_first_period_group').style.display = 'block';
+              document.getElementById('final_first_period_group').style.display = 'block';
+              document.getElementById('start_second_period_group').style.display = 'block';
+              document.getElementById('final_second_period_group').style.display = 'block';
+          }
+
+          $('#select_data').change(function () {
+              switch (document.getElementById('select_data').value) {
+                   case 'week':
+                       location.href = '{{ url_for('compare_information_week', public_id=user.public_id) }}';
+                       break;
+                   case 'month':
+                       location.href = '{{ url_for('compare_information_month', public_id=user.public_id) }}';
+                       break;
+                   case 'year':
+                       location.href = '{{ url_for('compare_information_year', public_id=user.public_id) }}';
+                       break;
+                   case 'range':
+                       document.getElementById('start_first_period_group').style.display = 'block';
+                       document.getElementById('final_first_period_group').style.display = 'block';
+                       document.getElementById('start_second_period_group').style.display = 'block';
+                       document.getElementById('final_second_period_group').style.display = 'block';
+                       document.getElementById('submit_compare_range').style.display = 'block';
+                       break;
+                   }
+            });
+
+          $('.right-menu-col').mouseenter(function () {
+              var c_d_o = 1;
+
+
+              var timerId = setInterval(function() {
+                  $('#chart_div').css("opacity", c_d_o);
+
+                  c_d_o -= 0.05
+              }, 50);
+
+              setTimeout(function() {
+                  clearInterval(timerId);
+              }, 1050);
+          });
+
+          $('.right-menu-col').mouseleave(function () {
+              var c_d_o = 0.05;
+
+              var timerId = setInterval(function() {
+                  $('#chart_div').css("opacity", c_d_o);
+
+                  c_d_o += 0.05
+              }, 50);
+
+              setTimeout(function() {
+                  clearInterval(timerId);
+              }, 1050);
+          });
+      });
+
+      $(window).on('load', function () {
+          $preloader = $('.loaderArea'),
+              $loader = $preloader.find('.loader');
+          $loader.fadeOut();
+          $preloader.delay(350).fadeOut('slow');
+      });
+
+    </script>
+
+    {% include "footer.html" %}
+
+{% endblock %}
+<body>

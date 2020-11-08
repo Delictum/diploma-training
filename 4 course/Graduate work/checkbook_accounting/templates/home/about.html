@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <script src="https://api-maps.yandex.ru/2.1?apikey=<b5d40529-5c6c-47ac-b4f0-cacb35a578c8>&load=package.full&lang=ru_RU&onload=init">
+    </script>
+    <script type="text/javascript">
+    // Сразу после загрузки API будет
+    // вызвана функция init.
+    // На момент ее исполнения div-контейнер
+    // карты уже будет готов.
+    function init (ymaps) {
+        var myMap = new ymaps.Map("YMapsID", {
+            center: [53.673310570837714,23.829241499999984],
+            zoom: 13,
+            controls: [
+
+                'zoomControl', // Ползунок масштаба
+                'rulerControl', // Линейка
+                'routeButtonControl', // Панель маршрутизации
+                'trafficControl', // Пробки
+                'typeSelector', // Переключатель слоев карты
+                'fullscreenControl', // Полноэкранный режим
+
+                // Поисковая строка
+                new ymaps.control.SearchControl({
+                    options: {
+                        // вид - поисковая строка
+                        size: 'large',
+                        // Включим возможность искать не только топонимы, но и организации.
+                        provider: 'yandex#search'
+                    }
+                })
+
+            ]
+        });
+
+        var myPlacemark = new ymaps.Placemark([53.673310570837714,23.829241499999984], {
+            // Хинт показывается при наведении мышкой на иконку метки.
+            hintContent: 'Содержимое всплывающей подсказки',
+            // Балун откроется при клике по метке.
+            balloonContent: 'Содержимое балуна'
+        });
+
+        // После того как метка была создана, добавляем её на карту.
+        myMap.geoObjects.add(myPlacemark)
+    }
+    </script>
+
+    <div class="container">
+        <h2 align="center">Основная информация</h2>
+        <br>
+        <p>Данный сайт предназначен для ведения учета личной бухгалтерии на основе распознования визульных образов чека.</p>
+        <p>Если у Вас имеются пожелания или замечания, быть может замечаны неполадки или сбои, то воспользуйтесь приведенными ниже контактами для соответсвующего обращения.</p>
+        <hr>
+    </div>
+
+    <div class="container">
+        <h3 align="center">Контактная информация</h3>
+        <br/>
+
+        <div class="row">
+            <div class="col-md-6">
+                <address>
+                    <br/>
+                    <br/>
+                    <br/>
+
+                    Беларусь, город Гродно, улица Мостовая, дом 39
+                    <br/>
+                    <abbr title="Phone">80336884457 (МТС)</abbr>
+                    <br/>
+                    <abbr title="Phone">80333605515 (Life)</abbr>
+                </address>
+
+                <section>
+                    <strong>Разработчик:</strong> <a target="_blank" href="http://vk.com/delinquentis">Олишкевич И.Р.</a> (<em><a target="_blank" href="https://github.com/Delictum/">Delictum Est</a></em>)
+                    <br/>
+                    Студент 4 курса часного гродненского колледжа <a target="_blank" href="http://gcbip.by/">Бизнеса И Права</a></em>
+                    <br/>
+                    <em>Специальности программное обеспечение информационных технологий</em>
+                    <em>Специализации программное обеспечение обработки экономической и деловой информации</em>
+                </section>
+
+                <br/>
+
+                <address>
+                    <strong>Обратная связь:</strong>   <a href="mailto:checkbook2019@gmail.com">checkbook2019@gmail.com</a><br />
+                </address>
+            </div>
+
+            <div class="col-md-6">
+                <div id="YMapsID" style="width: 500px; height: 400px; border: 1px deepskyblue solid;"></div>
+            </div>
+        </div>
+    </div>
+
+    {% include "footer.html" %}
+{% endblock %}

@@ -1,0 +1,18 @@
+.demotable {
+  border-collapse: collapse;
+  counter-reset: schetchik;  /* счётчик с названием "schetchik" работает в рамках класса .demotable */
+}
+.demotable tr {
+  counter-increment: schetchik;  /* при встрече тега tr счётчик с названием "schetchik" увеличивается на единицу */
+}
+.demotable td,
+.demotable tr:before {
+  padding: .1em .5em;
+  border: 1px solid #E7D5C0;
+}
+.demotable tr:before {
+  content: counter(schetchik);  /* значение счётчика с названием "schetchik" записывается в первую клетку строки */
+  display: table-cell;
+  vertical-align: middle;
+  color: #978777;
+}

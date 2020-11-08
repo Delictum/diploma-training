@@ -1,0 +1,12 @@
+<p>Дорогой {{ user.username }},</p>
+<p>
+    для подтверждения Вашего e-mail
+    <a href="{{ url_for('confirm_email', token=token, _external=True) }}">
+        нажмите здесь
+    </a>.
+</p>
+<p>Кроме того, вы можете вставить следующую ссылку в адресную строку браузера:</p>
+<p>{{ url_for('confirm_email', token=token, _external=True) }}</p>
+
+<p>Искренне,</p>
+<p>Check Accounting</p>
