@@ -1,0 +1,33 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DBXMySQL, Data.FMTBcd, Data.DB,
+  Vcl.Grids, Vcl.DBGrids, Datasnap.Provider, Datasnap.DBClient, Data.SqlExpr, ShellAPI,
+  Vcl.StdCtrls, Vcl.DBCtrls;
+
+type
+  TFormProg = class(TForm)
+    SQLConnection1: TSQLConnection;
+    SQLQuery1: TSQLQuery;
+    DataSource1: TDataSource;
+    ClientDataSet1: TClientDataSet;
+    DataSetProvider1: TDataSetProvider;
+    DBGrid1: TDBGrid;
+    DBMemo1: TDBMemo;
+    Helper: TButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormProg: TFormProg;
+
+implementation
+
+{$R *.dfm}
+end.

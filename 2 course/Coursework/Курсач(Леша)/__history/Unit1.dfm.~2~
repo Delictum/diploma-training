@@ -1,0 +1,152 @@
+object FormDinozavr: TFormDinozavr
+  Left = 0
+  Top = 0
+  Caption = 'FormDinozavr'
+  ClientHeight = 733
+  ClientWidth = 697
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object DBGrid1: TDBGrid
+    Left = 8
+    Top = 8
+    Width = 680
+    Height = 120
+    DataSource = DataSource1
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'ID'
+        Visible = False
+      end
+      item
+        Expanded = False
+        FieldName = 'Eda'
+        Title.Caption = #1055#1080#1097#1072
+        Width = 150
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Otryd'
+        Title.Caption = #1054#1090#1088#1103#1076
+        Width = 150
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Period'
+        Title.Caption = #1055#1077#1088#1080#1086#1076
+        Width = 150
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Dinozavr'
+        Title.Caption = #1044#1080#1085#1086#1079#1072#1074#1088
+        Width = 200
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Text'
+        Visible = False
+      end>
+  end
+  object DBMemo1: TDBMemo
+    Left = 8
+    Top = 144
+    Width = 680
+    Height = 521
+    DataField = 'Text'
+    DataSource = DataSource1
+    TabOrder = 1
+  end
+  object SQLConnection1: TSQLConnection
+    ConnectionName = 'MySQLConnection'
+    DriverName = 'MySQL'
+    LoginPrompt = False
+    Params.Strings = (
+      'DriverUnit=DBXMySQL'
+      
+        'DriverPackageLoader=TDBXDynalinkDriverLoader,DbxCommonDriver140.' +
+        'bpl'
+      
+        'DriverAssemblyLoader=Borland.Data.TDBXDynalinkDriverLoader,Borla' +
+        'nd.Data.DbxCommonDriver,Version=14.0.0.0,Culture=neutral,PublicK' +
+        'eyToken=91d62ebb5b0d1b1b'
+      
+        'MetaDataPackageLoader=TDBXMySqlMetaDataCommandFactory,DbxMySQLDr' +
+        'iver140.bpl'
+      
+        'MetaDataAssemblyLoader=Borland.Data.TDBXMySqlMetaDataCommandFact' +
+        'ory,Borland.Data.DbxMySQLDriver,Version=14.0.0.0,Culture=neutral' +
+        ',PublicKeyToken=91d62ebb5b0d1b1b'
+      'GetDriverFunc=getSQLDriverMYSQL'
+      'LibraryName=dbxmys.dll'
+      'LibraryNameOsx=libsqlmys.dylib'
+      'VendorLib=LIBMYSQL.dll'
+      'VendorLibWin64=libmysql.dll'
+      'VendorLibOsx=libmysqlclient.dylib'
+      'DriverName=MySQL'
+      'HostName=127.0.0.1'
+      'Database=Dinosaurs'
+      'User_Name=mysql'
+      'Password=mysql'
+      'ServerCharSet=cp1251'
+      'BlobSize=-1'
+      'ErrorResourceFile='
+      'LocaleCode=0000'
+      'Compressed=False'
+      'Encrypted=False'
+      'ConnectTimeout=60'
+      'MaxBlobSize=-1')
+    Connected = True
+    Left = 32
+    Top = 686
+  end
+  object SQLQuery1: TSQLQuery
+    Active = True
+    MaxBlobSize = 1
+    Params = <>
+    SQL.Strings = (
+      
+        'SELECT Dinozavr_Main.ID, Eda, Otryd, Period, Dinozavr, Text FROM' +
+        ' Dinozavr_Main, Period, Otryd, Eda WHERE Dinozavr_Main.ID_Eda = ' +
+        'Eda.ID AND Dinozavr_Main.ID_Otryd = Otryd.ID AND Dinozavr_Main.I' +
+        'D_Period = Period.ID')
+    SQLConnection = SQLConnection1
+    Left = 112
+    Top = 686
+  end
+  object DataSetProvider1: TDataSetProvider
+    DataSet = SQLQuery1
+    Left = 192
+    Top = 686
+  end
+  object ClientDataSet1: TClientDataSet
+    Active = True
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DataSetProvider1'
+    Left = 280
+    Top = 686
+  end
+  object DataSource1: TDataSource
+    DataSet = ClientDataSet1
+    Left = 360
+    Top = 686
+  end
+end

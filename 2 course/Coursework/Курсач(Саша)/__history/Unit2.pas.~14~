@@ -1,0 +1,213 @@
+unit Unit2;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.FMTBcd, Data.DB, Datasnap.DBClient,
+  Datasnap.Provider, Data.SqlExpr, Vcl.StdCtrls, Vcl.DBCtrls, Vcl.Mask;
+
+type
+  TForm2 = class(TForm)
+    SQLQuery1: TSQLQuery;
+    DataSetProvider1: TDataSetProvider;
+    ClientDataSet1: TClientDataSet;
+    DataSource1: TDataSource;
+    SQLQuery2: TSQLQuery;
+    DataSetProvider2: TDataSetProvider;
+    ClientDataSet2: TClientDataSet;
+    DataSource2: TDataSource;
+    DBLCBPeople: TDBLookupComboBox;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Button1: TButton;
+    DBEdit1: TDBEdit;
+    DBEdit2: TDBEdit;
+    DBEdit3: TDBEdit;
+    EditMonth: TDBEdit;
+    EditDay: TDBEdit;
+    EditHoliday: TDBEdit;
+    Memo1: TDBMemo;
+    DBComboBox1: TDBComboBox;
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit1;
+
+procedure TForm2.Button1Click(Sender: TObject);
+Var i, BufDateID, BufHolidayID, BufEventID, BufEventDateID : integer;
+    BufDateStr, BufPeopleStr, BufHolidayStr, BufEventStr : string;
+begin
+  if Button1.Caption = 'Добавить' then
+    begin
+      if EditMonth.Text = '' then
+        exit;
+      if EditDay.Text = '' then
+        exit;
+      if EditHoliday.Text = '' then
+        exit;
+      if DBLCBPeople.Text = '' then
+        exit;
+      if Memo1.Text = '' then
+        exit;
+
+      BufDateID := 0;
+      BufDateStr := '';
+      ClientDataSet1.Active := false;
+      SQLQuery1.Close;
+      SQLQuery1.SQL.Clear;
+      SQLQuery1.SQL.Add('SELECT MAX(ID) AS ID FROM Date');
+      SQLQuery1.Open;
+      ClientDataSet1.Active := true;
+      BufDateStr := IntToStr(SQLQuery1.FieldValues['ID']);
+      BufDateID := StrToInt(BufDateStr) + 1;
+
+      SQLQuery1.SQL.Clear;
+      SQLQuery1.SQL.Add('INSERT INTO Date (ID, Month, Day) VALUES(');
+      SQLQuery1.SQL.Add(IntToStr(BufDateID) + ', ' + EditMonth.Text + ', ' + EditDay.Text + ')');
+      SQLQuery1.ExecSQL;
+
+      ClientDataSet1.Active := false;
+      SQLQuery1.Close;
+      SQLQuery1.SQL.Clear;
+      SQLQuery1.SQL.Add('SELECT ID FROM People WHERE Name = "' + DBLCBPeople.Text + '"');
+      SQLQuery1.Open;
+      ClientDataSet1.Active := true;
+      BufPeopleStr := VarToStr(SQLQuery1.FieldValues['ID']);
+
+      BufHolidayID := 0;
+      BufHolidayStr := '';
+      ClientDataSet1.Active := false;
+      SQLQuery1.Close;
+      SQLQuery1.SQL.Clear;
+      SQLQuery1.SQL.Add('SELECT MAX(ID) AS ID FROM Holiday');
+      SQLQuery1.Open;
+      ClientDataSet1.Active := true;
+      BufHolidayStr := IntToStr(SQLQuery1.FieldValues['ID']);
+      BufHolidayID := StrToInt(BufHolidayStr) + 1;
+
+      SQLQuery1.SQL.Clear;
+      SQLQuery1.SQL.Add('INSERT INTO Holiday (ID, Name, Description, ID_People) VALUES(');
+      SQLQuery1.SQL.Add(IntToStr(BufHolidayID) + ', "' + EditHoliday.Text + '", "');
+      for I := 0 to Memo1.Lines.Count do
+        SQLQuery1.SQL.Add(Memo1.Lines[i]);
+      SQLQuery1.SQL.Add('", ' + BufPeopleStr + ')');
+      SQLQuery1.ExecSQL;
+
+      BufEventID := 0;
+      BufEventStr := '';
+      ClientDataSet1.Active := false;
+      SQLQuery1.Close;
+      SQLQuery1.SQL.Clear;
+      SQLQuery1.SQL.Add('SELECT MAX(ID) AS ID FROM Event');
+      SQLQuery1.Open;
+      ClientDataSet1.Active := true;
+      BufEventStr := IntToStr(SQLQuery1.FieldValues['ID']);
+      BufEventID := StrToInt(BufEventStr) + 1;
+
+      BufEventStr := '';
+      ClientDataSet1.Active := false;
+      SQLQuery1.Close;
+      SQLQuery1.SQL.Clear;
+      SQLQuery1.SQL.Add('SELECT MAX(ID_Date) AS ID FROM Event');
+      SQLQuery1.Open;
+      ClientDataSet1.Active := true;
+      BufEventDateID := SQLQuery1.FieldValues['ID'] + 1;
+
+      SQLQuery1.SQL.Clear;
+      SQLQuery1.SQL.Add('INSERT INTO Event (ID, ID_Holiday, ID_Date) VALUES(' + IntToStr(BufEventID));
+      SQLQuery1.SQL.Add(', ' + IntToStr(BufHolidayID) + ', ' + IntToStr(BufEventDateID) + ')');
+      SQLQuery1.ExecSQL;
+
+      ShowMessage('Добавлено!!!');
+      exit;
+    end;
+  if Button1.Caption = 'Удалить' then
+    begin
+      BufHolidayStr := '';
+      ClientDataSet1.Active := false;
+      SQLQuery1.Close;
+      SQLQuery1.SQL.Clear;
+      SQLQuery1.SQL.Add('SELECT ID FROM Holiday WHERE Name = "' + EditHoliday.Text + '"');
+      SQLQuery1.Open;
+      ClientDataSet1.Active := true;
+      BufHolidayStr := VarToStr(SQLQuery1.FieldValues['ID']);
+
+      SQLQuery1.SQL.Clear;
+      SQLQuery1.SQL.Add('DELETE FROM Date WHERE Day = ' + EditDay.Text + ' AND ');
+      SQLQuery1.SQL.Add('Month = ' + EditMonth.Text);
+      SQLQuery1.ExecSQL;
+
+      SQLQuery1.SQL.Clear;
+      SQLQuery1.SQL.Add('DELETE FROM Event WHERE ID_Holiday = ' + DBEdit3.Text);
+      SQLQuery1.ExecSQL;
+
+      SQLQuery1.SQL.Clear;
+      SQLQuery1.SQL.Add('DELETE FROM Holiday WHERE ID = ' + DBEdit3.Text);
+      SQLQuery1.ExecSQL;
+
+      ShowMessage('Удалено!!!');
+      exit;
+    end;
+  if Button1.Caption = 'Редактировать' then
+    begin
+      if EditMonth.Text = '' then
+        exit;
+      if EditDay.Text = '' then
+        exit;
+      if EditHoliday.Text = '' then
+        exit;
+      if DBLCBPeople.Text = '' then
+        exit;
+      if Memo1.Text = '' then
+        exit;
+
+      BufDateStr := '';
+      BufDateStr := DBEdit1.Text;
+
+      SQLQuery1.Close;
+      SQLQuery1.SQL.Clear;
+      SQLQuery1.SQL.Add('UPDATE Date SET Day = ' + EditDay.Text + ', Month = ' + EditMonth.Text);
+      SQLQuery1.SQL.Add(' WHERE ID = ' + BufDateStr);
+      SQLQuery1.ExecSQL;
+
+      BufPeopleStr := '';
+      ClientDataSet1.Active := false;
+      SQLQuery1.Close;
+      SQLQuery1.SQL.Clear;
+      SQLQuery1.SQL.Add('SELECT ID FROM People WHERE Name = "' + DBLCBPeople.Text + '"');
+      SQLQuery1.Open;
+      ClientDataSet1.Active := true;
+      BufPeopleStr := VarToStr(SQLQuery1.FieldValues['ID']);
+
+      BufHolidayStr := '';
+      BufHolidayStr := DBEdit2.Text;
+
+      SQLQuery1.Close;
+      SQLQuery1.SQL.Clear;
+      SQLQuery1.SQL.Add('UPDATE Holiday SET Name = "' + EditDay.Text + '", Description = "');
+      for I := 0 to Memo1.Lines.Count do
+        SQLQuery1.SQL.Add(Memo1.Lines[i]);
+      SQLQuery1.SQL.Add('", ID_People = ' + BufPeopleStr + ', ID_Date = ' + BufDateStr + ' WHERE ID = ' + BufHolidayStr);
+      SQLQuery1.ExecSQL;
+
+      ShowMessage('Отредактировано!!!');
+      exit;
+    end;
+end;
+
+end.

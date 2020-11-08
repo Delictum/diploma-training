@@ -1,0 +1,92 @@
+unit Unit8;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.FMTBcd, Datasnap.DBClient,
+  Datasnap.Provider, Data.DB, Data.SqlExpr, Vcl.StdCtrls, Vcl.DBCtrls;
+
+type
+  TForm8 = class(TForm)
+    Button1: TButton;
+    EditNebesTela: TEdit;
+    Label1: TLabel;
+    DBLCBTypeNebesTela: TDBLookupComboBox;
+    Label2: TLabel;
+    Memo1: TMemo;
+    Label3: TLabel;
+    SQLQuery1: TSQLQuery;
+    DataSource1: TDataSource;
+    DataSetProvider1: TDataSetProvider;
+    ClientDataSet1: TClientDataSet;
+    DataSource2: TDataSource;
+    ClientDataSet2: TClientDataSet;
+    DataSetProvider2: TDataSetProvider;
+    SQLQuery2: TSQLQuery;
+    SQLQuery3: TSQLQuery;
+    DataSetProvider3: TDataSetProvider;
+    ClientDataSet3: TClientDataSet;
+    DataSource3: TDataSource;
+    DBLCBGolak: TDBLookupComboBox;
+    Label4: TLabel;
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form8: TForm8;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit1;
+
+procedure TForm8.Button1Click(Sender: TObject);
+Var BuftypenebestelaStr, BufHNebessvazStr, BufGolakStr : string;
+    BufnebessvazID, i : integer;
+begin
+      ClientDataSet1.Active := false;
+      SQLQuery1.Close;
+      SQLQuery1.SQL.Clear;
+      SQLQuery1.SQL.Add('SELECT typenebestela_id FROM typenebestela WHERE typenebestela = "' + DBLCBTypeNebesTela.Text + '"');
+      SQLQuery1.Open;
+      ClientDataSet1.Active := true;
+      BuftypenebestelaStr := VarToStr(SQLQuery1.FieldValues['ID']);
+
+      ClientDataSet1.Active := false;
+      SQLQuery1.Close;
+      SQLQuery1.SQL.Clear;
+      SQLQuery1.SQL.Add('SELECT golak_id FROM golak WHERE galak_name = "' + DBLCBTypeNebesTela.Text + '"');
+      SQLQuery1.Open;
+      ClientDataSet1.Active := true;
+      BufGolakStr := VarToStr(SQLQuery1.FieldValues['ID']);
+
+      BufNebessvazID := 0;
+      BufHNebessvazStr := '';
+      ClientDataSet1.Active := false;
+      SQLQuery1.Close;
+      SQLQuery1.SQL.Clear;
+      SQLQuery1.SQL.Add('SELECT MAX(ID) AS ID FROM Nebessvaz');
+      SQLQuery1.Open;
+      ClientDataSet1.Active := true;
+      BufHNebessvazStr := IntToStr(SQLQuery1.FieldValues['ID']);
+      BufNebessvazID := StrToInt(BufHNebessvazStr) + 1;
+
+      SQLQuery1.SQL.Clear;
+      SQLQuery1.SQL.Add('INSERT INTO Holiday (NebesSvaz_id, NebesTela, Opisanie, typenebestela_id, golak_id) VALUES(');
+      SQLQuery1.SQL.Add(IntToStr(BufNebessvazID) + ', "' + EditNebesTela.Text + '", "');
+      for I := 0 to Memo1.Lines.Count do
+        SQLQuery1.SQL.Add(Memo1.Lines[i]);
+      SQLQuery1.SQL.Add('", ' + BuftypenebestelaStr + ', ' + BufGolakStr + ')');
+      SQLQuery1.ExecSQL;
+
+      ShowMessage('Добавлено!!!');
+      exit;
+end;
+
+end.

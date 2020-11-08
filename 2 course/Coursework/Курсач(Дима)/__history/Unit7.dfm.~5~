@@ -1,0 +1,37 @@
+object FormHelp: TFormHelp
+  Left = 0
+  Top = 0
+  BorderStyle = bsDialog
+  Caption = #1055#1086#1084#1086#1097#1100
+  ClientHeight = 360
+  ClientWidth = 746
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -13
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  PixelsPerInch = 96
+  TextHeight = 16
+  object RichEdit1: TRichEdit
+    Left = 0
+    Top = 0
+    Width = 746
+    Height = 360
+    Align = alClient
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    ScrollBars = ssBoth
+    TabOrder = 0
+    Zoom = 100
+    ExplicitTop = -2
+    ExplicitWidth = 724
+    ExplicitHeight = 362
+  end
+end

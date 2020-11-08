@@ -1,0 +1,115 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, DBXMySQL, Data.FMTBcd, Data.DB,
+  Vcl.StdCtrls, Vcl.DBCtrls, Vcl.Grids, Vcl.DBGrids, Datasnap.DBClient,
+  Datasnap.Provider, Data.SqlExpr, ShellAPI;
+
+type
+  TFormMain = class(TForm)
+    SQLConnection1: TSQLConnection;
+    SQLQuery2: TSQLQuery;
+    DataSetProvider2: TDataSetProvider;
+    ClientDataSet2: TClientDataSet;
+    DataSource2: TDataSource;
+    DBGrid2: TDBGrid;
+    DBMemo1: TDBMemo;
+    Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
+    SQLQuery1: TSQLQuery;
+    DataSetProvider1: TDataSetProvider;
+    DataSource1: TDataSource;
+    DBGrid1: TDBGrid;
+    ClientDataSet1: TClientDataSet;
+    Button4: TButton;
+    Button5: TButton;
+    Button6: TButton;
+    procedure Button1Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
+    procedure Button5Click(Sender: TObject);
+    procedure Button6Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormMain: TFormMain;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit2;
+
+procedure TFormMain.Button1Click(Sender: TObject);
+begin
+  Form2.Show;
+  Form2.Caption := 'Добавление';
+  Form2.Button1.Caption := 'Добавить';
+end;
+
+procedure TFormMain.Button2Click(Sender: TObject);
+begin
+  Form2.Show;
+  Form2.Caption := 'Редактирование';
+  Form2.Button1.Caption := 'Редактировать';
+end;
+
+procedure TFormMain.Button3Click(Sender: TObject);
+begin
+  Form2.Show;
+  Form2.Caption := 'Удаление';
+  Form2.Button1.Caption := 'Удалить';
+end;
+
+procedure TFormMain.Button4Click(Sender: TObject);
+begin
+  ShellExecute(FormMain.Handle, nil, 'iexplore', 'www.thedrakoneragoni.wix.com/helper/', nil, SW_RESTORE);
+end;
+
+procedure TFormMain.Button5Click(Sender: TObject);
+begin
+  if Button5.Caption = 'Все праздники' then
+  begin
+    ClientDataSet2.MasterFields := '';
+    Button5.Caption := 'По дате';
+    exit;
+  end;
+  if Button5.Caption = 'По дате' then
+  begin
+    ClientDataSet2.MasterFields := 'ID';
+    Button5.Caption := 'Все праздники';
+    exit;
+  end;
+end;
+
+procedure TFormMain.Button6Click(Sender: TObject);
+begin
+  ClientDataSet1.Active := false;
+  SQLQuery1.Close;
+  SQLQuery1.SQL.Clear;
+  SQLQuery1.SQL.Add('SELECT *  FROM Date ORDER BY Month ASC');
+  SQLQuery1.Open;
+  ClientDataSet1.Active := true;
+
+  ClientDataSet2.Active := false;
+  SQLQuery2.Close;
+  SQLQuery2.SQL.Clear;
+  SQLQuery2.SQL.Add('SELECT Holiday.ID, Holiday.Name, Description, People.Name, ID_Date');
+  SQLQuery2.SQL.Add('FROM Holiday, People, Event WHERE Holiday.ID_People = People.Id AND');
+  SQLQuery2.SQL.Add('Event.ID_Holiday = Holiday.ID');
+  SQLQuery2.Open;
+  ClientDataSet2.Active := true;
+
+  DBGrid1.Refresh;
+end;
+
+end.
