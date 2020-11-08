@@ -1,0 +1,46 @@
+C:\Users\Delictum\Desktop\ClinicOfVision\ClinicOfVision\bin\Debug\ClinicOfVision.exe.config
+C:\Users\Delictum\Desktop\ClinicOfVision\ClinicOfVision\bin\Debug\ClinicOfVision.exe
+C:\Users\Delictum\Desktop\ClinicOfVision\ClinicOfVision\bin\Debug\ClinicOfVision.pdb
+C:\Users\Delictum\Desktop\ClinicOfVision\ClinicOfVision\obj\Debug\ClinicOfVision.Form1.resources
+C:\Users\Delictum\Desktop\ClinicOfVision\ClinicOfVision\obj\Debug\ClinicOfVision.Properties.Resources.resources
+C:\Users\Delictum\Desktop\ClinicOfVision\ClinicOfVision\obj\Debug\ClinicOfVision.csproj.GenerateResource.cache
+C:\Users\Delictum\Desktop\ClinicOfVision\ClinicOfVision\obj\Debug\ClinicOfVision.csproj.CoreCompileInputs.cache
+C:\Users\Delictum\Desktop\ClinicOfVision\ClinicOfVision\obj\Debug\ClinicOfVision.exe
+C:\Users\Delictum\Desktop\ClinicOfVision\ClinicOfVision\obj\Debug\ClinicOfVision.pdb
+C:\Users\Delictum\Desktop\ClinicOfVision\ClinicOfVision\bin\Debug\MySql.Data.dll
+C:\Users\Delictum\Desktop\ClinicOfVision\ClinicOfVision\bin\Debug\MySql.Data.xml
+C:\Users\Delictum\Desktop\ClinicOfVision\ClinicOfVision\obj\Debug\ClinicOfVision.Form2.resources
+C:\Users\Delictum\Desktop\ClinicOfVision\ClinicOfVision\obj\Debug\ClinicOfVision.csproj.CopyComplete
+C:\Users\Delictum\Desktop\ClinicOfVision\ClinicOfVision\obj\Debug\ClinicOfVision.csprojResolveAssemblyReference.cache
+C:\Users\Delictum\Desktop\ClinicOfVision\ClinicOfVision\obj\Debug\ClinicOfVision.AboutBox1.resources
+C:\Users\Delictum\Desktop\ClinicOfVision\ClinicOfVision\obj\Debug\ClinicOfVision.Form3.resources
+C:\25 ПОИТ\3 курс\ТРПО\Лабораторные работы\ClinicOfVision\ClinicOfVision\bin\Debug\ClinicOfVision.exe.config
+C:\25 ПОИТ\3 курс\ТРПО\Лабораторные работы\ClinicOfVision\ClinicOfVision\bin\Debug\ClinicOfVision.exe
+C:\25 ПОИТ\3 курс\ТРПО\Лабораторные работы\ClinicOfVision\ClinicOfVision\bin\Debug\ClinicOfVision.pdb
+C:\25 ПОИТ\3 курс\ТРПО\Лабораторные работы\ClinicOfVision\ClinicOfVision\bin\Debug\MySql.Data.xml
+C:\25 ПОИТ\3 курс\ТРПО\Лабораторные работы\ClinicOfVision\ClinicOfVision\obj\Debug\ClinicOfVision.csprojAssemblyReference.cache
+C:\25 ПОИТ\3 курс\ТРПО\Лабораторные работы\ClinicOfVision\ClinicOfVision\obj\Debug\ClinicOfVision.AboutBox1.resources
+C:\25 ПОИТ\3 курс\ТРПО\Лабораторные работы\ClinicOfVision\ClinicOfVision\obj\Debug\ClinicOfVision.Form1.resources
+C:\25 ПОИТ\3 курс\ТРПО\Лабораторные работы\ClinicOfVision\ClinicOfVision\obj\Debug\ClinicOfVision.Form2.resources
+C:\25 ПОИТ\3 курс\ТРПО\Лабораторные работы\ClinicOfVision\ClinicOfVision\obj\Debug\ClinicOfVision.Form3.resources
+C:\25 ПОИТ\3 курс\ТРПО\Лабораторные работы\ClinicOfVision\ClinicOfVision\obj\Debug\ClinicOfVision.Properties.Resources.resources
+C:\25 ПОИТ\3 курс\ТРПО\Лабораторные работы\ClinicOfVision\ClinicOfVision\obj\Debug\ClinicOfVision.csproj.GenerateResource.cache
+C:\25 ПОИТ\3 курс\ТРПО\Лабораторные работы\ClinicOfVision\ClinicOfVision\obj\Debug\ClinicOfVision.csproj.CoreCompileInputs.cache
+C:\25 ПОИТ\3 курс\ТРПО\Лабораторные работы\ClinicOfVision\ClinicOfVision\obj\Debug\ClinicOfVision.csproj.CopyComplete
+C:\25 ПОИТ\3 курс\ТРПО\Лабораторные работы\ClinicOfVision\ClinicOfVision\obj\Debug\ClinicOfVision.exe
+C:\25 ПОИТ\3 курс\ТРПО\Лабораторные работы\ClinicOfVision\ClinicOfVision\obj\Debug\ClinicOfVision.pdb
+D:\25 Information Technology Software\3 course\ТРПО\Лабораторные работы\ClinicOfVision\ClinicOfVision\bin\Debug\ClinicOfVision.exe.config
+D:\25 Information Technology Software\3 course\ТРПО\Лабораторные работы\ClinicOfVision\ClinicOfVision\bin\Debug\ClinicOfVision.exe
+D:\25 Information Technology Software\3 course\ТРПО\Лабораторные работы\ClinicOfVision\ClinicOfVision\bin\Debug\ClinicOfVision.pdb
+D:\25 Information Technology Software\3 course\ТРПО\Лабораторные работы\ClinicOfVision\ClinicOfVision\bin\Debug\MySql.Data.xml
+D:\25 Information Technology Software\3 course\ТРПО\Лабораторные работы\ClinicOfVision\ClinicOfVision\obj\Debug\ClinicOfVision.csprojAssemblyReference.cache
+D:\25 Information Technology Software\3 course\ТРПО\Лабораторные работы\ClinicOfVision\ClinicOfVision\obj\Debug\ClinicOfVision.AboutBox1.resources
+D:\25 Information Technology Software\3 course\ТРПО\Лабораторные работы\ClinicOfVision\ClinicOfVision\obj\Debug\ClinicOfVision.Form1.resources
+D:\25 Information Technology Software\3 course\ТРПО\Лабораторные работы\ClinicOfVision\ClinicOfVision\obj\Debug\ClinicOfVision.Form2.resources
+D:\25 Information Technology Software\3 course\ТРПО\Лабораторные работы\ClinicOfVision\ClinicOfVision\obj\Debug\ClinicOfVision.Form3.resources
+D:\25 Information Technology Software\3 course\ТРПО\Лабораторные работы\ClinicOfVision\ClinicOfVision\obj\Debug\ClinicOfVision.Properties.Resources.resources
+D:\25 Information Technology Software\3 course\ТРПО\Лабораторные работы\ClinicOfVision\ClinicOfVision\obj\Debug\ClinicOfVision.csproj.GenerateResource.cache
+D:\25 Information Technology Software\3 course\ТРПО\Лабораторные работы\ClinicOfVision\ClinicOfVision\obj\Debug\ClinicOfVision.csproj.CoreCompileInputs.cache
+D:\25 Information Technology Software\3 course\ТРПО\Лабораторные работы\ClinicOfVision\ClinicOfVision\obj\Debug\ClinicOfVision.csproj.CopyComplete
+D:\25 Information Technology Software\3 course\ТРПО\Лабораторные работы\ClinicOfVision\ClinicOfVision\obj\Debug\ClinicOfVision.exe
+D:\25 Information Technology Software\3 course\ТРПО\Лабораторные работы\ClinicOfVision\ClinicOfVision\obj\Debug\ClinicOfVision.pdb
