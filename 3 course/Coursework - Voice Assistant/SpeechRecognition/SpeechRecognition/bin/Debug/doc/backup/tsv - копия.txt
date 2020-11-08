@@ -1,0 +1,5 @@
+1	гугл	https://www.google.by/
+1	вконтакте	https://vk.com/
+2	батл нэт	C:\Program Files (x86)\Battle.net\Battle.net Launcher.exe
+2	ава	C:\AVAVAVA.exe
+1	кой	https://bar.com/

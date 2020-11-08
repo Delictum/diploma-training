@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2043
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JournalEditableLibrary", "JournalEditableLibrary\JournalEditableLibrary.csproj", "{57EE8C91-8BEA-4A37-9C56-C02239CA0AFA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{57EE8C91-8BEA-4A37-9C56-C02239CA0AFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57EE8C91-8BEA-4A37-9C56-C02239CA0AFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57EE8C91-8BEA-4A37-9C56-C02239CA0AFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57EE8C91-8BEA-4A37-9C56-C02239CA0AFA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1177758E-3363-4031-9D38-DC410009D8A4}
+	EndGlobalSection
+EndGlobal

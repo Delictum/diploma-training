@@ -1,0 +1,9 @@
+C:\25 ПОИТ\3 курс\Курсовая работа - Голосовой ассистент\JournalEditableLibrary\JournalEditableLibrary\bin\Debug\JournalEditableLibrary.dll
+C:\25 ПОИТ\3 курс\Курсовая работа - Голосовой ассистент\JournalEditableLibrary\JournalEditableLibrary\bin\Debug\JournalEditableLibrary.pdb
+C:\25 ПОИТ\3 курс\Курсовая работа - Голосовой ассистент\JournalEditableLibrary\JournalEditableLibrary\obj\Debug\JournalEditableLibrary.csproj.CoreCompileInputs.cache
+C:\25 ПОИТ\3 курс\Курсовая работа - Голосовой ассистент\JournalEditableLibrary\JournalEditableLibrary\obj\Debug\JournalEditableLibrary.dll
+C:\25 ПОИТ\3 курс\Курсовая работа - Голосовой ассистент\JournalEditableLibrary\JournalEditableLibrary\obj\Debug\JournalEditableLibrary.pdb
+C:\25 ПОИТ\3 курс\Курсовая работа - Голосовой ассистент\JournalEditableLibrary\JournalEditableLibrary\bin\Debug\ParserFileTSVLibrary.dll
+C:\25 ПОИТ\3 курс\Курсовая работа - Голосовой ассистент\JournalEditableLibrary\JournalEditableLibrary\bin\Debug\ParserFileTSVLibrary.pdb
+C:\25 ПОИТ\3 курс\Курсовая работа - Голосовой ассистент\JournalEditableLibrary\JournalEditableLibrary\obj\Debug\JournalEditableLibrary.csproj.CopyComplete
+C:\25 ПОИТ\3 курс\Курсовая работа - Голосовой ассистент\JournalEditableLibrary\JournalEditableLibrary\obj\Debug\JournalEditableLibrary.csprojAssemblyReference.cache

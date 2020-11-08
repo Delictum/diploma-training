@@ -1,0 +1,7 @@
+C:\25 ПОИТ\3 курс\Курсовая работа - Голосовой ассистент\ParserFileTSVLibrary\ParserFileTSVLibrary\bin\Debug\ParserFileTSVLibrary.dll
+C:\25 ПОИТ\3 курс\Курсовая работа - Голосовой ассистент\ParserFileTSVLibrary\ParserFileTSVLibrary\bin\Debug\ParserFileTSVLibrary.pdb
+C:\25 ПОИТ\3 курс\Курсовая работа - Голосовой ассистент\ParserFileTSVLibrary\ParserFileTSVLibrary\bin\Debug\FastSearchLibrary.dll
+C:\25 ПОИТ\3 курс\Курсовая работа - Голосовой ассистент\ParserFileTSVLibrary\ParserFileTSVLibrary\obj\Debug\ParserFileTSVLibrary.dll
+C:\25 ПОИТ\3 курс\Курсовая работа - Голосовой ассистент\ParserFileTSVLibrary\ParserFileTSVLibrary\obj\Debug\ParserFileTSVLibrary.pdb
+C:\25 ПОИТ\3 курс\Курсовая работа - Голосовой ассистент\ParserFileTSVLibrary\ParserFileTSVLibrary\obj\Debug\ParserAndFinderFileTSVLibrary.csproj.CoreCompileInputs.cache
+C:\25 ПОИТ\3 курс\Курсовая работа - Голосовой ассистент\ParserFileTSVLibrary\ParserFileTSVLibrary\obj\Debug\ParserAndFinderFileTSVLibrary.csproj.CopyComplete
